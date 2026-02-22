@@ -2633,7 +2633,7 @@ header {
 
 .my-button {
 	margin: 0;
-	padding: 5px 10px;
+	padding: 2px 8px;
 }
 
 .my-button.disabled {
@@ -2996,7 +2996,7 @@ header {
 
 .my-button {
 	margin: 0;
-	padding: 5px 10px;
+	padding: 2px 8px;
 }
 
 .my-button.disabled {
