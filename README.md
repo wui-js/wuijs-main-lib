@@ -1789,8 +1789,9 @@ nav {
 	gap: 10px;
 }
 
-.my-link {
-	text-decoration: none;
+.my-button {
+	margin: 0;
+	padding: 0px 5px;
 }
 
 .my-element {
@@ -1812,9 +1813,10 @@ HTML code:
 
 ```html
 <nav>
-	<a href="javascript:" class="my-link fadein">fade-in</a>
-	<a href="javascript:" class="my-link fadeout">fade-out</a>
+	<button class="my-button fadein">fade-in</button>
+	<button class="my-button fadeout">fade-out</button>
 </nav>
+
 <div id="myElement" class="my-element"></div>
 ```
 
@@ -1822,18 +1824,18 @@ JS code:
 ```js
 const init = () => {
 	const element = document.getElementById("myElement");
-	const fadeinLink = document.querySelector(".my-link.fadein");
-	const fadeoutLink = document.querySelector(".my-link.fadeout");
+	const fadeinButton = document.querySelector(".my-button.fadein");
+	const fadeoutButton = document.querySelector(".my-button.fadeout");
 	const options = {
 		delay: 200,
 		//display: "block"
 	};
-	fadeinLink.addEventListener("click", () => {
+	fadeinButton.addEventListener("click", () => {
 		element.wuiFadein(options);
 		// or alternatively
 		//WUIFade.in(element, options);
 	});
-	fadeoutLink.addEventListener("click", () => {
+	fadeoutButton.addEventListener("click", () => {
 		element.wuiFadeout(options);
 		// or alternatively
 		//WUIFade.out(element, options);
