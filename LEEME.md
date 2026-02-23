@@ -35,7 +35,7 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 	*   [WUILoader](#WUILoader)
 	*   WUITooltip
 	*   [WUIModal](#WUIModal)
-	*   WUIPaging
+	*   [WUIPaging](#WUIPaging)
 	*   WUISlider
 	*   WUITabs
 	*   [WUIMenubar](#WUIMenubar)
@@ -61,7 +61,7 @@ WUI JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es un
 
 ### Tabla de Clases
 
-| Clase                               | Version | Descripción |
+| Nombre Clase                        | Version | Descripción |
 | ----------------------------------- | -------:| ----------- |
 | [WUICookie](#WUICookie)             | `0.3`   | Utilidades para el manejo de cookies. |
 | [WUIHead](#WUIHead)                 | `0.2`   | Utilidades para el manejo de la cabecera HTML. |
@@ -73,7 +73,7 @@ WUI JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es un
 | [WUILoader](#WUILoader)             | `0.2`   | Componente para la implementación de animaciones de carga. |
 | WUITooltip                          | `0.1`   | Componente para la implementación de textos emergentes. |
 | [WUIModal](#WUIModal)               | `0.2`   | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
-| WUIPaging                           | `0.2`   | Componente para la implementación de vistas accesibles paginadamente. |
+| [WUIPaging](#WUIPaging)             | `0.2`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
 | WUISlider                           | `0.2`   | Componente para la implementación de persianas controladas por ratón y/o por evento. |
 | WUITabs                             | `0.1`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
 | [WUIMenubar](#WUIMenubar)           | `0.1`   | Componente para la implementación de barras de menú. |
@@ -103,7 +103,7 @@ wuijs-lib/
 └── tools/
 ```
 
-| Nombre                    | Descripción |
+| Ruta                      | Descripción |
 | ------------------------- | ----------- |
 | [imgs](imgs/)             | Imágenes utilizadas en la documentación. |
 | [imgs/icons](imgs/icons/) | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
@@ -811,7 +811,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Cookie/WUICookie-0.3.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Cookie/WUICookie-0.3.js"></script>
 ```
 
 HTML code:
@@ -884,7 +884,7 @@ Cabecera HTML:
 <title></title>
 <meta name="application-name" content="">
 <meta name="theme-color" content="">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Head/WUIHead-0.2.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Head/WUIHead-0.2.js"></script>
 ```
 
 Código JS:
@@ -970,7 +970,7 @@ const testContentLog = (content) => {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Body/WUIBody-0.2.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Body/WUIBody-0.2.js"></script>
 ```
 
 Código HTML:
@@ -1074,7 +1074,7 @@ Código JSON archivo `main-es.json`:
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Language/WUILanguage-0.2.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Language/WUILanguage-0.2.js"></script>
 ```
 
 Código HTML:
@@ -1301,8 +1301,8 @@ body {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Scrolly/WUIScrolly-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Scrolly/WUIScrolly-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Scrolly/WUIScrolly-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Scrolly/WUIScrolly-0.2.js"></script>
 ```
 
 Código HTML:
@@ -1698,7 +1698,7 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
 ```
 
 Código HTML:
@@ -1805,7 +1805,7 @@ nav {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Fade/WUIFade-0.1.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Fade/WUIFade-0.1.js"></script>
 ```
 
 Código HTML:
@@ -2068,9 +2068,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Modal/WUIModal-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Modal/WUIModal-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Modal/WUIModal-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Modal/WUIModal-0.2.js"></script>
 ```
 
 Código HTML:
@@ -2139,6 +2139,188 @@ window.addEventListener("DOMContentLoaded", init);
 > Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIModal-basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIModal-basic).
 
 <a name="WUIPaging"></a>
+
+### WUIPaging
+
+Versión: `0.2`
+
+Componente para la implementación de vistas accesibles paginadamente con transiciones animadas.
+
+#### Fuentes
+
+| Tipo | Archivo |
+| ---- | ------- |
+| CSS  | [src/WUI/Paging/WUIPaging-0.2.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/WUI/Paging/WUIPaging-0.2.css) |
+| JS   | [src/WUI/Paging/WUIPaging-0.2.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/WUI/Paging/WUIPaging-0.2.js) |
+
+#### Constructor
+
+| Tipo      | Descripción |
+| --------- | ----------- |
+| WUIPaging | `WUIPaging([properties])`<br><br>Parámetros:<br>**• properties:** `object` *opcional* |
+
+#### Propiedades
+
+| Propiedad   | Tipo       | Valor predeterminado | Descripción |
+| ----------- | ---------- | -------------------- | ----------- |
+| selector    | `string`   | `""`                 | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
+| index       | `number`   | `null`               | (get/set)<br><br>Índice de la página actualmente seleccionada. |
+| dataTarget  | `string`   | `"target"`           | (get/set)<br><br>Nombre del atributo `data-*` que contiene el identificador de cada página. |
+| onSelect    | `function` | `null`               | (get/set)<br><br>Función que se ejecuta cuando se inicia la selección de una página. Recibe los parámetros:<br><br>**• inputIndex:** `number`, índice de la página que se va a seleccionar.<br>**• inputTarget:** `string`, identificador de la página que se va a seleccionar.<br>**• outputIndex:** `number`, índice de la página actualmente seleccionada.<br>**• outputTarget:** `string`, identificador de la página actualmente seleccionada. |
+| onChange    | `function` | `null`               | (get/set)<br><br>Función que se ejecuta cuando se completa el cambio de página. Recibe los parámetros:<br><br>**• index:** `number`, índice de la nueva página seleccionada.<br>**• target:** `string`, identificador de la nueva página seleccionada. |
+| onBack      | `function` | `null`               | (get/set)<br><br>Función que se ejecuta cuando se completa el retroceso a una página anterior del historial. Recibe los parámetros:<br><br>**• index:** `number`, índice de la página recuperada del historial.<br>**• target:** `string`, identificador de la página recuperada del historial. |
+| onScrolling | `function` | `null`               | (get/set)<br><br>Función que se ejecuta durante el scroll dentro de una página con clase `scroll`. Recibe el parámetro:<br><br>**• scroll:** `number`, posición del scroll en píxeles. |
+
+#### Métodos
+
+| Método     | Tipo retorno   | Descripción |
+| ---------- | -------------- | ----------- |
+| getElement | `HTMLElement`  | `getElement()`<br><br>Retorna el elemento HTML contenedor del objeto. |
+| getIndex   | `number`       | `getIndex([target])`<br><br>Parámetros:<br>**• target:** `string` *opcional*, identificador de la página. Si no se especifica, utiliza el target actual.<br><br>Retorna el índice de una página según su identificador. |
+| getTarget  | `string`       | `getTarget([index])`<br><br>Parámetros:<br>**• index:** `number` *opcional*, índice de la página. Si no se especifica, utiliza el índice actual.<br><br>Retorna el identificador de una página según su índice. |
+| getPages   | `NodeList`     | `getPages()`<br><br>Retorna una lista con todos los elementos HTML de tipo página (con clase `.page`). |
+| getPage    | `HTMLElement`  | `getPage(target)`<br><br>Parámetros:<br>**• target:** `string` o `number`, identificador o índice de la página.<br><br>Retorna el elemento HTML de una página específica. |
+| init       | `void`         | `init()`<br><br>Inicializa el objeto, estableciendo la página inicial y configurando los eventos de scroll. |
+| select     | `void`         | `select(target[, onChange])`<br><br>Parámetros:<br>**• target:** `string` o `number`, identificador o índice de la página a seleccionar.<br>**• onChange:** `function` *opcional*, función que se ejecuta al completar el cambio. El valor predeterminado corresponde al de la propiedad `onChange`.<br><br>Selecciona y muestra una página con animación de transición. |
+| setHistory | `void`         | `setHistory([history])`<br><br>Parámetros:<br>**• history:** `array` *opcional*, lista de identificadores o índices de páginas que conforman el historial.<br><br>Establece manualmente el historial de navegación. |
+| back       | `void`         | `back([onBack])`<br><br>Parámetros:<br>**• onBack:** `function` *opcional*, función que se ejecuta al completar el retroceso. El valor predeterminado corresponde al de la propiedad `onBack`.<br><br>Retrocede a la página anterior del historial. |
+| reset      | `void`         | `reset()`<br><br>Reinicia el componente, seleccionando la primera página y limpiando el historial. |
+
+#### Variables CSS
+
+| Variable                                | Descripción |
+| --------------------------------------- | ----------- |
+| `--wui-paging-page-transition-time`     | Tiempo de duración de la animación de transición entre páginas. |
+| `--wui-paging-page-bgcolor`             | Color de fondo de las páginas. |
+| `--wui-paging-page-scroll-bgcolor-out`  | Color de la barra de scroll en estado normal (páginas con clase `scroll`). |
+| `--wui-paging-page-scroll-bgcolor-over` | Color de la barra de scroll en estado hover (páginas con clase `scroll`). |
+
+#### Implementación
+
+Variables CSS:
+
+```css
+:root {
+
+	/* wui-paging */
+
+	--wui-paging-page-transition-time: .4s;
+	--wui-paging-page-bgcolor: transparent;
+	--wui-paging-page-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-paging-page-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+}
+```
+
+Código CSS:
+
+```css
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+.my-paging {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 50px;
+	width: 600px;
+}
+
+.my-output {
+	position: absolute;
+	bottom: 0;
+	margin: 10px;
+	font-family: monospace;
+}
+```
+
+Cabecera HTML:
+
+```html
+<link rel="stylesheet" type="text/css" href="./Libraries/WUI/Paging/WUIPaging-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Paging/WUIPaging-0.2.js"></script>
+```
+
+Código HTML:
+
+```html
+<div class="wui-paging my-paging">
+	<div class="page scroll" data-target="page1">
+		<h1>Página 1</h1>
+		<nav>
+			<button class="my-button go-page2">ir a la página 2</button>
+		</nav>
+	</div>
+	<div class="page scroll" data-target="page2">
+		<h1>Página 2</h1>
+		<nav>
+			<button class="my-button go-page1">ir a la página 1</button>
+			<button class="my-button go-page3">ir a la página 3</button>
+		</nav>
+	</div>
+	<div class="page scroll" data-target="page3">
+		<h1>Página 3</h1>
+		<nav>
+			<button class="my-button go-page2">ir a la página 2</button>
+		</nav>
+	</div>
+</div>
+
+<div class="my-output"></div>
+```
+
+Código JS:
+
+```js
+const init = () => {
+	const output = document.body.querySelector(".my-output");
+	const paging = new WUIPaging({
+		selector: ".wui-paging.my-paging",
+		//index: null,
+		//dataTarget: "target",
+		onSelect: (inputIndex, inputTarget, outputIndex, outputTarget) => {
+			output.textContent = `Seleccionando página: ${inputTarget} (${inputIndex})`;
+		},
+		onChange: (index, target) => {
+			output.textContent = `Cambio completado a: ${target} (${index})`;
+		},
+		onBack: (index, target) => {
+			output.textContent = `Retroceso a: ${target} (${index})`;
+		},
+		onScrolling: (scroll) => {
+			output.textContent = `Scroll en: ${scroll}px`;
+		}
+	});
+	paging.init();
+	["page1", "page2", "page3"].forEach(target => {
+		document.querySelectorAll(".go-" + target).forEach(button => {
+			button.addEventListener("click", () => {
+				paging.select(target);
+			});
+		})
+	});
+}
+
+window.addEventListener("DOMContentLoaded", init);
+```
+
+> [!IMPORTANT]
+> Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
+
+> [!NOTE]
+> Las páginas pueden tener la clase `scroll` para permitir scroll vertical. El componente soporta dos modos de transición: movimiento lateral (predeterminado) o por opacidad (agregando la clase `opacity` al contenedor principal).
+
+> [!TIP]
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIPaging-basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIPaging-basic).
+
 <a name="WUISlider"></a>
 <a name="WUITabs"></a>
 <a name="WUIMenubar"></a>
@@ -2342,15 +2524,16 @@ body {
 
 .my-output {
 	position: absolute;
-	top: 4px;
-	left: 440px;
-	margin: 10px;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	text-align: right;
 	font-family: monospace;
 }
 
 @media screen and (max-width: 767px) {
 	.my-output {
-		left: 0px;
+		text-align: center:
 	}
 }
 ```
@@ -2358,9 +2541,9 @@ body {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Menubar/WUIMenubar-0.1.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Menubar/WUIMenubar-0.1.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Menubar/WUIMenubar-0.1.css">
+<script type="text/javascript" src="./Libraries/WUI/Menubar/WUIMenubar-0.1.js"></script>
 ```
 
 Cuerpo HTML:
@@ -2667,9 +2850,9 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/List/WUIList-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/List/WUIList-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/List/WUIList-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/List/WUIList-0.2.js"></script>
 ```
 
 Código HTML:
@@ -3032,8 +3215,8 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Table/WUITable-0.3.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Table/WUITable-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Table/WUITable-0.3.css">
+<script type="text/javascript" src="./Libraries/WUI/Table/WUITable-0.3.js"></script>
 ```
 
 Código HTML:
@@ -3411,9 +3594,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Form/WUIForm-0.3.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Form/WUIForm-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Form/WUIForm-0.3.css">
+<script type="text/javascript" src="./Libraries/WUI/Form/WUIForm-0.3.js"></script>
 ```
 
 Código HTML:
@@ -3682,7 +3865,7 @@ CSS Code:
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Format/WUIFormat-0.2.js"></script>
+<script type="text/javascript" src="./Libraries/WUI/Format/WUIFormat-0.2.js"></script>
 ```
 
 HTML code:
@@ -4133,8 +4316,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Selectpicker/WUISelectpicker-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Selectpicker/WUISelectpicker-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Selectpicker/WUISelectpicker-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Selectpicker/WUISelectpicker-0.2.js"></script>
 ```
 
 Código HTML:
@@ -4409,8 +4592,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Datepicker/WUIDatepicker-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Datepicker/WUIDatepicker-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Datepicker/WUIDatepicker-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Datepicker/WUIDatepicker-0.2.js"></script>
 ```
 
 Código HTML:
@@ -4624,8 +4807,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Timepicker/WUITimepicker-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Timepicker/WUITimepicker-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Timepicker/WUITimepicker-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Timepicker/WUITimepicker-0.2.js"></script>
 ```
 
 Código HTML:
@@ -4848,8 +5031,8 @@ nav {
 Código HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Colorpicker/WUIColorpicker-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Colorpicker/WUIColorpicker-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Colorpicker/WUIColorpicker-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Colorpicker/WUIColorpicker-0.2.js"></script>
 ```
 
 Código HTML:
@@ -5018,8 +5201,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Switch/WUISwitch-0.3.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Switch/WUISwitch-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Switch/WUISwitch-0.3.css">
+<script type="text/javascript" src="./Libraries/WUI/Switch/WUISwitch-0.3.js"></script>
 ```
 
 Código HTML:
@@ -5158,8 +5341,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Intensity/WUIIntensity-0.1.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Intensity/WUIIntensity-0.1.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Intensity/WUIIntensity-0.1.css">
+<script type="text/javascript" src="./Libraries/WUI/Intensity/WUIIntensity-0.1.js"></script>
 ```
 
 Código HTML:
@@ -5387,9 +5570,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Icon/WUIIcon-0.1.css">
-<link type="text/css" rel="stylesheet" href="https://wuijs.dev/Libraries/WUI/Button/WUIButton-0.2.css">
-<script type="text/javascript" src="https://wuijs.dev/Libraries/WUI/Button/WUIButton-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Button/WUIButton-0.2.css">
+<script type="text/javascript" src="./Libraries/WUI/Button/WUIButton-0.2.js"></script>
 ```
 
 Código HTML:
@@ -5546,6 +5729,8 @@ Esta sección recoge los ejemplos de las implementaciones de la documentación y
 	Esta demostración muestra el uso de la funcionalidad básica de WUIFade.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIModal-basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIModal-basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIModal.<br><br>
+-	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIPaging-basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIPaging-basic)<br>
+	Esta demostración muestra el uso de la funcionalidad de submenú de WUIPaging.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIMenubar-submenu](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIMenubar-submenu)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIMenubar.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIList-paging-buttongroup](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIList-paging-buttongroup)<br>
@@ -5603,6 +5788,7 @@ https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/W
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIIcon-basic
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIFade-basic
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIModal-basic
+https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIPaging-basic
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIMenubar-submenu
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIList-paging-buttongroup
 https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUITable-paging
