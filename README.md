@@ -1676,12 +1676,12 @@ python tools/svg-icon-maker.py
 python tools/svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
 ```
 
-| Option          | Default value                     | Description |
-| --------------- | --------------------------------- | ----------- |
-| `--css`         | `../src/WUI/Icon/WUIIcon-0.1.css` | Path to the source CSS file. |
-| `-o`, `--out`   | `../imgs/Icons/`                  | Output directory for the generated files. |
-| `-c`, `--color` | `#a2a9b6`                         | CSS-compatible color format that will replace the 'currentColor' statement in the SVG code. |
-| `-s`, `--size`  | `24`                              | Size (width and height) of the images in the set. |
+| Option             | Default value                     | Description |
+| ------------------ | --------------------------------- | ----------- |
+| `--css`            | `../src/WUI/Icon/WUIIcon-0.1.css` | Path to the source CSS file. |
+| `-o`,<br>`--out`   | `../imgs/Icons/`                  | Output directory for the generated files. |
+| `-c`,<br>`--color` | `#a2a9b6`                         | CSS-compatible color format that will replace the 'currentColor' statement in the SVG code. |
+| `-s`,<br>`--size`  | `24`                              | Size (width and height) of the images in the set. |
 
 #### Implementation
 
