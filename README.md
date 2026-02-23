@@ -9,7 +9,7 @@
 
 Library version: `0.3.0` ([Change Log](./CHANGELOG.md))
 
-Document version: `0.3.0.20260221.1`
+Document version: `0.3.0.20260223.0`
 
 License: `Apache License 2.0`
 
@@ -118,7 +118,7 @@ wuijs-lib/
 
 ## Install
 
-To install the WUI library, must be cloned from the GitHib official distribution repository (`sbelmar/wuijs-lib`). Assuming the project where it will be deployed has a download directory: `./downloads`, a `./src` source directory, and within that, a `./src/Libraries` library directory, you must type the following in the terminal:
+To install the WUIJS library, must be cloned from the GitHib official distribution repository (`wuijsproject/wuijs-lib`). Assuming the project where it will be deployed has a download directory: `./downloads`, a `./src` source directory, and within that, a `./src/Libraries` library directory, you must type the following in the terminal:
 
 ```bash
 cd ./downloads

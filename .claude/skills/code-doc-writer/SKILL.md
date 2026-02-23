@@ -31,7 +31,7 @@ Si se utilizan tablas, estas deben cumplir las siguientes normas:
 ```
 
 - Columnas de cada Tabla
-	- Tabla de Clases:
+	- Clases, Plugins:
 		- Nombre Clase
 		- Versión
 		- Descripción

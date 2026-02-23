@@ -9,7 +9,7 @@
 
 Versión librería: `0.3.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.3.0.20260221.1`
+Versión documentación: `0.3.0.20260223.0`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -118,7 +118,7 @@ wuijs-lib/
 
 ## Instalación
 
-Para instalar la biblioteca WUI, debe ser clonada desde el repositorio oficial en GitHib (`sbelmar/wuijs-lib`). Suponiendo que el proyecto donde se implementará tenga un directorio de descargas: `./downloads`, un directorio de código fuente `./src` y, dentro de este, un directorio de bibliotecas `./src/Libraries`, debe escribir lo siguiente en la terminal:
+Para instalar la biblioteca WUIJS, debe ser clonada desde el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`). Suponiendo que el proyecto donde se implementará tenga un directorio de descargas: `./downloads`, un directorio de código fuente `./src` y, dentro de este, un directorio de bibliotecas `./src/Libraries`, debe escribir lo siguiente en la terminal:
 
 ```bash
 cd ./downloads
