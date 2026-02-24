@@ -5757,11 +5757,11 @@ Esta sección recoge los ejemplos de las implementaciones de la documentación y
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIMenubar-submenu](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIMenubar-submenu)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIMenubar.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIList-paging-buttongroup](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIList-paging-buttongroup)<br>
-	Esta demostración muestra el uso de la funcionalidad de paginación de WUIList mediante enlaces de navegación.<br>
+	Esta demostración muestra el uso de la funcionalidad de paginación de WUIList mediante botones HTML.<br>
 	El grupo de botones laterales con tapa extraíble está configurado con dos botones: uno asociado con una posible función de edición y el otro con la de eliminación.<br>
 	Los datos de la lista se cargan directamente durante la creación del componente.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUITable-paging](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUITable-paging)<br>
-	Esta demostración muestra el uso de la función de paginación de WUITable mediante enlaces de navegación.<br>
+	Esta demostración muestra el uso de la función de paginación de WUITable mediante botones HTML.<br>
 	Los datos de la tabla se cargan directamente durante la creación del componente.<br><br>
 -	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIForm-fillstyle](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/WUIForm-fillstyle)<br>
 	Esta demo muestra el uso de WUIForm con estilo de relleno y entradas HTML nativas.<br><br>
