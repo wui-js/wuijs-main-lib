@@ -1,0 +1,96 @@
+/*
+ * WUISlider - v0.3
+ * Author: Sergio E. Belmar (wuijs.project@gmail.com)
+ * Copyright (c) Sergio E. Belmar (wuijs.project@gmail.com)
+ */
+
+.wui-slider,
+.wui-slider * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wui-slider,
+.wui-slider > .body {
+	position: relative;
+}
+
+.wui-slider {
+	display: flex;
+	justify-content: center;
+}
+
+.wui-slider,
+.wui-slider > .body,
+.wui-slider > .body > .slide {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.wui-slider > .body > .slide {
+	left: -100%;
+}
+
+.wui-slider > .body > .slide.scroll {
+	overflow-y: auto !important;
+}
+
+.wui-slider > .body > .slide.image {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	-webkit-background-poaition: center center;
+	-moz-background-poaition: center center;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+.wui-slider > .paging {
+	display: flex;
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	height: 10px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.wui-slider > .paging > div {
+	background-color: var(--wui-slider-paging-bgcolor-hidden);
+}
+
+.wui-slider > .paging > div.selected {
+	background-color: var(--wui-slider-paging-bgcolor-visible);
+}
+
+.wui-slider > .paging.dots > div {
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wui-slider > .paging.lines > div {
+	width: 40px;
+	height: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}

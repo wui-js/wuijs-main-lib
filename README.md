@@ -70,14 +70,14 @@ WUI JS Lib, an acronym for *Web User Interface JavaScript library*, is an open s
 | [WUIHead](#WUIHead)                 | `0.2`   | Utilities for HTML head management. |
 | [WUIBody](#WUIBody)                 | `0.2`   | Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments. |
 | [WUILanguage](#WUILanguage)         | `0.2`   | Utilities for interfaces with different languages managment. Allows you to load language files in JS or JSON format and dynamically update the content of HTML elements based on the language. |
-| [WUIScrolly](#WUIScrolly)           | `0.2`   | Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body. |
+| [WUIScrolly](#WUIScrolly)           | `0.3`   | Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body. |
 | [WUIIcon](#WUIIcon)                 | `0.1`   | Pre-designed icons set loaded via CSS, for use in interfaces. |
 | [WUIFade](#WUIFade)                 | `0.1`   | Utilities for fading out and fading control in HTML elements with opacity. |
 | [WUILoader](#WUILoader)             | `0.2`   | Component for the implementation of loading animations. |
 | WUITooltip                          | `0.1`   | Component for the implementation of tooltip texts. |
 | [WUIModal](#WUIModal)               | `0.2`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
 | [WUIPaging](#WUIPaging)             | `0.2`   | Component for the implementation of paginated views with animated transitions. |
-| WUISlider                           | `0.2`   | Component for the implementation of mouse-controlled and/or event-controlled blinds. |
+| WUISlider                           | `0.3`   | Component for the implementation of mouse-controlled and/or event-controlled blinds. |
 | WUITabs                             | `0.1`   | Component for the implementation of views accessible by tab selection. |
 | [WUIMenubar](#WUIMenubar)           | `0.1`   | Component for the implementation of menu bars. |
 | [WUIList](#WUIList)                 | `0.2`   | Component for the implementation of data lists and buttons for each row optionally. |
@@ -153,7 +153,8 @@ CSS code in the `WUI.css` file:
 
 	/* wui-scrolly */
 
-	--wui-scrolly-paging-bgcolor: #f6f6fa;
+	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 60%);
+	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 90%);
 
 	/* wui-icon */
 
@@ -694,13 +695,13 @@ HTML code:
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./Settings/Main.css">
 		<link type="text/css" rel="stylesheet" href="./Settings/WUI.css">
-		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Scrolly/WUIScrolly-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Scrolly/WUIScrolly-0.3.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Icon/WUIIcon-0.1.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Loader/WUILoader-0.2.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Tooltip/WUITooltip-0.1.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Modal/WUIModal-0.2.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Paging/WUIPaging-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Slider/WUISlider-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Slider/WUISlider-0.3.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Tabs/WUITabs-0.1.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Menubar/WUIMenubar-0.1.css">
 		<link type="text/css" rel="stylesheet" href="./Libraries/WUI/List/WUIList-0.2.css">
@@ -717,13 +718,13 @@ HTML code:
 		<script type="text/javascript" src="./Libraries/WUI/Head/WUIHead-0.2.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Body/WUIBody-0.2.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Language/WUILanguage-0.2.js"></script>
-		<script type="text/javascript" src="./Libraries/WUI/Scrolly/WUIScrolly-0.2.js"></script>
+		<script type="text/javascript" src="./Libraries/WUI/Scrolly/WUIScrolly-0.3.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Fade/WUIFade-0.1.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Loader/WUILoader-0.2.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Tooltip/WUITooltip-0.1.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Modal/WUIModal-0.2.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Paging/WUIPaging-0.2.js"></script>
-		<script type="text/javascript" src="./Libraries/WUI/Slider/WUISlider-0.2.js"></script>
+		<script type="text/javascript" src="./Libraries/WUI/Slider/WUISlider-0.3.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Tabs/WUITabs-0.1.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/Menubar/WUIMenubar-0.1.js"></script>
 		<script type="text/javascript" src="./Libraries/WUI/List/WUIList-0.2.js"></script>
@@ -1143,7 +1144,7 @@ language.load("en", ["main", "main2"]);
 
 ### WUIScrolly
 
-Versión: `0.2`
+Versión: `0.3`
 
 Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body.
 
@@ -1151,7 +1152,7 @@ Utilities for animating HTML elements managment using the "onscroll" event of th
 
 | Type | File |
 | ---- | ---- |
-| JS   | [src/WUI/Scrolly/WUIScrolly-0.2.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/WUI/Scrolly/WUIScrolly-0.2.js) |
+| JS   | [src/WUI/Scrolly/WUIScrolly-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/WUI/Scrolly/WUIScrolly-0.3.js) |
 
 #### Constructor
 
@@ -1206,9 +1207,10 @@ Utilities for animating HTML elements managment using the "onscroll" event of th
 
 #### CSS Variables
 
-| Variable                       | Description |
-| ------------------------------ | ----------- |
-| `--wui-scrolly-paging-bgcolor` | Page indicator color. |
+| Variable                                | Description |
+| --------------------------------------- | ----------- |
+| `--wui-scrolly-paging-bgcolor-hidden`      | Unselected page indicator color. |
+| `--wui-scrolly-paging-bgcolor-visible` | Selected page indicator color. |
 
 #### CSS Styles for Animation
 
@@ -1231,7 +1233,8 @@ CSS settings:
 
 	/* wui-scrolly */
 
-	--wui-scrolly-paging-bgcolor: #888;
+	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 50%);
+	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 90%);
 }
 ```
 
@@ -1310,8 +1313,8 @@ body {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Scrolly/WUIScrolly-0.2.css">
-<script type="text/javascript" src="./Libraries/WUI/Scrolly/WUIScrolly-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./Libraries/WUI/Scrolly/WUIScrolly-0.3.css">
+<script type="text/javascript" src="./Libraries/WUI/Scrolly/WUIScrolly-0.3.js"></script>
 ```
 
 HTML code:

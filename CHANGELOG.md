@@ -9,10 +9,17 @@ Features:
 	- Added `encode()` method.
 	- Added a `string` return type to the `set()` method with the encoded cookie.
 	- Changed the `max-age` statement by `expires` in the cookie encoding..
-3. WUITable version class update to 0.3.
+3. WUIScrolly version class update to 0.3.
+	- Changed the name of the CSS variable `--wui-scrolly-paging-bgcolor` to `--wui-scrolly-paging-bgcolor-hidden`.
+	- Added the CSS variable `--wui-scrolly-paging-bgcolor-visible`.
+4. WUISlider version class update to 0.3.
+	- Changed the name of the CSS variable `--wui-slider-dot-bgcolor` to `--wui-slider-paging-bgcolor-hidden`.
+	- Changed the name of the CSS variable `--wui-slider-dot-bgcolor-selected` to `--wui-slider-paging-bgcolor-visible`.
+	- Removed the CSS variable `--wui-slider-dots-bgcolor`.
+5. WUITable version class update to 0.3.
 	- Added `resetPaging` property.
 	- Added filler column to maintain table width.
-4. WUIForm version class update to 0.3.
+6. WUIForm version class update to 0.3.
 	- Added compatibility with WUISwitch version 0.3.
 	- Added "fill" form style.
 
