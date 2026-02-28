@@ -55,7 +55,7 @@
 	window.wuiDirectory = dir;
 	classes.forEach(key => {
 		const name = key.replace(/-[\d\.]+$/, "");
-		if (load == "" || Boolean(load.match(new RegExp(name, "i")))) {
+		if (load == "" || Boolean(load.match(new RegExp("\b" + name + "\b", "i")))) {
 			if (!name.match(/Icon/)) {
 				const js = document.createElement("script");
 				js.setAttribute("src", dir + name + "/WUI" + key + ".js?" + d);

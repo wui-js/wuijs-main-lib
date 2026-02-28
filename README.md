@@ -776,11 +776,11 @@ Since version 0.3.0, simple loading scripts `WUI.js` and `WUI-0.3.0.js` have bee
 In case you want to implement only part of the WUI library set, you must specify the names of the classes or libraries required in the `class` parameter (or its short alias `c`) separated by commas.
 
 ```html
-<script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=Cookie,Head,Body"></script>
+<script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=head,icon,body,table"></script>
 ```
 
 > [!NOTE]
-> The names of the libraries passed in the `class` parameter do not have to contain the version suffix (`-0.x`). The version will be defined automatically by the simple loading script.
+> The names of the libraries passed in the `class` parameter do not have to contain the version suffix (`-x.x`). The version will be defined automatically by the simple loading script.
 > The `class` parameter does not distinguish between uppercase and lowercase.
 
 <a name="classes"></a>

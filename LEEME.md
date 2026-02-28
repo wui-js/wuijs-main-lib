@@ -775,7 +775,7 @@ Mediante el uso de `WUI.js` se pueden implementar todas las librerías WUI en un
 En caso que se desee implementar sólo una parte de las librerías WUI, se deben especificar los nombres de las clases o librerías requeridas en el parámetro `class` (o su alias corto `c`) separados por comas.
 
 ```html
-<script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=Cookie,Head,Body"></script>
+<script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=head,icon,body,table"></script>
 ```
 
 > [!NOTE]
