@@ -27,6 +27,10 @@ Author: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 *   [Overview](#overview)
 *   [Install](#install)
 *   [Implementation](#implementation)
+	*   [Standard Implementation](#standard)
+	*   [Abbreviated Implementation](#abbreviated)
+		*   [Full mode](#fullmode)
+		*   [Partial mode](#partialmode)
 *   [Classes](#classes)
     *   [WUICookie](#WUICookie)
 	*   [WUIHead](#WUIHead)
@@ -141,6 +145,8 @@ cp -r ./wuijs-lib-main/src/WUI ../src/Libraries/
 <a name="implementation"></a>
 
 ## Implementation
+
+<a name="standard"></a>
 
 ### Standard Implementation
 
@@ -755,6 +761,8 @@ This implementation method allows for standardization of an application's user i
 > If you only want to implement part of the WUI library set, you must add calls to the JS and CSS files in the HTML header as indicated in each section.
 > On the other hand, the `WUI.css` file will only require the definition of the objects you want to implement.
 
+<a name="abbreviated"></a>
+
 ### Abbreviated Implementation
 
 Starting with version 0.3.0, a resource loader was added for the simplified implementation of WUI libraries.
@@ -783,6 +791,8 @@ To specify the WUI library version, you must add the `version` parameter (or its
 > [!NOTE]
 > Optionally, you can use the resource loading script `WUI-0.3.0.js` which directly specifies the WUI JS Lib version in the script name.
 
+<a name="fullmode"></a>
+
 #### Full mode
 
 In full mode, all WUI libraries will be loaded into a web page, without requiring the manual inclusion of the JavaScript and CSS files corresponding to each library.
@@ -790,6 +800,8 @@ In full mode, all WUI libraries will be loaded into a web page, without requirin
 ```html
 <script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0"></script>
 ```
+
+<a name="partialmode"></a>
 
 #### Partial mode
 

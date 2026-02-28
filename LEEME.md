@@ -9,7 +9,7 @@
 
 Versión librería: `0.3.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.3.0.20260223.0`
+Versión documentación: `0.3.0.20260228.0`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -24,6 +24,10 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 *   [Descripción General](#overview)
 *   [Instalación](#install)
 *   [Implementación](#implementation)
+	*   [Implementación Estándar](#standard)
+	*   [Implementación Abrebiada](#abbreviated)
+		*   [Modo completo](#fullmode)
+		*   [Modo parcial](#partialmode)
 *   [Clases](#classes)
 	*   [WUICookie](#WUICookie)
 	*   [WUIHead](#WUIHead)
@@ -138,6 +142,8 @@ cp -r ./wuijs-lib-main/src/WUI ../src/Libraries/
 <a name="implementation"></a>
 
 ## Implementación
+
+<a name="standard"></a>
 
 ### Implementación Estándar
 
@@ -752,6 +758,10 @@ Este método de implementación permite la estandarización del diseño de la in
 > En caso que sólo se desee implementar una parte del conjunto de librerías WUI, se sebe agregar en la cabecera HTML los llamados a los archivos JS y CSS según se indique en cada sección.
 > Por otra parte, el archivo `WUI.css` sólo requerirá la definición de los objetos que se deseen implementar.
 
+<a name="abbreviated"></a>
+
+<a name="partialmode"></a>
+
 ### Implementación Abrebiada
 
 Desde la vesrión 0.3.0 se agregó un cargador de recursos para la implementación abrebiada de las librerías WUI.
@@ -780,6 +790,8 @@ Para especificar la versión de la librería WUI, se debe agregar el parámetro 
 > [!NOTE]
 > Opcionalmente se puede utilizar el script de carga de recursos `WUI-0.3.0.js` que especifica diréctamente la versión de WUI JS Lib en el nombre del script.
 
+<a name="fullmode"></a>
+
 #### Modo completo
 
 En el modo completo, se cargarán todas las librerías WUI en una página web, sin requerir la inclusión manual de los archivos JavaScript y CSS correspondientes a cada librería.
@@ -787,6 +799,8 @@ En el modo completo, se cargarán todas las librerías WUI en una página web, s
 ```html
 <script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0"></script>
 ```
+
+<a name="partialmode"></a>
 
 #### Modo parcial
 
