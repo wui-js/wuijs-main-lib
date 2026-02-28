@@ -5774,9 +5774,9 @@ Los componentes WUI pueden ser personalizados mediante CSS. Para ello, se recomi
 }
 ```
 
-### 3. Inicialización de objetos
+### 3. Inicialización de instancias
 
-Para evitar problemas en los tiempos de ejecución, se recomienda inicializar los objetos WUI una vez que se hayan cargado los elementos del DOM.
+Para evitar problemas en los tiempos de ejecución, se recomienda inicializar las instancias u objetos WUI una vez que se hayan cargado los elementos del DOM.
 
 ```js
 const init = () => {

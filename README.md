@@ -5796,9 +5796,9 @@ WUI components can be customized using CSS. To do this, it is recommended to use
 }
 ```
 
-### 3. Object initialization
+### 3. Instance initialization
 
-To avoid runtime problems, it is recommended to initialize WUI objects once the DOM elements have been loaded.
+To avoid runtime problems, it is recommended to initialize WUI instances or objects once the DOM elements have been loaded.
 
 ```js
 const init = () => {
