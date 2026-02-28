@@ -747,7 +747,7 @@ Este método de implementación permite la estandarización del diseño de la in
 > El archivo de configuración de estilos deben estar en la ruta `./Settings/WUI.css`.
 
 > [!TIP]
-> En caso que sólo se desee implementar sólo una parte del conjunto de librerías WUI, se sebe agregar en la cabecera HTML los llamados a los archivos JS y CSS según se indique en cada sección.
+> En caso que sólo se desee implementar una parte del conjunto de librerías WUI, se sebe agregar en la cabecera HTML los llamados a los archivos JS y CSS según se indique en cada sección.
 > Por otra parte, el archivo `WUI.css` sólo requerirá la definición de los objetos que se deseen implementar.
 
 Desde la vesrión 0.3.0 se han agregado los scripts de carga simple `WUI.js` y `WUI-0.3.0.js`.
@@ -777,6 +777,10 @@ En caso que se desee implementar sólo una parte de las librerías WUI, se deben
 ```html
 <script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=Cookie,Head,Body"></script>
 ```
+
+> [!NOTE]
+> Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`). La versión será definida automáticamente por el script de carga simple.
+> El parámetro `class` no distingue entre mayúsculas y minúsculas.
 
 <a name="classes"></a>
 

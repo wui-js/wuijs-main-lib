@@ -779,6 +779,10 @@ In case you want to implement only part of the WUI library set, you must specify
 <script type="text/javascript" src="./Libraries/WUI/WUI.js?v=0.3.0&c=Cookie,Head,Body"></script>
 ```
 
+> [!NOTE]
+> The names of the libraries passed in the `class` parameter do not have to contain the version suffix (`-0.x`). The version will be defined automatically by the simple loading script.
+> The `class` parameter does not distinguish between uppercase and lowercase.
+
 <a name="classes"></a>
 
 ## Classes
