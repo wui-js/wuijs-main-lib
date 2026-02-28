@@ -84,7 +84,7 @@
 		window.dispatchEvent(event);
 	}
 	Promise.all(load).then(() => {
-		if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		if (document.readyState == "complete" || document.readyState == "interactive") {
 			onLoad();
 		} else {
 			window.addEventListener("DOMContentLoaded", onLoad);
