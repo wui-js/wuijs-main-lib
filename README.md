@@ -787,9 +787,10 @@ This loader allows you to integrate all WUI libraries into a web page, either fu
 ```
 
 To specify the WUI library version, you must add the `version` parameter (or its short alias `v`) to the URL of the `WUI.js` file.
+If the `version` parameter is not specified, the installed version will be assumed.
 
-> [!NOTE]
-> Optionally, you can use the resource loading script `WUI-0.3.0.js` which directly specifies the WUI JS Lib version in the script name.
+> [!TIP]
+> For a correct abbreviated implementation, review the [Good Coding Practices](#goodpractices) section.
 
 <a name="fullmode"></a>
 
@@ -5807,6 +5808,15 @@ const init = () => {
 
 window.addEventListener("DOMContentLoaded", init);
 ```
+
+If you are using [Abbreviated Implementation](#abbreviated), the `DOMContentLoaded` event should be replaced by `wuiLoad`.
+
+```js
+window.addEventListener("wuiLoad", init);
+```
+
+> [!IMPORTANT]
+> This event only works with the `WUI.js` resource loader script.
 
 ### 4. Referencing components
 

@@ -25,7 +25,7 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 *   [Instalación](#install)
 *   [Implementación](#implementation)
 	*   [Implementación Estándar](#standard)
-	*   [Implementación Abrebiada](#abbreviated)
+	*   [Implementación Abreviada](#abbreviated)
 		*   [Modo completo](#fullmode)
 		*   [Modo parcial](#partialmode)
 *   [Clases](#classes)
@@ -760,11 +760,9 @@ Este método de implementación permite la estandarización del diseño de la in
 
 <a name="abbreviated"></a>
 
-<a name="partialmode"></a>
+### Implementación Abreviada
 
-### Implementación Abrebiada
-
-Desde la vesrión 0.3.0 se agregó un cargador de recursos para la implementación abrebiada de las librerías WUI.
+Desde la vesrión 0.3.0 se agregó un cargador de recursos para la implementación abreviada de las librerías WUI.
 Este cargador permite integrar todas las librerías WUI en una página web, ya sea de manera completa o parcial, sin requerir la inclusión manual de los archivos JavaScript y CSS correspondientes a cada librería.
 
 ```html
@@ -786,9 +784,10 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 ```
 
 Para especificar la versión de la librería WUI, se debe agregar el parámetro `version` (o su alias corto `v`) en la URL del archivo `WUI.js`.
+Si no se especifica el parámetro `version` se asumirá la versión instalada.
 
-> [!NOTE]
-> Opcionalmente se puede utilizar el script de carga de recursos `WUI-0.3.0.js` que especifica diréctamente la versión de WUI JS Lib en el nombre del script.
+> [!TIP]
+> Para una correcta implementación abreviada revise la sección [Buenas Prácticas de Codificación](#goodpractices).
 
 <a name="fullmode"></a>
 
@@ -5787,6 +5786,15 @@ const init = () => {
 
 window.addEventListener("DOMContentLoaded", init);
 ```
+
+Si se está utilizando [Implementación Abreviada](#abbreviated), el evento `DOMContentLoaded` debe reemplazarse poe `wuiLoad`.
+
+```js
+window.addEventListener("wuiLoad", init);
+```
+
+> [!IMPORTANT]
+> Este evento funciona únicamente con el script cargador de recursos `WUI.js`.
 
 ### 4. Uso de componentes referenciados
 
