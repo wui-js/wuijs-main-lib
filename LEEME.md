@@ -22,6 +22,9 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 ## Índice
 
 *   [Descripción General](#overview)
+	*   [Acerca del Proyecto WUI JS](#project)
+	*   [Tabla de Clases](#classtable)
+	*   [Mapa de Directorios](#dirmap)
 *   [Instalación](#install)
 *   [Implementación](#implementation)
 	*   [Implementación Estándar](#standard)
@@ -63,6 +66,21 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 
 WUI JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es una librería vainilla JavaScript/CSS de código abierto orientada a la implementación rápida de interfaces de usuario Web compuesta por 25 clases, las que pueden ser utilizadas de manera independiente o conjunta.
 
+<a name="project"></a>
+
+### Acerca del Proyecto WUI JS
+
+WUI JS Lib es parte del proyecto WUI JS, que consta actualmente de 3 repositorios:
+
+-	[https://github.com/wuijsproject/wuijs-lib](https://github.com/wuijsproject/wuijs-lib)<br>
+	Librería UI principal.<br><br>
+-	[https://github.com/wuijsproject/wuijs-plugins-lib](https://github.com/wuijsproject/wuijs-plugins-lib)<br>
+	Complementos de la librería UI principal.<br><br>
+-	[https://github.com/wuijsproject/wuijs-lab](https://github.com/wuijsproject/wuijs-lab)<br>
+	Repositorio con demos y ejemplos de uso tanto de las clases de la librería UI principal como de los complementos.<br><br>
+
+<a name="classtable"></a>
+
 ### Tabla de Clases
 
 | Nombre Clase                        | Version | Descripción |
@@ -92,6 +110,8 @@ WUI JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es un
 | [WUISwitch](#WUISwitch)             | `0.3`   | Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`. |
 | [WUIIntensity](#WUIIntensity)       | `0.1`   | Componente para la implementación de entradas de datos de tipo selector de intensidad de 4 niveles: nada, bajo, medio y alto basada en el elemento HTML `<input type="range">`. |
 | [WUIButton](#WUIButton)             | `0.2`   | Componente para la implementación de botones basada en el elemento HTML `<button>`. |
+
+<a name="dirmap"></a>
 
 ### Mapa de Directorios
 

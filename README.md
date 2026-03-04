@@ -25,6 +25,9 @@ Author: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 ## Index
 
 *   [Overview](#overview)
+	*   [About the WUI JS Project](#project)
+	*   [Classes Table](#classtable)
+	*   [Directory Map](#dirmap)
 *   [Install](#install)
 *   [Implementation](#implementation)
 	*   [Standard Implementation](#standard)
@@ -66,6 +69,21 @@ Author: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 
 WUI JS Lib, an acronym for *Web User Interface JavaScript library*, is an open source JavaScript/CSS vanilla library for the rapid implementation of Web user interfaces composed of 25 classes, which can be used independently or together.
 
+<a name="project"></a>
+
+### About the WUI JS Project
+
+WUI JS Lib is part of the WUI JS project, which currently consists of 3 repositories:
+
+-	[https://github.com/wuijsproject/wuijs-lib](https://github.com/wuijsproject/wuijs-lib)<br>
+	Main UI library.<br><br>
+-	[https://github.com/wuijsproject/wuijs-plugins-lib](https://github.com/wuijsproject/wuijs-plugins-lib)<br>
+	Main UI library plugins.<br><br>
+-	[https://github.com/wuijsproject/wuijs-lab](https://github.com/wuijsproject/wuijs-lab)<br>
+	Repository with demos and usage examples of both the main UI library classes and the plugins.<br><br>
+
+<a name="classtable"></a>
+
 ### Classes Table
 
 | Class name                          | Version | Description |
@@ -95,6 +113,8 @@ WUI JS Lib, an acronym for *Web User Interface JavaScript library*, is an open s
 | [WUISwitch](#WUISwitch)             | `0.3`   | Component for the implementation of checkbox type data inputs based on HTML element `<input type="checkbox">`. |
 | [WUIIntensity](#WUIIntensity)       | `0.1`   | Component for the implementation of 4-level intensity selector type data inputs: none, low, half, and high based on HTML element `<input type="range">`. |
 | [WUIButton](#WUIButton)             | `0.2`   | Component for the implementation of based on HTML element `<button>`. |
+
+<a name="dirmap"></a>
 
 ### Directory Map
 
