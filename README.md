@@ -2502,7 +2502,14 @@ body {
 
 .my-slider {
 	width: 100%;
-	height: 400px;
+	max-height: 400px;
+}
+
+.my-slider .slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
 }
 
 .slide1 {
