@@ -2505,7 +2505,7 @@ body {
 	max-height: 400px;
 }
 
-.my-slider .slider {
+.my-slider .slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
