@@ -83,7 +83,7 @@
 		const event = new CustomEvent("wuiLoad");
 		window.dispatchEvent(event);
 	}
-	Promise.all(load).then(() => {
+	Promise.all([load]).then(() => {
 		if (document.readyState == "complete" || document.readyState == "interactive") {
 			onLoad();
 		} else {
