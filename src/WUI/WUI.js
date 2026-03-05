@@ -64,7 +64,7 @@
 				if (res == "" || Boolean(res.match(new RegExp("\b" + name + "\b", "i")))) {
 					if (!name.match(/Icon/)) {
 						const js = document.createElement("script");
-						js.setAttribute("src", dir + name + "/WUI" + key + ".js?" + d);
+						js.setAttribute("src", dir + name + "/WUI" + name + ".js?" + d);
 						js.setAttribute("type", "text/javascript");
 						document.head.appendChild(js);
 					}
@@ -72,7 +72,7 @@
 						const css = document.createElement("link");
 						css.setAttribute("rel", "stylesheet");
 						css.setAttribute("type", "text/css");
-						css.setAttribute("href", dir + name + "/WUI" + key + ".css?" + d);
+						css.setAttribute("href", dir + name + "/WUI" + name + ".css?" + d);
 						document.head.appendChild(css);
 					}
 				}
