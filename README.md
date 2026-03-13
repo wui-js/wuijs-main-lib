@@ -12,7 +12,7 @@
 
 Library version: `0.3.0` ([Change Log](./CHANGELOG.md))
 
-Document version: `0.3.0.20260307.0`
+Document version: `0.3.0.20260314.0`
 
 License: `Apache License 2.0`
 
@@ -4157,10 +4157,12 @@ Utilities for management and validation `string`, `number` and `Date` data forma
 
 ##### Methods
 
-| Method      | Return type | Description |
-| ----------- | ----------- | ----------- |
-| wuiLoad     | `Date`      | `wuiLoad(value[, format[, options]])`<br><br>Arguments:<br>**• value:** `string`, date to load.<br>**• format:** `string` *optional*, date format (default value `"default"`).<br>**• options:** `object` *optional*, date options, according to the definition of **Default values** `<Date.prototype.wuiDefaults>`.<br><br>Load a date from a string. |
-| wuiToString | `string`    | `wuiToString([format[, options]])`<br><br>Arguments:<br>**• format:** `string` *optional*, date format (default value `"default"`).<br>**• options:** `object` *optional*, date options, according to the definition of **Default values** `<Date.prototype.wuiDefaults>`.<br><br>Converts a date to a string. |
+| Method       | Return type | Description |
+| ------------ | ----------- | ----------- |
+| wuiLoad      | `Date`      | `wuiLoad(value[, format[, options]])`<br><br>Arguments:<br>**• value:** `string`, date to load.<br>**• format:** `string` *optional*, date format (default value `"default"`).<br>**• options:** `object` *optional*, date options, according to the definition of **Default values** `<Date.prototype.wuiDefaults>`.<br><br>Load a date from a string. |
+| wuiToString  | `string`    | `wuiToString([format[, options]])`<br><br>Arguments:<br>**• format:** `string` *optional*, date format (default value `"default"`).<br>**• options:** `object` *optional*, date options, according to the definition of **Default values** `<Date.prototype.wuiDefaults>`.<br><br>Converts a date to a string. |
+| wuiDayName   | `string`    | `wuiDayName([day])`<br><br>Arguments:<br>**• day:** `number` *optional*, day of the week (default value `this.getDay()`).<br><br>Returns the name of the day of the week. |
+| wuiMonthName | `string`    | `wuiMonthName([month])`<br><br>Arguments:<br>**• month:** `number` *optional*, month (default value `this.getMonth()`).<br><br>Returns the name of the month. |
 
 #### Implementation
 

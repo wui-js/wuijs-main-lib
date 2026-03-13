@@ -9,7 +9,7 @@
 
 Versión librería: `0.3.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.3.0.20260307.0`
+Versión documentación: `0.3.0.20260314.0`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -4133,10 +4133,12 @@ Utilidades para manejo y validación de formatos de datos de tipo `string`, `num
 
 ##### Métodos
 
-| Método      | Tipo retorno | Descripción |
-| ----------- | ------------ | ----------- |
-| wuiLoad     | `Date`       | `wuiLoad(value[, format[, options]])`<br><br>Parámetros:<br>**• value:** `string`, fecha a cargar.<br>**• format:** `string` *opcional*, formato de fecha (valor predeterminado `"default"`).<br>**• options:** `object` *opcional*, opciones de fecha, según la definición de **Valores predeterminados** `<Date.prototype.wuiDefaults>`.<br><br>Carga una fecha a partir de una cadena. |
-| wuiToString | `string`     | `wuiToString([format[, options]])`<br><br>Parámetros:<br>**• format:** `string` *opcional*, formato de fecha (valor predeterminado `"default"`).<br>**• options:** `object` *opcional*, opciones de fecha, según la definición de **Valores predeterminados** `<Date.prototype.wuiDefaults>`.<br><br>Convierte una fecha a cadena. |
+| Método       | Tipo retorno | Descripción |
+| ------------ | ------------ | ----------- |
+| wuiLoad      | `Date`       | `wuiLoad(value[, format[, options]])`<br><br>Parámetros:<br>**• value:** `string`, fecha a cargar.<br>**• format:** `string` *opcional*, formato de fecha (valor predeterminado `"default"`).<br>**• options:** `object` *opcional*, opciones de fecha, según la definición de **Valores predeterminados** `<Date.prototype.wuiDefaults>`.<br><br>Carga una fecha a partir de una cadena. |
+| wuiToString  | `string`     | `wuiToString([format[, options]])`<br><br>Parámetros:<br>**• format:** `string` *opcional*, formato de fecha (valor predeterminado `"default"`).<br>**• options:** `object` *opcional*, opciones de fecha, según la definición de **Valores predeterminados** `<Date.prototype.wuiDefaults>`.<br><br>Convierte una fecha a cadena. |
+| wuiDayName   | `string`     | `wuiDayName([day])`<br><br>Parámetros:<br>**• day:** `number` *opcional*, día de la semana (valor predeterminado `this.getDay()`).<br><br>Retorna el nombre del día de la semana. |
+| wuiMonthName | `string`     | `wuiMonthName([month])`<br><br>Parámetros:<br>**• month:** `number` *opcional*, mes (valor predeterminado `this.getMonth()`).<br><br>Retorna el nombre del mes. |
 
 #### Implementación
 
