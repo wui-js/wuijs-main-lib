@@ -23,6 +23,9 @@ Características:
 7. Actualización versión clase WUIForm a 0.3.
 	- Se agregó compatibilidad con WUISwitch versión 0.3.
 	- Se agregó el estilo de formulario "fill".
+8. Actualización versión clase WUIFormat a 0.3.
+	- Se agregó el método `wuiDayName()` al tipo de dato `Date`.
+	- Se agregó el método `wuiMonthName()` al tipo de dato `Date`.
 
 ## [v0.2.0] - 2025-12-01
 

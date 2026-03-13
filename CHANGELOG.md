@@ -23,6 +23,9 @@ Features:
 7. WUIForm version class update to 0.3.
 	- Added compatibility with WUISwitch version 0.3.
 	- Added "fill" form style.
+8. WUIFormat version class update to 0.3.
+	- Added the `wuiDayName()` method to the `Date` data type.
+	- Added the `wuiMonthName()` method to the `Date` data type.
 
 ## [v0.2.0] - 2025-12-01
 
