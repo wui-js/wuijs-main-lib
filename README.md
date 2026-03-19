@@ -329,7 +329,7 @@ CSS code in the `WUI.css` file:
 	--wui-list-row-textcolor-disabled: #d5dce3;
 	--wui-list-innerrow-borderwidth: 1px;
 	--wui-list-innerrow-bordercolor: #f0f0f3;
-	--wui-list-innerrow-bgcolor: #f6f6fa;
+	--wui-list-innerrow-bgcolor: rgb(from #f6f6fa r g b / 20%);
 	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
 	--wui-list-buttons-bgcolor: transparent;
 	--wui-list-button-size: 48px;
@@ -3082,7 +3082,7 @@ CSS settings:
 	--wui-list-row-textcolor-disabled: #d5dce3;
 	--wui-list-innerrow-borderwidth: 1px;
 	--wui-list-innerrow-bordercolor: #f0f0f3;
-	--wui-list-innerrow-bgcolor: #f6f6fa;
+	--wui-list-innerrow-bgcolor: rgb(from #f6f6fa r g b / 20%);
 	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
 	--wui-list-buttons-bgcolor: transparent;
 	--wui-list-button-size: 48px;
