@@ -1,5 +1,36 @@
 # Change Log
 
+## [v0.4.0] - 2026-03-20
+
+Features:
+
+1. Renamed source directories and files to lowercase (e.g. `src/WUI/Slider/` → `src/wui/slider/`).
+2. WUICookie version class update to 0.4.
+3. WUIScrolly version class update to 0.4.
+4. WUISlider version class update to 0.4.
+5. WUISwitch version class update to 0.4.
+6. WUITable version class update to 0.4.
+7. WUIForm version class update to 0.4.
+8. WUIBody version class update to 0.3.
+9. WUIButton version class update to 0.3.
+10. WUIColorpicker version class update to 0.3.
+11. WUIDatepicker version class update to 0.3.
+12. WUIFormat version class update to 0.3.
+13. WUIHead version class update to 0.3.
+14. WUILanguage version class update to 0.3.
+15. WUIList version class update to 0.3.
+16. WUILoader version class update to 0.3.
+17. WUIModal version class update to 0.3.
+18. WUIPaging version class update to 0.3.
+19. WUISelectpicker version class update to 0.3.
+20. WUITimepicker version class update to 0.3.
+21. WUIFade version class update to 0.2.
+22. WUIIcon version class update to 0.2.
+23. WUIIntensity version class update to 0.2.
+24. WUIMenubar version class update to 0.2.
+25. WUITabs version class update to 0.2.
+26. WUITooltip version class update to 0.2.
+
 ## [v0.3.0] - 2026-02-09
 
 Features:

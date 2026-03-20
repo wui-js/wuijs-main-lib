@@ -1,5 +1,36 @@
 # Registro de Cambio
 
+## [v0.4.0] - 2026-03-20
+
+Características:
+
+1. Se renombraron los directorios y archivos fuente a minúscula (ej: `src/WUI/Slider/` → `src/wui/slider/`).
+2. Actualización versión clase WUICookie a 0.4.
+3. Actualización versión clase WUIScrolly a 0.4.
+4. Actualización versión clase WUISlider a 0.4.
+5. Actualización versión clase WUISwitch a 0.4.
+6. Actualización versión clase WUITable a 0.4.
+7. Actualización versión clase WUIForm a 0.4.
+8. Actualización versión clase WUIBody a 0.3.
+9. Actualización versión clase WUIButton a 0.3.
+10. Actualización versión clase WUIColorpicker a 0.3.
+11. Actualización versión clase WUIDatepicker a 0.3.
+12. Actualización versión clase WUIFormat a 0.3.
+13. Actualización versión clase WUIHead a 0.3.
+14. Actualización versión clase WUILanguage a 0.3.
+15. Actualización versión clase WUIList a 0.3.
+16. Actualización versión clase WUILoader a 0.3.
+17. Actualización versión clase WUIModal a 0.3.
+18. Actualización versión clase WUIPaging a 0.3.
+19. Actualización versión clase WUISelectpicker a 0.3.
+20. Actualización versión clase WUITimepicker a 0.3.
+21. Actualización versión clase WUIFade a 0.2.
+22. Actualización versión clase WUIIcon a 0.2.
+23. Actualización versión clase WUIIntensity a 0.2.
+24. Actualización versión clase WUIMenubar a 0.2.
+25. Actualización versión clase WUITabs a 0.2.
+26. Actualización versión clase WUITooltip a 0.2.
+
 ## [v0.3.0] - 2026-02-09
 
 Características:
