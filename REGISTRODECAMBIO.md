@@ -4,38 +4,63 @@
 
 Características:
 
-1. Se renombraron los directorios y archivos fuente a minúscula (ej: `src/WUI/Slider/` → `src/wui/slider/`).
+1. Se renombraron los directorios y archivos fuente a minúscula (ej: `src/WUI/Slider/WUISlider-0.3.js` → `src/wui/slider/wui-slider-0.4.js`).
 2. Actualización versión clase WUICookie a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 3. Actualización versión clase WUIScrolly a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 4. Actualización versión clase WUISlider a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 5. Actualización versión clase WUISwitch a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 6. Actualización versión clase WUITable a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 7. Actualización versión clase WUIForm a 0.4.
+	- Se renombró el directorio y archivos a minúscula.
 8. Actualización versión clase WUIBody a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 9. Actualización versión clase WUIButton a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 10. Actualización versión clase WUIColorpicker a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 11. Actualización versión clase WUIDatepicker a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 12. Actualización versión clase WUIFormat a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 13. Actualización versión clase WUIHead a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 14. Actualización versión clase WUILanguage a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 15. Actualización versión clase WUIList a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 16. Actualización versión clase WUILoader a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 17. Actualización versión clase WUIModal a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 18. Actualización versión clase WUIPaging a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 19. Actualización versión clase WUISelectpicker a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 20. Actualización versión clase WUITimepicker a 0.3.
+	- Se renombró el directorio y archivos a minúscula.
 21. Actualización versión clase WUIFade a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 22. Actualización versión clase WUIIcon a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 23. Actualización versión clase WUIIntensity a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 24. Actualización versión clase WUIMenubar a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 25. Actualización versión clase WUITabs a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 26. Actualización versión clase WUITooltip a 0.2.
+	- Se renombró el directorio y archivos a minúscula.
 
 ## [v0.3.0] - 2026-02-09
 
 Características:
 
-1. Se agregaron los scripts de carga simple `WUI.js` y `WUI-0.3.0.js`.
+1. Se agregaron los scripts de carga simple `WUI.js`.
 2. Cambio de nombre clase WUICheckbox versión 0.2 a WUISwitch versión 0.3.
 3. Actualización versión clase WUICookie a 0.3.
 	- Se agregó el método `encode()`.

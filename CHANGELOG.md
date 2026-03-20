@@ -4,38 +4,63 @@
 
 Features:
 
-1. Renamed source directories and files to lowercase (e.g. `src/WUI/Slider/` → `src/wui/slider/`).
+1. Renamed source directories and files to lowercase (e.g. `src/WUI/Slider/WUISlider-0.3.js` → `src/wui/slider/wui-slider-0.4.js`).
 2. WUICookie version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 3. WUIScrolly version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 4. WUISlider version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 5. WUISwitch version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 6. WUITable version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 7. WUIForm version class update to 0.4.
+	- Renamed the directory and files to lowercase.
 8. WUIBody version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 9. WUIButton version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 10. WUIColorpicker version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 11. WUIDatepicker version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 12. WUIFormat version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 13. WUIHead version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 14. WUILanguage version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 15. WUIList version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 16. WUILoader version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 17. WUIModal version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 18. WUIPaging version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 19. WUISelectpicker version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 20. WUITimepicker version class update to 0.3.
+	- Renamed the directory and files to lowercase.
 21. WUIFade version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 22. WUIIcon version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 23. WUIIntensity version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 24. WUIMenubar version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 25. WUITabs version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 26. WUITooltip version class update to 0.2.
+	- Renamed the directory and files to lowercase.
 
 ## [v0.3.0] - 2026-02-09
 
 Features:
 
-1. Added simple loading scripts `WUI.js` and `WUI-0.3.0.js`.
+1. Added simple loading scripts `WUI.js`.
 2. Changed the name of the WUICheckbox class from version 0.2 to WUISwitch version 0.3.
 3. WUICookie version class update to 0.3.
 	- Added `encode()` method.
