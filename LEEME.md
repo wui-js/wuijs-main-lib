@@ -9,7 +9,7 @@
 
 Versión librería: `0.4.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.4.0.20260321.0`
+Versión documentación: `0.4.0.20260330.0`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -1027,13 +1027,13 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 
 | Método   | Tipo retorno | Descripción |
 | -------- | ------------ | ----------- |
-| import   | `void`       | `import(id, path[, done])`<br><br>Parámetros:<br>**• id:** `string`, especifica el id del elemento HTML donde se va a cargar el contenido.<br>**• path:** `string`, especifica la ruta del subdirectorio y el nombre de los archivos con extensión `.css`, `.htm` y `.js` que serán importados y cargados.<br>**• done:** `function` *opcional*, esta función que es ejecutada cuando la carga del contenido ha concluido.<br><br>Importa contenido CSS/JS/HTML referenciado a un elemento HTML por medio de su `id`. |
+| import   | `void`       | `import(id, path[, done])`<br><br>Parámetros:<br>**• id:** `string`, especifica el id del elemento HTML donde se va a cargar el contenido.<br>**• path:** `string`, especifica la ruta del subdirectorio y el nombre de los archivos con extensión `.css`, `.htm` y `.js` que serán importados y cargados.<br>**• done:** `function` *opcional*, esta función que es ejecutada cuando la carga del contenido ha concluido.<br><br>Importa contenido CSS/JS/HTML referenciado a un elemento HTML por medio de su `id`. El contenido también se suele denominar "módulo" y es cargado en tres secciones:<br>**• CSS:** mediante un elemento `<style>` que es insertado antes del contenido HTML.<br>**• HTML:** sobre el elemento identificado mediante su `id`.<br>**• JS:** mediante un elemento `<script>` que es insertado en el cuerpo del documento HTML. |
 | prepare  | `void`       | `prepare()`<br><br>En función del valor del parámetro `environment`, modifica los elementos HTML de etiqueta `a`, `input` y `select` del cuerpo del documento HTML para adaptarlos a entornos nativos. |
 | openURL  | `void`       | `openURL(url[, download])`<br><br>Parámetros:<br>**• id:** `string`, especifica la dirección URL que se requiere abrir o descargar.<br>**• download:** `string` *opcional*, especifica el nombre del archivo con que se descargará el contenido referido mediante la URL.<br><br>Abre o descarga un contenido mediante una dirección URL. Este método es requerido en entornos nativos ya que no se siempre se cuenta con soporte mediante WebView sobre Android o WebKit sobre iOS. |
 
 #### Implementación
 
-Contenido CSS del archivo `./views/test-content.css`:
+Contenido CSS del archivo `./modules/test-content.css`:
 
 ```css
 .test a,
@@ -1044,7 +1044,7 @@ Contenido CSS del archivo `./views/test-content.css`:
 }
 ```
 
-Contenido HTML del archivo `./views/test-content.htm`:
+Contenido HTML del archivo `./modules/test-content.htm`:
 
 ```html
 <section id="testContent" class="test">
@@ -1052,7 +1052,7 @@ Contenido HTML del archivo `./views/test-content.htm`:
 </section>
 ```
 
-Contenido JS del archivo `./views/test-content.js`:
+Contenido JS del archivo `./modules/test-content.js`:
 
 ```js
 const testContentLog = (content) => {
@@ -1078,7 +1078,7 @@ Código JS:
 const init = () => {
 	const body = new WUIBody({
 		//environment: "web",
-		importDirectory: "./views/",
+		importDirectory: "./modules/",
 		//importMode: "fetch",
 		onCompleted: () => {
 			body.prepare();

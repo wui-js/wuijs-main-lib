@@ -12,7 +12,7 @@
 
 Library version: `0.4.0` ([Change Log](./CHANGELOG.md))
 
-Document version: `0.4.0.20260321.0`
+Document version: `0.4.0.20260330.0`
 
 License: `Apache License 2.0`
 
@@ -1036,13 +1036,13 @@ Utilities for HTML body management. Allows the import of CSS/JS/HTML content and
 
 | Method  | Return type | Description |
 | ------- | ----------- | ----------- |
-| import  | `void`      | `import(id, path[, done])`<br><br>Arguments:<br>**• id:** `string`, specifies the id of the HTML element where the content is to be loaded.<br>**• path:** `string`, specifies the subdirectory path and filename of the files with extension `.css`, `.htm` and `.js` that will be imported and loaded.<br>**• done:** `function` *optional*, this function is executed when the content loading has finished.<br><br>Imports CSS/JS/HTML content referenced to an HTML element by its `id`. |
+| import  | `void`      | `import(id, path[, done])`<br><br>Arguments:<br>**• id:** `string`, specifies the id of the HTML element where the content is to be loaded.<br>**• path:** `string`, specifies the subdirectory path and filename of the files with extension `.css`, `.htm` and `.js` that will be imported and loaded.<br>**• done:** `function` *optional*, this function is executed when the content loading has finished.<br><br>Imports CSS/JS/HTML content referenced to an HTML element by its `id`. The content is also commonly referred to as a "module" and is loaded in three sections:<br>**• CSS:** using a `<style>` element inserted before the HTML content.<br>**• HTML:** over the element identified by its `id`.<br>**• JS:** using a `<script>` element inserted into the body of the HTML document. |
 | prepare | `void`      | `prepare()`<br><br>Depending on the value of the `environment` parameter, modifies the HTML elements `a`, `input`, and `select` in the HTML document body to adapt them to native environments. |
 | openURL | `void`      | `openURL(url[, download])`<br><br>Arguments:<br><br>**• id:** `string`, specifies the URL that is required to be opened or downloaded.<br>**• download:** `string` *optional*, specifies the name of the file that will be used to download the content referenced by the URL.<br><br>Open or download content using a URL. This method is required in native environments since WebView on Android or WebKit on iOS aren't always supported. |
 
 #### Implementation
 
-CSS content of the `./views/test-content.css` file:
+CSS content of the `./modules/test-content.css` file:
 
 ```css
 .test a,
@@ -1053,7 +1053,7 @@ CSS content of the `./views/test-content.css` file:
 }
 ```
 
-HTML content of the `./views/test-content.htm` file:
+HTML content of the `./modules/test-content.htm` file:
 
 ```html
 <section id="testContent" class="test">
@@ -1061,7 +1061,7 @@ HTML content of the `./views/test-content.htm` file:
 </section>
 ```
 
-JS content of the `./views/test-content.js` file:
+JS content of the `./modules/test-content.js` file:
 
 ```js
 const testContentLog = (content) => {
@@ -1087,7 +1087,7 @@ JS code:
 const init = () => {
 	const body = new WUIBody({
 		//environment: "web",
-		importDirectory: "./views/",
+		importDirectory: "./modules/",
 		//importMode: "fetch",
 		onCompleted: () => {
 			body.prepare();
