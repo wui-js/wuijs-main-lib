@@ -1,5 +1,5 @@
 /*
- * WUI JS Lib - v0.3.0
+ * WUI/JS Lib - v0.3.0
  * Author: Sergio E. Belmar (wuijs.project@gmail.com)
  * Copyright (c) Sergio E. Belmar (wuijs.project@gmail.com)
  */
