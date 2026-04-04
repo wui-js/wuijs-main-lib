@@ -4,7 +4,7 @@ import urllib.parse
 import argparse
 
 # Default arguments
-default_css_path = "../src/WUI/Icon/WUIIcon-0.1.css"
+default_css_path = "../src/wui/icon/wui-icon-0.2.css"
 default_out_dir = "../imgs/Icons/"
 default_icon_color = "#a2a9b6"
 default_icon_size = 24
