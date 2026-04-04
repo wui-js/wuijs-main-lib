@@ -8,53 +8,57 @@ Features:
 2. WUICookie version class update to 0.4.
 	- Renamed the directory and files to lowercase.
 	- Fixed bug in the `get()` method where a leading space in the cookie string caused an off-by-one error, returning `=value` instead of `value`.
-3. WUIScrolly version class update to 0.4.
+3. WUIHead version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-4. WUISlider version class update to 0.4.
+4. WUIBody version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-5. WUISwitch version class update to 0.4.
+5. WUILanguage version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-6. WUITable version class update to 0.4.
+6. WUIScrolly version class update to 0.4.
 	- Renamed the directory and files to lowercase.
-7. WUIForm version class update to 0.4.
+7. WUIIcon version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-8. WUIBody version class update to 0.3.
+	- Fixed typo in CSS icon class names: `excamation` → `exclamation` (affected classes: `exclamation-line`, `exclamation-lg-line`, `exclamation-circle-line`, `exclamation-circle-fill`, `exclamation-triangle-line`, `exclamation-triangle-fill`).
+8. WUIFade version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-9. WUIButton version class update to 0.3.
+9. WUILoader version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-10. WUIColorpicker version class update to 0.3.
+10. WUITooltip version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-11. WUIDatepicker version class update to 0.3.
+11. WUIModal version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-12. WUIFormat version class update to 0.3.
+	- Added a dedicated `.overlay` child element to handle the overlay background, replacing the previous approach based on the `.over` CSS class.
+	- Fixed mobile page modal animation by correcting the `top` position calculation on the underlying modal when stacking.
+	- Fixed bug in the `.slide` class for mobile page modals in the responsive media query.
+12. WUIPaging version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-13. WUIHead version class update to 0.3.
+13. WUISlider version class update to 0.4.
 	- Renamed the directory and files to lowercase.
-14. WUILanguage version class update to 0.3.
+14. WUITabs version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-15. WUIList version class update to 0.3.
+15. WUIMenubar version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-16. WUILoader version class update to 0.3.
+16. WUIList version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-17. WUIModal version class update to 0.3.
+17. WUITable version class update to 0.4.
 	- Renamed the directory and files to lowercase.
-18. WUIPaging version class update to 0.3.
+18. WUIForm version class update to 0.4.
 	- Renamed the directory and files to lowercase.
-19. WUISelectpicker version class update to 0.3.
+19. WUIFormat version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-20. WUITimepicker version class update to 0.3.
+20. WUISelectpicker version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-21. WUIFade version class update to 0.2.
+21. WUIDatepicker version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-22. WUIIcon version class update to 0.2.
+22. WUITimepicker version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-23. WUIIntensity version class update to 0.2.
+23. WUIColorpicker version class update to 0.3.
 	- Renamed the directory and files to lowercase.
-24. WUIMenubar version class update to 0.2.
+24. WUISwitch version class update to 0.4.
 	- Renamed the directory and files to lowercase.
-25. WUITabs version class update to 0.2.
+25. WUIIntensity version class update to 0.2.
 	- Renamed the directory and files to lowercase.
-26. WUITooltip version class update to 0.2.
+26. WUIButton version class update to 0.3.
 	- Renamed the directory and files to lowercase.
 
 ## [v0.3.0] - 2026-02-09

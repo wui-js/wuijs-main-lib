@@ -8,53 +8,57 @@ Características:
 2. Actualización versión clase WUICookie a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
 	- Se corrigió error en el método `get()` donde un espacio inicial en la cadena de la cookie causaba un desplazamiento de índice, retornando `=valor` en lugar de `valor`.
-3. Actualización versión clase WUIScrolly a 0.4.
+3. Actualización versión clase WUIHead a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-4. Actualización versión clase WUISlider a 0.4.
+4. Actualización versión clase WUIBody a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-5. Actualización versión clase WUISwitch a 0.4.
+5. Actualización versión clase WUILanguage a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-6. Actualización versión clase WUITable a 0.4.
+6. Actualización versión clase WUIScrolly a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
-7. Actualización versión clase WUIForm a 0.4.
+7. Actualización versión clase WUIIcon a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-8. Actualización versión clase WUIBody a 0.3.
+	- Se corrigió error tipográfico en los nombres de clases CSS de iconos: `excamation` → `exclamation` (clases afectadas: `exclamation-line`, `exclamation-lg-line`, `exclamation-circle-line`, `exclamation-circle-fill`, `exclamation-triangle-line`, `exclamation-triangle-fill`).
+8. Actualización versión clase WUIFade a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-9. Actualización versión clase WUIButton a 0.3.
+9. Actualización versión clase WUILoader a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-10. Actualización versión clase WUIColorpicker a 0.3.
+10. Actualización versión clase WUITooltip a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-11. Actualización versión clase WUIDatepicker a 0.3.
+11. Actualización versión clase WUIModal a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-12. Actualización versión clase WUIFormat a 0.3.
+	- Se agregó un elemento hijo `.overlay` dedicado para gestionar el fondo de superposición, reemplazando el enfoque anterior basado en la clase CSS `.over`.
+	- Se corrigió la animación del modal de página en móvil, corrigiendo el cálculo de la posición `top` del modal subyacente al apilar modales.
+	- Se corrigió error de la clase `.slide` en modales de página en móvil en la media query responsive.
+12. Actualización versión clase WUIPaging a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-13. Actualización versión clase WUIHead a 0.3.
+13. Actualización versión clase WUISlider a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
-14. Actualización versión clase WUILanguage a 0.3.
+14. Actualización versión clase WUITabs a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-15. Actualización versión clase WUIList a 0.3.
+15. Actualización versión clase WUIMenubar a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-16. Actualización versión clase WUILoader a 0.3.
+16. Actualización versión clase WUIList a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-17. Actualización versión clase WUIModal a 0.3.
+17. Actualización versión clase WUITable a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
-18. Actualización versión clase WUIPaging a 0.3.
+18. Actualización versión clase WUIForm a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
-19. Actualización versión clase WUISelectpicker a 0.3.
+19. Actualización versión clase WUIFormat a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-20. Actualización versión clase WUITimepicker a 0.3.
+20. Actualización versión clase WUISelectpicker a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-21. Actualización versión clase WUIFade a 0.2.
+21. Actualización versión clase WUIDatepicker a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-22. Actualización versión clase WUIIcon a 0.2.
+22. Actualización versión clase WUITimepicker a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-23. Actualización versión clase WUIIntensity a 0.2.
+23. Actualización versión clase WUIColorpicker a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
-24. Actualización versión clase WUIMenubar a 0.2.
+24. Actualización versión clase WUISwitch a 0.4.
 	- Se renombró el directorio y archivos a minúscula.
-25. Actualización versión clase WUITabs a 0.2.
+25. Actualización versión clase WUIIntensity a 0.2.
 	- Se renombró el directorio y archivos a minúscula.
-26. Actualización versión clase WUITooltip a 0.2.
+26. Actualización versión clase WUIButton a 0.3.
 	- Se renombró el directorio y archivos a minúscula.
 
 ## [v0.3.0] - 2026-02-09

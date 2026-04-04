@@ -23,6 +23,7 @@ class WUIModal {
 	#properties = {};
 	#htmlElement;
 	#htmlElements = {
+		overlay: null,
 		box: null,
 		header: null,
 		back: null,
@@ -235,10 +236,18 @@ class WUIModal {
 
 	#initHTML() {
 		this.#loadHTML();
+		if (this.#htmlElement instanceof HTMLElement) {
+			if (!this.#htmlElements.overlay) {
+				this.#htmlElements.overlay = document.createElement("div");
+				this.#htmlElements.overlay.classList.add("overlay");
+				this.#htmlElement.prepend(this.#htmlElements.overlay);
+			}
+		}
 	}
 
 	#loadHTML() {
 		this.#htmlElement = document.querySelector(this.selector);
+		this.#htmlElements.overlay = document.querySelector(this.selector + " > .overlay");
 		this.#htmlElements.box = document.querySelector(this.selector + " > .box");
 		this.#htmlElements.header = document.querySelector(this.selector + " > .box > .header");
 		this.#htmlElements.back = document.querySelector(this.selector + " > .box > .header > .back");
@@ -421,12 +430,12 @@ class WUIModal {
 				const underPage = Boolean(under.#htmlElement.classList.contains("page"));
 				const underSlide = Boolean(under.#htmlElement.classList.contains("slide"));
 				const underMaximized = Boolean(under.#htmlElement.classList.contains("maximized"));
-				this.#htmlElement.classList.add("over");
+				under.#htmlElements.overlay.style.opacity = (1 - ease);
 				if (under.#htmlElements.box instanceof HTMLElement && underPage && page) {
 					if (!mobile && underSlide) {
 						// ...
 					} else if (mobile && !underMaximized) {
-						under.#htmlElements.box.style.top = (bodyHeight - (bodyHeight - 44) - 44 * ease) + "px";
+						under.#htmlElements.box.style.top = (44 - 52 * ease) + "px";
 						under.#htmlElements.box.style.scale = (1 - ease / 10);
 					}
 				}
@@ -540,12 +549,12 @@ class WUIModal {
 				const underPage = Boolean(under.#htmlElement.classList.contains("page"));
 				const underSlide = Boolean(under.#htmlElement.classList.contains("slide"));
 				const underMaximized = Boolean(under.#htmlElement.classList.contains("maximized"));
-				this.#htmlElement.classList.remove("over");
+				under.#htmlElements.overlay.style.opacity = (1 - ease);
 				if (under.#htmlElements.box instanceof HTMLElement && underPage && page) {
 					if (!mobile && underSlide) {
 						// ...
 					} else if (mobile && !underMaximized) {
-						under.#htmlElements.box.style.top = (bodyHeight - (bodyHeight - 44) - 44 * ease) + "px";
+						under.#htmlElements.box.style.top = (44 - 52 * ease) + "px";
 						under.#htmlElements.box.style.scale = (1 - ease / 10);
 					}
 				}
