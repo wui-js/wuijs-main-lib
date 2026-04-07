@@ -1,7 +1,9 @@
 /*
- * WUIIntensity - v0.2
- * Author: Sergio E. Belmar (wuijs.project@gmail.com)
- * Copyright (c) Sergio E. Belmar (wuijs.project@gmail.com)
+ * @file wui-intensity-0.2.js
+ * @class WUIIntensity
+ * @version 0.2
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
 
 class WUIIntensity {

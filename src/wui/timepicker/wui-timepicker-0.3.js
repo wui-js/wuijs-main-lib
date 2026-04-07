@@ -1,7 +1,9 @@
 /*
- * WUITimepicker - v0.3
- * Author: Sergio E. Belmar (wuijs.project@gmail.com)
- * Copyright (c) Sergio E. Belmar (wuijs.project@gmail.com)
+ * @file wui-timepicker-0.3.js
+ * @class WUITimepicker
+ * @version 0.3
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
 
 class WUITimepicker {

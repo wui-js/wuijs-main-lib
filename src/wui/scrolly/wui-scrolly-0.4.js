@@ -1,7 +1,9 @@
 /*
- * WUIScrolly - v0.4
- * Author: Sergio E. Belmar (wuijs.project@gmail.com)
- * Copyright (c) Sergio E. Belmar (wuijs.project@gmail.com)
+ * @file wui-scrolly-0.4.js
+ * @class WUIScrolly
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
 
 class WUIScrolly {

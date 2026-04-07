@@ -1,5 +1,5 @@
 > [!NOTE]
-> For the Spanish version of this document, see [README.md](./README.md).
+> For the English version of this document, see [README.md](./README.md).
 
 > [!WARNING]
 > Este documento aún no ha sido terminado y esta en una versión preliminar.
@@ -6098,5 +6098,6 @@ Esta sección recoge los ejemplos de las implementaciones de la documentación y
 
 ## Autor
 
-- **Sergio E. Belmar Valenzuela** - [sbelmar](https://github.com/sbelmar)
-- LinkedIn: [Sergio E. Belmar Valenzuela](https://www.linkedin.com/in/sbelmarv/)
+**Sergio E. Belmar V.**
+- GitHub: [https://github.com/sbelmar](https://github.com/sbelmar)
+- LinkedIn: [https://www.linkedin.com/in/sbelmarv/](https://www.linkedin.com/in/sbelmarv/)
