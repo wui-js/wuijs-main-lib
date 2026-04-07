@@ -1,3 +1,6 @@
+> [!NOTE]
+> For the Spanish version of this document, see [README.md](./README.md).
+
 > [!WARNING]
 > Este documento aún no ha sido terminado y esta en una versión preliminar.
 
@@ -15,14 +18,10 @@ Licencia: `Licencia Apache 2.0`
 
 Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 
-> [!NOTE]
-> Las dos primeras secciones del número de versión de la librería corresponde a la versión más alta de las clases que componen la librería,
-> mientras que la tercera sección corresponde al número de modificación de la versión general.
-
 ## Índice
 
 *   [Descripción General](#overview)
-	*   [Acerca del Proyecto WUI JS](#project)
+	*   [Acerca del Proyecto WUI/JS](#project)
 	*   [Tabla de Clases](#classtable)
 	*   [Mapa de Directorios](#dirmap)
 *   [Instalación](#install)
@@ -68,9 +67,9 @@ WUI/JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es un
 
 <a name="project"></a>
 
-### Acerca del Proyecto WUI JS
+### Acerca del Proyecto WUI/JS
 
-WUI/JS Lib es parte del proyecto WUI JS, que consta actualmente de 3 repositorios:
+WUI/JS Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorios:
 
 -	[https://github.com/wuijsproject/wuijs-lib](https://github.com/wuijsproject/wuijs-lib)<br>
 	Librería UI principal.<br><br>
@@ -133,16 +132,16 @@ wuijs-lib/
 | [imgs/icons](imgs/icons/) | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
 | [imgs/logo](imgs/logo/)   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
 | [legacy](legacy/)         | Fuentes obsoletas con versiones anteriores. |
-| [legacy/WUI](legacy/WUI/) | Librería WUI JS. |
+| [legacy/WUI](legacy/WUI/) | Librería WUI/JS. |
 | [src](src/)               | Fuentes principales de la última versión. |
-| [src/wui](src/wui/)       | Librería WUI JS. |
+| [src/wui](src/wui/)       | Librería WUI/JS. |
 | [tools](tools/)           | Herramientas complementarias. |
 
 <a name="install"></a>
 
 ## Instalación
 
-Para instalar la librería WUI JS, debe ser clonada desde el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`). Suponiendo que el proyecto donde se implementará tenga un directorio de descargas: `./downloads`, un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/Libraries`, debe escribir lo siguiente en la terminal:
+Para instalar la librería WUI/JS, debe ser clonada desde el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`). Suponiendo que el proyecto donde se implementará tenga un directorio de descargas: `./downloads`, un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/Libraries`, debe escribir lo siguiente en la terminal:
 
 ```bash
 cd ./downloads
@@ -6096,3 +6095,8 @@ Esta sección recoge los ejemplos de las implementaciones de la documentación y
 
 > [!NOTE]
 > Todos los demos del repositorio [wuijs-lab](https://github.com/wuijsproject/wuijs-lab) se pueden revisar en CodeSandbox en el enlace [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui).
+
+## Autor
+
+- **Sergio E. Belmar Valenzuela** - [sbelmar](https://github.com/sbelmar)
+- LinkedIn: [Sergio E. Belmar Valenzuela](https://www.linkedin.com/in/sbelmarv/)
