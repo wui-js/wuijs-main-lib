@@ -780,7 +780,7 @@ Código HTML:
 
 Este método de implementación permite la estandarización del diseño de la interfaz de usuario de una aplicación, por medio del archivo `wui.css`.
 
-> [NOTE]
+> [!NOTE]
 > Esta implementación supone la instalación vía GitHub.
 > Si se instaló vía NPM el llamado a los recursos es mediante la ruta `/node_modules/wui/`.
 > ```html

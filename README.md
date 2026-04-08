@@ -780,7 +780,7 @@ HTML code:
 
 This implementation method allows for standardization of an application's user interface design, using the `wui.css` file.
 
-> [NOTE]
+> [!NOTE]
 > This implementation assumes installation via GitHub.
 > If installed via NPM, the resource calls are made using the path `/node_modules/wui/`.
 > ```html
