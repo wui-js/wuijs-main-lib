@@ -10,9 +10,9 @@
 	<img src="https://github.com/wuijsproject/wuijs-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
 </div>
 
-Versión librería: `0.4.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
+Versión librería: `0.4.2` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.4.0.20260403.0`
+Versión documentación: `0.4.2.20260408.1`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -141,20 +141,12 @@ wuijs-lib/
 
 ## Instalación
 
-**Opción 1: Instalar mediante npm**
+**Opción 1: Instalar desde fuente**
 
-Para instalar la librería WUI/JS mediante npm:
-
-```bash
-npm i @wuijsproject/wui
-```
-
-**Opción 2: Instalar desde fuente**
-
-Alternativamente, puede ser clonada desde el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`). Suponiendo que el proyecto donde se implementará tenga un directorio de descargas: `./downloads`, un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/Libraries`, debe escribir lo siguiente en la terminal:
+Para instalar la librería WUI/JS desde GitHub, se debe clonar el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`).
+Suponiendo que el proyecto donde se implementará tenga un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/libraries`, debe escribir lo siguiente en la terminal:
 
 ```bash
-cd ./downloads
 git clone https://git@github.com/wuijsproject/wuijs-lib.git
 cp -r ./wuijs-lib/src/wui ../src/libraries/
 ```
@@ -162,17 +154,24 @@ cp -r ./wuijs-lib/src/wui ../src/libraries/
 Opcionalmente puede ser descargada desde los mismos repositorios en formato ZIP.
 
 ```bash
-cd ./downloads
 wget https://github.com/wuijsproject/wuijs-lib/archive/refs/heads/main.zip
 unzip main.zip
 cp -r ./wuijs-lib-main/src/wui ../src/libraries/
+```
+
+**Opción 2: Instalar mediante npm**
+
+Para instalar la librería WUI/JS mediante npm:
+
+```bash
+npm i @wuijsproject/wui
 ```
 
 <a name="implementation"></a>
 
 ## Implementación
 
-La librería WUI puede incluirse en un proyecto de dos formas: en modo estándar, enlazando individualmente los archivos CSS y JS de cada componente, o en modo abreviado, mediante el script `WUI.js` que gestiona la carga automática de los componentes indicados. En ambos casos es necesario crear el archivo de configuración `wui.css` con las variables CSS de los componentes utilizados.
+La librería WUI puede incluirse en un proyecto de dos formas: en modo estándar, enlazando individualmente los archivos CSS y JS de cada componente, o en modo abreviado, mediante el script `wui.js` que gestiona la carga automática de los componentes indicados. En ambos casos es necesario crear el archivo de configuración `wui.css` con las variables CSS de los componentes utilizados.
 
 <a name="standard"></a>
 
@@ -781,6 +780,13 @@ Código HTML:
 
 Este método de implementación permite la estandarización del diseño de la interfaz de usuario de una aplicación, por medio del archivo `wui.css`.
 
+> [NOTE]
+> Esta implementación supone la instalación vía GitHub.
+> Si se instaló vía NPM el llamado a los recursos es mediante la ruta `/node_modules/wui/`.
+> ```html
+> <script src="node_modules/@wuijsproject/wui/button/wui-button-0.3.js"></script>
+> ```
+
 > [!IMPORTANT]
 > El archivo de configuración de estilos deben estar en la ruta `./Settings/wui.css`.
 
@@ -813,7 +819,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 </html>
 ```
 
-Para especificar la versión de la librería WUI, se debe agregar el parámetro `version` (o su alias corto `v`) en la URL del archivo `WUI.js`.
+Para especificar la versión de la librería WUI, se debe agregar el parámetro `version` (o su alias corto `v`) en la URL del archivo `wui.js`.
 Si no se especifica el parámetro `version` se asumirá la versión instalada.
 
 > [!TIP]
@@ -6026,7 +6032,7 @@ window.addEventListener("wuiLoad", init);
 ```
 
 > [!IMPORTANT]
-> Este evento funciona únicamente con el script cargador de recursos `WUI.js`.
+> Este evento funciona únicamente con el script cargador de recursos `wui.js`.
 
 ### 4. Uso de componentes referenciados
 

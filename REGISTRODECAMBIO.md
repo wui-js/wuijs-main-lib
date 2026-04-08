@@ -1,5 +1,11 @@
 # Registro de Cambio
 
+## [v0.4.2] - 2026-04-08
+
+Características:
+
+1. Habilitación de instalación vía NPM.
+
 ## [v0.4.0] - 2026-03-20
 
 Características:

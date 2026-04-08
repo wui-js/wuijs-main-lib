@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.4.2] - 2026-04-08
+
+Features:
+
+1. Enable installation via NPM.
+
 ## [v0.4.0] - 2026-03-20
 
 Features:

@@ -1,6 +1,6 @@
 {
 	"name": "@wuijsproject/wui",
-	"version": "0.4.0",
+	"version": "0.4.2",
 	"description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
 	"keywords": [
 		"ui",
@@ -22,8 +22,37 @@
 	},
 	"license": "Apache-2.0",
 	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
-	"main": "src/wui/wui.js",
+	"main": "wui.js",
 	"files": [
-		"src/wui/"
-	]
+		"wui.js",
+		"body/",
+		"button/",
+		"colorpicker/",
+		"cookie/",
+		"datepicker/",
+		"fade/",
+		"form/",
+		"format/",
+		"head/",
+		"icon/",
+		"intensity/",
+		"language/",
+		"list/",
+		"loader/",
+		"menubar/",
+		"modal/",
+		"paging/",
+		"scrolly/",
+		"selectpicker/",
+		"slider/",
+		"switch/",
+		"table/",
+		"tabs/",
+		"timepicker/",
+		"tooltip/"
+	],
+	"scripts": {
+		"prepack": "cp README.md _README.bak && cp NPM.md README.md && cp -r src/wui/. .",
+		"postpack": "mv _README.bak README.md && ls src/wui/ | xargs rm -rf"
+	}
 }
