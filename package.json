@@ -1,0 +1,29 @@
+{
+  "name": "@wuijsproject/wuijs-lib",
+  "version": "0.4.0",
+  "description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
+  "keywords": [
+    "ui",
+    "components",
+    "vanilla",
+    "javascript",
+    "css",
+    "wui",
+    "frontend",
+    "library"
+  ],
+  "homepage": "https://github.com/wuijsproject/wuijs-lib",
+  "bugs": {
+    "url": "https://github.com/wuijsproject/wuijs-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuijsproject/wuijs-lib.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
+  "main": "src/wui/wui.js",
+  "files": [
+    "src/wui/"
+  ]
+}
