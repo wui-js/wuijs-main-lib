@@ -4,15 +4,15 @@
 > [!WARNING]
 > Este documento aún no ha sido terminado y esta en una versión preliminar.
 
-# wuijs-lib
+# wuijs-main-lib
 
 <div align="center">
-	<img src="https://github.com/wuijsproject/wuijs-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
+	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
 </div>
 
-Versión librería: `0.4.2` ([Registro de Cambio](./REGISTRODECAMBIO.md))
+Versión librería: `0.5.0` ([Registro de Cambio](./REGISTRODECAMBIO.md))
 
-Versión documentación: `0.4.2.20260408.1`
+Versión documentación: `0.5.0.20260409.0`
 
 Licencia: `Licencia Apache 2.0`
 
@@ -71,11 +71,11 @@ WUI/JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es un
 
 WUI/JS Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorios:
 
--	[https://github.com/wuijsproject/wuijs-lib](https://github.com/wuijsproject/wuijs-lib)<br>
+-	[https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib)<br>
 	Librería UI principal.<br><br>
--	[https://github.com/wuijsproject/wuijs-plugins-lib](https://github.com/wuijsproject/wuijs-plugins-lib)<br>
+-	[https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib)<br>
 	Complementos de la librería UI principal.<br><br>
--	[https://github.com/wuijsproject/wuijs-lab](https://github.com/wuijsproject/wuijs-lab)<br>
+-	[https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab)<br>
 	Repositorio con demos y ejemplos de uso tanto de las clases de la librería UI principal como de los complementos.<br><br>
 
 <a name="classtable"></a>
@@ -115,27 +115,28 @@ WUI/JS Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorio
 ### Mapa de Directorios
 
 ```bash
-wuijs-lib/
+wuijs-main-lib/
 ├── imgs/
 │   ├── icons/
 │   └── logo/
 ├── legacy/
 │   └── WUI/
 ├── src/
-│   └── wui/
+│   └── wui-js/
+│       └── main/
 └── tools/
 ```
 
-| Ruta                      | Descripción |
-| ------------------------- | ----------- |
-| [imgs](imgs/)             | Imágenes utilizadas en la documentación. |
-| [imgs/icons](imgs/icons/) | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
-| [imgs/logo](imgs/logo/)   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
-| [legacy](legacy/)         | Fuentes obsoletas con versiones anteriores. |
-| [legacy/WUI](legacy/WUI/) | Librería WUI/JS (versión anterior a la 0.4.0). |
-| [src](src/)               | Fuentes principales de la última versión. |
-| [src/wui](src/wui/)       | Librería WUI/JS. |
-| [tools](tools/)           | Herramientas complementarias. |
+| Ruta                                | Descripción |
+| ----------------------------------- | ----------- |
+| [imgs](imgs/)                       | Imágenes utilizadas en la documentación. |
+| [imgs/icons](imgs/icons/)           | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
+| [imgs/logo](imgs/logo/)             | Logotipo e isotipo del proyecto en formato SVG y PNG. |
+| [legacy](legacy/)                   | Fuentes obsoletas con versiones anteriores. |
+| [legacy/WUI](legacy/WUI/)           | Librería WUI/JS (versión anterior a la 0.4.0). |
+| [src](src/)                         | Fuentes principales de la última versión. |
+| [src/wui-js/main](src/wui-js/main/) | Librería WUI/JS. |
+| [tools](tools/)                     | Herramientas complementarias. |
 
 <a name="install"></a>
 
@@ -143,20 +144,20 @@ wuijs-lib/
 
 **Opción 1: Instalar desde fuente**
 
-Para instalar la librería WUI/JS desde GitHub, se debe clonar el repositorio oficial en GitHib (`wuijsproject/wuijs-lib`).
+Para instalar la librería WUI/JS desde GitHub, se debe clonar el repositorio oficial en GitHib (`wui-js/wuijs-main-lib`).
 Suponiendo que el proyecto donde se implementará tenga un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/libraries`, debe escribir lo siguiente en la terminal:
 
 ```bash
-git clone https://git@github.com/wuijsproject/wuijs-lib.git
-cp -r ./wuijs-lib/src/wui ../src/libraries/
+git clone https://git@github.com/wui-js/wuijs-main-lib.git
+cp -r ./wuijs-main-lib/src/wui-js/ ../src/libraries/
 ```
 
 Opcionalmente puede ser descargada desde los mismos repositorios en formato ZIP.
 
 ```bash
-wget https://github.com/wuijsproject/wuijs-lib/archive/refs/heads/main.zip
+wget https://github.com/wui-js/wuijs-main-lib/archive/refs/heads/main.zip
 unzip main.zip
-cp -r ./wuijs-lib-main/src/wui ../src/libraries/
+cp -r ./wuijs-main-lib-main/src/wui-js/ ../src/libraries/
 ```
 
 **Opción 2: Instalar mediante npm**
@@ -164,7 +165,7 @@ cp -r ./wuijs-lib-main/src/wui ../src/libraries/
 Para instalar la librería WUI/JS mediante npm:
 
 ```bash
-npm i @wuijsproject/wui
+npm i @wui-js/main
 ```
 
 <a name="implementation"></a>
@@ -729,49 +730,49 @@ Código HTML:
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./Settings/Main.css">
 		<link type="text/css" rel="stylesheet" href="./Settings/wui.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/scrolly/wui-scrolly-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/loader/wui-loader-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/tooltip/wui-tooltip-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/paging/wui-paging-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/slider/wui-slider-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/tabs/wui-tabs-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/menubar/wui-menubar-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/list/wui-list-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/table/wui-table-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/form/wui-form-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/selectpicker/wui-selectpicker-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/datepicker/wui-datepicker-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/timepicker/wui-timepicker-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/colorpicker/wui-colorpicker-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/switch/wui-switch-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/intensity/wui-intensity-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.3.css">
-		<script type="text/javascript" src="./libraries/wui/cookie/wui-cookie-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/head/wui-head-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/body/wui-body-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/language/wui-language-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/scrolly/wui-scrolly-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/fade/wui-fade-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui/loader/wui-loader-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/tooltip/wui-tooltip-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui/modal/wui-modal-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/paging/wui-paging-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/slider/wui-slider-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/tabs/wui-tabs-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui/menubar/wui-menubar-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui/list/wui-list-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/table/wui-table-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/form/wui-form-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/format/wui-format-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/selectpicker/wui-selectpicker-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/datepicker/wui-datepicker-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/timepicker/wui-timepicker-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/colorpicker/wui-colorpicker-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui/switch/wui-switch-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui/intensity/wui-intensity-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui/button/wui-button-0.3.js"></script>
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/loader/wui-loader-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/tooltip/wui-tooltip-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/modal/wui-modal-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/paging/wui-paging-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/slider/wui-slider-0.4.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/tabs/wui-tabs-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/menubar/wui-menubar-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/list/wui-list-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/table/wui-table-0.4.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/form/wui-form-0.4.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/datepicker/wui-datepicker-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/timepicker/wui-timepicker-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.3.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.4.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/intensity/wui-intensity-0.2.css">
+		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/button/wui-button-0.3.css">
+		<script type="text/javascript" src="./libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/head/wui-head-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/language/wui-language-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/fade/wui-fade-0.2.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/loader/wui-loader-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/tooltip/wui-tooltip-0.2.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/modal/wui-modal-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/paging/wui-paging-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/slider/wui-slider-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/tabs/wui-tabs-0.2.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/menubar/wui-menubar-0.2.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/list/wui-list-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/table/wui-table-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/format/wui-format-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/datepicker/wui-datepicker-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/timepicker/wui-timepicker-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.3.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.4.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/intensity/wui-intensity-0.2.js"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/button/wui-button-0.3.js"></script>
 	</head>
 	<body>
 	</body>
@@ -784,7 +785,7 @@ Este método de implementación permite la estandarización del diseño de la in
 > Esta implementación supone la instalación vía GitHub.
 > Si se instaló vía NPM el llamado a los recursos es mediante la ruta `/node_modules/wui/`.
 > ```html
-> <script src="node_modules/@wuijsproject/wui/button/wui-button-0.3.js"></script>
+> <script src="node_modules/@wui-js/main/button/wui-button-0.3.js"></script>
 > ```
 
 > [!IMPORTANT]
@@ -812,7 +813,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./Settings/Main.css">
 		<link type="text/css" rel="stylesheet" href="./Settings/wui.css">
-		<script type="text/javascript" src="./libraries/wui/wui.js?v=0.4.0"></script>
+		<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.4.0"></script>
 	</head>
 	<body>
 	</body>
@@ -826,7 +827,7 @@ Si no se especifica el parámetro `version` se asumirá la versión instalada.
 > Para una correcta implementación abreviada revise la sección [Buenas Prácticas de Codificación](#goodpractices).
 
 > [!TIP]
-> Para una implementación simplificada del archivo `wui.css`, opcionalmente se puede utilizar el plugin [WUIPluginsThemes](https://github.com/wuijsproject/wuijs-plugins-lib?tab=readme-ov-file#wuipluginsthemes) proporcionado en la librería [wuijs-plugins-lib](https://github.com/wuijsproject/wuijs-plugins-lib).
+> Para una implementación simplificada del archivo `wui.css`, opcionalmente se puede utilizar el plugin [WUIPluginsThemes](https://github.com/wui-js/wuijs-plugins-lib?tab=readme-ov-file#wuipluginsthemes) proporcionado en la librería [wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib).
 
 <a name="fullmode"></a>
 
@@ -835,7 +836,7 @@ Si no se especifica el parámetro `version` se asumirá la versión instalada.
 En el modo completo, se cargarán todas las librerías WUI en una página web, sin requerir la inclusión manual de los archivos JavaScript y CSS correspondientes a cada librería.
 
 ```html
-<script type="text/javascript" src="./libraries/wui/wui.js?v=0.4.0"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.4.0"></script>
 ```
 
 <a name="partialmode"></a>
@@ -845,7 +846,7 @@ En el modo completo, se cargarán todas las librerías WUI en una página web, s
 En el modo parcial, solo las librerías WUI especificadas en el parámetro `class` (o su alias corto `c`) se cargarán en la página web, sin necesidad de incluir manualmente los archivos JavaScript y CSS correspondientes a cada librería.
 
 ```html
-<script type="text/javascript" src="./libraries/wui/wui.js?v=0.4.0&c=selectpicker,switch"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.4.0&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -855,7 +856,7 @@ En el modo parcial, solo las librerías WUI especificadas en el parámetro `clas
 > El parámetro `class` no distingue entre mayúsculas y minúsculas.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/resource-loader/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic).
 
 <a name="classes"></a>
 
@@ -873,7 +874,7 @@ Utilidades para el manejo de cookies.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/cookie/wui-cookie-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/cookie/wui-cookie-0.4.js) |
+| JS   | [src/wui-js/main/cookie/wui-cookie-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/cookie/wui-cookie-0.4.js) |
 
 #### Constructor
 
@@ -919,7 +920,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui/cookie/wui-cookie-0.4.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
 ```
 
 Código HTML:
@@ -951,7 +952,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/cookie/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic).
 
 <a name="WUIHead"></a>
 
@@ -965,7 +966,7 @@ Utilidades para el manejo de la cabecera HTML.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/head/wui-head-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/head/wui-head-0.3.js) |
+| JS   | [src/wui-js/main/head/wui-head-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.3.js) |
 
 #### Constructor
 
@@ -995,7 +996,7 @@ Cabecera HTML:
 <title></title>
 <meta name="application-name" content="">
 <meta name="theme-color" content="">
-<script type="text/javascript" src="./libraries/wui/head/wui-head-0.3.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/head/wui-head-0.3.js"></script>
 ```
 
 Código JS:
@@ -1023,7 +1024,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/body/wui-body-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/body/wui-body-0.3.js) |
+| JS   | [src/wui-js/main/body/wui-body-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.3.js) |
 
 #### Constructor
 
@@ -1097,7 +1098,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui/body/wui-body-0.3.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.3.js"></script>
 ```
 
 Código HTML:
@@ -1130,7 +1131,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/body/import).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import).
 
 <a name="WUILanguage"></a>
 
@@ -1144,7 +1145,7 @@ Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar 
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/language/wui-language-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/language/wui-language-0.3.js) |
+| JS   | [src/wui-js/main/language/wui-language-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/language/wui-language-0.3.js) |
 
 #### Constructor
 
@@ -1206,7 +1207,7 @@ Código JSON archivo `main-es.json`:
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui/language/wui-language-0.3.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/language/wui-language-0.3.js"></script>
 ```
 
 Código HTML:
@@ -1274,7 +1275,7 @@ Utilidades para el manejo de animación de elementos HTML mediante el evento "on
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/scrolly/wui-scrolly-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/scrolly/wui-scrolly-0.4.js) |
+| JS   | [src/wui-js/main/scrolly/wui-scrolly-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/scrolly/wui-scrolly-0.4.js) |
 
 #### Constructor
 
@@ -1433,8 +1434,8 @@ body {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/scrolly/wui-scrolly-0.4.css">
-<script type="text/javascript" src="./libraries/wui/scrolly/wui-scrolly-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.css">
+<script type="text/javascript" src="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.js"></script>
 ```
 
 Código HTML:
@@ -1548,7 +1549,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/scrolly/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic).
 
 <a name="WUIIcon"></a>
 
@@ -1562,7 +1563,7 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/icon/wui-icon-0.2.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/icon/wui-icon-0.2.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.2.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.2.css) |
 
 #### Tabla de Íconos de Señales
 
@@ -1801,7 +1802,7 @@ python tools/svg-icon-maker.py --css <css-path> -o <output-directory> -c <color>
 
 | Opción             | Valor predeterminado              | Descripción |
 | ------------------ | --------------------------------- | ----------- |
-| `--css`            | `../src/wui/icon/wui-icon-0.2.css` | Ruta al archivo CSS fuente. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.2.css` | Ruta al archivo CSS fuente. |
 | `-o`,<br>`--out`   | `../imgs/Icons/`                  | Directorio de salida para los archivos generados. |
 | `-c`,<br>`--color` | `#a2a9b6`                         | Color en formato CSS compatible que reemplazará a la sentencia 'currentColor' en el código SVG. |
 | `-s`,<br>`--size`  | `24`                              | Tamaño en píxeles (ancho y alto) de las imágenes del set. |
@@ -1847,7 +1848,7 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
 ```
 
 Código HTML:
@@ -1864,7 +1865,7 @@ Código HTML:
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/icon/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic).
 
 <a name="WUIFade"></a>
 
@@ -1880,7 +1881,7 @@ Es una clase estática que no posee un constructor ni propiedades.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/fade/wui-fade-0.2.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/fade/wui-fade-0.2.js) |
+| JS   | [src/wui-js/main/fade/wui-fade-0.2.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/fade/wui-fade-0.2.js) |
 
 #### Métodos
 
@@ -1954,7 +1955,7 @@ nav {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui/fade/wui-fade-0.2.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/fade/wui-fade-0.2.js"></script>
 ```
 
 Código HTML:
@@ -1994,7 +1995,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/fade/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic).
 
 <a name="WUILoader"></a>
 
@@ -2008,8 +2009,8 @@ Componente para la implementación de animaciones de carga
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/loader/wui-loader-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/loader/wui-loader-0.3.css) |
-| JS   | [src/wui/loader/wui-loader-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/loader/wui-loader-0.3.js) |
+| CSS  | [src/wui-js/main/loader/wui-loader-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.3.css) |
+| JS   | [src/wui-js/main/loader/wui-loader-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.3.js) |
 
 #### Constructor
 
@@ -2047,8 +2048,8 @@ Componente para la implementación de cuadros de diálogo (tipo `message`) y ven
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/modal/wui-modal-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/modal/wui-modal-0.3.css) |
-| JS   | [src/wui/modal/wui-modal-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/modal/wui-modal-0.3.js) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.3.css) |
+| JS   | [src/wui-js/main/modal/wui-modal-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.3.js) |
 
 #### Constructor
 
@@ -2217,9 +2218,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.3.css">
-<script type="text/javascript" src="./libraries/wui/modal/wui-modal-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/modal/wui-modal-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/modal/wui-modal-0.3.js"></script>
 ```
 
 Código HTML:
@@ -2285,7 +2286,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/modal/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic).
 
 <a name="WUIPaging"></a>
 
@@ -2299,8 +2300,8 @@ Componente para la implementación de vistas accesibles paginadamente con transi
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/paging/wui-paging-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/paging/wui-paging-0.3.css) |
-| JS   | [src/wui/paging/wui-paging-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/paging/wui-paging-0.3.js) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.3.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.3.js) |
 
 #### Constructor
 
@@ -2400,8 +2401,8 @@ body {
 Cabecera HTML:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./libraries/wui/paging/wui-paging-0.3.css">
-<script type="text/javascript" src="./libraries/wui/paging/wui-paging-0.3.js"></script>
+<link rel="stylesheet" type="text/css" href="./libraries/wui-js/main/paging/wui-paging-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/paging/wui-paging-0.3.js"></script>
 ```
 
 Código HTML:
@@ -2474,7 +2475,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Las páginas pueden tener la clase `scroll` para permitir scroll vertical. El componente soporta dos modos de transición: movimiento lateral (predeterminado) o por opacidad (agregando la clase `opacity` al contenedor principal).
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/paging/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic).
 
 <a name="WUISlider"></a>
 
@@ -2488,8 +2489,8 @@ Componente para la implementación de presentaciones de diapositivas controladas
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/slider/wui-slider-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/slider/wui-slider-0.4.js) |
-| CSS  | [src/wui/slider/wui-slider-0.4.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/slider/wui-slider-0.4.css) |
+| JS   | [src/wui-js/main/slider/wui-slider-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.4.js) |
+| CSS  | [src/wui-js/main/slider/wui-slider-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.4.css) |
 
 #### Constructor
 
@@ -2594,8 +2595,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/slider/wui-slider-0.4.css">
-<script type="text/javascript" src="./libraries/wui/slider/wui-slider-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/slider/wui-slider-0.4.css">
+<script type="text/javascript" src="./libraries/wui-js/main/slider/wui-slider-0.4.js"></script>
 ```
 
 Código HTML:
@@ -2647,7 +2648,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/slider/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic).
 
 <a name="WUITabs"></a>
 <a name="WUIMenubar"></a>
@@ -2662,8 +2663,8 @@ Componente para la implementación de barras de menú.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/menubar/wui-menubar-0.2.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/menubar/wui-menubar-0.2.css) |
-| JS   | [src/wui/menubar/wui-menubar-0.2.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/menubar/wui-menubar-0.2.js) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.2.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.2.css) |
+| JS   | [src/wui-js/main/menubar/wui-menubar-0.2.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.2.js) |
 
 #### Constructor
 
@@ -2868,9 +2869,9 @@ body {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/menubar/wui-menubar-0.2.css">
-<script type="text/javascript" src="./libraries/wui/menubar/wui-menubar-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/menubar/wui-menubar-0.2.css">
+<script type="text/javascript" src="./libraries/wui-js/main/menubar/wui-menubar-0.2.js"></script>
 ```
 
 Cuerpo HTML:
@@ -2962,7 +2963,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/menubar/submenu).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu).
 
 <a name="WUIList"></a>
 
@@ -2976,8 +2977,8 @@ Componente para la implementación de listas de datos y botoneras para cada fila
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/list/wui-list-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/list/wui-list-0.3.css) |
-| JS   | [src/wui/list/wui-list-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/list/wui-list-0.3.js) |
+| CSS  | [src/wui-js/main/list/wui-list-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.3.css) |
+| JS   | [src/wui-js/main/list/wui-list-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.3.js) |
 
 #### Constructor
 
@@ -3177,9 +3178,9 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/list/wui-list-0.3.css">
-<script type="text/javascript" src="./libraries/wui/list/wui-list-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/list/wui-list-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/list/wui-list-0.3.js"></script>
 ```
 
 Código HTML:
@@ -3307,7 +3308,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup).
 
 <a name="WUITable"></a>
 
@@ -3321,8 +3322,8 @@ Componente para la implementación de tablas de datos. A diferencia del objeto `
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/table/wui-table-0.4.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/table/wui-table-0.4.css) |
-| JS   | [src/wui/table/wui-table-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/table/wui-table-0.4.js) |
+| CSS  | [src/wui-js/main/table/wui-table-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.4.css) |
+| JS   | [src/wui-js/main/table/wui-table-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.4.js) |
 
 #### Constructor
 
@@ -3542,8 +3543,8 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/table/wui-table-0.4.css">
-<script type="text/javascript" src="./libraries/wui/table/wui-table-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/table/wui-table-0.4.css">
+<script type="text/javascript" src="./libraries/wui-js/main/table/wui-table-0.4.js"></script>
 ```
 
 Código HTML:
@@ -3671,7 +3672,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/table/paging).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging).
 
 <a name="WUIForm"></a>
 
@@ -3685,8 +3686,8 @@ Componente para la implementación de formularios de datos. Este componente perm
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/form/wui-form-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/form/wui-form-0.4.js) |
-| CSS  | [src/wui/form/wui-form-0.4.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/form/wui-form-0.4.css) |
+| JS   | [src/wui-js/main/form/wui-form-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.4.js) |
+| CSS  | [src/wui-js/main/form/wui-form-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.4.css) |
 
 #### Constructor
 
@@ -3921,9 +3922,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/form/wui-form-0.4.css">
-<script type="text/javascript" src="./libraries/wui/form/wui-form-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/form/wui-form-0.4.css">
+<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.4.js"></script>
 ```
 
 Código HTML:
@@ -4019,7 +4020,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/linestyle).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle).
 
 <a name="WUIFormat"></a>
 
@@ -4033,7 +4034,7 @@ Utilidades para manejo y validación de formatos de datos de tipo `string`, `num
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui/format/wui-format-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/format/wui-format-0.3.js) |
+| JS   | [src/wui-js/main/format/wui-format-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/format/wui-format-0.3.js) |
 
 #### Métodos Estáticos
 
@@ -4194,7 +4195,7 @@ Código CSS:
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui/format/wui-format-0.3.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/format/wui-format-0.3.js"></script>
 ```
 
 HTML code:
@@ -4438,7 +4439,7 @@ window.addEventListener("DOMContentLoaded", () => {
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/format/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic).
 
 <a name="WUISelectpicker"></a>
 
@@ -4452,8 +4453,8 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/selectpicker/wui-selectpicker-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/selectpicker/wui-selectpicker-0.3.css) |
-| JS   | [src/wui/selectpicker/wui-selectpicker-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/selectpicker/wui-selectpicker-0.3.js) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.3.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.3.js) |
 
 #### Constructor
 
@@ -4645,8 +4646,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/selectpicker/wui-selectpicker-0.3.css">
-<script type="text/javascript" src="./libraries/wui/selectpicker/wui-selectpicker-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.3.js"></script>
 ```
 
 Código HTML:
@@ -4716,7 +4717,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/selectpicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic).
 
 <a name="WUIDatepicker"></a>
 
@@ -4730,8 +4731,8 @@ Componente para la implementación de entradas de datos de tipo fecha basada en 
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/datepicker/wui-datepicker-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/datepicker/wui-datepicker-0.3.css) |
-| JS   | [src/wui/datepicker/wui-datepicker-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/datepicker/wui-datepicker-0.3.js) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.3.css) |
+| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.3.js) |
 
 #### Constructor
 
@@ -4921,8 +4922,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/datepicker/wui-datepicker-0.3.css">
-<script type="text/javascript" src="./libraries/wui/datepicker/wui-datepicker-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/datepicker/wui-datepicker-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/datepicker/wui-datepicker-0.3.js"></script>
 ```
 
 Código HTML:
@@ -4970,7 +4971,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic).
 
 <a name="WUITimepicker"></a>
 
@@ -4984,8 +4985,8 @@ Componente para la implementación de entradas de datos de tipo hora basada en e
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/timepicker/wui-timepicker-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/timepicker/wui-timepicker-0.3.css) |
-| JS   | [src/wui/timepicker/wui-timepicker-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/timepicker/wui-timepicker-0.3.js) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.3.css) |
+| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.3.js) |
 
 #### Constructor
 
@@ -5136,8 +5137,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/timepicker/wui-timepicker-0.3.css">
-<script type="text/javascript" src="./libraries/wui/timepicker/wui-timepicker-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/timepicker/wui-timepicker-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/timepicker/wui-timepicker-0.3.js"></script>
 ```
 
 Código HTML:
@@ -5183,7 +5184,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/timepicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic).
 
 <a name="WUIColorpicker"></a>
 
@@ -5197,8 +5198,8 @@ Componente para la implementación de entradas de datos de tipo selector de colo
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/colorpicker/wui-colorpicker-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/colorpicker/wui-colorpicker-0.3.css) |
-| JS   | [src/wui/colorpicker/wui-colorpicker-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/colorpicker/wui-colorpicker-0.3.js) |
+| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.3.css) |
+| JS   | [src/wui-js/main/colorpicker/wui-colorpicker-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.3.js) |
 
 #### Constructor
 
@@ -5360,8 +5361,8 @@ nav {
 Código HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/colorpicker/wui-colorpicker-0.3.css">
-<script type="text/javascript" src="./libraries/wui/colorpicker/wui-colorpicker-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.3.js"></script>
 ```
 
 Código HTML:
@@ -5406,7 +5407,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/colorpicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic).
 
 <a name="WUISwitch"></a>
 
@@ -5420,8 +5421,8 @@ Componente para la implementación de entradas de datos de tipo casilla de verif
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/switch/wui-switch-0.4.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/switch/wui-switch-0.4.css) |
-| JS   | [src/wui/switch/wui-switch-0.4.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/switch/wui-switch-0.4.js) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.4.css) |
+| JS   | [src/wui-js/main/switch/wui-switch-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.4.js) |
 
 #### Constructor
 
@@ -5530,8 +5531,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/switch/wui-switch-0.4.css">
-<script type="text/javascript" src="./libraries/wui/switch/wui-switch-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.4.css">
+<script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.4.js"></script>
 ```
 
 Código HTML:
@@ -5569,7 +5570,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/switch/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic).
 
 <a name="WUIIntensity"></a>
 
@@ -5583,8 +5584,8 @@ Componente para la implementación de entradas de datos de tipo selector de inte
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/intensity/wui-intensity-0.2.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/intensity/wui-intensity-0.2.css) |
-| JS   | [src/wui/intensity/wui-intensity-0.2.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/intensity/wui-intensity-0.2.js) |
+| CSS  | [src/wui-js/main/intensity/wui-intensity-0.2.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.2.css) |
+| JS   | [src/wui-js/main/intensity/wui-intensity-0.2.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.2.js) |
 
 #### Constructor
 
@@ -5670,8 +5671,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/intensity/wui-intensity-0.2.css">
-<script type="text/javascript" src="./libraries/wui/intensity/wui-intensity-0.2.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/intensity/wui-intensity-0.2.css">
+<script type="text/javascript" src="./libraries/wui-js/main/intensity/wui-intensity-0.2.js"></script>
 ```
 
 Código HTML:
@@ -5708,7 +5709,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/intensity/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic).
 
 <a name="WUIButton"></a>
 
@@ -5722,8 +5723,8 @@ Componente para la implementación de botones.
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui/button/wui-button-0.3.css](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/button/wui-button-0.3.css) |
-| JS   | [src/wui/button/wui-button-0.3.js](https://github.com/wuijsproject/wuijs-lib/blob/main/src/wui/button/wui-button-0.3.js) |
+| CSS  | [src/wui-js/main/button/wui-button-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.3.css) |
+| JS   | [src/wui-js/main/button/wui-button-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.3.js) |
 
 #### Constructor
 
@@ -5899,9 +5900,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.3.css">
-<script type="text/javascript" src="./libraries/wui/button/wui-button-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/button/wui-button-0.3.css">
+<script type="text/javascript" src="./libraries/wui-js/main/button/wui-button-0.3.js"></script>
 ```
 
 Código HTML:
@@ -5959,7 +5960,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLButtonElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/button/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic).
 
 <a name="goodpractices"></a>
 
@@ -6057,57 +6058,57 @@ window.addEventListener("DOMContentLoaded", init);
 
 ## Demos
 
-Esta sección recoge los ejemplos de las implementaciones de la documentación y otros demos complementarios, todos disponibles en el repositorio **WUI/JS Lab** [https://github.com/wuijsproject/wuijs-lab](https://github.com/wuijsproject/wuijs-lab).
+Esta sección recoge los ejemplos de las implementaciones de la documentación y otros demos complementarios, todos disponibles en el repositorio **WUI/JS Lab** [https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab).
 
-1.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/resource-loader/basic)<br>
+1.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic)<br>
 	Esta demostración muestra el uso del script cargador de recursos de WUI.<br><br>
-2.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/cookie/basic)<br>
+2.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUICookie.<br><br>
-3.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/body/import)<br>
+3.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import)<br>
 	Esta demostración muestra el uso de la funcionalidad de importación de WUIBody.<br><br>
-4.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/scrolly/basic)<br>
+4.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIScrolly.<br><br>
-5.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/icon/basic)<br>
+5.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIIcon.<br><br>
-6.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/fade/basic)<br>
+6.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIFade.<br><br>
-7.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/modal/basic)<br>
+7.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIModal.<br><br>
-8.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/paging/basic)<br>
+8.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIPaging.<br><br>
-9.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/slider/basic)<br>
+9.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUISlider.<br><br>
-10.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/menubar/submenu)<br>
+10.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIMenubar.<br><br>
-11.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup)<br>
+11.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup)<br>
 	Esta demostración muestra el uso de la funcionalidad de paginación de WUIList mediante botones HTML.<br>
 	El grupo de botones laterales con tapa extraíble está configurado con dos botones: uno asociado con una posible función de edición y el otro con la de eliminación.<br>
 	Los datos de la lista se cargan directamente durante la creación del componente.<br><br>
-12.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/table/paging)<br>
+12.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging)<br>
 	Esta demostración muestra el uso de la función de paginación de WUITable mediante botones HTML.<br>
 	Los datos de la tabla se cargan directamente durante la creación del componente.<br><br>
-13.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/fillstyle](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/fillstyle)<br>
+13.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/fillstyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/fillstyle)<br>
 	Esta demo muestra el uso de WUIForm con estilo de relleno y entradas HTML nativas.<br><br>
-14.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/linestyle)<br>
+14.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle)<br>
 	Esta demo muestra el uso de WUIForm con estilo de línea y entradas HTML nativas.<br><br>
-15.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/form/wuiinputs)<br>
+15.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/wuiinputs)<br>
 	Esta demostración muestra el uso de WUIForm con estilo de relleno y componentes de entrada WUI.<br><br>
-16.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/format/basic)<br>
+16.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic)<br>
 	Esta demostración muestra el uso de WUIFormat para el formato de números, cadenas y fechas.<br><br>
-17.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/selectpicker/basic)<br>
+17.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUISelectpicker.<br><br>
-18.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+18.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIDatepicker.<br><br>
-19.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+19.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUITimepicker.<br><br>
-20.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+20.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIColorpicker.<br><br>
-21.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/switch/basic)<br>
+21.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUISwitch.<br><br>
-22.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/intensity/basic)<br>
+22.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIIntensity.<br><br>
-23.	[https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui/button/basic)<br>
+23.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic)<br>
 	Esta demostración muestra el uso de las funciones básicas de WUIButton.<br><br>
 
 > [!NOTE]
-> Todos los demos del repositorio [wuijs-lab](https://github.com/wuijsproject/wuijs-lab) se pueden revisar en CodeSandbox en el enlace [https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui](https://codesandbox.io/p/sandbox/github/wuijsproject/wuijs-lab/tree/main/demos/wui).
+> Todos los demos del repositorio [wuijs-lab](https://github.com/wui-js/wuijs-lab) se pueden revisar en CodeSandbox en el enlace [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui).

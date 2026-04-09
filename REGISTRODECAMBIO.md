@@ -1,10 +1,11 @@
 # Registro de Cambio
 
-## [v0.4.2] - 2026-04-08
+## [v0.5.0] - 2026-04-09
 
 Características:
 
-1. Habilitación de instalación vía NPM.
+1. Cambio de nombre del repositorio de `wuijs-lib` a `wuijs-main-lib`.
+2. Habilitación de instalación vía NPM.
 
 ## [v0.4.0] - 2026-03-20
 

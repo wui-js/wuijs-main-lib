@@ -1,10 +1,11 @@
 # Change Log
 
-## [v0.4.2] - 2026-04-08
+## [v0.5.0] - 2026-04-09
 
 Features:
 
-1. Enable installation via NPM.
+1. Change the name of the repository from `wuijs-lib` to `wuijs-main-lib`.
+2. Enable installation via NPM.
 
 ## [v0.4.0] - 2026-03-20
 
