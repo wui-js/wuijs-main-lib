@@ -10,9 +10,9 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
 </div>
 
-Library version: `0.5.0` ([Change Log](./CHANGELOG.md))
+Library version: `0.5.1` ([Change Log](./CHANGELOG.md))
 
-Document version: `0.5.0.20260409.0`
+Document version: `0.5.1.20260409.1`
 
 License: `Apache License 2.0`
 
