@@ -10,12 +10,13 @@ Características:
 
 Características:
 
-> [!NOET]
+> [!NOTE]
 > Se cambió el dueño del repositorio oficial de **@wuijsproject** a **@wui-js** con el fin de tener integridad entre las cuentas en GitHub y NPM.
 
 1. Habilitación de instalación vía NPM.
-2. Cambio de nombre del repositorio de `wuijs-lib` a `wuijs-main-lib` para que las tutas de los modos de instalación vía GitHub y NPM fuesen análogas.
-3. Se actualizó el cargador de recursos `wui.js`.
+2. Cambio de nombre del repositorio de `wuijs-lib` a `wuijs-main-lib` para que las rutas de los modos de instalación vía GitHub y NPM fuesen análogas.
+3. Cambio de nombre del directorio fuente de `src/wui` a `src/wui-js/main` para dar soporte a integración con otras librerías del proyecto WUI/JS.
+4. Se actualizó el cargador de recursos `wui.js`.
 
 ## [v0.4.0] - 2026-03-20
 

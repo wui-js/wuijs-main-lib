@@ -120,7 +120,7 @@ wuijs-main-lib/
 │   ├── icons/
 │   └── logo/
 ├── legacy/
-│   └── WUI/
+│   └── wui/
 ├── src/
 │   └── wui-js/
 │       └── main/
@@ -135,6 +135,7 @@ wuijs-main-lib/
 | [legacy](legacy/)                   | Fuentes obsoletas con versiones anteriores. |
 | [legacy/WUI](legacy/WUI/)           | Librería WUI/JS (versión anterior a la 0.4.0). |
 | [src](src/)                         | Fuentes principales de la última versión. |
+| [src/wui-js](src/wui-js)            | Directorio del proyecto WUI/JS. |
 | [src/wui-js/main](src/wui-js/main/) | Librería WUI/JS. |
 | [tools](tools/)                     | Herramientas complementarias. |
 
@@ -856,7 +857,7 @@ En el modo parcial, solo las librerías WUI especificadas en el parámetro `clas
 > El parámetro `class` no distingue entre mayúsculas y minúsculas.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic).
 
 <a name="classes"></a>
 
@@ -952,7 +953,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic).
 
 <a name="WUIHead"></a>
 
@@ -1131,7 +1132,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import).
 
 <a name="WUILanguage"></a>
 
@@ -1549,7 +1550,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic).
 
 <a name="WUIIcon"></a>
 
@@ -1865,7 +1866,7 @@ Código HTML:
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic).
 
 <a name="WUIFade"></a>
 
@@ -1995,7 +1996,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic).
 
 <a name="WUILoader"></a>
 
@@ -2286,7 +2287,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic).
 
 <a name="WUIPaging"></a>
 
@@ -2475,7 +2476,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Las páginas pueden tener la clase `scroll` para permitir scroll vertical. El componente soporta dos modos de transición: movimiento lateral (predeterminado) o por opacidad (agregando la clase `opacity` al contenedor principal).
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic).
 
 <a name="WUISlider"></a>
 
@@ -2648,7 +2649,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic).
 
 <a name="WUITabs"></a>
 <a name="WUIMenubar"></a>
@@ -2963,7 +2964,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu).
 
 <a name="WUIList"></a>
 
@@ -3308,7 +3309,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup).
 
 <a name="WUITable"></a>
 
@@ -3672,7 +3673,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging).
 
 <a name="WUIForm"></a>
 
@@ -4020,7 +4021,7 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle).
 
 <a name="WUIFormat"></a>
 
@@ -4439,7 +4440,7 @@ window.addEventListener("DOMContentLoaded", () => {
 ```
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic).
 
 <a name="WUISelectpicker"></a>
 
@@ -4717,7 +4718,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic).
 
 <a name="WUIDatepicker"></a>
 
@@ -4971,7 +4972,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic).
 
 <a name="WUITimepicker"></a>
 
@@ -5184,7 +5185,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic).
 
 <a name="WUIColorpicker"></a>
 
@@ -5407,7 +5408,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic).
 
 <a name="WUISwitch"></a>
 
@@ -5570,7 +5571,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic).
 
 <a name="WUIIntensity"></a>
 
@@ -5709,7 +5710,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLDivElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic).
 
 <a name="WUIButton"></a>
 
@@ -5960,7 +5961,7 @@ window.addEventListener("DOMContentLoaded", init);
 > Si el selector define un elemento que no es de tipo `HTMLButtonElement`, el objeto no se inicializará.
 
 > [!TIP]
-> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic).
+> Puede revisar este ejemplo funcional en CodeSandbox en el enlace: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic).
 
 <a name="goodpractices"></a>
 
@@ -6060,54 +6061,54 @@ window.addEventListener("DOMContentLoaded", init);
 
 Esta sección recoge los ejemplos de las implementaciones de la documentación y otros demos complementarios, todos disponibles en el repositorio **WUI/JS Lab** [https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab).
 
-1.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/resource-loader/basic)<br>
+1.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic)<br>
 	Esta demostración muestra el uso del script cargador de recursos de WUI.<br><br>
-2.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/cookie/basic)<br>
+2.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUICookie.<br><br>
-3.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/body/import)<br>
+3.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import)<br>
 	Esta demostración muestra el uso de la funcionalidad de importación de WUIBody.<br><br>
-4.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/scrolly/basic)<br>
+4.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIScrolly.<br><br>
-5.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/icon/basic)<br>
+5.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIIcon.<br><br>
-6.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/fade/basic)<br>
+6.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIFade.<br><br>
-7.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/modal/basic)<br>
+7.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad básica de WUIModal.<br><br>
-8.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/paging/basic)<br>
+8.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIPaging.<br><br>
-9.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/slider/basic)<br>
+9.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUISlider.<br><br>
-10.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/menubar/submenu)<br>
+10.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu)<br>
 	Esta demostración muestra el uso de la funcionalidad de submenú de WUIMenubar.<br><br>
-11.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/list/paging-buttongroup)<br>
+11.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup)<br>
 	Esta demostración muestra el uso de la funcionalidad de paginación de WUIList mediante botones HTML.<br>
 	El grupo de botones laterales con tapa extraíble está configurado con dos botones: uno asociado con una posible función de edición y el otro con la de eliminación.<br>
 	Los datos de la lista se cargan directamente durante la creación del componente.<br><br>
-12.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/table/paging)<br>
+12.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging)<br>
 	Esta demostración muestra el uso de la función de paginación de WUITable mediante botones HTML.<br>
 	Los datos de la tabla se cargan directamente durante la creación del componente.<br><br>
-13.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/fillstyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/fillstyle)<br>
+13.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/fillstyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/fillstyle)<br>
 	Esta demo muestra el uso de WUIForm con estilo de relleno y entradas HTML nativas.<br><br>
-14.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/linestyle)<br>
+14.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle)<br>
 	Esta demo muestra el uso de WUIForm con estilo de línea y entradas HTML nativas.<br><br>
-15.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/form/wuiinputs)<br>
+15.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/wuiinputs)<br>
 	Esta demostración muestra el uso de WUIForm con estilo de relleno y componentes de entrada WUI.<br><br>
-16.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/format/basic)<br>
+16.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic)<br>
 	Esta demostración muestra el uso de WUIFormat para el formato de números, cadenas y fechas.<br><br>
-17.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/selectpicker/basic)<br>
+17.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUISelectpicker.<br><br>
-18.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+18.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIDatepicker.<br><br>
-19.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+19.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUITimepicker.<br><br>
-20.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/datepicker/basic)<br>
+20.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIColorpicker.<br><br>
-21.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/switch/basic)<br>
+21.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUISwitch.<br><br>
-22.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/intensity/basic)<br>
+22.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic)<br>
 	Esta demo muestra el uso de las funciones básicas de WUIIntensity.<br><br>
-23.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui/button/basic)<br>
+23.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic)<br>
 	Esta demostración muestra el uso de las funciones básicas de WUIButton.<br><br>
 
 > [!NOTE]

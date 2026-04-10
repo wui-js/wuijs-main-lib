@@ -15,7 +15,8 @@ Features:
 
 1. Enable installation via NPM.
 2. Change the name of the repository from `wuijs-lib` to `wuijs-main-lib` so that the paths for the installation methods via GitHub and NPM were analogous.
-3. Updated the resource loader `wui.js`.
+3. Change the name of the source directory from `src/wui` to `src/wui-js/main` to support integration with other libraries of the WUI/JS project.
+4. Updated the resource loader `wui.js`.
 
 ## [v0.4.0] - 2026-03-20
 
