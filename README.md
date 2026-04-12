@@ -169,6 +169,8 @@ To install the WUI/JS library via npm:
 npm i @wui-js/main
 ```
 
+The resources will be available at the path `./node_modules/@wui-js/main`.
+
 <a name="implementation"></a>
 
 ## Implementation
@@ -1802,9 +1804,9 @@ Pre-designed icons set loaded via CSS, for use in interfaces.
 The `tools/svg-icon-maker.py` script crea el set de archivos SVG en base a todos los estilos de icono disponibles en la librería WUIIcon.
 
 ```bash
-python tools/svg-icon-maker.py
+python ./svg-icon-maker.py
 
-python tools/svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
+python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
 ```
 
 | Option             | Default value                     | Description |

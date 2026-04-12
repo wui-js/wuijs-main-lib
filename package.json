@@ -24,6 +24,7 @@
 	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
 	"main": "wui.js",
 	"files": [
+		"LICENSE",
 		"wui.js",
 		"body/",
 		"button/",

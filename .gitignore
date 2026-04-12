@@ -10,6 +10,7 @@ Thumbs.db
 .vscode
 .claude
 .npmignore
+VERSION
 CLAUDE.md
 MEMORY.md
 NOTES.md

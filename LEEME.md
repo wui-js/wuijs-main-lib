@@ -10,7 +10,7 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
 </div>
 
-Versión librería: `0.5.1` ([Registro de Cambio](./REGISTRODECAMBIO.md))
+Versión librería: `0.5.1` ([Registro de Cambios](./REGISTRODECAMBIOS.md))
 
 Versión documentación: `0.5.1.20260409.1`
 
@@ -168,6 +168,8 @@ Para instalar la librería WUI/JS mediante npm:
 ```bash
 npm i @wui-js/main
 ```
+
+Los recursos quedarán disponibles en la ruta `./node_modules/@wui-js/main`.
 
 <a name="implementation"></a>
 
@@ -1796,9 +1798,9 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 El script `tools/svg-icon-maker.py` crea el set de archivos SVG en base a todos los estilos de icono disponibles en la librería WUIIcon.
 
 ```bash
-python tools/svg-icon-maker.py
+python ./svg-icon-maker.py
 
-python tools/svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
+python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
 ```
 
 | Opción             | Valor predeterminado              | Descripción |

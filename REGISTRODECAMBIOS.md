@@ -1,4 +1,4 @@
-# Registro de Cambio
+# Registro de Cambios
 
 ## [v0.5.1] - 2026-04-09
 
