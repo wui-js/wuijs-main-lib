@@ -7,7 +7,7 @@
 # wuijs-main-lib
 
 <div align="center">
-	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-logotype-color.svg" width="220" height="220">
+	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
 </div>
 
 Versión librería: `0.5.1` ([Registro de Cambios](./REGISTRODECAMBIOS.md))
@@ -63,13 +63,13 @@ Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 
 ## Descripción General
 
-WUI/JS Lib, acrónimo del inglés *Web User Interface JavaScript library*, es una librería vainilla JavaScript/CSS de código abierto orientada a la implementación rápida de interfaces de usuario Web compuesta por 25 clases, las que pueden ser utilizadas de manera independiente o conjunta.
+WUI/JS Main Lib, acrónimo del inglés *Web User Interface JavaScript library*, es una librería vainilla JavaScript/CSS de código abierto orientada a la implementación rápida de interfaces de usuario Web compuesta por 25 clases, las que pueden ser utilizadas de manera independiente o conjunta.
 
 <a name="project"></a>
 
 ### Acerca del Proyecto WUI/JS
 
-WUI/JS Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorios:
+WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorios:
 
 -	[https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib)<br>
 	Librería UI principal.<br><br>
