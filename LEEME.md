@@ -120,24 +120,26 @@ wuijs-main-lib/
 │   ├── icons/
 │   └── logo/
 ├── legacy/
-│   └── wui/
+│   └── wui-js/
+│       └── main/
 ├── src/
 │   └── wui-js/
 │       └── main/
 └── tools/
 ```
 
-| Ruta                                | Descripción |
-| ----------------------------------- | ----------- |
-| [imgs](imgs/)                       | Imágenes utilizadas en la documentación. |
-| [imgs/icons](imgs/icons/)           | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
-| [imgs/logo](imgs/logo/)             | Logotipo e isotipo del proyecto en formato SVG y PNG. |
-| [legacy](legacy/)                   | Fuentes obsoletas con versiones anteriores. |
-| [legacy/wui](legacy/wui/)           | Librería WUI/JS (versión anterior a la 0.4.0). |
-| [src](src/)                         | Fuentes principales de la última versión. |
-| [src/wui-js](src/wui-js)            | Directorio del proyecto WUI/JS. |
-| [src/wui-js/main](src/wui-js/main/) | Librería WUI/JS. |
-| [tools](tools/)                     | Herramientas complementarias. |
+| Ruta                                      | Descripción |
+| ----------------------------------------- | ----------- |
+| [imgs](imgs/)                             | Imágenes utilizadas en la documentación. |
+| [imgs/icons](imgs/icons/)                 | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
+| [imgs/logo](imgs/logo/)                   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
+| [legacy](legacy/)                         | Fuentes obsoletas con versiones anteriores. |
+| [legacy/wui-js](legacy/wui-js/)           | Directorio del proyecto WUI/JS. |
+| [legacy/wui-js/main](legacy/wui-js/main/) | Librería WUI/JS (versión anterior a la 0.4.0). |
+| [src](src/)                               | Fuentes principales de la última versión. |
+| [src/wui-js](src/wui-js)                  | Directorio del proyecto WUI/JS. |
+| [src/wui-js/main](src/wui-js/main/)       | Librería WUI/JS. |
+| [tools](tools/)                           | Herramientas complementarias. |
 
 <a name="install"></a>
 
