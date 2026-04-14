@@ -76,7 +76,7 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 3 reposi
 -	[https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib)<br>
 	Librería de complementos UI.<br><br>
 -	[https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab)<br>
-	Repositorio con demos y ejemplos de uso tanto de las clases de la librería UI principal como de los complementos.<br><br>
+	Repositorio con demos y ejemplos de uso de las librerías del proyecto.<br><br>
 
 <a name="classtable"></a>
 
