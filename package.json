@@ -1,6 +1,8 @@
 {
 	"name": "@wui-js/main",
 	"version": "0.5.1",
+	"license": "Apache-2.0",
+	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
 	"description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
 	"keywords": [
 		"ui",
@@ -13,21 +15,18 @@
 		"library"
 	],
 	"homepage": "https://wuijs.dev",
-	"bugs": {
-		"url": "https://github.com/wui-js/wuijs-main-lib/issues"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/wui-js/wuijs-main-lib.git"
 	},
-	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/wui-js/wuijs-main-lib/issues"
+	},
 	"publishConfig": {
 		"access": "public"
 	},
-	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
 	"main": "wui.js",
 	"files": [
-		"LICENSE",
 		"wui.js",
 		"body/",
 		"button/",
@@ -57,6 +56,6 @@
 	],
 	"scripts": {
 		"prepack": "cp README.md _README.bak && cp NPM.md README.md && cp -r src/wui-js/main/. .",
-		"postpack": "mv _README.bak README.md && ls src/wui-js/main/ | xargs rm -rf && cp src/wui-js/main/LICENSE ."
+		"postpack": "mv _README.bak README.md && ls src/wui-js/main/ | grep -v '^LICENSE$' | xargs rm -rf"
 	}
 }
