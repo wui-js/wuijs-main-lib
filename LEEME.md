@@ -1,8 +1,11 @@
-> [!NOTE]
-> For the English version of this document, see [README.md](./README.md).
+> [!IMPORTANT]
+> La cuenta de GitHub `wuiproject` se migró a `wui-js` para que coincidiera con el nombre de la cuenta de NPM.
 
 > [!WARNING]
 > Este documento aún no ha sido terminado y esta en una versión preliminar.
+
+> [!NOTE]
+> For the English version of this document, see [README.md](./README.md).
 
 # wuijs-main-lib
 
@@ -10,13 +13,13 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
 </div>
 
-Versión librería: `0.5.1` ([Registro de Cambios](./REGISTRODECAMBIOS.md))
+**Versión librería**: `0.5.1` ([Registro de Cambios](./REGISTRODECAMBIOS.md))
 
-Versión documentación: `0.5.1.20260409.1`
+**Versión documentación**: `0.5.1.20260417.1`
 
-Licencia: `Licencia Apache 2.0`
+**Licencia**: `Licencia Apache 2.0`
 
-Autor: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
+**Autor**: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
 
 ## Índice
 
@@ -135,10 +138,10 @@ wuijs-main-lib/
 | [imgs/logo](imgs/logo/)                   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
 | [legacy](legacy/)                         | Fuentes obsoletas con versiones anteriores. |
 | [legacy/wui-js](legacy/wui-js/)           | Directorio del proyecto WUI/JS. |
-| [legacy/wui-js/main](legacy/wui-js/main/) | Librería WUI/JS (versión anterior a la 0.4.0). |
+| [legacy/wui-js/main](legacy/wui-js/main/) | Librería WUI/JS Main (versión anterior a la 0.4.0). |
 | [src](src/)                               | Fuentes principales de la última versión. |
 | [src/wui-js](src/wui-js)                  | Directorio del proyecto WUI/JS. |
-| [src/wui-js/main](src/wui-js/main/)       | Librería WUI/JS. |
+| [src/wui-js/main](src/wui-js/main/)       | Librería WUI/JS Main. |
 | [tools](tools/)                           | Herramientas complementarias. |
 
 <a name="install"></a>
