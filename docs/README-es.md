@@ -121,6 +121,7 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 
 ```bash
 wuijs-main-lib/
+├── docs/
 ├── imgs/
 │   ├── icons/
 │   └── logo/
@@ -133,18 +134,19 @@ wuijs-main-lib/
 └── tools/
 ```
 
-| Ruta                                         | Descripción |
-| -------------------------------------------- | ----------- |
-| [imgs](../imgs/)                             | Imágenes utilizadas en la documentación. |
-| [imgs/icons](../imgs/icons/)                 | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
-| [imgs/logo](../imgs/logo/)                   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
-| [legacy](../legacy/)                         | Fuentes obsoletas con versiones anteriores. |
-| [legacy/wui-js](../legacy/wui-js/)           | Directorio del proyecto WUI/JS. |
-| [legacy/wui-js/main](../legacy/wui-js/main/) | Librería WUI/JS Main (versión anterior a la 0.4.0). |
-| [src](../src/)                               | Fuentes principales de la última versión. |
-| [src/wui-js](../src/wui-js)                  | Directorio del proyecto WUI/JS. |
-| [src/wui-js/main](../src/wui-js/main/)       | Librería WUI/JS Main. |
-| [tools](../tools/)                           | Herramientas complementarias. |
+| Ruta                                                                                         | Descripción |
+| -------------------------------------------------------------------------------------------- | ----------- |
+| [docs](https://github.com/wui-js/wuijs-main-lib/tree/main/docs/)                             | Documentación. |
+| [imgs](https://github.com/wui-js/wuijs-main-lib/tree/main/imgs/)                             | Imágenes utilizadas en la documentación. |
+| [imgs/icons](https://github.com/wui-js/wuijs-main-lib/tree/main/imgs/icons/)                 | Íconos generados por la herramienta `/tools/svg-icon-maker.py` a partir de la clase WUIIcon. |
+| [imgs/logo](https://github.com/wui-js/wuijs-main-lib/tree/main/imgs/logo/)                   | Logotipo e isotipo del proyecto en formato SVG y PNG. |
+| [legacy](https://github.com/wui-js/wuijs-main-lib/tree/main/legacy/)                         | Fuentes obsoletas con versiones anteriores. |
+| [legacy/wui-js](https://github.com/wui-js/wuijs-main-lib/tree/main/legacy/wui-js/)           | Directorio del proyecto WUI/JS. |
+| [legacy/wui-js/main](https://github.com/wui-js/wuijs-main-lib/tree/main/legacy/wui-js/main/) | Librería WUI/JS Main (versión anterior a la 0.4.0). |
+| [src](https://github.com/wui-js/wuijs-main-lib/tree/main/src/)                               | Fuentes principales de la última versión. |
+| [src/wui-js](https://github.com/wui-js/wuijs-main-lib/tree/main/src/wui-js)                  | Directorio del proyecto WUI/JS. |
+| [src/wui-js/main](https://github.com/wui-js/wuijs-main-lib/tree/main/src/wui-js/main/)       | Librería WUI/JS Main. |
+| [tools](https://github.com/wui-js/wuijs-main-lib/tree/main/tools/)                           | Herramientas complementarias. |
 
 <a name="install"></a>
 
