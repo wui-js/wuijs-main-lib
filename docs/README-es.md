@@ -72,12 +72,14 @@ WUI/JS Main Lib, acrónimo del inglés *Web User Interface JavaScript library*, 
 
 ### Acerca del Proyecto WUI/JS
 
-WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 3 repositorios:
+WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 repositorios:
 
 -	[https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib)<br>
 	Librería UI principal.<br><br>
 -	[https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib)<br>
 	Librería de complementos UI.<br><br>
+-	[https://github.com/wui-js/wuijs-environment-lib](https://github.com/wui-js/wuijs-environment-lib)<br>
+	Librería puente entre entornos web y motores de renderizado web nativos.<br><br>
 -	[https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab)<br>
 	Repositorio con demos y ejemplos de uso de las librerías del proyecto.<br><br>
 
