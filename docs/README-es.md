@@ -1,17 +1,17 @@
 > [!IMPORTANT]
 > La cuenta de GitHub `@wuiproject` se migró a `@wui-js` para que coincidiera con el nombre de la cuenta de NPM.
 
----
 <p align="right">
-	<a href="https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md">English</a> |
-	<a href="https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md">Español</a>
+	[English](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md) |
+	[Español](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md)
 </p>
+---
 
 # wuijs-main-lib
 
-<div align="center">
+<p align="center">
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
-</div>
+</p>
 
 |                       | |
 | --------------------- | ----------- |
