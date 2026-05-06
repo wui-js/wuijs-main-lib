@@ -1,5 +1,13 @@
 # Registro de Cambios
 
+## [v0.6.1] - 2026-05-06
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUISelectpicker a `0.6`.
+	- Se mejoró evento `onChange` para que se dispare de manera diferida en dispositivos móviles (al presionar el botón Aceptar) y de manera inmediata en los navegadores de escritorio.
+
 ## [v0.6.0] - 2026-05-01
 
 Características:

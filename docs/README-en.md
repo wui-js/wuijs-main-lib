@@ -1,9 +1,6 @@
 > [!IMPORTANT]
 > The GitHub account `@wuiproject` was migrated to `@wui-js` to match the name with the NPM account.
 
-> [!WARNING]
-> This document has not yet been finalized and is in a preliminary version.
-
 > [!NOTE]
 > Para la versión en Español de este documento, consulte [README-es.md](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md).
 
@@ -13,13 +10,17 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
 </div>
 
-**Library version**: `0.6.0` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md))
-
-**Document version**: `0.6.0.20260501.0`
-
-**License**: `Apache License 2.0`
-
-**Author**: `Sergio E. Belmar V. <wuijs.project@gmail.com>`
+|                      | Information |
+| -------------------- | ----------- |
+| **Library name**     | `wuijs-main-lib` |
+| **Library version**  | `0.6.0` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **NPM package**      | `@wui-js/main` |
+| **Document version** | `0.6.0.20260506.0` |
+| **License**          | `Apache License 2.0` |
+| **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
+| **Repository**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
+| **Documentation**    | [https://docs.wuijs.dev](https://docs.wuijs.dev) |
+| **Website**          | [https://wuijs.dev](https://wuijs.dev) |
 
 ## Index
 
@@ -105,7 +106,7 @@ WUI/JS Main Lib is part of the WUI/JS project, which currently consists of 4 rep
 | [WUITable](#wui-table)               | `0.5`   | Component for the implementation of data tables. Unlike the `WUIList` component, the `WUITable` component includes a column header. |
 | [WUIForm](#wui-form)                 | `0.5`   | Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`. |
 | [WUIFormat](#wui-format)             | `0.3`   | Utilities for management and validation `string`, `number` and `Date` data formats. |
-| [WUISelectpicker](#wui-selectpicker) | `0.5`   | Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`. |
+| [WUISelectpicker](#wui-selectpicker) | `0.6`   | Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`. |
 | [WUIDatepicker](#wui-datepicker)     | `0.5`   | Component for the implementation of date type data inputs based on HTML element `<input type="date">`. |
 | [WUITimepicker](#wui-timepicker)     | `0.5`   | Component for the implementation of time type data inputs based on HTML element `<input type="time">`. |
 | [WUIColorpicker](#wui-colorpicker)   | `0.5`   | Component for the implementation of color picker type data inputs based on HTML element `<input type="color">`. |
@@ -232,8 +233,8 @@ HTML code:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.5.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.root.css">
@@ -262,7 +263,7 @@ HTML code:
 		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.3.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.js"></script>
@@ -3863,7 +3864,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ### WUISelectpicker
 
-Version: `0.5`
+Version: `0.6`
 
 Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`.
 
@@ -3871,9 +3872,9 @@ Component for the implementation of multiple or exclusive selection list data in
 
 | Type | File |
 |:----:| ---- |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.css) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css) |
-| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.js) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.6.css) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.6.root.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.6.js) |
 
 #### Constructor
 
@@ -4065,9 +4066,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.css">
-<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.6.js"></script>
 ```
 
 HTML code:
@@ -5063,6 +5064,7 @@ Component for the implementation of based on HTML element `<button>`.
 | ------------------------------------------- | ----------- |
 | `--wui-button-default-minwidth`             | Minimum width of the default button. |
 | `--wui-button-default-height`               | Height of the default button. |
+| `--wui-button-default-borderwidth`          | Border width of the default button. |
 | `--wui-button-default-bordercolor-out`      | Border color of the default button in normal state. |
 | `--wui-button-default-bordercolor-over`     | Border color of the default button in hover state. |
 | `--wui-button-default-bordercolor-selected` | Border color of the default button in selected state. |
@@ -5071,6 +5073,8 @@ Component for the implementation of based on HTML element `<button>`.
 | `--wui-button-default-bgcolor-over`         | Background color of the default button in hover state. |
 | `--wui-button-default-bgcolor-selected`     | Background color of the default button in selected state. |
 | `--wui-button-default-bgcolor-disabled`     | Background color of the default button in disabled state. |
+| `--wui-button-default-horizpadding`         | Horizontal padding of the default button. |
+| `--wui-button-default-vertpadding`          | Vertical padding of the default button. |
 | `--wui-button-default-textcolor-out`        | Text color of the default button in normal state. |
 | `--wui-button-default-textcolor-over`       | Text color of the default button in hover state. |
 | `--wui-button-default-textcolor-selected`   | Text color of the default button in selected state. |
@@ -5104,6 +5108,7 @@ Component for the implementation of based on HTML element `<button>`.
 | `--wui-button-warning-textcolor-selected`   | Text color of the warning button in selected state. |
 | `--wui-button-warning-textcolor-disabled`   | Text color of the warning button in disabled state. |
 | `--wui-button-icon-float-padding`           | Padding of the floating icons in the button. |
+| `--wui-button-mobile-default-minwidth`      | Minimum width of the default button in mobile mode (screen width less than 768px). |
 | `--wui-button-mobile-default-height`        | Height of the default button in mobile mode (screen width less than 768px). |
 | `--wui-button-mobile-submit-height`         | Height of the submit button in mobile mode (screen width less than 768px). |
 | `--wui-button-mobile-icon-float-padding`    | Padding of the floating icons in the button in mobile mode (screen width less than 768px). |

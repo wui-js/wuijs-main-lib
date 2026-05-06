@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.6.1] - 2026-05-06
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUISelectpicker version class update to `0.6`.
+	- Improved `onChange` event to trigger later on mobile devices (upon pressing the OK button) and immediately on desktop browsers.
+
 ## [v0.6.0] - 2026-05-01
 
 Features:
