@@ -10,7 +10,7 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
 </div>
 
-|                      | Information |
+|                      | |
 | -------------------- | ----------- |
 | **Library name**     | `wuijs-main-lib` |
 | **Library version**  | `0.6.0` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
