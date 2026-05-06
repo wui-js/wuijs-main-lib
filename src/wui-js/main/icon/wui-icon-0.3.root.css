@@ -1,0 +1,14 @@
+/*
+ * @file wui-icon-0.3.root.css
+ * @version 0.3
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-icon */
+
+	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-icon-bgcolor-over: #353a40;
+}

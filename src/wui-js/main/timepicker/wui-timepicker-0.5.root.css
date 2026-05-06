@@ -1,0 +1,42 @@
+/*
+ * @file wui-timepicker-0.5.root.css
+ * @class WUITimepicker
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-timepicker */
+
+	--wui-timepicker-borderradius: 10px;
+	--wui-timepicker-borderwidth: 0px;
+	--wui-timepicker-bordercolor: transparent;
+	--wui-timepicker-bgcolor: #f6f6fa;
+	--wui-timepicker-opener-iconsize: 30px;
+	--wui-timepicker-opener-iconcolor-out: #000;
+	--wui-timepicker-opener-iconcolor-over: #1e90ff;
+	--wui-timepicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-timepicker-opener-openicon-src: none;
+	--wui-timepicker-opener-closeicon-src: none;
+	--wui-timepicker-viewinput-paddingleft: 10px;
+	--wui-timepicker-viewinput-textcolor-out: #2d3a47;
+	--wui-timepicker-viewinput-textcolor-over: #1f2937;
+	--wui-timepicker-viewinput-textcolor-disabled: #d5dce3;
+	--wui-timepicker-box-shadowcolor: #959da5;
+	--wui-timepicker-box-borderradius: 15px;
+	--wui-timepicker-box-bordercolor: #f0f0f3;
+	--wui-timepicker-box-bgcolor: rgb(from #fff r g b / 80%);
+	--wui-timepicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-timepicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-timepicker-box-option-bgcolor-now: #f0f0f3;
+	--wui-timepicker-box-option-bgcolor-over: rgb(from #1e90ff r g b / 20%);
+	--wui-timepicker-box-option-bgcolor-selected: #1e90ff;
+	--wui-timepicker-box-option-textcolor-out: #000;
+	--wui-timepicker-box-option-textcolor-over: #1e90ff;
+	--wui-timepicker-box-option-textcolor-selected: #fff;
+	--wui-timepicker-box-button-textcolor-out: #1e90ff;
+	--wui-timepicker-box-button-textcolor-over: #1e90ff;
+	--wui-timepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+}

@@ -13,9 +13,9 @@
 	<img src="https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/logo/wuijs-main-logotype-color.svg" width="220" height="220">
 </div>
 
-**Library version**: `0.5.2` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md))
+**Library version**: `0.6.0` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md))
 
-**Document version**: `0.5.2.20260425.0`
+**Document version**: `0.6.0.20260501.0`
 
 **License**: `Apache License 2.0`
 
@@ -31,34 +31,32 @@
 *   [Implementation](#implementation)
 	*   [Standard Implementation](#standard)
 	*   [Abbreviated Implementation](#abbreviated)
-		*   [Full mode](#fullmode)
-		*   [Partial mode](#partialmode)
 *   [Classes](#classes)
-    *   [WUICookie](#WUICookie)
-	*   [WUIHead](#WUIHead)
-	*   [WUIBody](#WUIBody)
-	*   [WUILanguage](#WUILanguage)
-	*   [WUIScrolly](#WUIScrolly)
-	*   [WUIIcon](#WUIIcon)
-	*   [WUIFade](#WUIFade)
-	*   [WUILoader](#WUILoader)
-	*   WUITooltip
-	*   [WUIModal](#WUIModal)
-	*   [WUIPaging](#WUIPaging)
-	*   [WUISlider](#WUISlider)
-	*   WUITabs
-	*   [WUIMenubar](#WUIMenubar)
-	*   [WUIList](#WUIList)
-	*   [WUITable](#WUITable)
-	*   [WUIForm](#WUIForm)
-	*   [WUIFormat](#WUIFormat)
-	*   [WUISelectpicker](#WUISelectpicker)
-	*   [WUIDatepicker](#WUIDatepicker)
-	*   [WUITimepicker](#WUITimepicker)
-	*   [WUIColorpicker](#WUIColorpicker)
-	*   [WUISwitch](#WUISwitch)
-	*   [WUIIntensity](#WUIIntensity)
-	*   [WUIButton](#WUIButton)
+    *   [WUICookie](#wui-cookie)
+	*   [WUIHead](#wui-head)
+	*   [WUIBody](#wui-body)
+	*   [WUILanguage](#wui-language)
+	*   [WUIScrolly](#wui-scrolly)
+	*   [WUIIcon](#wui-icon)
+	*   [WUIFade](#wui-fade)
+	*   [WUILoader](#wui-loader)
+	*   [WUITooltip](#wui-tooltip)
+	*   [WUIModal](#wui-modal)
+	*   [WUIPaging](#wui-paging)
+	*   [WUISlider](#wui-slider)
+	*   [WUITabs](#wui-tabs)
+	*   [WUIMenubar](#wui-menubar)
+	*   [WUIList](#wui-list)
+	*   [WUITable](#wui-table)
+	*   [WUIForm](#wui-form)
+	*   [WUIFormat](#wui-format)
+	*   [WUISelectpicker](#wui-selectpicker)
+	*   [WUIDatepicker](#wui-datepicker)
+	*   [WUITimepicker](#wui-timepicker)
+	*   [WUIColorpicker](#wui-colorpicker)
+	*   [WUISwitch](#wui-switch)
+	*   [WUIIntensity](#wui-intensity)
+	*   [WUIButton](#wui-button)
 *	[Good Coding Practices](#goodpractices)
 *   [Demos](#demos) (CodeSandbox)
 
@@ -80,40 +78,40 @@ WUI/JS Main Lib is part of the WUI/JS project, which currently consists of 4 rep
 	UI plugins library.<br><br>
 -	[https://github.com/wui-js/wuijs-environment-lib](https://github.com/wui-js/wuijs-environment-lib)<br>
 	Bridge library between a web environments and native web rendering engines.<br><br>
--	[https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab)<br>
+-	[https://github.com/wui-js/wuijs-demos](https://github.com/wui-js/wuijs-demos)<br>
 	Repository with demos and usage examples for the project libraries.<br><br>
 
 <a name="classtable"></a>
 
 ### Classes Table
 
-| Class name                          | Version | Description |
-| ----------------------------------- | -------:| ----------- |
-| [WUICookie](#WUICookie)             | `0.4`   | Utilities for cookies management. |
-| [WUIHead](#WUIHead)                 | `0.3`   | Utilities for HTML head management. |
-| [WUIBody](#WUIBody)                 | `0.3`   | Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments. |
-| [WUILanguage](#WUILanguage)         | `0.3`   | Utilities for interfaces with different languages managment. Allows you to load language files in JS or JSON format and dynamically update the content of HTML elements based on the language. |
-| [WUIScrolly](#WUIScrolly)           | `0.4`   | Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body. |
-| [WUIIcon](#WUIIcon)                 | `0.2`   | Pre-designed icons set loaded via CSS, for use in interfaces. |
-| [WUIFade](#WUIFade)                 | `0.2`   | Utilities for fading out and fading control in HTML elements with opacity. |
-| [WUILoader](#WUILoader)             | `0.3`   | Component for the implementation of loading animations. |
-| WUITooltip                          | `0.2`   | Component for the implementation of tooltip texts. |
-| [WUIModal](#WUIModal)               | `0.4`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
-| [WUIPaging](#WUIPaging)             | `0.3`   | Component for the implementation of paginated views with animated transitions. |
-| [WUISlider](#WUISlider)             | `0.4`   | Component for the implementation of slide presentations controlled by mouse/touch dragging and/or by event. |
-| WUITabs                             | `0.2`   | Component for the implementation of views accessible by tab selection. |
-| [WUIMenubar](#WUIMenubar)           | `0.2`   | Component for the implementation of menu bars. |
-| [WUIList](#WUIList)                 | `0.3`   | Component for the implementation of data lists and buttons for each row optionally. |
-| [WUITable](#WUITable)               | `0.4`   | Component for the implementation of data tables. Unlike the `WUIList` component, the `WUITable` component includes a column header. |
-| [WUIForm](#WUIForm)                 | `0.4`   | Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`. |
-| [WUIFormat](#WUIFormat)             | `0.3`   | Utilities for management and validation `string`, `number` and `Date` data formats. |
-| [WUISelectpicker](#WUISelectpicker) | `0.4`   | Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`. |
-| [WUIDatepicker](#WUIDatepicker)     | `0.4`   | Component for the implementation of date type data inputs based on HTML element `<input type="date">`. |
-| [WUITimepicker](#WUITimepicker)     | `0.4`   | Component for the implementation of time type data inputs based on HTML element `<input type="time">`. |
-| [WUIColorpicker](#WUIColorpicker)   | `0.4`   | Component for the implementation of color picker type data inputs based on HTML element `<input type="color">`. |
-| [WUISwitch](#WUISwitch)             | `0.5`   | Component for the implementation of checkbox type data inputs based on HTML element `<input type="checkbox">`. |
-| [WUIIntensity](#WUIIntensity)       | `0.3`   | Component for the implementation of 4-level intensity selector type data inputs: none, low, half, and high based on HTML element `<input type="range">`. |
-| [WUIButton](#WUIButton)             | `0.4`   | Component for the implementation of based on HTML element `<button>`. |
+| Class name                           | Version | Description |
+| ------------------------------------ | -------:| ----------- |
+| [WUICookie](#wui-cookie)             | `0.4`   | Utilities for cookies management. |
+| [WUIHead](#wui-head)                 | `0.3`   | Utilities for HTML head management. |
+| [WUIBody](#wui-body)                 | `0.3`   | Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments. |
+| [WUILanguage](#wui-language)         | `0.3`   | Utilities for interfaces with different languages managment. Allows you to load language files in JS or JSON format and dynamically update the content of HTML elements based on the language. |
+| [WUIScrolly](#wui-scrolly)           | `0.5`   | Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body. |
+| [WUIIcon](#wui-icon)                 | `0.3`   | Pre-designed icons set loaded via CSS, for use in interfaces. |
+| [WUIFade](#wui-fade)                 | `0.3`   | Utilities for fading out and fading control in HTML elements with opacity. |
+| [WUILoader](#wui-loader)             | `0.4`   | Component for the implementation of loading animations. |
+| [WUITooltip](#wui-tooltip)           | `0.3`   | Component for the implementation of tooltip texts. |
+| [WUIModal](#wui-modal)               | `0.5`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
+| [WUIPaging](#wui-paging)             | `0.4`   | Component for the implementation of paginated views with animated transitions. |
+| [WUISlider](#wui-slider)             | `0.5`   | Component for the implementation of slide presentations controlled by mouse/touch dragging and/or by event. |
+| [WUITabs](#wui-tabs)                 | `0.3`   | Component for the implementation of views accessible by tab selection. |
+| [WUIMenubar](#wui-menubar)           | `0.4`   | Component for the implementation of menu bars. |
+| [WUIList](#wui-list)                 | `0.4`   | Component for the implementation of data lists and buttons for each row optionally. |
+| [WUITable](#wui-table)               | `0.5`   | Component for the implementation of data tables. Unlike the `WUIList` component, the `WUITable` component includes a column header. |
+| [WUIForm](#wui-form)                 | `0.5`   | Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`. |
+| [WUIFormat](#wui-format)             | `0.3`   | Utilities for management and validation `string`, `number` and `Date` data formats. |
+| [WUISelectpicker](#wui-selectpicker) | `0.5`   | Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`. |
+| [WUIDatepicker](#wui-datepicker)     | `0.5`   | Component for the implementation of date type data inputs based on HTML element `<input type="date">`. |
+| [WUITimepicker](#wui-timepicker)     | `0.5`   | Component for the implementation of time type data inputs based on HTML element `<input type="time">`. |
+| [WUIColorpicker](#wui-colorpicker)   | `0.5`   | Component for the implementation of color picker type data inputs based on HTML element `<input type="color">`. |
+| [WUISwitch](#wui-switch)             | `0.6`   | Component for the implementation of checkbox type data inputs based on HTML element `<input type="checkbox">`. |
+| [WUIIntensity](#wui-intensity)       | `0.4`   | Component for the implementation of 4-level intensity selector type data inputs: none, low, half, and high based on HTML element `<input type="range">`. |
+| [WUIButton](#wui-button)             | `0.5`   | Component for the implementation of based on HTML element `<button>`. |
 
 <a name="dirmap"></a>
 
@@ -131,7 +129,8 @@ wuijs-main-lib/
 ├── src/
 │   └── wui-js/
 │       └── main/
-└── tools/
+├── tools/
+└── tests/
 ```
 
 | Path                                                                                         | Description |
@@ -147,6 +146,7 @@ wuijs-main-lib/
 | [src/wui-js](https://github.com/wui-js/wuijs-main-lib/tree/main/src/wui-js)                  | WUI/JS Project directory. |
 | [src/wui-js/main](https://github.com/wui-js/wuijs-main-lib/tree/main/src/wui-js/main/)       | WUI/JS Main library. |
 | [tools](https://github.com/wui-js/wuijs-main-lib/tree/main/tools/)                           | Complementary tools. |
+| [tests](https://github.com/wui-js/wuijs-main-lib/tree/main/tests/)                           | Testing scripts. |
 
 <a name="install"></a>
 
@@ -184,554 +184,18 @@ The resources will be available at the path `./node_modules/@wui-js/main`.
 
 ## Implementation
 
-The WUI library can be included in a project in two ways: in standard mode, by linking the CSS and JS files of each component individually, or in abbreviated mode, using the `wui.js` script that automatically manages the loading of the indicated components. In both cases it is necessary to create the `wui.css` configuration file with the CSS variables of the components used.
+The WUI library can be included in a project in two ways: in standard mode, by linking the CSS and JS files of each component individually, or in abbreviated mode, using the `wui.js` script that automatically manages the loading of the indicated components.
+
+> [!NOTE]
+> The use of the `wui.css` configuration file was deprecated starting from version `0.6.0`.
 
 <a name="standard"></a>
 
 ### Standard Implementation
 
-To enable all classes, the CSS and JS dependencies of the libraries must be implemented in the HTML header of the web page in the `wui.css` configuration file.
+To enable all classes, the CSS and JS dependencies of the libraries must be implemented in the HTML header of the web page.
 
-CSS code in the `wui.css` file:
-
-```css
-/* WUI settings */
-
-:root {
-
-	/* wui-scrolly */
-
-	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 60%);
-	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 90%);
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-loader */
-
-	--wui-loader-color: #353a40;
-
-	/* wui-tooltip */
-
-	--wui-tooltip-open-delay: .2s;
-	--wui-tooltip-bgcolor: #1f2429;
-	--wui-tooltip-textcolor: #fff;
-
-	/* wui-modal */
-
-	--wui-modal-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-	--wui-modal-box-borderradius: 17px;
-	--wui-modal-box-bgcolor: rgb(from #efeff6 r g b / 100%);
-	--wui-modal-back-textcolor: #1e90ff;
-	--wui-modal-close-bgcolor: #353a40;
-	--wui-modal-topbar-height: 4px;
-	--wui-modal-title-textfont: Arial, Helvetica, Verdana, sans-serif;
-	--wui-modal-title-textcase: none;
-	--wui-modal-title-textcolor: #000;
-	--wui-modal-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-modal-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-modal-footer-bordercolor: transparent;
-	--wui-modal-button-submit-bgcolor-mobile: rgb(from #959da5 r g b / 20%);
-	--wui-modal-button-submit-textcolor-mobile: #1e90ff;
-	--wui-modal-button-warning-textcolor-mobile: #f44343;
-	--wui-modal-message-box-width: 280px;
-	--wui-modal-message-box-bgcolor: rgb(from #efeff6 r g b / 80%);
-	--wui-modal-message-box-textcolor: #2d3a47;
-	--wui-modal-message-mobile-box-width: 280px;
-	--wui-modal-message-mobile-footer-bordercolor: #d5dce3;
-	--wui-modal-message-mobile-button-bordercolor: #d5dce3;
-	--wui-modal-message-linkcolor: #1e90ff;
-	--wui-modal-page-box-width: 800px;
-	--wui-modal-page-box-height: 90%;
-	--wui-modal-page-box-borderradius: 10px;
-	--wui-modal-page-box-maxheight: 640px;
-	--wui-modal-page-box-bgcolor: rgb(from #efeff6 r g b / 100%);
-	--wui-modal-page-header-topbar-bgcolor: #d5dce3;
-	--wui-modal-page-header-bordercolor: #d5dce3;
-	--wui-modal-slidepage-box-margin: 10px;
-	--wui-modal-smallpage-box-width: 340px;
-	--wui-modal-smallpage-box-height: 280px;
-	--wui-modal-mobile-page-box-topmargin: 0px;
-	--wui-modal-mobile-page-box-borderradius-maximized: 0px;
-
-	/* wui-paging */
-
-	--wui-paging-page-transition-time: .4s;
-	--wui-paging-page-bgcolor: transparent;
-	--wui-paging-page-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-paging-page-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-
-	/* wui-slider */
-
-	--wui-slider-paging-bgcolor-hidden: rgb(from #fff r g b / 20%);
-	--wui-slider-paging-bgcolor-visible: rgb(from #fff r g b / 80%);
-
-	/* wui-tabs */
-
-	--wui-tabs-tab-bgcolor-out: #fdfdfe;
-	--wui-tabs-tab-bgcolor-over: #f6f6fa;
-	--wui-tabs-tab-iconcolor-out: #1e90ff;
-	--wui-tabs-tab-iconcolor-over: #1e90ff;
-	--wui-tabs-tab-iconcolor-mobile: #1e90ff;
-	--wui-tabs-tab-textcolor-out: #2d3a47;
-	--wui-tabs-tab-textcolor-over: #1e90ff;
-
-	/* wui-menubar */
-
-	--wui-menubar-shadowcolor: #959da5;
-	--wui-menubar-margin: 10px;
-	--wui-menubar-borderradius: 10px;
-	--wui-menubar-bar-bordercolor: #f0f0f3;
-	--wui-menubar-bar-bgcolor-top: #f0f0f3;
-	--wui-menubar-bar-bgcolor-bottom: #f0f0f3;
-	--wui-menubar-bar-button-bgcolor-out: transparent;
-	--wui-menubar-bar-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-bar-button-bgcolor-selected: #1e90ff;
-	--wui-menubar-bar-button-bgcolor-disabled: transparent;
-	--wui-menubar-bar-button-iconsize: 24px;
-	--wui-menubar-bar-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-menubar-bar-button-iconcolor-over: #353a40;
-	--wui-menubar-bar-button-iconcolor-selected: #f6f6fa;
-	--wui-menubar-bar-button-iconcolor-disabled: #d5dce3;
-	--wui-menubar-bar-button-textcolor-out: #2d3a47;
-	--wui-menubar-bar-button-textcolor-over: #1f2937;
-	--wui-menubar-bar-button-textcolor-selected: #f6f6fa;
-	--wui-menubar-bar-button-textcolor-disabled: #d5dce3;
-	--wui-menubar-expander-bgcolor-out: transparent;
-	--wui-menubar-expander-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-expander-iconsize: 16px;
-	--wui-menubar-expander-iconcolor-out: #444;
-	--wui-menubar-expander-iconcolor-over: #000;
-	--wui-menubar-expander-expandicon-src: none;
-	--wui-menubar-expander-contracticon-src: none;
-	--wui-menubar-opener-iconsize: 16px;
-	--wui-menubar-opener-openicon-src: none;
-	--wui-menubar-opener-closeicon-src: none;
-	--wui-menubar-submenu-bordercolor: #f0f0f3;
-	--wui-menubar-submenu-bgcolor: #fdfdfe;
-	--wui-menubar-submenu-button-bgcolor-out: transparent;
-	--wui-menubar-submenu-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-submenu-button-bgcolor-selected: #1e90ff;
-	--wui-menubar-submenu-button-bgcolor-disabled: transparent;
-	--wui-menubar-submenu-button-iconsize: 24px;
-	--wui-menubar-submenu-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-menubar-submenu-button-iconcolor-over: #353a40;
-	--wui-menubar-submenu-button-iconcolor-selected: #f6f6fa;
-	--wui-menubar-submenu-button-iconcolor-disabled: #d5dce3;
-	--wui-menubar-submenu-button-textcolor-out: #2d3a47;
-	--wui-menubar-submenu-button-textcolor-over: #1f2937;
-	--wui-menubar-submenu-button-textcolor-selected: #f6f6fa;
-	--wui-menubar-submenu-button-textcolor-disabled: #d5dce3;
-	--wui-menubar-tooltip-bgcolor: #000;
-	--wui-menubar-tooltip-textcolor: #fff;
-	--wui-menubar-bubble-bgcolor: #f44343;
-	--wui-menubar-bubble-textcolor: #fff;
-	--wui-menubar-mobile-bar-horizpadding: 10px;
-	--wui-menubar-mobile-bar-vertpadding: 0px;
-	--wui-menubar-mobile-opener-closeicon-src: none;
-
-	/* wui-list */
-
-	--wui-list-shadowcolor: #959da5;
-	--wui-list-borderradius: 10px;
-	--wui-list-borderwidth: 0px;
-	--wui-list-bordercolor: #f0f0f3;
-	--wui-list-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-list-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-list-row-height: 44px;
-	--wui-list-row-borderwidth: 1px;
-	--wui-list-row-bordercolor-out: #f0f0f3;
-	--wui-list-row-bordercolor-over: #f0f0f3;
-	--wui-list-row-bgcolor-out: #fdfdfe;
-	--wui-list-row-bgcolor-over: #f6f6fa;
-	--wui-list-row-textcolor-out: #2d3a47;
-	--wui-list-row-textcolor-over: #1f2937;
-	--wui-list-row-textcolor-disabled: #d5dce3;
-	--wui-list-innerrow-borderwidth: 1px;
-	--wui-list-innerrow-bordercolor: #f0f0f3;
-	--wui-list-innerrow-bgcolor: rgb(from #f6f6fa r g b / 20%);
-	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
-	--wui-list-buttons-bgcolor: transparent;
-	--wui-list-button-size: 48px;
-	--wui-list-button-hmargin: 8px;
-	--wui-list-button-borderradius: 50%;
-	--wui-list-button-bgcolor-enabled: #1e90ff;
-	--wui-list-button-bgcolor-disabled: #d5dce3;
-
-	/* wui-table */
-
-	--wui-table-shadowcolor: #959da5;
-	--wui-table-borderradius: 10px;
-	--wui-table-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-table-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-table-column-bordercolor-width: 1px;
-	--wui-table-column-bordercolor-out: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-bordercolor-over: #1e90ff;
-	--wui-table-column-bordercolor-selected: #1e90ff;
-	--wui-table-column-bgcolor-out: #f6f6fa;
-	--wui-table-column-bgcolor-over: #f6f6fa;
-	--wui-table-column-bgcolor-selected: #1e90ff;
-	--wui-table-column-textcolor-out: #444;
-	--wui-table-column-textcolor-over: #000;
-	--wui-table-column-textcolor-selected: #1e90ff;
-	--wui-table-column-textcolor-disabled: #d5dce3;
-	--wui-table-column-sorter-iconsize: 16px;
-	--wui-table-column-sorter-iconcolor-out: #444;
-	--wui-table-column-sorter-iconcolor-over: #000;
-	--wui-table-column-sorter-iconcolor-disabled: #d5dce3;
-	--wui-table-column-sorter-ascicon-src: none;
-	--wui-table-column-sorter-descicon-src: none;
-	--wui-table-column-resizer-bordercolor-out: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-resizer-bordercolor-over: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-dragger-bordercolor-over: #444;
-	--wui-table-column-dragger-bgcolor-drop: rgb(from #1e90ff r g b / 10%);
-	--wui-table-row-bordercolor-width: 1px;
-	--wui-table-row-bordercolor-out: #f0f0f3;
-	--wui-table-row-bordercolor-over: #f0f0f3;
-	--wui-table-row-bordercolor-selected: #1e90ff;
-	--wui-table-row-bordercolor-disabled: #f0f0f3;
-	--wui-table-row-bgcolor-out: #fdfdfe;
-	--wui-table-row-bgcolor-over: #f6f6fa;
-	--wui-table-row-bgcolor-selected: #1e90ff;
-	--wui-table-row-bgcolor-disabled: transparent;
-	--wui-table-row-textcolor-out: #2d3a47;
-	--wui-table-row-textcolor-over: #1f2937;
-	--wui-table-row-textcolor-selected: #f6f6fa;
-	--wui-table-row-textcolor-disabled: #d5dce3;
-
-	/* wui-form */
-
-	--wui-form-header-bordercolor: #d5dce3;
-	--wui-form-header-titlecolor: #000;
-	--wui-form-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-form-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-form-line-bordercolor: #d5dce3;
-	--wui-form-fieldset-bgcolor: #fff;
-	--wui-form-legend-texttransform: uppercase;
-	--wui-form-legend-textcolor: rgb(from #2d3a47 r g b / 60%);
-	--wui-form-label-textcolor-out: #2d3a47;
-	--wui-form-label-textcolor-focus: #1e90ff;
-	--wui-form-label-textcolor-notempty: rgb(from #2d3a47 r g b / 40%);
-	--wui-form-label-textcolor-disabled: #d5dce3;
-	--wui-form-input-height: 30px;
-	--wui-form-input-borderwidth: 1px;
-	--wui-form-input-borderradius: 10px;
-	--wui-form-input-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-form-input-bordercolor-focus: #1e90ff;
-	--wui-form-input-bordercolor-invalid: #f44343;
-	--wui-form-input-bordercolor-disabled: #d5dce3;
-	--wui-form-input-bgcolor-out: #f6f6fa;
-	--wui-form-input-bgcolor-focus: #f6f6fa;
-	--wui-form-input-bgcolor-disabled: #d5dce3;
-	--wui-form-input-textcolor-out: #2d3a47;
-	--wui-form-input-textcolor-over: #1f2937;
-	--wui-form-input-textcolor-disabled: #d5dce3;
-	--wui-form-date-opener-iconsize: 30px;
-	--wui-form-date-opener-iconcolor-out: #000;
-	--wui-form-date-opener-iconcolor-over: #1e90ff;
-	--wui-form-date-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-date-opener-openicon-src: none;
-	--wui-form-date-opener-closeicon-src: none;
-	--wui-form-time-opener-iconsize: 30px;
-	--wui-form-time-opener-iconcolor-out: #000;
-	--wui-form-time-opener-iconcolor-over: #1e90ff;
-	--wui-form-time-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-time-opener-openicon-src: none;
-	--wui-form-time-opener-closeicon-src: none;
-	--wui-form-range-thumb-size: 20px;
-	--wui-form-range-thumb-bgcolor-out: #1e90ff;
-	--wui-form-range-thumb-bgcolor-over: #1e90ff;
-	--wui-form-range-thumb-bgcolor-disabled: #d5dce3;
-	--wui-form-range-trackbar-height: 7px;
-	--wui-form-range-trackbar-borderwidth: 1px;
-	--wui-form-range-trackbar-bordercolor-out: #f0f0f3;
-	--wui-form-range-trackbar-bordercolor-focus: #1e90ff;
-	--wui-form-range-trackbar-bordercolor-disabled: #d5dce3;
-	--wui-form-range-trackbar-bgcolor-out: #f6f6fa;
-	--wui-form-range-trackbar-bgcolor-focus: #f6f6fa;
-	--wui-form-range-trackbar-bgcolor-disabled: #d5dce3;
-	--wui-form-select-opener-iconsize: 30px;
-	--wui-form-select-opener-iconcolor-out: #000;
-	--wui-form-select-opener-iconcolor-over: #1e90ff;
-	--wui-form-select-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-select-opener-openicon-src: none;
-	--wui-form-select-opener-closeicon-src: none;
-	--wui-form-data-textcolor-out: #1e90ff;
-	--wui-form-data-textcolor-disabled: #d5dce3;
-	--wui-form-progress-borderwidth: 1px;
-	--wui-form-progress-bordercolor: #f0f0f3;
-	--wui-form-progress-valuecolor: #1e90ff;
-	--wui-form-progress-bgcolor: #f6f6fa;
-	--wui-form-text-textcolor-out: #888;
-	--wui-form-text-textcolor-disabled: #d5dce3;
-	--wui-form-text-linkcolor-out: #1e90ff;
-	--wui-form-text-linkcolor-highlight: #1e90ff;
-	--wui-form-message-shadowcolor: #959da5;
-	--wui-form-message-bgcolor: #fdfdfe;
-	--wui-form-message-textcolor: #2d3a47;
-	--wui-form-message-highlight-bgcolor: #1e90ff;
-	--wui-form-message-highlight-textcolor: #fff;
-	--wui-form-mobile-field-bordercolor: rgb(from #1e90ff r g b / 10%);
-	--wui-form-mobile-label-textcolor: #444;
-	--wui-form-mobile-input-height: 40px;
-	--wui-form-mobile-input-bgcolor: rgb(from #1e90ff r g b / 4%);
-	--wui-form-mobile-input-height: 34px;
-	--wui-form-mobile-input-borderradius: 15px;
-
-	/* wui-selectpicker */
-
-	--wui-selectpicker-borderradius: 10px;
-	--wui-selectpicker-borderwidth: 0px;
-	--wui-selectpicker-bordercolor: transparent;
-	--wui-selectpicker-bgcolor: #f6f6fa;
-	--wui-selectpicker-opener-iconsize: 30px;
-	--wui-selectpicker-opener-iconcolor-out: #000;
-	--wui-selectpicker-opener-iconcolor-over: #1e90ff;
-	--wui-selectpicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-selectpicker-opener-openicon-src: none;
-	--wui-selectpicker-opener-closeicon-src: none;
-	--wui-selectpicker-viewinput-leftpadding: 10px;
-	--wui-selectpicker-viewinput-textcolor-out: #2d3a47;
-	--wui-selectpicker-viewinput-textcolor-over: #1f2937;
-	--wui-selectpicker-viewinput-textcolor-disabled: #d5dce3;
-	--wui-selectpicker-box-shadowcolor: #959da5;
-	--wui-selectpicker-box-borderradius: 15px;
-	--wui-selectpicker-box-bordercolor: #f0f0f3;
-	--wui-selectpicker-box-bgcolor: #fdfdfe;
-	--wui-selectpicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-selectpicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-selectpicker-box-option-borderradius: 10px;
-	--wui-selectpicker-box-option-bordercolor-out: #f0f0f3;
-	--wui-selectpicker-box-option-bordercolor-over: #f0f0f3;
-	--wui-selectpicker-box-option-bgcolor-out: transparent;
-	--wui-selectpicker-box-option-bgcolor-over: #f6f6fa;
-	--wui-selectpicker-box-option-iconsize: 24px;
-	--wui-selectpicker-box-option-iconcolor-out: #1e90ff;
-	--wui-selectpicker-box-option-iconcolor-over: #1e90ff;
-	--wui-selectpicker-box-option-iconcolor-selected: #1e90ff;
-	--wui-selectpicker-box-option-iconcolor-disabled: rgb(from #d5dce3 r g b / 40%);
-	--wui-selectpicker-box-option-checkicon-src: none;
-	--wui-selectpicker-box-option-textcolor-empty: rgb(from #2d3a47 r g b / 60%);
-	--wui-selectpicker-box-option-textcolor-out: #2d3a47;
-	--wui-selectpicker-box-option-textcolor-over: #2d3a47;
-	--wui-selectpicker-box-option-textcolor-selected: #1e90ff;
-	--wui-selectpicker-box-option-textcolor-disabled: rgb(from #d5dce3 r g b / 40%);
-	--wui-selectpicker-box-button-bordercolor: #f0f0f3;
-	--wui-selectpicker-box-button-textcolor-out: #1e90ff;
-	--wui-selectpicker-box-button-textcolor-over: #1e90ff;
-	--wui-selectpicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-	--wui-selectpicker-mobile-box-width: 280px;
-	--wui-selectpicker-mobile-box-borderradius: 17px;
-
-	/* wui-datepicker */
-
-	--wui-datepicker-borderradius: 10px;
-	--wui-datepicker-borderwidth: 0px;
-	--wui-datepicker-bordercolor: transparent;
-	--wui-datepicker-bgcolor: #f6f6fa;
-	--wui-datepicker-opener-iconsize: 30px;
-	--wui-datepicker-opener-iconcolor-out: #000;
-	--wui-datepicker-opener-iconcolor-over: #1e90ff;
-	--wui-datepicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-opener-openicon-src: none;
-	--wui-datepicker-opener-closeicon-src: none;
-	--wui-datepicker-viewinput-leftpadding: 10px;
-	--wui-datepicker-viewinput-textcolor-out: #2d3a47;
-	--wui-datepicker-viewinput-textcolor-over: #1f2937;
-	--wui-datepicker-viewinput-textcolor-disabled: #d5dce3;
-	--wui-datepicker-box-shadowcolor: #959da5;
-	--wui-datepicker-box-borderradius: 15px;
-	--wui-datepicker-box-bordercolor: #f0f0f3;
-	--wui-datepicker-box-bgcolor: rgb(from #fdfdfe r g b / 100%);
-	--wui-datepicker-box-period-iconsize: 20px;
-	--wui-datepicker-box-period-iconcolor-out: #000;
-	--wui-datepicker-box-period-iconcolor-over: #1e90ff;
-	--wui-datepicker-box-period-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-box-period-upicon-src: none;
-	--wui-datepicker-box-period-downicon-src: none;
-	--wui-datepicker-box-paging-iconsize: 26px;
-	--wui-datepicker-box-paging-iconcolor-out: #1e90ff;
-	--wui-datepicker-box-paging-iconcolor-over: #1e90ff;
-	--wui-datepicker-box-paging-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-box-paging-previcon-src: none;
-	--wui-datepicker-box-paging-nexticon-src: none;
-	--wui-datepicker-box-month-titlecolor: #888;
-	--wui-datepicker-box-month-bgcolor-today: #f0f0f3;
-	--wui-datepicker-box-month-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-datepicker-box-month-bgcolor-selected: #1e90ff;
-	--wui-datepicker-box-month-textcolor-out: #000;
-	--wui-datepicker-box-month-textcolor-over: #1e90ff;
-	--wui-datepicker-box-month-textcolor-selected: #fff;
-	--wui-datepicker-box-day-bgcolor-today: #f0f0f3;
-	--wui-datepicker-box-day-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-datepicker-box-day-bgcolor-selected: #1e90ff;
-	--wui-datepicker-box-day-textcolor-out: #000;
-	--wui-datepicker-box-day-textcolor-over: #1e90ff;
-	--wui-datepicker-box-day-textcolor-selected: #fff;
-	--wui-datepicker-box-button-textcolor-out: #1e90ff;
-	--wui-datepicker-box-button-textcolor-over: #1e90ff;
-	--wui-datepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-
-	/* wui-timepicker */
-
-	--wui-timepicker-borderradius: 10px;
-	--wui-timepicker-borderwidth: 0px;
-	--wui-timepicker-bordercolor: transparent;
-	--wui-timepicker-bgcolor: #f6f6fa;
-	--wui-timepicker-opener-iconsize: 30px;
-	--wui-timepicker-opener-iconcolor-out: #000;
-	--wui-timepicker-opener-iconcolor-over: #1e90ff;
-	--wui-timepicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-timepicker-opener-openicon-src: none;
-	--wui-timepicker-opener-closeicon-src: none;
-	--wui-timepicker-viewinput-leftpadding: 10px;
-	--wui-timepicker-viewinput-textcolor-out: #2d3a47;
-	--wui-timepicker-viewinput-textcolor-over: #1f2937;
-	--wui-timepicker-viewinput-textcolor-disabled: #d5dce3;
-	--wui-timepicker-box-shadowcolor: #959da5;
-	--wui-timepicker-box-borderradius: 15px;
-	--wui-timepicker-box-bordercolor: #f0f0f3;
-	--wui-timepicker-box-bgcolor: rgb(from #fff r g b / 80%);
-	--wui-timepicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-timepicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-timepicker-box-option-bgcolor-now: #f0f0f3;
-	--wui-timepicker-box-option-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-timepicker-box-option-bgcolor-selected: #1e90ff;
-	--wui-timepicker-box-option-textcolor-out: #000;
-	--wui-timepicker-box-option-textcolor-over: #1e90ff;
-	--wui-timepicker-box-option-textcolor-selected: #fff;
-	--wui-timepicker-box-button-textcolor-out: #1e90ff;
-	--wui-timepicker-box-button-textcolor-over: #1e90ff;
-	--wui-timepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-
-	/* wui-colorpicker */
-
-	--wui-colorpicker-opener-iconsize: 30px;
-	--wui-colorpicker-opener-iconcolor-out: #000;
-	--wui-colorpicker-opener-iconcolor-over: #1e90ff;
-	--wui-colorpicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-colorpicker-opener-openicon-src: none;
-	--wui-colorpicker-opener-closeicon-src: none;
-	--wui-colorpicker-viewbutton-size: 30px;
-	--wui-colorpicker-viewbutton-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-colorpicker-viewbutton-bordercolor-over: #1e90ff;
-	--wui-colorpicker-viewbutton-bordercolor-invalid: #f44343;
-	--wui-colorpicker-viewbutton-bordercolor-disabled: #d5dce3;
-	--wui-colorpicker-viewbutton-bgcolor-out: transparent;
-	--wui-colorpicker-viewbutton-bgcolor-over: transparent;
-	--wui-colorpicker-viewbutton-bgcolor-disabled: transparent;
-	--wui-colorpicker-viewcolor-borderwidth: 1px;
-	--wui-colorpicker-viewcolor-bordercolor: rgb(from #1e90ff r g b / 20%);
-	--wui-colorpicker-viewcolor-emptyicon-src: none;
-	--wui-colorpicker-box-shadowcolor: #959da5;
-	--wui-colorpicker-box-borderradius: 15px;
-	--wui-colorpicker-box-bordercolor: #f0f0f3;
-	--wui-colorpicker-box-bgcolor: rgb(from #fff r g b / 80%);
-	--wui-colorpicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-colorpicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-colorpicker-box-tab-textcolor-out: #2d3a47;
-	--wui-colorpicker-box-tab-textcolor-selected: #1e90ff;
-	--wui-colorpicker-box-option-bordercolor-out: #f0f0f3;
-	--wui-colorpicker-box-option-bordercolor-over: #f0f0f3;
-	--wui-colorpicker-box-option-bgcolor-out: transparent;
-	--wui-colorpicker-box-option-bgcolor-over: #f6f6fa;
-	--wui-colorpicker-box-option-bgcolor-selected: #1e90ff;
-	--wui-colorpicker-box-option-textcolor-out: #000;
-	--wui-colorpicker-box-option-textcolor-over: #1e90ff;
-	--wui-colorpicker-box-option-textcolor-selected: #fff;
-	--wui-colorpicker-box-preview-textcolor-out: #000;
-	--wui-colorpicker-box-preview-textcolor-empty: rgb(from #2d3a47 r g b / 60%);
-	--wui-colorpicker-box-button-textcolor-out: #1e90ff;
-	--wui-colorpicker-box-button-textcolor-over: #1e90ff;
-	--wui-colorpicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-
-	/* wui-switch */
-
-	--wui-switch-button-size: 30px;
-	--wui-switch-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-switch-bordercolor-over: #1e90ff;
-	--wui-switch-bordercolor-activated: #1e90ff;
-	--wui-switch-bordercolor-invalid: #f44343;
-	--wui-switch-bordercolor-disabled: #d5dce3;
-	--wui-switch-bgcolor-out: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-bgcolor-over: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-bgcolor-activated: #1e90ff;
-	--wui-switch-bgcolor-disabled: rgb(from #d5dce3 r g b / 20%);
-	--wui-switch-button-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-switch-button-bordercolor-over: #1e90ff;
-	--wui-switch-button-bordercolor-activated: #1e90ff;
-	--wui-switch-button-bordercolor-disabled: #d5dce3;
-	--wui-switch-button-bgcolor-out: #f6f6fa;
-	--wui-switch-button-bgcolor-over: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-button-bgcolor-activated: #f6f6fa;
-	--wui-switch-button-bgcolor-disabled: #d5dce3;
-
-	/* wui-intensity */
-
-	--wui-intensity-height: 30px;
-	--wui-intensity-borderradius: 15px;
-	--wui-intensity-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-intensity-bordercolor-disabled: #d5dce3;
-	--wui-intensity-bgcolor-none: #f6f6fa;
-	--wui-intensity-bgcolor-low: mediumaquamarine;
-	--wui-intensity-bgcolor-half: darkorange;
-	--wui-intensity-bgcolor-high: orangered;
-
-	/* wui-button */
-
-	--wui-button-default-minwidth: 200px;
-	--wui-button-default-height: 34px;
-	--wui-button-default-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-button-default-bordercolor-over: #1e90ff;
-	--wui-button-default-bordercolor-selected: #1e90ff;
-	--wui-button-default-bordercolor-disabled: #d5dce3;
-	--wui-button-default-bgcolor-out: transparent;
-	--wui-button-default-bgcolor-over: transparent;
-	--wui-button-default-bgcolor-selected: #1e90ff;
-	--wui-button-default-bgcolor-disabled: transparent;
-	--wui-button-default-textcolor-out: #1e90ff;
-	--wui-button-default-textcolor-over: #1e90ff;
-	--wui-button-default-textcolor-selected: #fff;
-	--wui-button-default-textcolor-disabled: #d5dce3;
-	--wui-button-default-textsize: 15px;
-	--wui-button-submit-minwidth: 200px;
-	--wui-button-submit-height: 34px;
-	--wui-button-submit-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-button-submit-bordercolor-over: #1e90ff;
-	--wui-button-submit-bordercolor-selected: #1e90ff;
-	--wui-button-submit-bordercolor-disabled: #d5dce3;
-	--wui-button-submit-bgcolor-out: #1e90ff;
-	--wui-button-submit-bgcolor-over: #1e90ff;
-	--wui-button-submit-bgcolor-selected: #1e90ff;
-	--wui-button-submit-bgcolor-disabled: #d5dce3;
-	--wui-button-submit-textcolor-out: #fff;
-	--wui-button-submit-textcolor-over: #fff;
-	--wui-button-submit-textcolor-selected: #fff;
-	--wui-button-submit-textcolor-disabled: #d5dce3;
-	--wui-button-submit-textsize: 15px;
-	--wui-button-warning-bordercolor-out: rgb(from #f44343 r g b / 25%);
-	--wui-button-warning-bordercolor-over: #f44343;
-	--wui-button-warning-bordercolor-selected: #f44343;
-	--wui-button-warning-bordercolor-disabled: #d5dce3;
-	--wui-button-warning-bgcolor-out: #f44343;
-	--wui-button-warning-bgcolor-over: #f44343;
-	--wui-button-warning-bgcolor-selected: #f44343;
-	--wui-button-warning-bgcolor-disabled: #d5dce3;
-	--wui-button-warning-textcolor-out: #fff;
-	--wui-button-warning-textcolor-over: #fff;
-	--wui-button-warning-textcolor-selected: #fff;
-	--wui-button-warning-textcolor-disabled: #d5dce3;
-	--wui-button-icon-float-padding: 5px;
-	--wui-button-mobile-default-height: 40px;
-	--wui-button-mobile-submit-height: 40px;
-	--wui-button-mobile-icon-float-padding: 10px;
-	--wui-button-form-default-minwidth: 100px;
-}
-```
-
-Assuming the CSS settings file is installed in the relative path `./Settings/wui.css` and the libraries are installed in the relative path `./libraries/WUI`, the HTML header looks like this:
+Assuming the library resources are located in the relative path `/libraries/` directory, the HTML header looks like this:
 
 HTML code:
 
@@ -744,58 +208,72 @@ HTML code:
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
-		<link type="text/css" rel="stylesheet" href="./Settings/Main.css">
-		<link type="text/css" rel="stylesheet" href="./Settings/wui.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/loader/wui-loader-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/tooltip/wui-tooltip-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/modal/wui-modal-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/paging/wui-paging-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/slider/wui-slider-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/tabs/wui-tabs-0.2.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/menubar/wui-menubar-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/list/wui-list-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/table/wui-table-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/form/wui-form-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/datepicker/wui-datepicker-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/timepicker/wui-timepicker-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.4.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.5.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/intensity/wui-intensity-0.3.css">
-		<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/button/wui-button-0.3.css">
-		<script type="text/javascript" src="./libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/head/wui-head-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/language/wui-language-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/fade/wui-fade-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/loader/wui-loader-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/tooltip/wui-tooltip-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/modal/wui-modal-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/paging/wui-paging-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/slider/wui-slider-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/tabs/wui-tabs-0.2.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/menubar/wui-menubar-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/list/wui-list-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/table/wui-table-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/format/wui-format-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/datepicker/wui-datepicker-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/timepicker/wui-timepicker-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.4.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.5.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/intensity/wui-intensity-0.3.js"></script>
-		<script type="text/javascript" src="./libraries/wui-js/main/button/wui-button-0.3.js"></script>
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.4.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.4.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.6.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.6.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.4.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.3.css">
+		<script type="text/javascript" src="/libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/language/wui-language-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.3.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.6.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/intensity/wui-intensity-0.4.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.3.js"></script>
 	</head>
 	<body>
 	</body>
 </html>
 ```
-
-This implementation method allows for standardization of an application's user interface design, using the `wui.css` file.
 
 > [!NOTE]
 > This implementation assumes installation via GitHub.
@@ -804,12 +282,9 @@ This implementation method allows for standardization of an application's user i
 > <script src="node_modules/@wui-js/main/button/wui-button-0.3.js"></script>
 > ```
 
-> [!IMPORTANT]
-> The styles settings file must be in the path `./Settings/wui.css`.
-
 > [!TIP]
-> If you only want to implement part of the WUI library set, you must add calls to the JS and CSS files in the HTML header as indicated in each section.
-> On the other hand, the `wui.css` file will only require the definition of the objects you want to implement.
+> If you need to customize the design, you can add a CSS file with the customization of the CSS variables in the `*.root.css` files that are needed.
+> According to WUI/JS project standard, this file is called `wui.root.css`.
 
 <a name="abbreviated"></a>
 
@@ -827,9 +302,8 @@ This loader allows you to integrate all WUI libraries into a web page, either fu
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
-		<link type="text/css" rel="stylesheet" href="./Settings/Main.css">
-		<link type="text/css" rel="stylesheet" href="./Settings/wui.css">
-		<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.5.2"></script>
+		<link type="text/css" rel="stylesheet" href="./Settings/wui.root.css">
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.6.0"></script>
 	</head>
 	<body>
 	</body>
@@ -843,53 +317,43 @@ If the `version` parameter is not specified, the installed version will be assum
 > For a correct abbreviated implementation, review the [Good Coding Practices](#goodpractices) section.
 
 > [!TIP]
-> For a simplified implementation of the `wui.css` file, you can optionally use the [WUIPluginThemes](https://github.com/wui-js/wuijs-plugins-lib?tab=readme-ov-file#wuipluginthemes) plugin provided in the [wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) library.
+> For a simplified implementation of the `wui.root.css` file, you can optionally use the [WUIPluginThemes](https://github.com/wui-js/wuijs-plugins-lib?tab=readme-ov-file#wuipluginthemes) plugin provided in the [wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) library.
 
-<a name="fullmode"></a>
-
-#### Full mode
-
-In full mode, all WUI libraries will be loaded into a web page, without requiring the manual inclusion of the JavaScript and CSS files corresponding to each library.
+Optionally, libraries can be included individually. To do this, add them to the `wui.js` file URL using the `class` parameter (or its short alias `c`).
+Library names passed in the `class` parameter should not contain the version suffix (`-x.x`) as the version will be automatically defined by the simple load script.
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.4.0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.6.0&c=selectpicker,switch"></script>
 ```
-
-<a name="partialmode"></a>
-
-#### Partial mode
-
-In partial mode, only the WUI libraries specified in the `class` parameter (or its short alias `c`) will be loaded into a web page, without requiring the manual inclusion of the JavaScript and CSS files corresponding to each library.
-
-```html
-<script type="text/javascript" src="./libraries/wui-js/main/wui.js?v=0.4.0&c=selectpicker,switch"></script>
-```
-
-> [!NOTE]
-> The names of the libraries passed in the `class` parameter do not have to contain the version suffix (`-x.x`). The version will be defined automatically by the simple loading script.
 
 > [!NOTE]
 > The `class` parameter does not distinguish between uppercase and lowercase.
 
+Additionally, you can omit loading the `root.css` files for each library by adding the `root` parameter with the value `0` (zero) to the `wui.js` file URL.
+
+```html
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.6.0&c=selectpicker,switch&r=0"></script>
+```
+
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/resource-loader/basic).
 
 <a name="classes"></a>
 
 ## Classes
 
-<a name="WUICookie"></a>
+<a name="wui-cookie"></a>
 
 ### WUICookie
 
-Version: `0.3`
+Version: `0.4`
 
 Utilities for cookies management.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
+|:----:| ---- |
 | JS   | [src/wui-js/main/cookie/wui-cookie-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/cookie/wui-cookie-0.4.js) |
 
 #### Constructor
@@ -942,7 +406,7 @@ body {
 HTML head:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/cookie/wui-cookie-0.4.js"></script>
 ```
 
 HTML code:
@@ -974,20 +438,20 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/cookie/basic).
 
-<a name="WUIHead"></a>
+<a name="wui-head"></a>
 
 ### WUIHead
 
-Version: `0.2`
+Version: `0.3`
 
 Utilities for HTML head management.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
+|:----:| ---- |
 | JS   | [src/wui-js/main/head/wui-head-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.3.js) |
 
 #### Constructor
@@ -1018,7 +482,7 @@ HTML head:
 <title></title>
 <meta name="application-name" content="">
 <meta name="theme-color" content="">
-<script type="text/javascript" src="./libraries/wui-js/main/head/wui-head-0.3.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.3.js"></script>
 ```
 
 JS code:
@@ -1034,7 +498,7 @@ const init = () => {
 window.addEventListener("DOMContentLoaded", init);
 ```
 
-<a name="WUIBody"></a>
+<a name="wui-body"></a>
 
 ### WUIBody
 
@@ -1045,7 +509,7 @@ Utilities for HTML body management. Allows the import of CSS/JS/HTML content and
 #### Sources
 
 | Type | File |
-| ---- | ---- |
+|:----:| ---- |
 | JS   | [src/wui-js/main/body/wui-body-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.3.js) |
 
 #### Constructor
@@ -1071,6 +535,7 @@ Utilities for HTML body management. Allows the import of CSS/JS/HTML content and
 | import  | `void`      | `import(id, path[, done])`<br><br>Arguments:<br>**• id:** `string`, specifies the id of the HTML element where the content is to be loaded.<br>**• path:** `string`, specifies the subdirectory path and filename of the files with extension `.css`, `.htm` and `.js` that will be imported and loaded.<br>**• done:** `function` *optional*, this function is executed when the content loading has finished.<br><br>Imports CSS/JS/HTML content referenced to an HTML element by its `id`. The content is also commonly referred to as a "module" and is loaded in three sections:<br>**• CSS:** using a `<style>` element inserted before the HTML content.<br>**• HTML:** over the element identified by its `id`.<br>**• JS:** using a `<script>` element inserted into the body of the HTML document. |
 | prepare | `void`      | `prepare()`<br><br>Depending on the value of the `environment` parameter, modifies the HTML elements `a`, `input`, and `select` in the HTML document body to adapt them to native environments. |
 | openURL | `void`      | `openURL(url[, download])`<br><br>Arguments:<br><br>**• id:** `string`, specifies the URL that is required to be opened or downloaded.<br>**• download:** `string` *optional*, specifies the name of the file that will be used to download the content referenced by the URL.<br><br>Open or download content using a URL. This method is required in native environments since WebView on Android or WebKit on iOS aren't always supported. |
+| destroy | `void`      | `destroy()`<br><br>Destroyer. |
 
 #### Implementation
 
@@ -1120,7 +585,7 @@ body {
 HTML head:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.3.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.3.js"></script>
 ```
 
 HTML code:
@@ -1153,20 +618,20 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/body/import).
 
-<a name="WUILanguage"></a>
+<a name="wui-language"></a>
 
 ### WUILanguage
 
-Version: `0.2`
+Version: `0.3`
 
 Utilities for interfaces with different languages managment. Allows you to load language files in JS or JSON format and dynamically update the content of HTML elements based on the language.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
+|:----:| ---- |
 | JS   | [src/wui-js/main/language/wui-language-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/language/wui-language-0.3.js) |
 
 #### Constructor
@@ -1194,6 +659,7 @@ Utilities for interfaces with different languages managment. Allows you to load 
 | ------- | ----------- | ----------- |
 | load    | `void`      | `load([lang[, sets]])`<br><br>Arguments:<br>**• lang:** `string` *optional* (default value corresponds to the `lang` property of the object)<br>**• sets:** `array` *optional* (default value corresponds to the `sets` property of the object)<br><br>Loads the language files indicated by language and set, and updates the HTML elements marked with the CSS selector. |
 | refresh | `void`      | `refresh([selector[, lang]])`<br><br>Arguments:**• selector:** `string` *optional* (default value corresponds to the `selector` property of the object)<br>**• lang:** `string` *optional* (default value corresponds to the `lang` property of the object)<br><br>Reloads the text contained in the nested elements of the HTML element specified in the `selector` argument. |
+| destroy | `void`      | `destroy()`<br><br>Destroyer. |
 
 #### Implementation
 
@@ -1229,7 +695,7 @@ JSON code file `main-en.json`:
 HTML head:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/language/wui-language-0.3.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/language/wui-language-0.3.js"></script>
 ```
 
 HTML code:
@@ -1285,19 +751,21 @@ language.load("en", ["main", "main2"]);
 > [!TIP]
 > If you want to add dynamic content within a text, It is recommended to use the `js` language file format (`mode: "js"`) and add the text using the string interpolation method, also known as template literals. I.e. ``mykey: `My ${var} text` ``.
 
-<a name="WUIScrolly"></a>
+<a name="wui-scrolly"></a>
 
 ### WUIScrolly
 
-Versión: `0.3`
+Versión: `0.5`
 
 Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| JS   | [src/wui-js/main/scrolly/wui-scrolly-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/scrolly/wui-scrolly-0.4.js) |
+|:----:| ---- |
+| JS   | [src/wui-js/main/scrolly/wui-scrolly-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/scrolly/wui-scrolly-0.5.js) |
+| CSS  | [src/wui-js/main/scrolly/wui-scrolly-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/scrolly/wui-scrolly-0.5.css) |
+| CSS  | [src/wui-js/main/scrolly/wui-scrolly-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/scrolly/wui-scrolly-0.5.root.css) |
 
 #### Constructor
 
@@ -1349,12 +817,13 @@ Utilities for animating HTML elements managment using the "onscroll" event of th
 | selectPage | `void`      | `selectPage(sectionIndex, pageIndex)`<br><br>Arguments:<br>**• sectionIndex:** `number`, values ​​from `0` <br>**• pageIndex:** `number`, value between `0` and `pages - 1` <br><br>Moves the focus of the HTML page to the section specified by the `sectionIndex` parameter and advances to the `pageIndex` page in that section. |
 | drawCenter | `void`      | `drawCenter()`<br><br>Draws the center of the visible part of the HTML page in the browser. |
 | drawRuler  | `void`      | `drawRuler()`<br><br>Draws a vertical ruler with pixel measurements, on the left side of the HTML page. |
+| destroy    | `void`      | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
-| Variable                                | Description |
-| --------------------------------------- | ----------- |
-| `--wui-scrolly-paging-bgcolor-hidden`      | Unselected page indicator color. |
+| Variable                               | Description |
+| -------------------------------------- | ----------- |
+| `--wui-scrolly-paging-bgcolor-hidden`  | Unselected page indicator color. |
 | `--wui-scrolly-paging-bgcolor-visible` | Selected page indicator color. |
 
 #### CSS Styles for Animation
@@ -1368,18 +837,6 @@ Utilities for animating HTML elements managment using the "onscroll" event of th
 | .fadein-right | Enter and exit with opacity from the right. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-scrolly */
-
-	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 50%);
-	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 90%);
-}
-```
 
 CSS code:
 
@@ -1456,8 +913,9 @@ body {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/scrolly/wui-scrolly-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.js"></script>
 ```
 
 HTML code:
@@ -1571,239 +1029,241 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/scrolly/basic).
 
-<a name="WUIIcon"></a>
+<a name="wui-icon"></a>
 
 ### WUIIcon
 
-Version: `0.1`
+Version: `0.3`
 
 Pre-designed icons set loaded via CSS, for use in interfaces.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.2.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.2.css) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.3.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.3.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.3.root.css) |
 
 #### Signals Icon Table
 
-| Icon                                             | Style                                                     | Icon                                             | Style                                                     | Icon                                        | Style                                                         | Icon                                        | Style                                                          |
-| :---:                                            | -----                                                     | :---:                                            | -----                                                     | :---:                                       | -----                                                         | :---:                                       | -----                                                          |
-| ![](../imgs/Icons/plus-line.svg)                 | .plus-line                                                | ![](../imgs/Icons/plus-lg-line.svg)              | .plus-lg-line                                             | ![](../imgs/Icons/dash-line.svg)            | .dash-line                                                    | ![](../imgs/Icons/dash-lg-line.svg)         | .dash-lg-line                                                  |
-| ![](../imgs/Icons/check-line.svg)                | .check-line<br>.successful-line                           | ![](../imgs/Icons/check-lg-line.svg)             | .check-lg-line<br>.successful-lg-line                     | ![](../imgs/Icons/info-line.svg)            | .info-line                                                    | ![](../imgs/Icons/info-lg-line.svg)         | .info-lg-line                                                  |
-| ![](../imgs/Icons/question-line.svg)             | .question-line                                            | ![](../imgs/Icons/question-lg-line.svg)          | .question-lg-line                                         | ![](../imgs/Icons/exclamation-line.svg)     | .exclamation-line<br>.warning-line                            | ![](../imgs/Icons/exclamation-lg-line.svg)  | .exclamation-lg-line<br>.warning-lg-line                       |
-| ![](../imgs/Icons/slash-line.svg)                | .slash-line                                               | ![](../imgs/Icons/slash-lg-line.svg)             | .slash-lg-line                                            | ![](../imgs/Icons/x-line.svg)               | .x-line<br>.close-line<br>.error-line                         | ![](../imgs/Icons/x-lg-line.svg)            | .x-lg-line<br>.close-lg-line<br>.error-lg-line                 |
-| ![](../imgs/Icons/filter-line.svg)               | .filter-line                                              | ![](../imgs/Icons/filter-lg-line.svg)            | .filter-lg-line                                           | ![](../imgs/Icons/plus-circle-line.svg)     | .plus-circle-line                                             | ![](../imgs/Icons/plus-circle-fill.svg)     | .plus-circle-fill                                              |
-| ![](../imgs/Icons/dash-circle-line.svg)          | .dash-circle-line                                         | ![](../imgs/Icons/dash-circle-fill.svg)          | .dash-circle-fill                                         | ![](../imgs/Icons/check-circle-line.svg)    | .check-circle-line<br>.successful-circle-line                 | ![](../imgs/Icons/check-circle-fill.svg)    | .check-circle-fill<br>.successful-circle-fill                  |
-| ![](../imgs/Icons/info-circle-line.svg)          | .info-circle-line                                         | ![](../imgs/Icons/info-circle-fill.svg)          | .info-circle-fill                                         | ![](../imgs/Icons/question-circle-line.svg) | .question-circle-line                                         | ![](../imgs/Icons/question-circle-fill.svg) | .question-circle-fill                                          |
-| ![](../imgs/Icons/exclamation-circle-line.svg)   | .exclamation-circle-line<br>.warning-circle-line          | ![](../imgs/Icons/exclamation-circle-fill.svg)   | .exclamation-circle-fill<br>.warning-circle-fill          | ![](../imgs/Icons/slash-circle-line.svg)    | .slash-circle-line                                            | ![](../imgs/Icons/slash-circle-fill.svg)    | .slash-circle-fill                                             |
-| ![](../imgs/Icons/x-circle-line.svg)             | .x-circle-line<br>.close-circle-line<br>error-circle-line | ![](../imgs/Icons/x-circle-fill.svg)             | .x-circle-fill<br>.close-circle-fill<br>error-circle-fill | ![](../imgs/Icons/filter-circle-line.svg)   | .filter-circle-line                                           | ![](../imgs/Icons/filter-circle-fill.svg)   | .filter-circle-fill                                            |
-| ![](../imgs/Icons/exclamation-triangle-line.svg) | .exclamation-triangle-line<br>.warning-triangle-line      | ![](../imgs/Icons/exclamation-triangle-fill.svg) | .exclamation-triangle-fill<br>.warning-triangle-fill      | ![](../imgs/Icons/x-octagon-line.svg)       | .x-octagon-line<br>.close-octagon-line<br>.error-octagon-line | ![](../imgs/Icons/x-octagon-fill.svg)       | ..x-octagon-fill<br>.close-octagon-fill<br>.error-octagon-fill |
+| Icon                                             | Style                                                     | Icon                                             | Style                                                     | Icon                                        | Style                                                            | Icon                                        | Style                                                            |
+| :---:                                            | -----                                                     | :---:                                            | -----                                                     | :---:                                       | -----                                                            | :---:                                       | -----                                                            |
+| ![](../imgs/icons/plus-line.svg)                 | .plus-line                                                | ![](../imgs/icons/plus-lg-line.svg)              | .plus-lg-line                                             | ![](../imgs/icons/dash-line.svg)            | .dash-line                                                       | ![](../imgs/icons/dash-lg-line.svg)         | .dash-lg-line                                                    |
+| ![](../imgs/icons/check-line.svg)                | .check-line<br>.successful-line                           | ![](../imgs/icons/check-lg-line.svg)             | .check-lg-line<br>.successful-lg-line                     | ![](../imgs/icons/info-line.svg)            | .info-line                                                       | ![](../imgs/icons/info-lg-line.svg)         | .info-lg-line                                                    |
+| ![](../imgs/icons/question-line.svg)             | .question-line                                            | ![](../imgs/icons/question-lg-line.svg)          | .question-lg-line                                         | ![](../imgs/icons/exclamation-line.svg)     | .exclamation-line<br>.warning-line                               | ![](../imgs/icons/exclamation-lg-line.svg)  | .exclamation-lg-line<br>.warning-lg-line                         |
+| ![](../imgs/icons/slash-line.svg)                | .slash-line                                               | ![](../imgs/icons/slash-lg-line.svg)             | .slash-lg-line                                            | ![](../imgs/icons/x-line.svg)               | .x-line<br>.close-line<br>.error-line                            | ![](../imgs/icons/x-lg-line.svg)            | .x-lg-line<br>.close-lg-line<br>.error-lg-line                   |
+| ![](../imgs/icons/filter-line.svg)               | .filter-line                                              | ![](../imgs/icons/filter-lg-line.svg)            | .filter-lg-line                                           | ![](../imgs/icons/plus-circle-line.svg)     | .plus-circle-line                                                | ![](../imgs/icons/plus-circle-fill.svg)     | .plus-circle-fill                                                |
+| ![](../imgs/icons/dash-circle-line.svg)          | .dash-circle-line                                         | ![](../imgs/icons/dash-circle-fill.svg)          | .dash-circle-fill                                         | ![](../imgs/icons/check-circle-line.svg)    | .check-circle-line<br>.successful-circle-line                    | ![](../imgs/icons/check-circle-fill.svg)    | .check-circle-fill<br>.successful-circle-fill                    |
+| ![](../imgs/icons/info-circle-line.svg)          | .info-circle-line                                         | ![](../imgs/icons/info-circle-fill.svg)          | .info-circle-fill                                         | ![](../imgs/icons/question-circle-line.svg) | .question-circle-line                                            | ![](../imgs/icons/question-circle-fill.svg) | .question-circle-fill                                            |
+| ![](../imgs/icons/exclamation-circle-line.svg)   | .exclamation-circle-line<br>.warning-circle-line          | ![](../imgs/icons/exclamation-circle-fill.svg)   | .exclamation-circle-fill<br>.warning-circle-fill          | ![](../imgs/icons/slash-circle-line.svg)    | .slash-circle-line                                               | ![](../imgs/icons/slash-circle-fill.svg)    | .slash-circle-fill                                               |
+| ![](../imgs/icons/x-circle-line.svg)             | .x-circle-line<br>.close-circle-line<br>error-circle-line | ![](../imgs/icons/x-circle-fill.svg)             | .x-circle-fill<br>.close-circle-fill<br>error-circle-fill | ![](../imgs/icons/filter-circle-line.svg)   | .filter-circle-line                                              | ![](../imgs/icons/filter-circle-fill.svg)   | .filter-circle-fill                                              |
+| ![](../imgs/icons/exclamation-octagon-line.svg)  | .exclamation-octagon-line<br>.warning-octagon-line        | ![](../imgs/icons/exclamation-octagon-fill.svg)  | .exclamation-octagon-fill<br>.warning-octagon-fill        | ![](../imgs/icons/x-octagon-line.svg)       | .x-octagon-line<br>.close-octagon-line<br>.error-octagon-line    | ![](../imgs/icons/x-octagon-fill.svg)       | .x-octagon-fill<br>.close-octagon-fill<br>.error-octagon-fill    |
+| ![](../imgs/icons/exclamation-triangle-line.svg) | .exclamation-triangle-line<br>.warning-triangle-line      | ![](../imgs/icons/exclamation-triangle-fill.svg) | .exclamation-triangle-fill<br>.warning-triangle-fill      | ![](../imgs/icons/x-triangle-line.svg)      | .x-triangle-line<br>.close-triangle-line<br>.error-triangle-line | ![](../imgs/icons/x-triangle-fill.svg)      | .x-triangle-fill<br>.close-triangle-fill<br>.error-triangle-fill |
 
 #### Arrow Icon Table
 
 | Icon                                                 | Style                          | Icon                                               | Style                        | Icon                                                   | Style                            | Icon                                                 | Style                          |
 | :--:                                                 | -----                          | :--:                                               | -----                        | :--:                                                   | -----                            | :--:                                                 | -----                          |
-| ![](../imgs/Icons/arrow-up-line.svg)                 | .arrow-up-line                 | ![](../imgs/Icons/arrow-left-line.svg)             | .arrow-left-line             | ![](../imgs/Icons/arrow-right-line.svg)                | .arrow-right-line                | ![](../imgs/Icons/arrow-down-line.svg)               | .arrow-down-line               |
-| ![](../imgs/Icons/arrow-up-lg-line.svg)              | .arrow-up-lg-line              | ![](../imgs/Icons/arrow-left-lg-line.svg)          | .arrow-left-lg-line          | ![](../imgs/Icons/arrow-right-lg-line.svg)             | .arrow-right-lg-line             | ![](../imgs/Icons/arrow-down-lg-line.svg)            | .arrow-down-lg-line            |
-| ![](../imgs/Icons/arrow-upleft-lg-line.svg)          | .arrow-upleft-lg-line          | ![](../imgs/Icons/arrow-upright-lg-line.svg)       | .arrow-upright-lg-line       | ![](../imgs/Icons/arrow-downleft-lg-line.svg)          | .arrow-downleft-lg-line          | ![](../imgs/Icons/arrow-downright-lg-line.svg)       | .arrow-downright-lg-line       |
-| ![](../imgs/Icons/arrowhead-up-line.svg)             | .arrowhead-up-line             | ![](../imgs/Icons/arrowhead-left-line.svg)         | .arrowhead-left-line         | ![](../imgs/Icons/arrowhead-right-line.svg)            | .arrowhead-right-line            | ![](../imgs/Icons/arrowhead-down-line.svg)           | .arrowhead-down-line           |
-| ![](../imgs/Icons/arrowhead-up-lg-line.svg)          | .arrowhead-up-lg-line          | ![](../imgs/Icons/arrowhead-left-lg-line.svg)      | .arrowhead-left-lg-line      | ![](../imgs/Icons/arrowhead-right-lg-line.svg)         | .arrowhead-right-lg-line         | ![](../imgs/Icons/arrowhead-down-lg-line.svg)        | .arrowhead-down-lg-line        |
-| ![](../imgs/Icons/arrowhead-up-stg-line.svg)         | .arrowhead-up-stg-line         | ![](../imgs/Icons/arrowhead-left-stg-line.svg)     | .arrowhead-left-stg-line     | ![](../imgs/Icons/arrowhead-right-stg-line.svg)        | .arrowhead-right-stg-line        | ![](../imgs/Icons/arrowhead-down-stg-line.svg)       | .arrowhead-down-stg-line       |
-| ![](../imgs/Icons/arrowhead-up-fill.svg)             | .arrowhead-up-fill             | ![](../imgs/Icons/arrowhead-left-fill.svg)         | .arrowhead-left-fill         | ![](../imgs/Icons/arrowhead-right-fill.svg)            | .arrowhead-right-fill            | ![](../imgs/Icons/arrowhead-down-fill.svg)           | .arrowhead-down-fill           |
-| ![](../imgs/Icons/arrow-up-circle-line.svg)          | .arrow-up-circle-line          | ![](../imgs/Icons/arrow-left-circle-line.svg)      | .arrow-left-circle-line      | ![](../imgs/Icons/arrow-right-circle-line.svg)         | .arrow-right-circle-line         | ![](../imgs/Icons/arrow-down-circle-line.svg)        | .arrow-down-circle-line        |
-| ![](../imgs/Icons/arrow-upleft-circle-line.svg)      | .arrow-upleft-circle-line      | ![](../imgs/Icons/arrow-upright-circle-line.svg)   | .arrow-upright-circle-line   | ![](../imgs/Icons/arrow-downleft-circle-line.svg)      | .arrow-downleft-circle-line      | ![](../imgs/Icons/arrow-downright-circle-line.svg)   | .arrow-downright-circle-line   |
-| ![](../imgs/Icons/arrow-up-circle-fill.svg)          | .arrow-up-circle-fill          | ![](../imgs/Icons/arrow-left-circle-fill.svg)      | .arrow-left-circle-fill      | ![](../imgs/Icons/arrow-right-circle-fill.svg)         | .arrow-right-circle-fill         | ![](../imgs/Icons/arrow-down-circle-fill.svg)        | .arrow-down-circle-fill        |
-| ![](../imgs/Icons/arrow-upleft-circle-fill.svg)      | .arrow-upleft-circle-fill      | ![](../imgs/Icons/arrow-upright-circle-fill.svg)   | .arrow-upright-circle-fill   | ![](../imgs/Icons/arrow-downleft-circle-fill.svg)      | .arrow-downleft-circle-fill      | ![](../imgs/Icons/arrow-downright-circle-fill.svg)   | .arrow-downright-circle-fill   |
-| ![](../imgs/Icons/arrowbar-up-line.svg)              | .arrowbar-up-line              | ![](../imgs/Icons/arrowbar-left-line.svg)          | .arrowbar-left-line          | ![](../imgs/Icons/arrowbar-right-line.svg)             | .arrowbar-right-line             | ![](../imgs/Icons/arrowbar-down-line.svg)            | .arrowbar-down-line            |
-| ![](../imgs/Icons/arrows-expand-horizontal-line.svg) | .arrows-expand-horizontal-line | ![](../imgs/Icons/arrows-expand-vertical-line.svg) | .arrows-expand-vertical-line | ![](../imgs/Icons/arrows-collapse-horizontal-line.svg) | .arrows-collapse-horizontal-line | ![](../imgs/Icons/arrows-collapse-vertical-line.svg) | .arrows-collapse-vertical-line |
-| ![](../imgs/Icons/arrows-horizontal-line.svg)        | .arrows-horizontal-line        | ![](../imgs/Icons/arrows-vertical-line.svg)        | .arrows-vertical-line        | ![](../imgs/Icons/arrows-expand-diagonal-line.svg)     | .arrows-expand-diagonal-line     | ![](../imgs/Icons/arrows-collapse-diagonal-line.svg) | .arrows-collapse-diagonal-line |
-| ![](../imgs/Icons/arrowbox-out-up-line.svg)          | .arrowbox-out-up-line          | ![](../imgs/Icons/arrowbox-out-left-line.svg)      | .arrowbox-out-left-line      | ![](../imgs/Icons/arrowbox-out-right-line.svg)         | .arrowbox-out-right-line         | ![](../imgs/Icons/arrowbox-out-down-line.svg)        | .arrowbox-out-down-line        |
-| ![](../imgs/Icons/arrowbox-out-upleft-line.svg)      | .arrowbox-out-upleft-line      | ![](../imgs/Icons/arrowbox-out-upright-line.svg)   | .arrowbox-out-upright-line   | ![](../imgs/Icons/arrowbox-out-downleft-line.svg)      | .arrowbox-out-downleft-line      | ![](../imgs/Icons/arrowbox-out-downright-line.svg)   | .arrowbox-out-downright-line   |
-| ![](../imgs/Icons/arrowbox-in-up-line.svg)           | .arrowbox-in-up-line           | ![](../imgs/Icons/arrowbox-in-left-line.svg)       | .arrowbox-in-left-line       | ![](../imgs/Icons/arrowbox-in-right-line.svg)          | .arrowbox-in-right-line          | ![](../imgs/Icons/arrowbox-in-down-line.svg)         | .arrowbox-in-down-line         |
-| ![](../imgs/Icons/arrowbox-in-upleft-line.svg)       | .arrowbox-in-upleft-line       | ![](../imgs/Icons/arrowbox-in-upright-line.svg)    | .arrowbox-in-upright-line    | ![](../imgs/Icons/arrowbox-in-downleft-line.svg)       | .arrowbox-in-downleft-line       | ![](../imgs/Icons/arrowbox-in-downright-line.svg)    | .arrowbox-in-downright-line    |
+| ![](../imgs/icons/arrow-up-line.svg)                 | .arrow-up-line                 | ![](../imgs/icons/arrow-left-line.svg)             | .arrow-left-line             | ![](../imgs/icons/arrow-right-line.svg)                | .arrow-right-line                | ![](../imgs/icons/arrow-down-line.svg)               | .arrow-down-line               |
+| ![](../imgs/icons/arrow-up-lg-line.svg)              | .arrow-up-lg-line              | ![](../imgs/icons/arrow-left-lg-line.svg)          | .arrow-left-lg-line          | ![](../imgs/icons/arrow-right-lg-line.svg)             | .arrow-right-lg-line             | ![](../imgs/icons/arrow-down-lg-line.svg)            | .arrow-down-lg-line            |
+| ![](../imgs/icons/arrow-upleft-lg-line.svg)          | .arrow-upleft-lg-line          | ![](../imgs/icons/arrow-upright-lg-line.svg)       | .arrow-upright-lg-line       | ![](../imgs/icons/arrow-downleft-lg-line.svg)          | .arrow-downleft-lg-line          | ![](../imgs/icons/arrow-downright-lg-line.svg)       | .arrow-downright-lg-line       |
+| ![](../imgs/icons/arrowhead-up-line.svg)             | .arrowhead-up-line             | ![](../imgs/icons/arrowhead-left-line.svg)         | .arrowhead-left-line         | ![](../imgs/icons/arrowhead-right-line.svg)            | .arrowhead-right-line            | ![](../imgs/icons/arrowhead-down-line.svg)           | .arrowhead-down-line           |
+| ![](../imgs/icons/arrowhead-up-lg-line.svg)          | .arrowhead-up-lg-line          | ![](../imgs/icons/arrowhead-left-lg-line.svg)      | .arrowhead-left-lg-line      | ![](../imgs/icons/arrowhead-right-lg-line.svg)         | .arrowhead-right-lg-line         | ![](../imgs/icons/arrowhead-down-lg-line.svg)        | .arrowhead-down-lg-line        |
+| ![](../imgs/icons/arrowhead-up-stg-line.svg)         | .arrowhead-up-stg-line         | ![](../imgs/icons/arrowhead-left-stg-line.svg)     | .arrowhead-left-stg-line     | ![](../imgs/icons/arrowhead-right-stg-line.svg)        | .arrowhead-right-stg-line        | ![](../imgs/icons/arrowhead-down-stg-line.svg)       | .arrowhead-down-stg-line       |
+| ![](../imgs/icons/arrowhead-up-fill.svg)             | .arrowhead-up-fill             | ![](../imgs/icons/arrowhead-left-fill.svg)         | .arrowhead-left-fill         | ![](../imgs/icons/arrowhead-right-fill.svg)            | .arrowhead-right-fill            | ![](../imgs/icons/arrowhead-down-fill.svg)           | .arrowhead-down-fill           |
+| ![](../imgs/icons/arrow-up-circle-line.svg)          | .arrow-up-circle-line          | ![](../imgs/icons/arrow-left-circle-line.svg)      | .arrow-left-circle-line      | ![](../imgs/icons/arrow-right-circle-line.svg)         | .arrow-right-circle-line         | ![](../imgs/icons/arrow-down-circle-line.svg)        | .arrow-down-circle-line        |
+| ![](../imgs/icons/arrow-upleft-circle-line.svg)      | .arrow-upleft-circle-line      | ![](../imgs/icons/arrow-upright-circle-line.svg)   | .arrow-upright-circle-line   | ![](../imgs/icons/arrow-downleft-circle-line.svg)      | .arrow-downleft-circle-line      | ![](../imgs/icons/arrow-downright-circle-line.svg)   | .arrow-downright-circle-line   |
+| ![](../imgs/icons/arrow-up-circle-fill.svg)          | .arrow-up-circle-fill          | ![](../imgs/icons/arrow-left-circle-fill.svg)      | .arrow-left-circle-fill      | ![](../imgs/icons/arrow-right-circle-fill.svg)         | .arrow-right-circle-fill         | ![](../imgs/icons/arrow-down-circle-fill.svg)        | .arrow-down-circle-fill        |
+| ![](../imgs/icons/arrow-upleft-circle-fill.svg)      | .arrow-upleft-circle-fill      | ![](../imgs/icons/arrow-upright-circle-fill.svg)   | .arrow-upright-circle-fill   | ![](../imgs/icons/arrow-downleft-circle-fill.svg)      | .arrow-downleft-circle-fill      | ![](../imgs/icons/arrow-downright-circle-fill.svg)   | .arrow-downright-circle-fill   |
+| ![](../imgs/icons/arrowbar-up-line.svg)              | .arrowbar-up-line              | ![](../imgs/icons/arrowbar-left-line.svg)          | .arrowbar-left-line          | ![](../imgs/icons/arrowbar-right-line.svg)             | .arrowbar-right-line             | ![](../imgs/icons/arrowbar-down-line.svg)            | .arrowbar-down-line            |
+| ![](../imgs/icons/arrows-expand-horizontal-line.svg) | .arrows-expand-horizontal-line | ![](../imgs/icons/arrows-expand-vertical-line.svg) | .arrows-expand-vertical-line | ![](../imgs/icons/arrows-collapse-horizontal-line.svg) | .arrows-collapse-horizontal-line | ![](../imgs/icons/arrows-collapse-vertical-line.svg) | .arrows-collapse-vertical-line |
+| ![](../imgs/icons/arrows-horizontal-line.svg)        | .arrows-horizontal-line        | ![](../imgs/icons/arrows-vertical-line.svg)        | .arrows-vertical-line        | ![](../imgs/icons/arrows-expand-diagonal-line.svg)     | .arrows-expand-diagonal-line     | ![](../imgs/icons/arrows-collapse-diagonal-line.svg) | .arrows-collapse-diagonal-line |
+| ![](../imgs/icons/arrowbox-out-up-line.svg)          | .arrowbox-out-up-line          | ![](../imgs/icons/arrowbox-out-left-line.svg)      | .arrowbox-out-left-line      | ![](../imgs/icons/arrowbox-out-right-line.svg)         | .arrowbox-out-right-line         | ![](../imgs/icons/arrowbox-out-down-line.svg)        | .arrowbox-out-down-line        |
+| ![](../imgs/icons/arrowbox-out-upleft-line.svg)      | .arrowbox-out-upleft-line      | ![](../imgs/icons/arrowbox-out-upright-line.svg)   | .arrowbox-out-upright-line   | ![](../imgs/icons/arrowbox-out-downleft-line.svg)      | .arrowbox-out-downleft-line      | ![](../imgs/icons/arrowbox-out-downright-line.svg)   | .arrowbox-out-downright-line   |
+| ![](../imgs/icons/arrowbox-in-up-line.svg)           | .arrowbox-in-up-line           | ![](../imgs/icons/arrowbox-in-left-line.svg)       | .arrowbox-in-left-line       | ![](../imgs/icons/arrowbox-in-right-line.svg)          | .arrowbox-in-right-line          | ![](../imgs/icons/arrowbox-in-down-line.svg)         | .arrowbox-in-down-line         |
+| ![](../imgs/icons/arrowbox-in-upleft-line.svg)       | .arrowbox-in-upleft-line       | ![](../imgs/icons/arrowbox-in-upright-line.svg)    | .arrowbox-in-upright-line    | ![](../imgs/icons/arrowbox-in-downleft-line.svg)       | .arrowbox-in-downleft-line       | ![](../imgs/icons/arrowbox-in-downright-line.svg)    | .arrowbox-in-downright-line    |
 
 #### Number Icon Table
 
 | Icon                                    | Style             | Icon                                    | Style             | Icon                                    | Style             | Icon                                    | Style             |
 | :--:                                    | -----             | :--:                                    | -----             | :--:                                    | -----             | :--:                                    | -----             |
-| ![](../imgs/Icons/num0-circle-line.svg) | .num0-circle-line | ![](../imgs/Icons/num0-circle-fill.svg) | .num0-circle-fill | ![](../imgs/Icons/num1-circle-line.svg) | .num1-circle-line | ![](../imgs/Icons/num1-circle-fill.svg) | .num1-circle-fill |
-| ![](../imgs/Icons/num2-circle-line.svg) | .num2-circle-line | ![](../imgs/Icons/num2-circle-fill.svg) | .num2-circle-fill | ![](../imgs/Icons/num3-circle-line.svg) | .num3-circle-line | ![](../imgs/Icons/num3-circle-fill.svg) | .num3-circle-fill |
-| ![](../imgs/Icons/num4-circle-line.svg) | .num4-circle-line | ![](../imgs/Icons/num4-circle-fill.svg) | .num4-circle-fill | ![](../imgs/Icons/num5-circle-line.svg) | .num5-circle-line | ![](../imgs/Icons/num5-circle-fill.svg) | .num5-circle-fill |
-| ![](../imgs/Icons/num6-circle-line.svg) | .num6-circle-line | ![](../imgs/Icons/num6-circle-fill.svg) | .num6-circle-fill | ![](../imgs/Icons/num7-circle-line.svg) | .num7-circle-line | ![](../imgs/Icons/num7-circle-fill.svg) | .num7-circle-fill |
-| ![](../imgs/Icons/num8-circle-line.svg) | .num8-circle-line | ![](../imgs/Icons/num8-circle-fill.svg) | .num8-circle-fill | ![](../imgs/Icons/num9-circle-line.svg) | .num9-circle-line | ![](../imgs/Icons/num9-circle-fill.svg) | .num9-circle-fill |
+| ![](../imgs/icons/num0-circle-line.svg) | .num0-circle-line | ![](../imgs/icons/num0-circle-fill.svg) | .num0-circle-fill | ![](../imgs/icons/num1-circle-line.svg) | .num1-circle-line | ![](../imgs/icons/num1-circle-fill.svg) | .num1-circle-fill |
+| ![](../imgs/icons/num2-circle-line.svg) | .num2-circle-line | ![](../imgs/icons/num2-circle-fill.svg) | .num2-circle-fill | ![](../imgs/icons/num3-circle-line.svg) | .num3-circle-line | ![](../imgs/icons/num3-circle-fill.svg) | .num3-circle-fill |
+| ![](../imgs/icons/num4-circle-line.svg) | .num4-circle-line | ![](../imgs/icons/num4-circle-fill.svg) | .num4-circle-fill | ![](../imgs/icons/num5-circle-line.svg) | .num5-circle-line | ![](../imgs/icons/num5-circle-fill.svg) | .num5-circle-fill |
+| ![](../imgs/icons/num6-circle-line.svg) | .num6-circle-line | ![](../imgs/icons/num6-circle-fill.svg) | .num6-circle-fill | ![](../imgs/icons/num7-circle-line.svg) | .num7-circle-line | ![](../imgs/icons/num7-circle-fill.svg) | .num7-circle-fill |
+| ![](../imgs/icons/num8-circle-line.svg) | .num8-circle-line | ![](../imgs/icons/num8-circle-fill.svg) | .num8-circle-fill | ![](../imgs/icons/num9-circle-line.svg) | .num9-circle-line | ![](../imgs/icons/num9-circle-fill.svg) | .num9-circle-fill |
 
 #### Person Icon Table
 
 | Icon                                      | Style               | Icon                                      | Style               | Icon                                       | Style                | Icon                                       | Style                |
 | :--:                                      | -----               | :--:                                      | -----               | :--:                                       | -----                | :--:                                       | -----                |
-| ![](../imgs/Icons/man-fill.svg)           | .man-fill           | ![](../imgs/Icons/woman-fill.svg)         | .woman-fill         | ![](../imgs/Icons/person-line.svg)         | .person-line         | ![](../imgs/Icons/person-fill.svg)         | .person-fill         |
-| ![](../imgs/Icons/person-plus-line.svg)   | .person-plus-line   | ![](../imgs/Icons/person-plus-fill.svg)   | .person-plus-fill   | ![](../imgs/Icons/person-dash-line.svg)    | .person-dash-line    | ![](../imgs/Icons/person-dash-fill.svg)    | .person-dash-fill    |
-| ![](../imgs/Icons/person-check-line.svg)  | .person-check-line  | ![](../imgs/Icons/person-check-fill.svg)  | .person-check-fill  | ![](../imgs/Icons/person-x-line.svg)       | .person-x-line       | ![](../imgs/Icons/person-x-fill.svg)       | .person-x-fill       |
-| ![](../imgs/Icons/people-line.svg)        | .people-line        | ![](../imgs/Icons/people-fill.svg)        | .people-fill        | ![](../imgs/Icons/person-contact-line.svg) | .person-contact-line | ![](../imgs/Icons/person-contact-fill.svg) | .person-contact-fill |
-| ![](../imgs/Icons/person-card-line.svg)   | .person-card-line   | ![](../imgs/Icons/person-card-fill.svg)   | .person-card-fill   | ![](../imgs/Icons/person-names-line.svg)   | .person-names-line   | ![](../imgs/Icons/person-names-fill.svg)   | .person-names-fill   |
-| ![](../imgs/Icons/person-circle-line.svg) | .person-circle-line | ![](../imgs/Icons/person-circle-fill.svg) | .person-circle-fill | ![](../imgs/Icons/user-line.svg)           | .user-line           |                                           |                      |
+| ![](../imgs/icons/man-fill.svg)           | .man-fill           | ![](../imgs/icons/woman-fill.svg)         | .woman-fill         | ![](../imgs/icons/person-line.svg)         | .person-line         | ![](../imgs/icons/person-fill.svg)         | .person-fill         |
+| ![](../imgs/icons/person-plus-line.svg)   | .person-plus-line   | ![](../imgs/icons/person-plus-fill.svg)   | .person-plus-fill   | ![](../imgs/icons/person-dash-line.svg)    | .person-dash-line    | ![](../imgs/icons/person-dash-fill.svg)    | .person-dash-fill    |
+| ![](../imgs/icons/person-check-line.svg)  | .person-check-line  | ![](../imgs/icons/person-check-fill.svg)  | .person-check-fill  | ![](../imgs/icons/person-x-line.svg)       | .person-x-line       | ![](../imgs/icons/person-x-fill.svg)       | .person-x-fill       |
+| ![](../imgs/icons/people-line.svg)        | .people-line        | ![](../imgs/icons/people-fill.svg)        | .people-fill        | ![](../imgs/icons/person-contact-line.svg) | .person-contact-line | ![](../imgs/icons/person-contact-fill.svg) | .person-contact-fill |
+| ![](../imgs/icons/person-card-line.svg)   | .person-card-line   | ![](../imgs/icons/person-card-fill.svg)   | .person-card-fill   | ![](../imgs/icons/person-names-line.svg)   | .person-names-line   | ![](../imgs/icons/person-names-fill.svg)   | .person-names-fill   |
+| ![](../imgs/icons/person-circle-line.svg) | .person-circle-line | ![](../imgs/icons/person-circle-fill.svg) | .person-circle-fill | ![](../imgs/icons/user-line.svg)           | .user-line           |                                         |                      |
 
 #### File Icon Table
 
 | Icon                                     | Style              | Icon                                     | Style              | Icon                                      | Style               | Icon                                      | Style               |
 | :--:                                     | -----              | :--:                                     | -----              | :--:                                      | -----               | :--:                                      | -----               |
-| ![](../imgs/Icons/folder-close-line.svg) | .folder-close-line | ![](../imgs/Icons/folder-close-fill.svg) | .folder-close-fill | ![](../imgs/Icons/folder-open-line.svg)   | .folder-open-line   | ![](../imgs/Icons/folder-open-fill.svg)   | .folder-open-fill   |
-| ![](../imgs/Icons/file-line.svg)         | .file-line         | ![](../imgs/Icons/file-fill.svg)         | .file-fill         | ![](../imgs/Icons/file-barchart-line.svg) | .file-barchart-line | ![](../imgs/Icons/file-barchart-fill.svg) | .file-barchart-fill |
-| ![](../imgs/Icons/file-check-line.svg)   | .file-check-line   | ![](../imgs/Icons/file-check-fill.svg)   | .file-check-fill   | ![](../imgs/Icons/file-pdf-line.svg)      | .file-pdf-line      | ![](../imgs/Icons/file-pdf-fill.svg)      | .file-pdf-fill      |
-| ![](../imgs/Icons/file-image-line.svg)   | .file-image-line    | ![](../imgs/Icons/file-image-fill.svg)  | .file-image-fill   | ![](../imgs/Icons/file-text-line.svg)     | .file-text-line     | ![](../imgs/Icons/file-text-fill.svg)     | .file-text-fill     |
-| ![](../imgs/Icons/file-upload-line.svg)  | .file-upload-line  | ![](../imgs/Icons/file-upload-fill.svg)  | .file-upload-fill  | ![](../imgs/Icons/file-zip-line.svg)      | .file-zip-line      | ![](../imgs/Icons/file-zip-fill.svg)      | .file-zip-fill      |
+| ![](../imgs/icons/folder-close-line.svg) | .folder-close-line | ![](../imgs/icons/folder-close-fill.svg) | .folder-close-fill | ![](../imgs/icons/folder-open-line.svg)   | .folder-open-line   | ![](../imgs/icons/folder-open-fill.svg)   | .folder-open-fill   |
+| ![](../imgs/icons/file-line.svg)         | .file-line         | ![](../imgs/icons/file-fill.svg)         | .file-fill         | ![](../imgs/icons/file-barchart-line.svg) | .file-barchart-line | ![](../imgs/icons/file-barchart-fill.svg) | .file-barchart-fill |
+| ![](../imgs/icons/file-check-line.svg)   | .file-check-line   | ![](../imgs/icons/file-check-fill.svg)   | .file-check-fill   | ![](../imgs/icons/file-pdf-line.svg)      | .file-pdf-line      | ![](../imgs/icons/file-pdf-fill.svg)      | .file-pdf-fill      |
+| ![](../imgs/icons/file-image-line.svg)   | .file-image-line    | ![](../imgs/icons/file-image-fill.svg)  | .file-image-fill   | ![](../imgs/icons/file-text-line.svg)     | .file-text-line     | ![](../imgs/icons/file-text-fill.svg)     | .file-text-fill     |
+| ![](../imgs/icons/file-upload-line.svg)  | .file-upload-line  | ![](../imgs/icons/file-upload-fill.svg)  | .file-upload-fill  | ![](../imgs/icons/file-zip-line.svg)      | .file-zip-line      | ![](../imgs/icons/file-zip-fill.svg)      | .file-zip-fill      |
 
 #### Control Icon Table
 
 | Icon                                        | Style                 | Icon                                        | Style                 | Icon                                       | Style                | Icon                                       | Style                |
 | :--:                                        | -----                 | :--:                                        | -----                 | :--:                                       | -----                | :--:                                       | -----                |
-| ![](../imgs/Icons/calendar-line.svg)        | .calendar-line        | ![](../imgs/Icons/calendar-fill.svg)        | .calendar-fill        | ![](../imgs/Icons/calendar-day-line.svg)   | .calendar-day-line   | ![](../imgs/Icons/calendar-day-fill.svg)   | .calendar-day-fill   |
-| ![](../imgs/Icons/calendar-week-line.svg)   | .calendar-week-line   | ![](../imgs/Icons/calendar-week-fill.svg)   | .calendar-week-fill   | ![](../imgs/Icons/calendar-range-line.svg) | .calendar-range-line | ![](../imgs/Icons/calendar-range-fill.svg) | .calendar-range-fill |
-| ![](../imgs/Icons/clipboard-check-line.svg) | .clipboard-check-line | ![](../imgs/Icons/clipboard-check-fill.svg) | .clipboard-check-fill | ![](../imgs/Icons/clipboard-data-line.svg) | .clipboard-data-line | ![](../imgs/Icons/clipboard-data-fill.svg) | .clipboard-data-fill |
-| ![](../imgs/Icons/bookmark-line.svg)        | .bookmark-line        | ![](../imgs/Icons/bookmark-fill.svg)        | .bookmark-fill        | ![](../imgs/Icons/bookmarks-line.svg)      | .bookmarks-line      | ![](../imgs/Icons/bookmarks-fill.svg)      | .bookmarks-fill      |
-| ![](../imgs/Icons/bookmark-check-line.svg)  | .bookmark-check-line  | ![](../imgs/Icons/bookmark-check-fill.svg)  | .bookmark-check-fill  | ![](../imgs/Icons/bookmark-x-line.svg)     | .bookmark-x-line     | ![](../imgs/Icons/bookmark-x-fill.svg)     | .bookmark-x-fill     |
+| ![](../imgs/icons/calendar-line.svg)        | .calendar-line        | ![](../imgs/icons/calendar-fill.svg)        | .calendar-fill        | ![](../imgs/icons/calendar-day-line.svg)   | .calendar-day-line   | ![](../imgs/icons/calendar-day-fill.svg)   | .calendar-day-fill   |
+| ![](../imgs/icons/calendar-week-line.svg)   | .calendar-week-line   | ![](../imgs/icons/calendar-week-fill.svg)   | .calendar-week-fill   | ![](../imgs/icons/calendar-range-line.svg) | .calendar-range-line | ![](../imgs/icons/calendar-range-fill.svg) | .calendar-range-fill |
+| ![](../imgs/icons/clipboard-check-line.svg) | .clipboard-check-line | ![](../imgs/icons/clipboard-check-fill.svg) | .clipboard-check-fill | ![](../imgs/icons/clipboard-data-line.svg) | .clipboard-data-line | ![](../imgs/icons/clipboard-data-fill.svg) | .clipboard-data-fill |
+| ![](../imgs/icons/bookmark-line.svg)        | .bookmark-line        | ![](../imgs/icons/bookmark-fill.svg)        | .bookmark-fill        | ![](../imgs/icons/bookmarks-line.svg)      | .bookmarks-line      | ![](../imgs/icons/bookmarks-fill.svg)      | .bookmarks-fill      |
+| ![](../imgs/icons/bookmark-check-line.svg)  | .bookmark-check-line  | ![](../imgs/icons/bookmark-check-fill.svg)  | .bookmark-check-fill  | ![](../imgs/icons/bookmark-x-line.svg)     | .bookmark-x-line     | ![](../imgs/icons/bookmark-x-fill.svg)     | .bookmark-x-fill     |
 
 #### Protection Icons Table
 
 | Icon                                       | Style              | Icon                                     | Style              | Icon                                       | Style                | Icon                                       | Style                |
 | :--:                                       | -----              | :--:                                     | -----              | :--:                                       | -----                | :--:                                       | -----                |
-| ![](../imgs/Icons/shield-check-line.svg)   | .shield-check-line | ![](../imgs/Icons/shield-check-fill.svg) | .shield-check-fill | ![](../imgs/Icons/shield-lock-line.svg)    | .shield-lock-line    | ![](../imgs/Icons/shield-lock-fill.svg)    | .shield-lock-fill    |
-| ![](../imgs/Icons/patch-check-line.svg)    | .patch-check-line  | ![](../imgs/Icons/patch-check-fill.svg)  | .patch-check-fill  | ![](../imgs/Icons/patch-question-line.svg) | .patch-question-line | ![](../imgs/Icons/patch-question-fill.svg) | .patch-question-fill |
+| ![](../imgs/icons/shield-check-line.svg)   | .shield-check-line | ![](../imgs/icons/shield-check-fill.svg) | .shield-check-fill | ![](../imgs/icons/shield-lock-line.svg)    | .shield-lock-line    | ![](../imgs/icons/shield-lock-fill.svg)    | .shield-lock-fill    |
+| ![](../imgs/icons/patch-check-line.svg)    | .patch-check-line  | ![](../imgs/icons/patch-check-fill.svg)  | .patch-check-fill  | ![](../imgs/icons/patch-question-line.svg) | .patch-question-line | ![](../imgs/icons/patch-question-fill.svg) | .patch-question-fill |
 
 #### Communication Icons Table
 
 | Icon                                        | Style                 | Icon                                        | Style                 | Icon                                       | Style                | Icon                                       | Style                |
 | :--:                                        | -----                 | :--:                                        | -----                 | :--:                                       | -----                | :--:                                       | -----                |
-| ![](../imgs/Icons/phone-line.svg)           | .phone-line           | ![](../imgs/Icons/phone-fill.svg)           | .phone-fill           | ![](../imgs/Icons/phonebook-line.svg)      | .phonebook-line      | ![](../imgs/Icons/phonebook-fill.svg)      | .phonebook-fill      |
-| ![](../imgs/Icons/mail-close-line.svg)      | .mail-close-line      | ![](../imgs/Icons/mail-close-fill.svg)      | .mail-close-fill      | ![](../imgs/Icons/chat-dots-line.svg)      | .chat-dots-line      | ![](../imgs/Icons/chat-dots-fill.svg)      | .chat-dots-fill      |
-| ![](../imgs/Icons/chat-left-quote-line.svg) | .chat-left-quote-line | ![](../imgs/Icons/chat-left-quote-fill.svg) | .chat-left-quote-fill | ![](../imgs/Icons/chat-left-text-line.svg) | .chat-left-text-line | ![](../imgs/Icons/chat-left-text-fill.svg) | .chat-left-text-fill |
-| ![](../imgs/Icons/emoji-neutral-line.svg)   | .emoji-neutral-line   | ![](../imgs/Icons/emoji-neutral-fill.svg)   | .emoji-neutral-fill   | ![](../imgs/Icons/emoji-smile-line.svg)    | .emoji-smile-line    | ![](../imgs/Icons/emoji-smile-fill.svg)    | .emoji-smile-fill    |
-| ![](../imgs/Icons/emoji-frown-line.svg)     | .emoji-frown-line     | ![](../imgs/Icons/emoji-frown-fill.svg)     | .emoji-frown-fill     | ![](../imgs/Icons/emoji-surprise-line.svg) | .emoji-surprise-line | ![](../imgs/Icons/emoji-surprise-fill.svg) | .emoji-surprise-fill |
+| ![](../imgs/icons/phone-line.svg)           | .phone-line           | ![](../imgs/icons/phone-fill.svg)           | .phone-fill           | ![](../imgs/icons/phonebook-line.svg)      | .phonebook-line      | ![](../imgs/icons/phonebook-fill.svg)      | .phonebook-fill      |
+| ![](../imgs/icons/mail-close-line.svg)      | .mail-close-line      | ![](../imgs/icons/mail-close-fill.svg)      | .mail-close-fill      | ![](../imgs/icons/chat-dots-line.svg)      | .chat-dots-line      | ![](../imgs/icons/chat-dots-fill.svg)      | .chat-dots-fill      |
+| ![](../imgs/icons/chat-left-quote-line.svg) | .chat-left-quote-line | ![](../imgs/icons/chat-left-quote-fill.svg) | .chat-left-quote-fill | ![](../imgs/icons/chat-left-text-line.svg) | .chat-left-text-line | ![](../imgs/icons/chat-left-text-fill.svg) | .chat-left-text-fill |
+| ![](../imgs/icons/emoji-neutral-line.svg)   | .emoji-neutral-line   | ![](../imgs/icons/emoji-neutral-fill.svg)   | .emoji-neutral-fill   | ![](../imgs/icons/emoji-smile-line.svg)    | .emoji-smile-line    | ![](../imgs/icons/emoji-smile-fill.svg)    | .emoji-smile-fill    |
+| ![](../imgs/icons/emoji-frown-line.svg)     | .emoji-frown-line     | ![](../imgs/icons/emoji-frown-fill.svg)     | .emoji-frown-fill     | ![](../imgs/icons/emoji-surprise-line.svg) | .emoji-surprise-line | ![](../imgs/icons/emoji-surprise-fill.svg) | .emoji-surprise-fill |
 
 #### Cloud Icon Table
 
 | Icon                                     | Style              | Icon                                     | Style              | Icon                                       | Style                | Icon                                       | Style                |
 | :--:                                     | -----              | :--:                                     | -----              | :--:                                       | -----                | :--:                                       | -----                |
-| ![](../imgs/Icons/cloud-line.svg)        | .cloud-line        | ![](../imgs/Icons/cloud-fill.svg)        | .cloud-fill        | ![](../imgs/Icons/cloud-slash-line.svg)    | .cloud-slash-line    | ![](../imgs/Icons/cloud-slash-fill.svg)    | .cloud-slash-fill    |
-| ![](../imgs/Icons/cloud-upload-line.svg) | .cloud-upload-line | ![](../imgs/Icons/cloud-upload-fill.svg) | .cloud-upload-fill | ![](../imgs/Icons/cloud-download-line.svg) | .cloud-download-line | ![](../imgs/Icons/cloud-download-fill.svg) | .cloud-download-fill |
+| ![](../imgs/icons/cloud-line.svg)        | .cloud-line        | ![](../imgs/icons/cloud-fill.svg)        | .cloud-fill        | ![](../imgs/icons/cloud-slash-line.svg)    | .cloud-slash-line    | ![](../imgs/icons/cloud-slash-fill.svg)    | .cloud-slash-fill    |
+| ![](../imgs/icons/cloud-upload-line.svg) | .cloud-upload-line | ![](../imgs/icons/cloud-upload-fill.svg) | .cloud-upload-fill | ![](../imgs/icons/cloud-download-line.svg) | .cloud-download-line | ![](../imgs/icons/cloud-download-fill.svg) | .cloud-download-fill |
 
 #### Map Icon Table
 
 | Icon                                      | Style               | Icon                                        | Style                 | Icon                                   | Style            |
 | :--:                                      | -----               | :--:                                        | -----                 | :--:                                   | -----            |
-| ![](../imgs/Icons/map-line.svg)           | .map-line           | ![](../imgs/Icons/map-fill.svg)             | .map-fill             |                                        |                  |
-| ![](../imgs/Icons/map-alt-line.svg)       | .map-alt-line       | ![](../imgs/Icons/map-alt-fill.svg)         | .map-alt-fill         |                                        |                  |
-| ![](../imgs/Icons/mapmarker-line.svg)     | .mapmarker-line     | ![](../imgs/Icons/mapmarker-fill.svg)       | .mapmarker-fill       | ![](../imgs/Icons/mapmarker-color.svg) | .mapmarker-color |
-| ![](../imgs/Icons/mappin-line.svg)        | .mappin-line        | ![](../imgs/Icons/mappin-fill.svg)          | .mappin-fill          | ![](../imgs/Icons/mappin-color.svg)    | .mappin-color    |
-| ![](../imgs/Icons/mappointer-line.svg)    | .mappointer-line    | ![](../imgs/Icons/mappointer-fill.svg)      | .mappointer-fill      |                                        |                  |
-| ![](../imgs/Icons/mapchart-line.svg)      | .mapchart-line      | ![](../imgs/Icons/mapchart-fill.svg)        | .mapchart-fill        |                                        |                  |
-| ![](../imgs/Icons/globe-line.svg)         | .globe-line         | ![](../imgs/Icons/globe-alt-line.svg)       | .globe-alt-line       |                                        |                  |
-| ![](../imgs/Icons/globe-america-fill.svg) | .globe-america-fill | ![](../imgs/Icons/globe-africa-fill.svg)    | .globe-africa-fill    |                                        |                  |
-| ![](../imgs/Icons/globe-asia-fill.svg)    | .globe-asia-fill    | ![](../imgs/Icons/globe-australia-fill.svg) | .globe-australia-fill |                                        |                  |
-| ![](../imgs/Icons/h-circle-line.svg)      | .h-circle-line      | ![](../imgs/Icons/h-circle-fill.svg)        | .h-circle-fill        |                                        |                  |
-| ![](../imgs/Icons/highway-66-fill.svg)    | .highway-66-fill    | ![](../imgs/Icons/highway-75-fill.svg)      | .highway-75-fill      | ![](../imgs/Icons/highway-94-fill.svg) | .highway-94-fill |
+| ![](../imgs/icons/map-line.svg)           | .map-line           | ![](../imgs/icons/map-fill.svg)             | .map-fill             |                                     |                  |
+| ![](../imgs/icons/map-alt-line.svg)       | .map-alt-line       | ![](../imgs/icons/map-alt-fill.svg)         | .map-alt-fill         |                                     |                  |
+| ![](../imgs/icons/mapmarker-line.svg)     | .mapmarker-line     | ![](../imgs/icons/mapmarker-fill.svg)       | .mapmarker-fill       | ![](../imgs/icons/mapmarker-color.svg) | .mapmarker-color |
+| ![](../imgs/icons/mappin-line.svg)        | .mappin-line        | ![](../imgs/icons/mappin-fill.svg)          | .mappin-fill          | ![](../imgs/icons/mappin-color.svg)    | .mappin-color    |
+| ![](../imgs/icons/mappointer-line.svg)    | .mappointer-line    | ![](../imgs/icons/mappointer-fill.svg)      | .mappointer-fill      |                                     |                  |
+| ![](../imgs/icons/mapchart-line.svg)      | .mapchart-line      | ![](../imgs/icons/mapchart-fill.svg)        | .mapchart-fill        |                                     |                  |
+| ![](../imgs/icons/globe-line.svg)         | .globe-line         | ![](../imgs/icons/globe-alt-line.svg)       | .globe-alt-line       |                                     |                  |
+| ![](../imgs/icons/globe-america-fill.svg) | .globe-america-fill | ![](../imgs/icons/globe-africa-fill.svg)    | .globe-africa-fill    |                                     |                  |
+| ![](../imgs/icons/globe-asia-fill.svg)    | .globe-asia-fill    | ![](../imgs/icons/globe-australia-fill.svg) | .globe-australia-fill |                                     |                  |
+| ![](../imgs/icons/h-circle-line.svg)      | .h-circle-line      | ![](../imgs/icons/h-circle-fill.svg)        | .h-circle-fill        |                                     |                  |
+| ![](../imgs/icons/highway-66-fill.svg)    | .highway-66-fill    | ![](../imgs/icons/highway-75-fill.svg)      | .highway-75-fill      | ![](../imgs/icons/highway-94-fill.svg) | .highway-94-fill |
 
 #### Device Icon Table
 
 | Icon                                    | Style             | Icon                                    | Style             | Icon                                 | Style          | Icon                                   | Style            |
 | :--:                                    | -----             | :--:                                    | -----             | :--:                                 | -----          | :--:                                   | -----            |
-| ![](../imgs/Icons/devices-line.svg)     | .devices-line     | ![](../imgs/Icons/laptop-line.svg)      | .laptop-line      | ![](../imgs/Icons/mobile-line.svg)   | .mobile-line   | ![](../imgs/Icons/mobile-alt-line.svg) | .mobile-alt-line |
-| ![](../imgs/Icons/mobile-apps-line.svg) | .mobile-apps-line | ![](../imgs/Icons/mobile-apps-fill.svg) | .mobile-apps-fill | ![](../imgs/Icons/computer-line.svg) | .computer-line | ![](../imgs/Icons/camera-fill.svg)     | .camera-fill     |
+| ![](../imgs/icons/devices-line.svg)     | .devices-line     | ![](../imgs/icons/laptop-line.svg)      | .laptop-line      | ![](../imgs/icons/mobile-line.svg)   | .mobile-line   | ![](../imgs/icons/mobile-alt-line.svg) | .mobile-alt-line |
+| ![](../imgs/icons/mobile-apps-line.svg) | .mobile-apps-line | ![](../imgs/icons/mobile-apps-fill.svg) | .mobile-apps-fill | ![](../imgs/icons/computer-line.svg) | .computer-line | ![](../imgs/icons/camera-fill.svg)     | .camera-fill     |
 
 #### Brand Icon Table
 
 | Icon                                | Style         | Icon                              | Style       | Icon                               | Style        |
-| :--:                                | -----         | :--:                              | -----       | :--:                              | -----        |
-| ![](../imgs/Icons/android-fill.svg) | .android-fill | ![](../imgs/Icons/apple-fill.svg) | .apple-fill | ![](../imgs/Icons/huawei-fill.svg) | .huawei-fill |
+| :--:                                | -----         | :--:                              | -----       | :--:                               | -----        |
+| ![](../imgs/icons/android-fill.svg) | .android-fill | ![](../imgs/icons/apple-fill.svg) | .apple-fill | ![](../imgs/icons/huawei-fill.svg) | .huawei-fill |
 
 #### Apps Icons Table
 
-| Icon                                      | Style               | Icon                                         | Style                  | Icon                                     | Style              | Icon                                      | Style               |
-| :--:                                      | -----               | :--:                                         | -----                  | :--:                                     | -----              | :--:                                      | -----               |
-| ![](../imgs/Icons/app-line.svg)           | .app-line           | ![](../imgs/Icons/app-notification-line.svg) | .app-notification-line | ![](../imgs/Icons/acrobat-fill.svg)      | .acrobat-fill      | ![](../imgs/Icons/acrobat-color.svg)      | .acrobat-color      |      
-| ![](../imgs/Icons/applemail-fill.svg)     | .applemail-fill     | ![](../imgs/Icons/applemail-color.svg)       | .applemail-color       | ![](../imgs/Icons/appstore-fill.svg)     | .appstore-fill     | ![](../imgs/Icons/appstore-color.svg)     | .appstore-color     |  
-| ![](../imgs/Icons/appstore-alt-fill.svg)  | .appstore-alt-fill  | ![](../imgs/Icons/appstore-alt-color.svg)    | .appstore-alt-color    | ![](../imgs/Icons/bcardy-fill.svg)       | .bcardy-fill       | ![](../imgs/Icons/bcardy-color.svg)       | .bcardy-color       |  
-| ![](../imgs/Icons/behance-fill.svg)       | .behance-fill       | ![](../imgs/Icons/behance-color.svg)         | .behance-color         | ![](../imgs/Icons/facebook-fill.svg)     | .facebook-fill     | ![](../imgs/Icons/facebook-color.svg)     | .facebook-color     |  
-| ![](../imgs/Icons/facebook-alt-fill.svg)  | .facebook-alt-fill  | ![](../imgs/Icons/facebook-alt-color.svg)    | .facebook-alt-color    | ![](../imgs/Icons/github-fill.svg)       | .github-fill       | ![](../imgs/Icons/github-color.svg)       | .github-color       |  
-| ![](../imgs/Icons/gmail-fill.svg)         | .gmail-fill         | ![](../imgs/Icons/gmail-color.svg)           | .gmail-color           | ![](../imgs/Icons/googlemaps-fill.svg)   | .googlemaps-fill   | ![](../imgs/Icons/googlemaps-color.svg)   | .googlemaps-color   |  
-| ![](../imgs/Icons/googleplay-fill.svg)    | .googleplay-fill    | ![](../imgs/Icons/googleplay-color.svg)      | .googleplay-color      | ![](../imgs/Icons/instagram-fill.svg)    | .instagram-fill    | ![](../imgs/Icons/instagram-color.svg)    | .instagram-color    |  
-| ![](../imgs/Icons/instagram-alt-fill.svg) | .instagram-alt-fill | ![](../imgs/Icons/instagram-alt-color.svg)   | .instagram-alt-color   | ![](../imgs/Icons/line-fill.svg)         | .line-fill         | ![](../imgs/Icons/line-color.svg)         | .line-color         |  
-| ![](../imgs/Icons/line-alt-fill.svg)      | .line-alt-fill      | ![](../imgs/Icons/line-alt-color.svg)        | .line-alt-color        | ![](../imgs/Icons/linkedin-fill.svg)     | .linkedin-fill     | ![](../imgs/Icons/linkedin-color.svg)     | .linkedin-color     |  
-| ![](../imgs/Icons/linkedin-alt-fill.svg)  | .linkedin-alt-fill  | ![](../imgs/Icons/linkedin-alt-color.svg)    | .linkedin-alt-color    | ![](../imgs/Icons/messenger-fill.svg)    | .messenger-fill    | ![](../imgs/Icons/messenger-color.svg)    | .messenger-color    |   
-| ![](../imgs/Icons/outlook-fill.svg)       | .outlook-fill       | ![](../imgs/Icons/outlook-color.svg)         | .outlook-color         | ![](../imgs/Icons/samsungemail-fill.svg) | .samsungemail-fill | ![](../imgs/Icons/samsungemail-color.svg) | .samsungemail-color |
-| ![](../imgs/Icons/skype-fill.svg)         | .skype-fill         | ![](../imgs/Icons/skype-color.svg)           | .skype-color           | ![](../imgs/Icons/telegram-fill.svg)     | .telegram-fill     | ![](../imgs/Icons/telegram-color.svg)     | .telegram-color     |
-| ![](../imgs/Icons/telegram-alt-fill.svg)  | .telegram-alt-fill  | ![](../imgs/Icons/telegram-alt-color.svg)    | .telegram-alt-color    | ![](../imgs/Icons/tiktok-fill.svg)       | .tiktok-fill       | ![](../imgs/Icons/tiktok-color.svg)       | .tiktok-color       |
-| ![](../imgs/Icons/twitter-fill.svg)       | .twitter-fill       | ![](../imgs/Icons/twitter-color.svg)         | .twitter-color         | ![](../imgs/Icons/twitter-alt-fill.svg)  | .twitter-alt-fill  | ![](../imgs/Icons/twitter-alt-color.svg)  | .twitter-alt-color  |
-| ![](../imgs/Icons/twitter-x-fill.svg)     | .twitter-x-fill     | ![](../imgs/Icons/twitter-x-color.svg)       | .twitter-x-color       | ![](../imgs/Icons/vimeo-fill.svg)        | .vimeo-fill        | ![](../imgs/Icons/vimeo-color.svg)        | .vimeo-color        |
-| ![](../imgs/Icons/vimeo-alt-fill.svg)     | .vimeo-alt-fill     | ![](../imgs/Icons/vimeo-alt-color.svg)       | .vimeo-alt-color       | ![](../imgs/Icons/yahoo-fill.svg)        | .yahoo-fill        | ![](../imgs/Icons/yahoo-color.svg)        | .yahoo-color        |
-| ![](../imgs/Icons/yahoo-alt-fill.svg)     | .yahoo-alt-fill     | ![](../imgs/Icons/yahoo-alt-color.svg)       | .yahoo-alt-color       | ![](../imgs/Icons/youtube-fill.svg)      | .youtube-fill      | ![](../imgs/Icons/youtube-color.svg)      | .youtube-color      |
-| ![](../imgs/Icons/whatsapp-fill.svg)      | .whatsapp-fill      | ![](../imgs/Icons/whatsapp-color.svg)        | .whatsapp-color        | ![](../imgs/Icons/whatsapp-alt-fill.svg) | .whatsapp-alt-fill | ![](../imgs/Icons/whatsapp-alt-color.svg) | .whatsapp-alt-color |
-| ![](../imgs/Icons/wuijs-fill.svg)         | .wuijs-fill         | ![](../imgs/Icons/wuijs-color.svg)           | .wuijs-color           |
+| Icon                                      | Style               | Icon                                         | Style                  | Icon                                      | Style               | Icon                                       | Style                |
+| :--:                                      | -----               | :--:                                         | -----                  | :--:                                      | -----               | :--:                                       | -----                |
+| ![](../imgs/icons/app-line.svg)           | .app-line           | ![](../imgs/icons/app-notification-line.svg) | .app-notification-line | ![](../imgs/icons/acrobat-fill.svg)       | .acrobat-fill       | ![](../imgs/icons/acrobat-color.svg)       | .acrobat-color       |      
+| ![](../imgs/icons/applemail-fill.svg)     | .applemail-fill     | ![](../imgs/icons/applemail-color.svg)       | .applemail-color       | ![](../imgs/icons/appstore-fill.svg)      | .appstore-fill      | ![](../imgs/icons/appstore-color.svg)      | .appstore-color      |  
+| ![](../imgs/icons/appstore-alt-fill.svg)  | .appstore-alt-fill  | ![](../imgs/icons/appstore-alt-color.svg)    | .appstore-alt-color    | ![](../imgs/icons/bcardy-fill.svg)        | .bcardy-fill        | ![](../imgs/icons/bcardy-color.svg)        | .bcardy-color        |  
+| ![](../imgs/icons/behance-fill.svg)       | .behance-fill       | ![](../imgs/icons/behance-color.svg)         | .behance-color         | ![](../imgs/icons/claude-fill.svg)        | .claude-fill        | ![](../imgs/icons/claude-color.svg)        | .claude-color        |
+| ![](../imgs/icons/facebook-fill.svg)      | .facebook-fill      | ![](../imgs/icons/facebook-color.svg)        | .facebook-color        | ![](../imgs/icons/facebook-alt-fill.svg)  | .facebook-alt-fill  | ![](../imgs/icons/facebook-alt-color.svg)  | .facebook-alt-color  |
+| ![](../imgs/icons/github-fill.svg)        | .github-fill        | ![](../imgs/icons/github-color.svg)          | .github-color          | ![](../imgs/icons/gmail-fill.svg)         | .gmail-fill         | ![](../imgs/icons/gmail-color.svg)         | .gmail-color         |
+| ![](../imgs/icons/googlemaps-fill.svg)    | .googlemaps-fill    | ![](../imgs/icons/googlemaps-color.svg)      | .googlemaps-color      | ![](../imgs/icons/googleplay-fill.svg)    | .googleplay-fill    | ![](../imgs/icons/googleplay-color.svg)    | .googleplay-color    |
+| ![](../imgs/icons/instagram-fill.svg)     | .instagram-fill     | ![](../imgs/icons/instagram-color.svg)       | .instagram-color       | ![](../imgs/icons/instagram-alt-fill.svg) | .instagram-alt-fill | ![](../imgs/icons/instagram-alt-color.svg) | .instagram-alt-color |
+| ![](../imgs/icons/line-fill.svg)          | .line-fill          | ![](../imgs/icons/line-color.svg)            | .line-color            | ![](../imgs/icons/line-alt-fill.svg)      | .line-alt-fill      | ![](../imgs/icons/line-alt-color.svg)      | .line-alt-color      |
+| ![](../imgs/icons/linkedin-fill.svg)      | .linkedin-fill      | ![](../imgs/icons/linkedin-color.svg)        | .linkedin-color        | ![](../imgs/icons/linkedin-alt-fill.svg)  | .linkedin-alt-fill  | ![](../imgs/icons/linkedin-alt-color.svg)  | .linkedin-alt-color  |
+| ![](../imgs/icons/messenger-fill.svg)     | .messenger-fill     | ![](../imgs/icons/messenger-color.svg)       | .messenger-color       | ![](../imgs/icons/outlook-fill.svg)       | .outlook-fill       | ![](../imgs/icons/outlook-color.svg)       | .outlook-color       |
+| ![](../imgs/icons/samsungemail-fill.svg)  | .samsungemail-fill  | ![](../imgs/icons/samsungemail-color.svg)    | .samsungemail-color    | ![](../imgs/icons/skype-fill.svg)         | .skype-fill         | ![](../imgs/icons/skype-color.svg)         | .skype-color         |
+| ![](../imgs/icons/telegram-fill.svg)      | .telegram-fill      | ![](../imgs/icons/telegram-color.svg)        | .telegram-color        | ![](../imgs/icons/telegram-alt-fill.svg)  | .telegram-alt-fill  | ![](../imgs/icons/telegram-alt-color.svg)  | .telegram-alt-color  |
+| ![](../imgs/icons/tiktok-fill.svg)        | .tiktok-fill        | ![](../imgs/icons/tiktok-color.svg)          | .tiktok-color          | ![](../imgs/icons/twitter-fill.svg)       | .twitter-fill       | ![](../imgs/icons/twitter-color.svg)       | .twitter-color       |
+| ![](../imgs/icons/twitter-alt-fill.svg)   | .twitter-alt-fill   | ![](../imgs/icons/twitter-alt-color.svg)     | .twitter-alt-color     | ![](../imgs/icons/twitter-x-fill.svg)     | .twitter-x-fill     | ![](../imgs/icons/twitter-x-color.svg)     | .twitter-x-color     |
+| ![](../imgs/icons/vimeo-fill.svg)         | .vimeo-fill         | ![](../imgs/icons/vimeo-color.svg)           | .vimeo-color           | ![](../imgs/icons/vimeo-alt-fill.svg)     | .vimeo-alt-fill     | ![](../imgs/icons/vimeo-alt-color.svg)     | .vimeo-alt-color     |
+| ![](../imgs/icons/yahoo-fill.svg)         | .yahoo-fill         | ![](../imgs/icons/yahoo-color.svg)           | .yahoo-color           | ![](../imgs/icons/yahoo-alt-fill.svg)     | .yahoo-alt-fill     | ![](../imgs/icons/yahoo-alt-color.svg)     | .yahoo-alt-color     |
+| ![](../imgs/icons/youtube-fill.svg)       | .youtube-fill       | ![](../imgs/icons/youtube-color.svg)         | .youtube-color         | ![](../imgs/icons/whatsapp-fill.svg)      | .whatsapp-fill      | ![](../imgs/icons/whatsapp-color.svg)      | .whatsapp-color      |
+| ![](../imgs/icons/whatsapp-alt-fill.svg)  | .whatsapp-alt-fill  | ![](../imgs/icons/whatsapp-alt-color.svg)    | .whatsapp-alt-color    | ![](../imgs/icons/wuijs-fill.svg)         | .wuijs-fill         | ![](../imgs/icons/wuijs-color.svg)         | .wuijs-color         |
 
 #### Options Icon Table
 
 | Icon                                    | Style             | Icon                                        | Style                 | Icon                                         | Style                  | Icon                                         | Style                  |
 | :--:                                    | -----             | :--:                                        | -----                 | :--:                                         | -----                  | :--:                                         | -----                  |
-| ![](../imgs/Icons/at-line.svg)          | .at-line          | ![](../imgs/Icons/at-lg-line.svg)           | .at-lg-line           | ![](../imgs/Icons/award-line.svg)            | .award-line            | ![](../imgs/Icons/award-fill.svg)            | .award-fill            |
-| ![](../imgs/Icons/basket-line.svg)      | .basket-line      | ![](../imgs/Icons/basket-fill.svg)          | .basket-fill          | ![](../imgs/Icons/bell-line.svg)             | .bell-line             | ![](../imgs/Icons/bell-fill.svg)             | .bell-fill             |
-| ![](../imgs/Icons/bluetooth-line.svg)   | .bluetooth-line   | ![](../imgs/Icons/bluetooth-fill.svg)       | .bluetooth-fill       | ![](../imgs/Icons/bug-line.svg)              | .bug-line              | ![](../imgs/Icons/bug-fill.svg)              | .bug-fill              |
-| ![](../imgs/Icons/cash-line.svg)        | .cash-line        | ![](../imgs/Icons/cash-alt-fill.svg)        | .cash-alt-fill        | ![](../imgs/Icons/circle-line.svg)           | .circle-line           | ![](../imgs/Icons/circle-fill.svg)           | .circle-fill           |
-| ![](../imgs/Icons/contacts-line.svg)    | .contacts-line    | ![](../imgs/Icons/contacts-fill.svg)        | .contacts-fill        | ![](../imgs/Icons/copy-link-line.svg)        | .copy-link-line        | ![](../imgs/Icons/copy-link-fill.svg)        | .copy-link-fill        |
-| ![](../imgs/Icons/easel-line.svg)       | .easel-line       | ![](../imgs/Icons/easel-fill.svg)           | .easel-fill           | ![](../imgs/Icons/eye-line.svg)              | .eye-line              | ![](../imgs/Icons/eye-fill.svg)              | .eye-fill              |
-| ![](../imgs/Icons/eye-slash-line.svg)   | .eye-slash-line   | ![](../imgs/Icons/eye-slash-fill.svg)       | .eye-slash-fill       | ![](../imgs/Icons/flag-line.svg)             | .flag-line             | ![](../imgs/Icons/flag-fill.svg)             | .flag-fill             |
-| ![](../imgs/Icons/floppy-line.svg)      | .floppy-line      | ![](../imgs/Icons/floppy-fill.svg)          | .floppy-fill          | ![](../imgs/Icons/gear-line.svg)             | .gear-line             | ![](../imgs/Icons/gear-fill.svg)             | .gear-fill             |
-| ![](../imgs/Icons/gears-line.svg)       | .gears-line       | ![](../imgs/Icons/gears-fill.svg)           | .gears-fill           | ![](../imgs/Icons/grid3x2-line.svg)          | .grid3x2-line          | ![](../imgs/Icons/grid3x3-line.svg)          | .grid3x3-line          |
-| ![](../imgs/Icons/health-line.svg)      | .health-line      | ![](../imgs/Icons/health-fill.svg)          | .health-fill          | ![](../imgs/Icons/home-line.svg)             | .home-line             | ![](../imgs/Icons/home-fill.svg)             | .home-fill             |
-| ![](../imgs/Icons/image-line.svg)       | .image-line       | ![](../imgs/Icons/image-fill.svg)           | .image-fill           | ![](../imgs/Icons/image-alt-line.svg)        | .image-alt-line        | ![](../imgs/Icons/images-line.svg)           | .images-line           |
-| ![](../imgs/Icons/key-line.svg)         | .key-line         | ![](../imgs/Icons/key-fill.svg)             | .key-fill             | ![](../imgs/Icons/keyboard-line.svg)         | .keyboard-line         | ![](../imgs/Icons/keyboard-fill.svg)         | .keyboard-fill         |
-| ![](../imgs/Icons/layers-line.svg)      | .layers-line      | ![](../imgs/Icons/layers-fill.svg)          | .layers-fill          | ![](../imgs/Icons/lightbulb-line.svg)        | .lightbulb-line        | ![](../imgs/Icons/lightbulb-fill.svg)        | .lightbulb-fill        |
-| ![](../imgs/Icons/lock-line.svg)        | .lock-line        | ![](../imgs/Icons/lock-fill.svg)            | .lock-fill            | ![](../imgs/Icons/mailbox-line.svg)          | .mailbox-line          | ![](../imgs/Icons/mailbox-fill.svg)          | .mailbox-fill          |
-| ![](../imgs/Icons/moon-line.svg)        | .moon-line        | ![](../imgs/Icons/moon-fill.svg)            | .moon-fill            | ![](../imgs/Icons/moon-stars-line.svg)       | .moon-stars-line       | ![](../imgs/Icons/moon-stars-fill.svg)       | .moon-stars-fill       |
-| ![](../imgs/Icons/mortarboard-line.svg) | .mortarboard-line | ![](../imgs/Icons/mortarboard-fill.svg)     | .mortarboard-fill     | ![](../imgs/Icons/piechart-line.svg)         | .piechart-line         | ![](../imgs/Icons/piechart-fill.svg)         | .piechart-fill         |
-| ![](../imgs/Icons/palette-line.svg)     | .palette-line     | ![](../imgs/Icons/palette-fill.svg)         | .palette-fill         | ![](../imgs/Icons/pen-line.svg)              | .pen-line              | ![](../imgs/Icons/pen-fill.svg)              | .pen-fill              |
-| ![](../imgs/Icons/pencil-line.svg)      | .pencil-line      | ![](../imgs/Icons/pencil-fill.svg)          | .pencil-fill          | ![](../imgs/Icons/pin-line.svg)              | .pin-line              | ![](../imgs/Icons/pin-fill.svg)              | .pin-fill              |
-| ![](../imgs/Icons/plant-line.svg)       | .plant-line       | ![](../imgs/Icons/plant-fill.svg)           | .plant-fill           | ![](../imgs/Icons/play-line.svg)             | .play-line             | ![](../imgs/Icons/play-fill.svg)             | .play-fill             |
-| ![](../imgs/Icons/play-circle-line.svg) | .play-circle-line | ![](../imgs/Icons/play-circle-fill.svg)     | .play-circle-fill     | ![](../imgs/Icons/send-line.svg)             | .send-line             | ![](../imgs/Icons/send-fill.svg)             | .send-fill             |
-| ![](../imgs/Icons/separationh-line.svg) | .separationh-line | ![](../imgs/Icons/separationv-line.svg)     | .separationv-line     | ![](../imgs/Icons/share-line.svg)            | .share-line            | ![](../imgs/Icons/share-fill.svg)            | .share-fill            |
-| ![](../imgs/Icons/shop-line.svg)        | .shop-line        | ![](../imgs/Icons/shop-alt-fill.svg)        | .shop-alt-fill        | ![](../imgs/Icons/signpost-line.svg)         | .signpost-line         | ![](../imgs/Icons/signpost-fill.svg)         | .signpost-fill         |
-| ![](../imgs/Icons/sim-line.svg)         | .sim-line         | ![](../imgs/Icons/sim-fill.svg)             | .sim-fill             | ![](../imgs/Icons/star-line.svg)             | .star-line             | ![](../imgs/Icons/star-fill.svg)             | .star-fill             |
-| ![](../imgs/Icons/star-circle-line.svg) | .star-circle-line | ![](../imgs/Icons/star-circle-fill.svg)     | .star-circle-fill     | ![](../imgs/Icons/stoplights-line.svg)       | .stoplights-line       | ![](../imgs/Icons/stoplights-fill.svg)       | .stoplights-fill       |
-| ![](../imgs/Icons/thermometer-line.svg) | .thermometer-line | ![](../imgs/Icons/thermometer-low-line.svg) | .thermometer-low-line | ![](../imgs/Icons/thermometer-half-line.svg) | .thermometer-half-line | ![](../imgs/Icons/thermometer-high-line.svg) | .thermometer-high-line |
-| ![](../imgs/Icons/time-line.svg)        | .time-line        | ![](../imgs/Icons/time-fill.svg)            | .time-fill            | ![](../imgs/Icons/trash-line.svg)            | .trash-line            | ![](../imgs/Icons/trash-fill.svg)            | .trash-fill            |
-| ![](../imgs/Icons/trophy-line.svg)      | .trophy-line      | ![](../imgs/Icons/trophy-fill.svg)          | .trophy-fill          | ![](../imgs/Icons/unlock-line.svg)           | .unlock-line           | ![](../imgs/Icons/unlock-fill.svg)           | .unlock-fill           |
-| ![](../imgs/Icons/wallet-line.svg)      | .wallet-line      | ![](../imgs/Icons/wallet-fill.svg)          | .wallet-fill          | ![](../imgs/Icons/wifi-on-line.svg)          | .wifi-on-line          | ![](../imgs/Icons/wifi-off-line.svg)         | .wifi-off-line         |
-| ![](../imgs/Icons/window-app-line.svg)  | .window-app-line  | ![](../imgs/Icons/window-app-fill.svg)      | .window-app-fill      | ![](../imgs/Icons/wrench-line.svg)           | .wrench-line           | ![](../imgs/Icons/wrench-fill.svg)           | .wrench-fill           |
-| ![](../imgs/Icons/zoomin-line.svg)      | .zoomin-line      | ![](../imgs/Icons/zoomout-line.svg)         | .zoomout-line         |
+| ![](../imgs/icons/at-line.svg)          | .at-line          | ![](../imgs/icons/at-lg-line.svg)           | .at-lg-line           | ![](../imgs/icons/award-line.svg)            | .award-line            | ![](../imgs/icons/award-fill.svg)            | .award-fill            |
+| ![](../imgs/icons/basket-line.svg)      | .basket-line      | ![](../imgs/icons/basket-fill.svg)          | .basket-fill          | ![](../imgs/icons/bell-line.svg)             | .bell-line             | ![](../imgs/icons/bell-fill.svg)             | .bell-fill             |
+| ![](../imgs/icons/bluetooth-line.svg)   | .bluetooth-line   | ![](../imgs/icons/bluetooth-fill.svg)       | .bluetooth-fill       | ![](../imgs/icons/bug-line.svg)              | .bug-line              | ![](../imgs/icons/bug-fill.svg)              | .bug-fill              |
+| ![](../imgs/icons/cash-line.svg)        | .cash-line        | ![](../imgs/icons/cash-alt-fill.svg)        | .cash-alt-fill        | ![](../imgs/icons/circle-line.svg)           | .circle-line           | ![](../imgs/icons/circle-fill.svg)           | .circle-fill           |
+| ![](../imgs/icons/contacts-line.svg)    | .contacts-line    | ![](../imgs/icons/contacts-fill.svg)        | .contacts-fill        | ![](../imgs/icons/copy-link-line.svg)        | .copy-link-line        | ![](../imgs/icons/copy-link-fill.svg)        | .copy-link-fill        |
+| ![](../imgs/icons/easel-line.svg)       | .easel-line       | ![](../imgs/icons/easel-fill.svg)           | .easel-fill           | ![](../imgs/icons/eye-line.svg)              | .eye-line              | ![](../imgs/icons/eye-fill.svg)              | .eye-fill              |
+| ![](../imgs/icons/eye-slash-line.svg)   | .eye-slash-line   | ![](../imgs/icons/eye-slash-fill.svg)       | .eye-slash-fill       | ![](../imgs/icons/flag-line.svg)             | .flag-line             | ![](../imgs/icons/flag-fill.svg)             | .flag-fill             |
+| ![](../imgs/icons/floppy-line.svg)      | .floppy-line      | ![](../imgs/icons/floppy-fill.svg)          | .floppy-fill          | ![](../imgs/icons/gear-line.svg)             | .gear-line             | ![](../imgs/icons/gear-fill.svg)             | .gear-fill             |
+| ![](../imgs/icons/gears-line.svg)       | .gears-line       | ![](../imgs/icons/gears-fill.svg)           | .gears-fill           | ![](../imgs/icons/grid3x2-line.svg)          | .grid3x2-line          | ![](../imgs/icons/grid3x3-line.svg)          | .grid3x3-line          |
+| ![](../imgs/icons/health-line.svg)      | .health-line      | ![](../imgs/icons/health-fill.svg)          | .health-fill          | ![](../imgs/icons/home-line.svg)             | .home-line             | ![](../imgs/icons/home-fill.svg)             | .home-fill             |
+| ![](../imgs/icons/image-line.svg)       | .image-line       | ![](../imgs/icons/image-fill.svg)           | .image-fill           | ![](../imgs/icons/image-alt-line.svg)        | .image-alt-line        | ![](../imgs/icons/images-line.svg)           | .images-line           |
+| ![](../imgs/icons/key-line.svg)         | .key-line         | ![](../imgs/icons/key-fill.svg)             | .key-fill             | ![](../imgs/icons/keyboard-line.svg)         | .keyboard-line         | ![](../imgs/icons/keyboard-fill.svg)         | .keyboard-fill         |
+| ![](../imgs/icons/layers-line.svg)      | .layers-line      | ![](../imgs/icons/layers-fill.svg)          | .layers-fill          | ![](../imgs/icons/lightbulb-line.svg)        | .lightbulb-line        | ![](../imgs/icons/lightbulb-fill.svg)        | .lightbulb-fill        |
+| ![](../imgs/icons/lock-line.svg)        | .lock-line        | ![](../imgs/icons/lock-fill.svg)            | .lock-fill            | ![](../imgs/icons/mailbox-line.svg)          | .mailbox-line          | ![](../imgs/icons/mailbox-fill.svg)          | .mailbox-fill          |
+| ![](../imgs/icons/moon-line.svg)        | .moon-line        | ![](../imgs/icons/moon-fill.svg)            | .moon-fill            | ![](../imgs/icons/moon-stars-line.svg)       | .moon-stars-line       | ![](../imgs/icons/moon-stars-fill.svg)       | .moon-stars-fill       |
+| ![](../imgs/icons/mortarboard-line.svg) | .mortarboard-line | ![](../imgs/icons/mortarboard-fill.svg)     | .mortarboard-fill     | ![](../imgs/icons/piechart-line.svg)         | .piechart-line         | ![](../imgs/icons/piechart-fill.svg)         | .piechart-fill         |
+| ![](../imgs/icons/palette-line.svg)     | .palette-line     | ![](../imgs/icons/palette-fill.svg)         | .palette-fill         | ![](../imgs/icons/pen-line.svg)              | .pen-line              | ![](../imgs/icons/pen-fill.svg)              | .pen-fill              |
+| ![](../imgs/icons/pencil-line.svg)      | .pencil-line      | ![](../imgs/icons/pencil-fill.svg)          | .pencil-fill          | ![](../imgs/icons/pin-line.svg)              | .pin-line              | ![](../imgs/icons/pin-fill.svg)              | .pin-fill              |
+| ![](../imgs/icons/plant-line.svg)       | .plant-line       | ![](../imgs/icons/plant-fill.svg)           | .plant-fill           | ![](../imgs/icons/play-line.svg)             | .play-line             | ![](../imgs/icons/play-fill.svg)             | .play-fill             |
+| ![](../imgs/icons/play-circle-line.svg) | .play-circle-line | ![](../imgs/icons/play-circle-fill.svg)     | .play-circle-fill     | ![](../imgs/icons/send-line.svg)             | .send-line             | ![](../imgs/icons/send-fill.svg)             | .send-fill             |
+| ![](../imgs/icons/separationh-line.svg) | .separationh-line | ![](../imgs/icons/separationv-line.svg)     | .separationv-line     | ![](../imgs/icons/share-line.svg)            | .share-line            | ![](../imgs/icons/share-fill.svg)            | .share-fill            |
+| ![](../imgs/icons/shop-line.svg)        | .shop-line        | ![](../imgs/icons/shop-alt-fill.svg)        | .shop-alt-fill        | ![](../imgs/icons/signpost-line.svg)         | .signpost-line         | ![](../imgs/icons/signpost-fill.svg)         | .signpost-fill         |
+| ![](../imgs/icons/sim-line.svg)         | .sim-line         | ![](../imgs/icons/sim-fill.svg)             | .sim-fill             | ![](../imgs/icons/star-line.svg)             | .star-line             | ![](../imgs/icons/star-fill.svg)             | .star-fill             |
+| ![](../imgs/icons/star-circle-line.svg) | .star-circle-line | ![](../imgs/icons/star-circle-fill.svg)     | .star-circle-fill     | ![](../imgs/icons/stoplights-line.svg)       | .stoplights-line       | ![](../imgs/icons/stoplights-fill.svg)       | .stoplights-fill       |
+| ![](../imgs/icons/thermometer-line.svg) | .thermometer-line | ![](../imgs/icons/thermometer-low-line.svg) | .thermometer-low-line | ![](../imgs/icons/thermometer-half-line.svg) | .thermometer-half-line | ![](../imgs/icons/thermometer-high-line.svg) | .thermometer-high-line |
+| ![](../imgs/icons/time-line.svg)        | .time-line        | ![](../imgs/icons/time-fill.svg)            | .time-fill            | ![](../imgs/icons/trash-line.svg)            | .trash-line            | ![](../imgs/icons/trash-fill.svg)            | .trash-fill            |
+| ![](../imgs/icons/trophy-line.svg)      | .trophy-line      | ![](../imgs/icons/trophy-fill.svg)          | .trophy-fill          | ![](../imgs/icons/unlock-line.svg)           | .unlock-line           | ![](../imgs/icons/unlock-fill.svg)           | .unlock-fill           |
+| ![](../imgs/icons/wallet-line.svg)      | .wallet-line      | ![](../imgs/icons/wallet-fill.svg)          | .wallet-fill          | ![](../imgs/icons/wifi-on-line.svg)          | .wifi-on-line          | ![](../imgs/icons/wifi-off-line.svg)         | .wifi-off-line         |
+| ![](../imgs/icons/window-app-line.svg)  | .window-app-line  | ![](../imgs/icons/window-app-fill.svg)      | .window-app-fill      | ![](../imgs/icons/wrench-line.svg)           | .wrench-line           | ![](../imgs/icons/wrench-fill.svg)           | .wrench-fill           |
+| ![](../imgs/icons/zoomin-line.svg)      | .zoomin-line      | ![](../imgs/icons/zoomout-line.svg)         | .zoomout-line         |
 
 #### Composer Icon Table
 
 | Icon                                          | Style                   | Icon                                           | Style                    | Icon                                    | Style             | Icon                                      | Style               |
-| :---:                                         | ------                   | :---:                                         | ------                   | :---:                                   | ------            | :---:                                     | ------              |
-| ![](../imgs/Icons/doublequotes-left-fill.svg) | .doublequotes-left-fill | ![](../imgs/Icons/doublequotes-right-fill.svg) | .doublequotes-right-fill | ![](../imgs/Icons/indent-left-line.svg) | .indent-left-line | ![](../imgs/Icons/indent-right-line.svg)  | .indent-right-line  |
-| ![](../imgs/Icons/link-line.svg)              | .link-line              | ![](../imgs/Icons/link-alt-line.svg)           | .link-alt-line           | ![](../imgs/Icons/list-line.svg)        | .list-line        | ![](../imgs/Icons/list-check-line.svg)    | .list-check-line    |
-| ![](../imgs/Icons/list-number-line.svg)       | .list-number-line       | ![](../imgs/Icons/list-stars-line.svg)         | .list-stars-line         | ![](../imgs/Icons/list-task-line.svg)   | .list-task-line   | ![](../imgs/Icons/list-unorderd-line.svg) | .list-unorderd-line |
-| ![](../imgs/Icons/text-center-line.svg)       | .text-center-line       | ![](../imgs/Icons/text-paragraph-line.svg)     | .text-paragraph-line     | ![](../imgs/Icons/text-left-line.svg)   | .text-left-line   | ![](../imgs/Icons/text-right-line.svg)    | .text-right-line    |
+| :---:                                         | -----                   | :---:                                          | -----                    | :---:                                   | -----             | :---:                                     | -----               |
+| ![](../imgs/icons/doublequotes-left-fill.svg) | .doublequotes-left-fill | ![](../imgs/icons/doublequotes-right-fill.svg) | .doublequotes-right-fill | ![](../imgs/icons/indent-left-line.svg) | .indent-left-line | ![](../imgs/icons/indent-right-line.svg)  | .indent-right-line  |
+| ![](../imgs/icons/link-line.svg)              | .link-line              | ![](../imgs/icons/link-alt-line.svg)           | .link-alt-line           | ![](../imgs/icons/list-line.svg)        | .list-line        | ![](../imgs/icons/list-check-line.svg)    | .list-check-line    |
+| ![](../imgs/icons/list-number-line.svg)       | .list-number-line       | ![](../imgs/icons/list-stars-line.svg)         | .list-stars-line         | ![](../imgs/icons/list-task-line.svg)   | .list-task-line   | ![](../imgs/icons/list-unorderd-line.svg) | .list-unorderd-line |
+| ![](../imgs/icons/text-center-line.svg)       | .text-center-line       | ![](../imgs/icons/text-paragraph-line.svg)     | .text-paragraph-line     | ![](../imgs/icons/text-left-line.svg)   | .text-left-line   | ![](../imgs/icons/text-right-line.svg)    | .text-right-line    |
 
 #### Other Icons Table
 
 | Icon                                         | Style                  | Icon                                         | Style                  | Icon                                         | Style                  | Icon                                   | Style            |
-| :---:                                        | ------                 | :---:                                        | ------                 | :---:                                        | ------                 | :---:                                  | ------           |
-| ![](../imgs/Icons/ai-fill.svg)               | .ai-fill               | ![](../imgs/Icons/bullseye-line.svg)         | .bullseye-line         | ![](../imgs/Icons/columnsgap-line.svg)       | .columnsgap-line       | ![](../imgs/Icons/dart-fill.svg)       | .dart-fill       |
-| ![](../imgs/Icons/datasheet-line.svg)        | .datasheet-line        | ![](../imgs/Icons/datasheet-health-line.svg) | .datasheet-health-line | ![](../imgs/Icons/hash-line.svg)             | .hash-line             | ![](../imgs/Icons/headphones-line.svg) | .headphones-line |
-| ![](../imgs/Icons/headset-line.svg)          | .headset-line          | ![](../imgs/Icons/lab-fill.svg)              | .lab-fill              | ![](../imgs/Icons/logout-line.svg)           | .logout-line           | ![](../imgs/Icons/medal-line.svg)      | .medal-line      |
-| ![](../imgs/Icons/menu-line.svg)             | .menu-line             | ![](../imgs/Icons/pencil-square-fill.svg)    | .pencil-square-fill    | ![](../imgs/Icons/polygon-editable-line.svg) | .polygon-editable-line | ![](../imgs/Icons/qr-line.svg)         | .qr-line         |
-| ![](../imgs/Icons/qr-scan-line.svg)          | .qr-scan-line          | ![](../imgs/Icons/quote-fill.svg)            | .quote-fill            | ![](../imgs/Icons/rotate-line.svg)           | .rotate-line           | ![](../imgs/Icons/search-line.svg)     | .search-line     |
-| ![](../imgs/Icons/speedometer-line.svg)      | .speedometer-line      | ![](../imgs/Icons/translate-fill.svg)        | .translate-fill        | ![](../imgs/Icons/web-line.svg)              | .web-line              | ![](../imgs/Icons/universal-line.svg)  | .universal-line  |
-| ![](../imgs/Icons/universal-circle-line.svg) | .universal-circle-line |
+| :---:                                        | -----                  | :---:                                        | -----                  | :---:                                        | -----                  | :---:                                  | -----            |
+| ![](../imgs/icons/ai-fill.svg)               | .ai-fill               | ![](../imgs/icons/bullseye-line.svg)         | .bullseye-line         | ![](../imgs/icons/columnsgap-line.svg)       | .columnsgap-line       | ![](../imgs/icons/dart-fill.svg)       | .dart-fill       |
+| ![](../imgs/icons/datasheet-line.svg)        | .datasheet-line        | ![](../imgs/icons/datasheet-health-line.svg) | .datasheet-health-line | ![](../imgs/icons/hash-line.svg)             | .hash-line             | ![](../imgs/icons/headphones-line.svg) | .headphones-line |
+| ![](../imgs/icons/headset-line.svg)          | .headset-line          | ![](../imgs/icons/lab-fill.svg)              | .lab-fill              | ![](../imgs/icons/logout-line.svg)           | .logout-line           | ![](../imgs/icons/medal-line.svg)      | .medal-line      |
+| ![](../imgs/icons/menu-line.svg)             | .menu-line             | ![](../imgs/icons/pencil-square-fill.svg)    | .pencil-square-fill    | ![](../imgs/icons/polygon-editable-line.svg) | .polygon-editable-line | ![](../imgs/icons/qr-line.svg)         | .qr-line         |
+| ![](../imgs/icons/qr-scan-line.svg)          | .qr-scan-line          | ![](../imgs/icons/quote-fill.svg)            | .quote-fill            | ![](../imgs/icons/rotate-line.svg)           | .rotate-line           | ![](../imgs/icons/search-line.svg)     | .search-line     |
+| ![](../imgs/icons/speedometer-line.svg)      | .speedometer-line      | ![](../imgs/icons/translate-fill.svg)        | .translate-fill        | ![](../imgs/icons/web-line.svg)              | .web-line              | ![](../imgs/icons/universal-line.svg)  | .universal-line  |
+| ![](../imgs/icons/universal-circle-line.svg) | .universal-circle-line |
 
 #### Animated Icons Table
 
 | Icon                                           | Style                    | Icon                                          | Style                   | Icon                                              | Style                       |
 | :--:                                           | -----                    | :--:                                          | -----                   | :--:                                              | -----                       |
-| ![](../imgs/Icons/animation-loarder-comet.svg) | .animation-loarder-comet | ![](../imgs/Icons/animation-loarder-ring.svg) | .animation-loarder-ring | ![](../imgs/Icons/animation-loarder-ringpath.svg) | .animation-loarder-ringpath |
+| ![](../imgs/icons/animation-loarder-comet.svg) | .animation-loarder-comet | ![](../imgs/icons/animation-loarder-ring.svg) | .animation-loarder-ring | ![](../imgs/icons/animation-loarder-ringpath.svg) | .animation-loarder-ringpath |
 
 #### CSS Variables
 
@@ -1822,26 +1282,14 @@ python ./svg-icon-maker.py
 python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s <size>
 ```
 
-| Option             | Default value                     | Description |
-| ------------------ | --------------------------------- | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.2.css` | Path to the source CSS file. |
-| `-o`,<br>`--out`   | `../imgs/Icons/`                  | Output directory for the generated files. |
-| `-c`,<br>`--color` | `#a2a9b6`                         | CSS-compatible color format that will replace the 'currentColor' statement in the SVG code. |
-| `-s`,<br>`--size`  | `24`                              | Size in pixels (width and height) of the images in the set. |
+| Option             | Default value                              | Description |
+| ------------------ | ------------------------------------------ | ----------- |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.3.css` | Path to the source CSS file. |
+| `-o`,<br>`--out`   | `../imgs/icons/`                           | Output directory for the generated files. |
+| `-c`,<br>`--color` | `#a2a9b6`                                  | CSS-compatible color format that will replace the 'currentColor' statement in the SVG code. |
+| `-s`,<br>`--size`  | `24`                                       | Size in pixels (width and height) of the images in the set. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-}
-```
 
 CSS code:
 
@@ -1870,7 +1318,8 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
 ```
 
 HTML code:
@@ -1886,15 +1335,14 @@ HTML code:
 </nav>
 ```
 
-
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/icon/basic).
 
-<a name="WUIFade"></a>
+<a name="wui-fade"></a>
 
 ### WUIFade
 
-Version: `0.1`
+Version: `0.3`
 
 Utilities for fading out and fading control in HTML elements with opacity.
 
@@ -1903,8 +1351,8 @@ It is a static class that does not have a constructor or properties.
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| JS   | [src/wui-js/main/fade/wui-fade-0.2.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/fade/wui-fade-0.2.js) |
+|:----:| ---- |
+| JS   | [src/wui-js/main/fade/wui-fade-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/fade/wui-fade-0.3.js) |
 
 #### Methods
 
@@ -1978,7 +1426,7 @@ nav {
 HTML head:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/fade/wui-fade-0.2.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.3.js"></script>
 ```
 
 HTML code:
@@ -2018,22 +1466,23 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/fade/basic).
 
-<a name="WUILoader"></a>
+<a name="wui-loader"></a>
 
 ### WUILoader
 
-Version: `0.3`
+Version: `0.4`
 
 Component for the implementation of loading animations.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/loader/wui-loader-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.3.css) |
-| JS   | [src/wui-js/main/loader/wui-loader-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.3.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/loader/wui-loader-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.4.css) |
+| CSS  | [src/wui-js/main/loader/wui-loader-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.4.root.css) |
+| JS   | [src/wui-js/main/loader/wui-loader-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.4.js) |
 
 #### Constructor
 
@@ -2057,22 +1506,125 @@ Component for the implementation of loading animations.
 | ----------- | ----------- | ----------- |
 | getElements | `NodeList`  | `getElements()`<br><br>Returns a list of HTML elements with the containers of the loading animation objects. |
 | init        | `void`      | `init()`<br><br>Initializes the loading animation objects. |
+| destroy     | `void`      | `destroy()`<br><br>Destroyer. |
 
-<a name="WUITooltip"></a>
-<a name="WUIModal"></a>
+#### CSS Variables
+
+| Variable             | Description |
+| -------------------- | ----------- |
+| `--wui-loader-color` | Loading animation color. |
+
+#### Implementation
+
+<a name="wui-tooltip"></a>
+
+### WUITooltip
+
+Version: `0.3`
+
+Component for the implementation of tooltip texts.
+
+#### Sources
+
+| Type | File |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.3.css) |
+| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.3.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.3.root.css) |
+| JS   | [src/wui-js/main/tooltip/wui-tooltip-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.3.js) |
+
+#### Constructor
+
+| Type       | Description |
+| ---------- | ----------- |
+| WUITooltip | `WUITooltip([properties])`<br><br>Arguments:<br>**• properties:** `object` *optional* |
+
+#### Properties
+
+| Property | Type     | Default value            | Description |
+| -------- | -------- | ------------------------ | ----------- |
+| selector | `string` | `".wui-tooltip-target"` | (get/set)<br><br>CSS selector that defines the HTML elements that act as tooltip trigger targets. If more than one element matches the selector, all matches will be included. |
+
+#### Methods
+
+| Method      | Return type | Description |
+| ----------- | ----------- | ----------- |
+| getElements | `NodeList`  | `getElements()`<br><br>Returns the list of HTML elements acting as tooltip trigger targets. |
+| init        | `void`      | `init()`<br><br>Initializes the object, attaching hover events to all target elements. |
+| lock        | `void`      | `lock()`<br><br>Locks all tooltips in the open state. |
+| unlock      | `void`      | `unlock()`<br><br>Unlocks all tooltips, restoring normal hover behavior. |
+| destroy     | `void`      | `destroy()`<br><br>Destroyer. |
+
+#### CSS Variables
+
+| Variable                   | Description |
+| -------------------------- | ----------- |
+| `--wui-tooltip-open-delay` | Delay before the tooltip appears. |
+| `--wui-tooltip-bgcolor`    | Background color of the tooltip. |
+| `--wui-tooltip-textcolor`  | Text color of the tooltip. |
+
+#### Implementation
+
+CSS code:
+
+```css
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.my-container {
+	position: relative;
+	display: inline-block;
+}
+```
+
+HTML head:
+
+```html
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.css">
+<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.js"></script>
+```
+
+HTML code:
+
+```html
+<div class="wui-tooltip-target my-container">
+	<button>Hover me</button>
+	<div class="wui-tooltip-top">Tooltip text</div>
+</div>
+```
+
+JS code:
+
+```js
+const init = () => {
+	const tooltip = new WUITooltip({
+		selector: ".wui-tooltip-target.my-container"
+	});
+	tooltip.init();
+}
+
+window.addEventListener("DOMContentLoaded", init);
+```
+
+<a name="wui-modal"></a>
 
 ### WUIModal
 
-Version: `0.4`
+Version: `0.5`
 
 Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`).
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.4.css) |
-| JS   | [src/wui-js/main/modal/wui-modal-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.5.css) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.5.root.css) |
+| JS   | [src/wui-js/main/modal/wui-modal-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.5.js) |
 
 #### Constructor
 
@@ -2166,55 +1718,6 @@ Component for the implementation of dialog boxes (type `message`) and pop-up win
 
 #### Implementation
 
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-modal */
-
-	--wui-modal-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-	--wui-modal-box-borderradius: 17px;
-	--wui-modal-box-bgcolor: rgb(from #efeff6 r g b / 100%);
-	--wui-modal-back-textcolor: #1e90ff;
-	--wui-modal-close-bgcolor: #353a40;
-	--wui-modal-topbar-height: 4px;
-	--wui-modal-title-textfont: Arial, Helvetica, Verdana, sans-serif;
-	--wui-modal-title-textcase: none;
-	--wui-modal-title-textcolor: #000;
-	--wui-modal-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-modal-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-modal-footer-bordercolor: transparent;
-	--wui-modal-button-submit-bgcolor-mobile: rgb(from #959da5 r g b / 20%);
-	--wui-modal-button-submit-textcolor-mobile: #1e90ff;
-	--wui-modal-button-warning-textcolor-mobile: #f44343;
-	--wui-modal-message-box-width: 280px;
-	--wui-modal-message-box-bgcolor: rgb(from #efeff6 r g b / 80%);
-	--wui-modal-message-box-textcolor: #2d3a47;
-	--wui-modal-message-mobile-box-width: 280px;
-	--wui-modal-message-mobile-footer-bordercolor: #d5dce3;
-	--wui-modal-message-mobile-button-bordercolor: #d5dce3;
-	--wui-modal-message-linkcolor: #1e90ff;
-	--wui-modal-page-box-width: 800px;
-	--wui-modal-page-box-height: 90%;
-	--wui-modal-page-box-borderradius: 10px;
-	--wui-modal-page-box-maxheight: 640px;
-	--wui-modal-page-box-bgcolor: rgb(from #efeff6 r g b / 100%);
-	--wui-modal-page-header-topbar-bgcolor: #d5dce3;
-	--wui-modal-page-header-bordercolor: #d5dce3;
-	--wui-modal-slidepage-box-margin: 10px;
-	--wui-modal-smallpage-box-width: 340px;
-	--wui-modal-smallpage-box-height: 280px;
-	--wui-modal-mobile-page-box-topmargin: 0px;
-	--wui-modal-mobile-page-box-borderradius-maximized: 0px;
-}
-```
-
 CSS Code:
 
 ```css
@@ -2245,9 +1748,11 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/modal/wui-modal-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/modal/wui-modal-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.5.js"></script>
 ```
 
 HTML code:
@@ -2313,22 +1818,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this working example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic).
+> You can check this working example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/modal/basic).
 
-<a name="WUIPaging"></a>
+<a name="wui-paging"></a>
 
 ### WUIPaging
 
-Version: `0.2`
+Version: `0.4`
 
 Component for the implementation of paginated views with animated transitions.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.3.css) |
-| JS   | [src/wui-js/main/paging/wui-paging-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.3.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.4.css) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.4.root.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.4.js) |
 
 #### Constructor
 
@@ -2362,6 +1868,7 @@ Component for the implementation of paginated views with animated transitions.
 | setHistory | `void`         | `setHistory([history])`<br><br>Arguments:<br>**• history:** `array` *optional*, list of page identifiers or indexes that make up the history.<br><br>Manually sets the navigation history. |
 | back       | `void`         | `back([onBack])`<br><br>Arguments:<br>**• onBack:** `function` *optional*, function executed when going back is completed. The default value corresponds to the `onBack` property.<br><br>Goes back to the previous page in the history. |
 | reset      | `void`         | `reset()`<br><br>Resets the component, selecting the first page and clearing the history. |
+| destroy    | `void`         | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
@@ -2373,20 +1880,6 @@ Component for the implementation of paginated views with animated transitions.
 | `--wui-paging-page-scroll-bgcolor-over` | Scrollbar color in hover state (pages with `scroll` class). |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-paging */
-
-	--wui-paging-page-transition-time: .4s;
-	--wui-paging-page-bgcolor: transparent;
-	--wui-paging-page-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-paging-page-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-}
-```
 
 CSS code:
 
@@ -2428,8 +1921,8 @@ body {
 HTML header:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./libraries/wui-js/main/paging/wui-paging-0.3.css">
-<script type="text/javascript" src="./libraries/wui-js/main/paging/wui-paging-0.3.js"></script>
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.4.css">
+<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.4.js"></script>
 ```
 
 HTML code:
@@ -2502,22 +1995,23 @@ window.addEventListener("DOMContentLoaded", init);
 > Pages can have the `scroll` class to enable vertical scrolling. The component supports two transition modes: lateral movement (default) or opacity-based (by adding the `opacity` class to the main container).
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/paging/basic).
 
-<a name="WUISlider"></a>
+<a name="wui-slider"></a>
 
 ### WUISlider
 
-Version: `0.3`
+Version: `0.5`
 
 Component for the implementation of slide presentations controlled by mouse/touch dragging and/or by event.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| JS   | [src/wui-js/main/slider/wui-slider-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.4.js) |
-| CSS  | [src/wui-js/main/slider/wui-slider-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.4.css) |
+|:----:| ---- |
+| JS   | [src/wui-js/main/slider/wui-slider-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.5.js) |
+| CSS  | [src/wui-js/main/slider/wui-slider-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.5.css) |
+| CSS  | [src/wui-js/main/slider/wui-slider-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.5.root.css) |
 
 #### Constructor
 
@@ -2544,6 +2038,7 @@ Component for the implementation of slide presentations controlled by mouse/touc
 | prev       | `void`        | `prev()`<br><br>Moves the slider to the previous slide with animation. Has no effect if already on the first slide. |
 | next       | `void`        | `next()`<br><br>Moves the slider to the next slide with animation. Has no effect if already on the last slide. |
 | go         | `void`        | `go(index)`<br><br>Parameters:<br>**• index:** `number`, index of the target slide (starts at `0`)<br><br>Jumps directly to the indicated slide without transition animation. |
+| destroy    | `void`        | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
@@ -2553,18 +2048,6 @@ Component for the implementation of slide presentations controlled by mouse/touc
 | `--wui-slider-paging-bgcolor-visible` | Color of the pagination indicator in selected state. |
 
 #### Implementation
-
-CSS Configuration:
-
-```css
-:root {
-
-	/* wui-slider */
-
-	--wui-slider-paging-bgcolor-hidden: rgb(from #fff r g b / 20%);
-	--wui-slider-paging-bgcolor-visible: rgb(from #fff r g b / 80%);
-}
-```
 
 CSS code:
 
@@ -2624,8 +2107,9 @@ nav {
 HTML Header:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/slider/wui-slider-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/slider/wui-slider-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.5.js"></script>
 ```
 
 HTML Code:
@@ -2677,23 +2161,139 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/slider/basic).
 
-<a name="WUITabs"></a>
-<a name="WUIMenubar"></a>
+<a name="wui-tabs"></a>
+
+### WUITabs
+
+Version: `0.3`
+
+Component for the implementation of views accessible by tab selection.
+
+#### Sources
+
+| Type | File |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.3.css) |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.3.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.3.root.css) |
+| JS   | [src/wui-js/main/tabs/wui-tabs-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.3.js) |
+
+#### Constructor
+
+| Type    | Description |
+| ------- | ----------- |
+| WUITabs | `WUITabs([properties])`<br><br>Arguments:<br>**• properties:** `object` *optional* |
+
+#### Properties
+
+| Property | Type     | Default value | Description |
+| -------- | -------- | ------------- | ----------- |
+| selector | `string` | `""`          | (get/set)<br><br>CSS selector that defines the HTML container element of the tab component. If more than one element matches the selector, only the first match will be included. |
+| index    | `number` | `0`           | (get/set)<br><br>Index of the tab selected by default on initialization. |
+
+#### Methods
+
+| Method     | Return type   | Description |
+| ---------- | ------------- | ----------- |
+| getElement | `HTMLElement` | `getElement()`<br><br>Returns the HTML container element of the object. |
+| init       | `void`        | `init()`<br><br>Initializes the object, attaching click events to tabs and selecting the default tab. |
+| select     | `void`        | `select([index])`<br><br>Arguments:<br>**• index:** `number`, tab index to select. The default value is `0`.<br><br>Selects the tab at the given index, showing the corresponding page. |
+| destroy    | `void`        | `destroy()`<br><br>Destroyer. |
+
+#### CSS Variables
+
+| Variable                          | Description |
+| --------------------------------- | ----------- |
+| `--wui-tabs-tab-bgcolor-out`      | Background color of tabs in normal state. |
+| `--wui-tabs-tab-bgcolor-over`     | Background color of tabs in hover/selected state. |
+| `--wui-tabs-tab-iconcolor-out`    | Icon    color of tabs in normal state. |
+| `--wui-tabs-tab-iconcolor-over`   | Icon    color of tabs in hover/selected state. |
+| `--wui-tabs-tab-iconcolor-mobile` | Icon    color of tabs in mobile mode. |
+| `--wui-tabs-tab-textcolor-out`    | Text color of tabs in normal state. |
+| `--wui-tabs-tab-textcolor-over`   | Text color of tabs in hover/selected state. |
+
+#### Implementation
+
+CSS code:
+
+```css
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.my-tabs {
+	height: 100%;
+}
+```
+
+HTML head:
+
+```html
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.css">
+<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.3.js"></script>
+```
+
+HTML code:
+
+```html
+<div class="wui-tabs bottombar mobile my-tabs">
+	<div class="body">
+		<div class="border"></div>
+		<div class="page">Page 1 content</div>
+		<div class="page">Page 2 content</div>
+		<div class="page">Page 3 content</div>
+	</div>
+	<div class="bar">
+		<div class="tab">
+			<div class="icon wui-icon wui-icon-home"></div>
+			<div class="text">Home</div>
+		</div>
+		<div class="tab">
+			<div class="icon wui-icon wui-icon-user"></div>
+			<div class="text">Profile</div>
+		</div>
+		<div class="tab">
+			<div class="icon wui-icon wui-icon-settings"></div>
+			<div class="text">Settings</div>
+		</div>
+	</div>
+</div>
+```
+
+JS code:
+
+```js
+const init = () => {
+	const tabs = new WUITabs({
+		selector: ".wui-tabs.my-tabs",
+		index: 0
+	});
+	tabs.init();
+}
+
+window.addEventListener("DOMContentLoaded", init);
+```
+
+<a name="wui-menubar"></a>
 
 ### WUIMenubar
 
-Versión: `0.1`
+Versión: `0.4`
 
 Component for the implementation of menu bars.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.3.css) |
-| JS   | [src/wui-js/main/menubar/wui-menubar-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.3.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.4.css) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.4.root.css) |
+| JS   | [src/wui-js/main/menubar/wui-menubar-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.4.js) |
 
 #### Constructor
 
@@ -2721,7 +2321,7 @@ Component for the implementation of menu bars.
 | ------------ | ---------- | ------------- | ----------- |
 | id           | `string`   | `undefined`   | Unique button identifier. |
 | iconImage    | `string`   | `undefined`   | URL of the image associated with the menu button. |
-| iconClass    | `string`   | `undefined`   | CSS styles that define the menu button icon. This option can optionally be used with the [WUIIcon](#WUIIcon) library by using the `wui-icon` style in conjunction with a specific icon style. |
+| iconClass    | `string`   | `undefined`   | CSS styles that define the menu button icon. This option can optionally be used with the [WUIIcon](#wui-icon) library by using the `wui-icon` style in conjunction with a specific icon style. |
 | label        | `string`   | `""`          | Label text associated with the menu button. |
 | radioMode    | `boolean`  | `true`        | Defines whether the button behaves like a radio mode button. |
 | selectable   | `boolean`  | `true`        | Defines whether the button is selectable. |
@@ -2759,23 +2359,23 @@ Component for the implementation of menu bars.
 | `--wui-menubar-bar-button-bgcolor-over`           | Background color of main bar buttons in hover/focus state. |
 | `--wui-menubar-bar-button-bgcolor-selected`       | Background color of main bar buttons in selected state. |
 | `--wui-menubar-bar-button-bgcolor-disabled`       | Background color of main bar buttons in disabled state. |
-| `--wui-menubar-bar-button-iconsize`               | Icon size for main bar buttons. |
-| `--wui-menubar-bar-button-iconcolor-out`          | Icon color of main bar buttons in normal state. |
-| `--wui-menubar-bar-button-iconcolor-over`         | Icon color of main bar buttons in hover/focus state. |
-| `--wui-menubar-bar-button-iconcolor-selected`     | Icon color of main bar buttons in selected state. |
-| `--wui-menubar-bar-button-iconcolor-disabled`     | Icon color of main bar buttons in disabled state. |
+| `--wui-menubar-bar-button-iconsize`               | Icon    size for main bar buttons. |
+| `--wui-menubar-bar-button-iconcolor-out`          | Icon    color of main bar buttons in normal state. |
+| `--wui-menubar-bar-button-iconcolor-over`         | Icon    color of main bar buttons in hover/focus state. |
+| `--wui-menubar-bar-button-iconcolor-selected`     | Icon    color of main bar buttons in selected state. |
+| `--wui-menubar-bar-button-iconcolor-disabled`     | Icon    color of main bar buttons in disabled state. |
 | `--wui-menubar-bar-button-textcolor-out`          | Text color of main bar buttons in normal state. |
 | `--wui-menubar-bar-button-textcolor-over`         | Text color of main bar buttons in hover/focus state. |
 | `--wui-menubar-bar-button-textcolor-selected`     | Text color of main bar buttons in selected state. |
 | `--wui-menubar-bar-button-textcolor-disabled`     | Text color of main bar buttons in disabled state. |
 | `--wui-menubar-expander-bgcolor-out`              | Background color of the expander/contractor button in normal state. |
 | `--wui-menubar-expander-bgcolor-over`             | Background color of the expander/contractor button in hover state. |
-| `--wui-menubar-expander-iconsize`                 | Icon size of the expander/contractor button. |
-| `--wui-menubar-expander-iconcolor-out`            | Icon color of the expander/contractor button in normal state. |
-| `--wui-menubar-expander-iconcolor-over`           | Icon color of the expander/contractor button in hover state. |
+| `--wui-menubar-expander-iconsize`                 | Icon    size of the expander/contractor button. |
+| `--wui-menubar-expander-iconcolor-out`            | Icon    color of the expander/contractor button in normal state. |
+| `--wui-menubar-expander-iconcolor-over`           | Icon    color of the expander/contractor button in hover state. |
 | `--wui-menubar-expander-expandicon-src`           | Source for the expand icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-menubar-expander-contracticon-src`         | Source for the contract icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-menubar-opener-iconsize`                   | Icon size of the submenu opener button. |
+| `--wui-menubar-opener-iconsize`                   | Icon    size of the submenu opener button. |
 | `--wui-menubar-opener-openicon-src`               | Source for the submenu open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-menubar-opener-closeicon-src`              | Source for the submenu close icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-menubar-submenu-bordercolor`               | Border color of the submenu. |
@@ -2784,11 +2384,11 @@ Component for the implementation of menu bars.
 | `--wui-menubar-submenu-button-bgcolor-over`       | Background color of submenu buttons in hover/focus state. |
 | `--wui-menubar-submenu-button-bgcolor-selected`   | Background color of submenu buttons in selected state. |
 | `--wui-menubar-submenu-button-bgcolor-disabled`   | Background color of submenu buttons in disabled state. |
-| `--wui-menubar-submenu-button-iconsize`           | Icon size for submenu buttons. |
-| `--wui-menubar-submenu-button-iconcolor-out`      | Icon color of submenu buttons in normal state. |
-| `--wui-menubar-submenu-button-iconcolor-over`     | Icon color of submenu buttons in hover/focus state. |
-| `--wui-menubar-submenu-button-iconcolor-selected` | Icon color of submenu buttons in selected state. |
-| `--wui-menubar-submenu-button-iconcolor-disabled` | Icon color of submenu buttons in disabled state. |
+| `--wui-menubar-submenu-button-iconsize`           | Icon    size for submenu buttons. |
+| `--wui-menubar-submenu-button-iconcolor-out`      | Icon    color of submenu buttons in normal state. |
+| `--wui-menubar-submenu-button-iconcolor-over`     | Icon    color of submenu buttons in hover/focus state. |
+| `--wui-menubar-submenu-button-iconcolor-selected` | Icon    color of submenu buttons in selected state. |
+| `--wui-menubar-submenu-button-iconcolor-disabled` | Icon    color of submenu buttons in disabled state. |
 | `--wui-menubar-submenu-button-textcolor-out`      | Text color of submenu buttons in normal state. |
 | `--wui-menubar-submenu-button-textcolor-over`     | Text color of submenu buttons in hover/focus state. |
 | `--wui-menubar-submenu-button-textcolor-selected` | Text color of submenu buttons in selected state. |
@@ -2802,72 +2402,6 @@ Component for the implementation of menu bars.
 | `--wui-menubar-mobile-opener-closeicon-src`       | Source for the submenu close icon in mobile mode<br>(format: `url()` or `none` for the default source). |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-menubar */
-
-	--wui-menubar-shadowcolor: #959da5;
-	--wui-menubar-margin: 10px;
-	--wui-menubar-borderradius: 10px;
-	--wui-menubar-bar-bordercolor: #f0f0f3;
-	--wui-menubar-bar-bgcolor-top: #f0f0f3;
-	--wui-menubar-bar-bgcolor-bottom: #f0f0f3;
-	--wui-menubar-bar-button-bgcolor-out: transparent;
-	--wui-menubar-bar-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-bar-button-bgcolor-selected: #1e90ff;
-	--wui-menubar-bar-button-bgcolor-disabled: transparent;
-	--wui-menubar-bar-button-iconsize: 24px;
-	--wui-menubar-bar-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-menubar-bar-button-iconcolor-over: #353a40;
-	--wui-menubar-bar-button-iconcolor-selected: #f6f6fa;
-	--wui-menubar-bar-button-iconcolor-disabled: #d5dce3;
-	--wui-menubar-bar-button-textcolor-out: #2d3a47;
-	--wui-menubar-bar-button-textcolor-over: #1f2937;
-	--wui-menubar-bar-button-textcolor-selected: #f6f6fa;
-	--wui-menubar-bar-button-textcolor-disabled: #d5dce3;
-	--wui-menubar-expander-bgcolor-out: transparent;
-	--wui-menubar-expander-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-expander-iconsize: 16px;
-	--wui-menubar-expander-iconcolor-out: #444;
-	--wui-menubar-expander-iconcolor-over: #000;
-	--wui-menubar-expander-expandicon-src: none;
-	--wui-menubar-expander-contracticon-src: none;
-	--wui-menubar-opener-iconsize: 16px;
-	--wui-menubar-opener-openicon-src: none;
-	--wui-menubar-opener-closeicon-src: none;
-	--wui-menubar-submenu-bordercolor: #f0f0f3;
-	--wui-menubar-submenu-bgcolor: #fdfdfe;
-	--wui-menubar-submenu-button-bgcolor-out: transparent;
-	--wui-menubar-submenu-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
-	--wui-menubar-submenu-button-bgcolor-selected: #1e90ff;
-	--wui-menubar-submenu-button-bgcolor-disabled: transparent;
-	--wui-menubar-submenu-button-iconsize: 24px;
-	--wui-menubar-submenu-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-menubar-submenu-button-iconcolor-over: #353a40;
-	--wui-menubar-submenu-button-iconcolor-selected: #f6f6fa;
-	--wui-menubar-submenu-button-iconcolor-disabled: #d5dce3;
-	--wui-menubar-submenu-button-textcolor-out: #2d3a47;
-	--wui-menubar-submenu-button-textcolor-over: #1f2937;
-	--wui-menubar-submenu-button-textcolor-selected: #f6f6fa;
-	--wui-menubar-submenu-button-textcolor-disabled: #d5dce3;
-	--wui-menubar-tooltip-bgcolor: #000;
-	--wui-menubar-tooltip-textcolor: #fff;
-	--wui-menubar-bubble-bgcolor: #f44343;
-	--wui-menubar-bubble-textcolor: #fff;
-	--wui-menubar-mobile-bar-horizpadding: 10px;
-	--wui-menubar-mobile-bar-vertpadding: 0px;
-	--wui-menubar-mobile-opener-closeicon-src: none;
-}
-```
 
 CSS code:
 
@@ -2903,9 +2437,11 @@ body {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/menubar/wui-menubar-0.3.css">
-<script type="text/javascript" src="./libraries/wui-js/main/menubar/wui-menubar-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.css">
+<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.4.js"></script>
 ```
 
 HTML code:
@@ -2997,22 +2533,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/menubar/submenu).
 
-<a name="WUIList"></a>
+<a name="wui-list"></a>
 
 ### WUIList
 
-Versión: `0.2`
+Versión: `0.4`
 
 Component for the implementation of data lists and buttons for each row optionally.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/list/wui-list-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.3.css) |
-| JS   | [src/wui-js/main/list/wui-list-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.3.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/list/wui-list-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.4.css) |
+| CSS  | [src/wui-js/main/list/wui-list-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.4.root.css) |
+| JS   | [src/wui-js/main/list/wui-list-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.4.js) |
 
 #### Constructor
 
@@ -3057,7 +2594,7 @@ Component for the implementation of data lists and buttons for each row optional
 
 | Property  | Type.               | Default value | Description |
 | --------- | ------------------- | ------------- | ----------- |
-| iconClass | `string\|function`  | `undefined`   | CSS styles that define the row button icon. This option can optionally be used with the [WUIIcon](#WUIIcon) library by using the `wui-icon` style in conjunction with a specific icon style. |
+| iconClass | `string\|function`  | `undefined`   | CSS styles that define the row button icon. This option can optionally be used with the [WUIIcon](#wui-icon) library by using the `wui-icon` style in conjunction with a specific icon style. |
 | bgcolor   | `string\|function`  | `undefined`   | Background color in CSS compatible format. |
 | enabled   | `boolean\|function` | `true`        | Defines whether the button is enabled. |
 | onClick   | `function`          | `null`        | Function run when the button is clicked. It receives the parameters `index`, corresponding to the row position starting from `0`; and `id`, corresponding to the row's unique identifier. |
@@ -3117,46 +2654,6 @@ Component for the implementation of data lists and buttons for each row optional
 
 #### Implementation
 
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-list */
-
-	--wui-list-shadowcolor: #959da5;
-	--wui-list-borderradius: 10px;
-	--wui-list-borderwidth: 0px;
-	--wui-list-bordercolor: #f0f0f3;
-	--wui-list-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-list-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-list-row-height: 44px;
-	--wui-list-row-borderwidth: 1px;
-	--wui-list-row-bordercolor-out: #f0f0f3;
-	--wui-list-row-bordercolor-over: #f0f0f3;
-	--wui-list-row-bgcolor-out: #fdfdfe;
-	--wui-list-row-bgcolor-over: #f6f6fa;
-	--wui-list-row-textcolor-out: #2d3a47;
-	--wui-list-row-textcolor-over: #1f2937;
-	--wui-list-row-textcolor-disabled: #d5dce3;
-	--wui-list-innerrow-borderwidth: 1px;
-	--wui-list-innerrow-bordercolor: #f0f0f3;
-	--wui-list-innerrow-bgcolor: rgb(from #f6f6fa r g b / 20%);
-	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
-	--wui-list-buttons-bgcolor: transparent;
-	--wui-list-button-size: 48px;
-	--wui-list-button-hmargin: 8px;
-	--wui-list-button-borderradius: 50%;
-	--wui-list-button-bgcolor-enabled: #1e90ff;
-	--wui-list-button-bgcolor-disabled: #d5dce3;
-}
-```
-
 CSS code:
 
 ```css
@@ -3212,9 +2709,11 @@ footer {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/list/wui-list-0.3.css">
-<script type="text/javascript" src="./libraries/wui-js/main/list/wui-list-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.css">
+<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.4.js"></script>
 ```
 
 HTML code:
@@ -3342,22 +2841,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/list/paging-buttongroup).
 
-<a name="WUITable"></a>
+<a name="wui-table"></a>
 
 ### WUITable
 
-Versión: `0.3`
+Versión: `0.5`
 
 Component for the implementation of data tables. Unlike the `WUIList` object, the `WUITable` object includes a column header.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/table/wui-table-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.4.css) |
-| JS   | [src/wui-js/main/table/wui-table-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/table/wui-table-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.5.css) |
+| CSS  | [src/wui-js/main/table/wui-table-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.5.root.css) |
+| JS   | [src/wui-js/main/table/wui-table-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.5.js) |
 
 #### Constructor
 
@@ -3441,21 +2941,24 @@ Component for the implementation of data tables. Unlike the `WUIList` object, th
 | Variable                                       | Description |
 | ---------------------------------------------- | ----------- |
 | `--wui-table-shadowcolor`                      | Shadow color for the table. |
+| `--wui-table-width`                            | Table width. |
 | `--wui-table-borderradius`                     | Border radius for the table. |
 | `--wui-table-scroll-bgcolor-out`               | Background color of the horizontal scrollbar in normal state. |
 | `--wui-table-scroll-bgcolor-over`              | Background color of the horizontal scrollbar in hover/active state. |
-| `--wui-table-column-bordercolor-width`         | Border width for columns. |
+| `--wui-table-column-borderwidth`               | Border width for columns. |
 | `--wui-table-column-bordercolor-out`           | Border color of columns in normal state. |
 | `--wui-table-column-bordercolor-over`          | Border color of columns in hover/focus state. |
 | `--wui-table-column-bordercolor-selected`      | Border color of columns in selected state. |
+| `--wui-table-column-bordercolor-disabled`      | Border color of columns in disabled state. |
 | `--wui-table-column-bgcolor-out`               | Background color of columns in normal state. |
 | `--wui-table-column-bgcolor-over`              | Background color of columns in hover/focus state. |
 | `--wui-table-column-bgcolor-selected`          | Background color of columns in selected state. |
+| `--wui-table-column-bgcolor-disabled`          | Background color of columns in disabled state. |
 | `--wui-table-column-textcolor-out`             | Text color of columns in normal state. |
 | `--wui-table-column-textcolor-over`            | Text color of columns in hover/focus state. |
 | `--wui-table-column-textcolor-selected`        | Text color of columns in selected state. |
 | `--wui-table-column-textcolor-disabled`        | Text color of columns in disabled state. |
-| `--wui-table-column-sorter-iconsize`           | Icon size for column sorting. |
+| `--wui-table-column-sorter-iconsize`           | Icon    size for column sorting. |
 | `--wui-table-column-sorter-iconcolor-out`      | Color of the sorting icon in normal state. |
 | `--wui-table-column-sorter-iconcolor-over`     | Color of the sorting icon in hover state. |
 | `--wui-table-column-sorter-iconcolor-disabled` | Color of the sorting icon in disabled state. |
@@ -3465,7 +2968,7 @@ Component for the implementation of data tables. Unlike the `WUIList` object, th
 | `--wui-table-column-resizer-bordercolor-over`  | Border color of the column resizer in hover state. |
 | `--wui-table-column-dragger-bordercolor-over`  | Border color of the column during drag in hover state. |
 | `--wui-table-column-dragger-bgcolor-drop`      | Background color of the column when dropping during drag. |
-| `--wui-table-row-bordercolor-width`            | Border width for rows. |
+| `--wui-table-row-borderwidth`                  | Border width for rows. |
 | `--wui-table-row-bordercolor-out`              | Border color of rows in normal state. |
 | `--wui-table-row-bordercolor-over`             | Border color of rows in hover/focus state. |
 | `--wui-table-row-bordercolor-selected`         | Border color of rows in selected state. |
@@ -3480,54 +2983,6 @@ Component for the implementation of data tables. Unlike the `WUIList` object, th
 | `--wui-table-row-textcolor-disabled`           | Text color of rows in disabled state. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-table */
-
-	--wui-table-shadowcolor: #959da5;
-	--wui-table-borderradius: 10px;
-	--wui-table-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-table-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-table-column-bordercolor-width: 1px;
-	--wui-table-column-bordercolor-out: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-bordercolor-over: #1e90ff;
-	--wui-table-column-bordercolor-selected: #1e90ff;
-	--wui-table-column-bgcolor-out: #f6f6fa;
-	--wui-table-column-bgcolor-over: #f6f6fa;
-	--wui-table-column-bgcolor-selected: #1e90ff;
-	--wui-table-column-textcolor-out: #444;
-	--wui-table-column-textcolor-over: #000;
-	--wui-table-column-textcolor-selected: #1e90ff;
-	--wui-table-column-textcolor-disabled: #d5dce3;
-	--wui-table-column-sorter-iconsize: 16px;
-	--wui-table-column-sorter-iconcolor-out: #444;
-	--wui-table-column-sorter-iconcolor-over: #000;
-	--wui-table-column-sorter-iconcolor-disabled: #d5dce3;
-	--wui-table-column-sorter-ascicon-src: none;
-	--wui-table-column-sorter-descicon-src: none;
-	--wui-table-column-resizer-bordercolor-out: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-resizer-bordercolor-over: rgb(from #1e90ff r g b / 10%);
-	--wui-table-column-dragger-bordercolor-over: #444;
-	--wui-table-column-dragger-bgcolor-drop: rgb(from #1e90ff r g b / 10%);
-	--wui-table-row-bordercolor-width: 1px;
-	--wui-table-row-bordercolor-out: #f0f0f3;
-	--wui-table-row-bordercolor-over: #f0f0f3;
-	--wui-table-row-bordercolor-selected: #1e90ff;
-	--wui-table-row-bordercolor-disabled: #f0f0f3;
-	--wui-table-row-bgcolor-out: #fdfdfe;
-	--wui-table-row-bgcolor-over: #f6f6fa;
-	--wui-table-row-bgcolor-selected: #1e90ff;
-	--wui-table-row-bgcolor-disabled: transparent;
-	--wui-table-row-textcolor-out: #2d3a47;
-	--wui-table-row-textcolor-over: #1f2937;
-	--wui-table-row-textcolor-selected: #f6f6fa;
-	--wui-table-row-textcolor-disabled: #d5dce3;
-}
-```
 
 CSS code:
 
@@ -3584,8 +3039,9 @@ footer {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/table/wui-table-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/table/wui-table-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.5.js"></script>
 ```
 
 HTML code:
@@ -3713,22 +3169,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/table/paging).
 
-<a name="WUIForm"></a>
+<a name="wui-form"></a>
 
 ### WUIForm
 
-Version: `0.3`
+Version: `0.5`
 
 Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| JS   | [src/wui-js/main/form/wui-form-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.4.js) |
-| CSS  | [src/wui-js/main/form/wui-form-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.4.css) |
+|:----:| ---- |
+| JS   | [src/wui-js/main/form/wui-form-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.5.js) |
+| CSS  | [src/wui-js/main/form/wui-form-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.5.css) |
+| CSS  | [src/wui-js/main/form/wui-form-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.5.root.css) |
 
 #### Constructor
 
@@ -3772,6 +3229,7 @@ Component for the implementation of data forms. This component allows the implem
 | blur        | `void`                                                     | `blur(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Removes focus from the field identified by the input field name. |
 | change      | `void`                                                     | `change(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Triggers the change event in the field identified by the input field name. |
 | autosize    | `void`                                                     | `autosize(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Automatically adjusts the height of a text field `<textarea>` identified by the input field name. |
+| destroy     | `void`                                                     | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
@@ -3802,16 +3260,16 @@ Component for the implementation of data forms. This component allows the implem
 | `--wui-form-input-textcolor-out`                 | Text color of input fields in normal state. |
 | `--wui-form-input-textcolor-over`                | Text color of input fields in hover state. |
 | `--wui-form-input-textcolor-disabled`            | Text color of input fields in disabled state. |
-| `--wui-form-date-opener-iconsize`                | Icon size for the date picker opener. |
-| `--wui-form-date-opener-iconcolor-out`           | Icon color for the date picker opener in normal state. |
-| `--wui-form-date-opener-iconcolor-over`          | Icon color for the date picker opener in hover state. |
-| `--wui-form-date-opener-iconcolor-disabled`      | Icon color for the date picker opener in disabled state. |
+| `--wui-form-date-opener-iconsize`                | Icon    size for the date picker opener. |
+| `--wui-form-date-opener-iconcolor-out`           | Icon    color for the date picker opener in normal state. |
+| `--wui-form-date-opener-iconcolor-over`          | Icon    color for the date picker opener in hover state. |
+| `--wui-form-date-opener-iconcolor-disabled`      | Icon    color for the date picker opener in disabled state. |
 | `--wui-form-date-opener-openicon-src`            | Source for the date picker open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-form-date-opener-closeicon-src`           | Source for the date picker close icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-form-time-opener-iconsize`                | Icon size for the time picker opener. |
-| `--wui-form-time-opener-iconcolor-out`           | Icon color for the time picker opener in normal state. |
-| `--wui-form-time-opener-iconcolor-over`          | Icon color for the time picker opener in hover state. |
-| `--wui-form-time-opener-iconcolor-disabled`      | Icon color for the time picker opener in disabled state. |
+| `--wui-form-time-opener-iconsize`                | Icon    size for the time picker opener. |
+| `--wui-form-time-opener-iconcolor-out`           | Icon    color for the time picker opener in normal state. |
+| `--wui-form-time-opener-iconcolor-over`          | Icon    color for the time picker opener in hover state. |
+| `--wui-form-time-opener-iconcolor-disabled`      | Icon    color for the time picker opener in disabled state. |
 | `--wui-form-time-opener-openicon-src`            | Source for the time picker open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-form-time-opener-closeicon-src`           | Source for the time picker close icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-form-range-thumb-size`                    | Size of the range control thumb. |
@@ -3824,12 +3282,12 @@ Component for the implementation of data forms. This component allows the implem
 | `--wui-form-range-trackbar-bordercolor-focus`    | Border color of the range trackbar in focus state. |
 | `--wui-form-range-trackbar-bordercolor-disabled` | Border color of the range trackbar in disabled state. |
 | `--wui-form-range-trackbar-bgcolor-out`          | Background color of the range trackbar in normal state. |
-| `--wui-form-range-trackbar-bgcolor-over`         | Background color of the range trackbar in hover state. |
+| `--wui-form-range-trackbar-bgcolor-focus`        | Background color of the range trackbar in focus state. |
 | `--wui-form-range-trackbar-bgcolor-disabled`     | Background color of the range trackbar in disabled state. |
-| `--wui-form-select-opener-iconsize`              | Icon size for the select dropdown opener. |
-| `--wui-form-select-opener-iconcolor-out`         | Icon color for the select opener in normal state. |
-| `--wui-form-select-opener-iconcolor-over`        | Icon color for the select opener in hover state. |
-| `--wui-form-select-opener-iconcolor-disabled`    | Icon color for the select opener in disabled state. |
+| `--wui-form-select-opener-iconsize`              | Icon    size for the select dropdown opener. |
+| `--wui-form-select-opener-iconcolor-out`         | Icon    color for the select opener in normal state. |
+| `--wui-form-select-opener-iconcolor-over`        | Icon    color for the select opener in hover state. |
+| `--wui-form-select-opener-iconcolor-disabled`    | Icon    color for the select opener in disabled state. |
 | `--wui-form-select-opener-openicon-src`          | Source for the select open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-form-select-opener-closeicon-src`         | Source for the select close icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-form-data-textcolor-out`                  | Text color of data elements in normal state. |
@@ -3838,6 +3296,7 @@ Component for the implementation of data forms. This component allows the implem
 | `--wui-form-progress-bordercolor`                | Border color of progress bars. |
 | `--wui-form-progress-valuecolor`                 | Color of the progress bar value/fill. |
 | `--wui-form-progress-bgcolor`                    | Background color of progress bars. |
+| `--wui-form-button-minwidth`                     | Minimum width for form action buttons. |
 | `--wui-form-text-textcolor-out`                  | Text color of auxiliary text in normal state. |
 | `--wui-form-text-textcolor-disabled`             | Text color of auxiliary text in disabled state. |
 | `--wui-form-text-linkcolor-out`                  | Color of links in auxiliary text in normal state. |
@@ -3854,97 +3313,6 @@ Component for the implementation of data forms. This component allows the implem
 | `--wui-form-mobile-input-borderradius`           | Border radius of input fields in mobile mode. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-form */
-
-	--wui-form-header-bordercolor: #d5dce3;
-	--wui-form-header-titlecolor: #000;
-	--wui-form-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-form-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-form-line-bordercolor: #d5dce3;
-	--wui-form-fieldset-bgcolor: #fff;
-	--wui-form-legend-texttransform: uppercase;
-	--wui-form-legend-textcolor: rgb(from #2d3a47 r g b / 60%);
-	--wui-form-label-textcolor-out: #2d3a47;
-	--wui-form-label-textcolor-focus: #1e90ff;
-	--wui-form-label-textcolor-notempty: rgb(from #2d3a47 r g b / 40%);
-	--wui-form-label-textcolor-disabled: #d5dce3;
-	--wui-form-input-height: 30px;
-	--wui-form-input-borderwidth: 1px;
-	--wui-form-input-borderradius: 10px;
-	--wui-form-input-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-form-input-bordercolor-focus: #1e90ff;
-	--wui-form-input-bordercolor-invalid: #f44343;
-	--wui-form-input-bordercolor-disabled: #d5dce3;
-	--wui-form-input-bgcolor-out: #f6f6fa;
-	--wui-form-input-bgcolor-focus: #f6f6fa;
-	--wui-form-input-bgcolor-disabled: #d5dce3;
-	--wui-form-input-textcolor-out: #2d3a47;
-	--wui-form-input-textcolor-over: #1f2937;
-	--wui-form-input-textcolor-disabled: #d5dce3;
-	--wui-form-date-opener-iconsize: 30px;
-	--wui-form-date-opener-iconcolor-out: #000;
-	--wui-form-date-opener-iconcolor-over: #1e90ff;
-	--wui-form-date-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-date-opener-openicon-src: none;
-	--wui-form-date-opener-closeicon-src: none;
-	--wui-form-time-opener-iconsize: 30px;
-	--wui-form-time-opener-iconcolor-out: #000;
-	--wui-form-time-opener-iconcolor-over: #1e90ff;
-	--wui-form-time-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-time-opener-openicon-src: none;
-	--wui-form-time-opener-closeicon-src: none;
-	--wui-form-range-thumb-size: 20px;
-	--wui-form-range-thumb-bgcolor-out: #1e90ff;
-	--wui-form-range-thumb-bgcolor-over: #1e90ff;
-	--wui-form-range-thumb-bgcolor-disabled: #d5dce3;
-	--wui-form-range-trackbar-height: 7px;
-	--wui-form-range-trackbar-borderwidth: 1px;
-	--wui-form-range-trackbar-bordercolor-out: #f0f0f3;
-	--wui-form-range-trackbar-bordercolor-focus: #1e90ff;
-	--wui-form-range-trackbar-bordercolor-disabled: #d5dce3;
-	--wui-form-range-trackbar-bgcolor-out: #f6f6fa;
-	--wui-form-range-trackbar-bgcolor-focus: #f6f6fa;
-	--wui-form-range-trackbar-bgcolor-disabled: #d5dce3;
-	--wui-form-select-opener-iconsize: 30px;
-	--wui-form-select-opener-iconcolor-out: #000;
-	--wui-form-select-opener-iconcolor-over: #1e90ff;
-	--wui-form-select-opener-iconcolor-disabled: #d5dce3;
-	--wui-form-select-opener-openicon-src: none;
-	--wui-form-select-opener-closeicon-src: none;
-	--wui-form-data-textcolor-out: #1e90ff;
-	--wui-form-data-textcolor-disabled: #d5dce3;
-	--wui-form-progress-borderwidth: 1px;
-	--wui-form-progress-bordercolor: #f0f0f3;
-	--wui-form-progress-valuecolor: #1e90ff;
-	--wui-form-progress-bgcolor: #f6f6fa;
-	--wui-form-text-textcolor-out: #888;
-	--wui-form-text-textcolor-disabled: #d5dce3;
-	--wui-form-text-linkcolor-out: #1e90ff;
-	--wui-form-text-linkcolor-highlight: #1e90ff;
-	--wui-form-message-shadowcolor: #959da5;
-	--wui-form-message-bgcolor: #fdfdfe;
-	--wui-form-message-textcolor: #2d3a47;
-	--wui-form-message-highlight-bgcolor: #1e90ff;
-	--wui-form-message-highlight-textcolor: #fff;
-	--wui-form-mobile-field-bordercolor: rgb(from #1e90ff r g b / 10%);
-	--wui-form-mobile-label-textcolor: #444;
-	--wui-form-mobile-input-height: 40px;
-	--wui-form-mobile-input-bgcolor: rgb(from #1e90ff r g b / 4%);
-	--wui-form-mobile-input-height: 34px;
-	--wui-form-mobile-input-borderradius: 15px;
-}
-```
 
 CSS code:
 
@@ -3970,9 +3338,11 @@ nav {
 HTML Head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/form/wui-form-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.5.js"></script>
 ```
 
 HTML code:
@@ -4068,20 +3438,20 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/linestyle).
 
-<a name="WUIFormat"></a>
+<a name="wui-format"></a>
 
 ### WUIFormat
 
-Version: `0.2`
+Version: `0.3`
 
 Utilities for management and validation `string`, `number` and `Date` data formats.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
+|:----:| ---- |
 | JS   | [src/wui-js/main/format/wui-format-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/format/wui-format-0.3.js) |
 
 #### Static Methods
@@ -4199,7 +3569,7 @@ Utilities for management and validation `string`, `number` and `Date` data forma
 ##### Predefined load formats
 
 | Format                | Value |
-| --------------------- | ----- |
+| ---------------------    | ----- |
 | `"datetime\|default"` | `Date.prototype.wuiDefaults.datetimeFormat` |
 | `"numeric"`           | `"yyyymmddhhMMss"` |
 | `"standard"`          | `"yyyy-mm-dd hh:MM:ss"` |
@@ -4208,7 +3578,7 @@ Utilities for management and validation `string`, `number` and `Date` data forma
 ##### Predefined output formats
 
 | Format                       | Value |
-| ---------------------------- | ----- |
+| ----------------------------    | ----- |
 | `"datetime\|default"`        | `Date.prototype.wuiDefaults.datetimeFormat` |
 | `"date"`                     | `Date.prototype.wuiDefaults.dateFormat` |
 | `"time"`                     | `Date.prototype.wuiDefaults.timeFormat` |
@@ -4243,7 +3613,7 @@ CSS Code:
 HTML head:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/format/wui-format-0.3.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.3.js"></script>
 ```
 
 HTML code:
@@ -4487,22 +3857,23 @@ window.addEventListener("DOMContentLoaded", () => {
 ```
 
 > [!TIP]
-> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic).
+> You can check this functional example in CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/format/basic).
 
-<a name="WUISelectpicker"></a>
+<a name="wui-selectpicker"></a>
 
 ### WUISelectpicker
 
-Version: `0.2`
+Version: `0.5`
 
 Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.4.css) |
-| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.css) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.5.js) |
 
 #### Constructor
 
@@ -4567,13 +3938,13 @@ Component for the implementation of multiple or exclusive selection list data in
 | `--wui-selectpicker-borderwidth`                    | Border width of the selectpicker container. |
 | `--wui-selectpicker-bordercolor`                    | Border color of the selectpicker container. |
 | `--wui-selectpicker-bgcolor`                        | Background color of the selectpicker container. |
-| `--wui-selectpicker-opener-iconsize`                | Icon size of the selectpicker opener. |
-| `--wui-selectpicker-opener-iconcolor-out`           | Icon color of the selectpicker opener in normal state. |
-| `--wui-selectpicker-opener-iconcolor-over`          | Icon color of the selectpicker opener in hover state. |
-| `--wui-selectpicker-opener-iconcolor-disabled`      | Icon color of the selectpicker opener in disabled state. |
+| `--wui-selectpicker-opener-iconsize`                | Icon    size of the selectpicker opener. |
+| `--wui-selectpicker-opener-iconcolor-out`           | Icon    color of the selectpicker opener in normal state. |
+| `--wui-selectpicker-opener-iconcolor-over`          | Icon    color of the selectpicker opener in hover state. |
+| `--wui-selectpicker-opener-iconcolor-disabled`      | Icon    color of the selectpicker opener in disabled state. |
 | `--wui-selectpicker-opener-openicon-src`            | Image source of the selectpicker open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-selectpicker-opener-closeicon-src`           | Image source of the selectpicker close icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-selectpicker-viewinput-leftpadding`          | Left padding of the view input field. |
+| `--wui-selectpicker-viewinput-paddingleft`          | Left padding of the view input field. |
 | `--wui-selectpicker-viewinput-textcolor-out`        | Text color of the view input field in normal state. |
 | `--wui-selectpicker-viewinput-textcolor-over`       | Text color of the view input field in hover state. |
 | `--wui-selectpicker-viewinput-textcolor-disabled`   | Text color of the view input field in disabled state. |
@@ -4588,11 +3959,11 @@ Component for the implementation of multiple or exclusive selection list data in
 | `--wui-selectpicker-box-option-bordercolor-over`    | Border color of the dropdown box options in hover state. |
 | `--wui-selectpicker-box-option-bgcolor-out`         | Background color of the dropdown box options in normal state. |
 | `--wui-selectpicker-box-option-bgcolor-over`        | Background color of the dropdown box options in hover state. |
-| `--wui-selectpicker-box-option-iconsize`            | Icon size of the dropdown box options. |
-| `--wui-selectpicker-box-option-iconcolor-out`       | Icon color of the dropdown box options in normal state. |
-| `--wui-selectpicker-box-option-iconcolor-over`      | Icon color of the dropdown box options in hover state. |
-| `--wui-selectpicker-box-option-iconcolor-selected`  | Icon color of the dropdown box options in selected state. |
-| `--wui-selectpicker-box-option-iconcolor-disabled`  | Icon color of the dropdown box options in disabled state. |
+| `--wui-selectpicker-box-option-iconsize`            | Icon    size of the dropdown box options. |
+| `--wui-selectpicker-box-option-iconcolor-out`       | Icon    color of the dropdown box options in normal state. |
+| `--wui-selectpicker-box-option-iconcolor-over`      | Icon    color of the dropdown box options in hover state. |
+| `--wui-selectpicker-box-option-iconcolor-selected`  | Icon    color of the dropdown box options in selected state. |
+| `--wui-selectpicker-box-option-iconcolor-disabled`  | Icon    color of the dropdown box options in disabled state. |
 | `--wui-selectpicker-box-option-checkicon-src`       | Image source of the option check icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-selectpicker-box-option-textcolor-empty`     | Text color of empty dropdown box options. |
 | `--wui-selectpicker-box-option-textcolor-out`       | Text color of the dropdown box options in normal state. |
@@ -4625,7 +3996,7 @@ CSS Settings:
 	--wui-selectpicker-opener-iconcolor-disabled: #d5dce3;
 	--wui-selectpicker-opener-openicon-src: none;
 	--wui-selectpicker-opener-closeicon-src: none;
-	--wui-selectpicker-viewinput-leftpadding: 10px;
+	--wui-selectpicker-viewinput-paddingleft: 10px;
 	--wui-selectpicker-viewinput-textcolor-out: #2d3a47;
 	--wui-selectpicker-viewinput-textcolor-over: #1f2937;
 	--wui-selectpicker-viewinput-textcolor-disabled: #d5dce3;
@@ -4694,8 +4065,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/selectpicker/wui-selectpicker-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.5.js"></script>
 ```
 
 HTML code:
@@ -4765,22 +4137,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/selectpicker/basic).
 
-<a name="WUIDatepicker"></a>
+<a name="wui-datepicker"></a>
 
 ### WUIDatepicker
 
-Versión: `0.2`
+Versión: `0.5`
 
 Component for the implementation of date type data inputs based on HTML element `<input type="date">`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.4.css) |
-| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.5.css) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.5.root.css) |
+| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.5.js) |
 
 #### Constructor
 
@@ -4835,13 +4208,13 @@ Component for the implementation of date type data inputs based on HTML element 
 | `--wui-datepicker-borderwidth`                   | Border width of the datepicker container. |
 | `--wui-datepicker-bordercolor`                   | Border color of the datepicker container. |
 | `--wui-datepicker-bgcolor`                       | Background color of the datepicker container. |
-| `--wui-datepicker-opener-iconsize`               | Icon size of the datepicker opener. |
-| `--wui-datepicker-opener-iconcolor-out`          | Icon color of the datepicker opener in normal state. |
-| `--wui-datepicker-opener-iconcolor-over`         | Icon color of the datepicker opener in hover state. |
-| `--wui-datepicker-opener-iconcolor-disabled`     | Icon color of the datepicker opener in disabled state. |
+| `--wui-datepicker-opener-iconsize`               | Icon    size of the datepicker opener. |
+| `--wui-datepicker-opener-iconcolor-out`          | Icon    color of the datepicker opener in normal state. |
+| `--wui-datepicker-opener-iconcolor-over`         | Icon    color of the datepicker opener in hover state. |
+| `--wui-datepicker-opener-iconcolor-disabled`     | Icon    color of the datepicker opener in disabled state. |
 | `--wui-datepicker-opener-openicon-src`           | Image source of the datepicker open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-datepicker-opener-closeicon-src`          | Image source of the datepicker close icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-datepicker-viewinput-leftpadding`         | Left padding of the view input fields. |
+| `--wui-datepicker-viewinput-paddingleft`         | Left padding of the view input fields. |
 | `--wui-datepicker-viewinput-textcolor-out`       | Text color of the view input fields in normal state. |
 | `--wui-datepicker-viewinput-textcolor-over`      | Text color of the view input fields in hover state. |
 | `--wui-datepicker-viewinput-textcolor-disabled`  | Text color of the view input fields in disabled state. |
@@ -4849,16 +4222,16 @@ Component for the implementation of date type data inputs based on HTML element 
 | `--wui-datepicker-box-borderradius`              | Border radius of the calendar dropdown. |
 | `--wui-datepicker-box-bordercolor`               | Border color of the calendar dropdown. |
 | `--wui-datepicker-box-bgcolor`                   | Background color of the calendar dropdown. |
-| `--wui-datepicker-box-period-iconsize`           | Icon size of the calendar period selector (month/year). |
-| `--wui-datepicker-box-period-iconcolor-out`      | Icon color of the calendar period selector in normal state. |
-| `--wui-datepicker-box-period-iconcolor-over`     | Icon color of the calendar period selector in hover state. |
-| `--wui-datepicker-box-period-iconcolor-disabled` | Icon color of the calendar period selector in disabled state. |
+| `--wui-datepicker-box-period-iconsize`           | Icon    size of the calendar period selector (month/year). |
+| `--wui-datepicker-box-period-iconcolor-out`      | Icon    color of the calendar period selector in normal state. |
+| `--wui-datepicker-box-period-iconcolor-over`     | Icon    color of the calendar period selector in hover state. |
+| `--wui-datepicker-box-period-iconcolor-disabled` | Icon    color of the calendar period selector in disabled state. |
 | `--wui-datepicker-box-period-upicon-src`         | Image source of the period selector up icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-datepicker-box-period-downicon-src`       | Image source of the period selector down icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-datepicker-box-paging-iconsize`           | Icon size of the calendar paging controls. |
-| `--wui-datepicker-box-paging-iconcolor-out`      | Icon color of the calendar paging controls in normal state. |
-| `--wui-datepicker-box-paging-iconcolor-over`     | Icon color of the calendar paging controls in hover state. |
-| `--wui-datepicker-box-paging-iconcolor-disabled` | Icon color of the calendar paging controls in disabled state. |
+| `--wui-datepicker-box-paging-iconsize`           | Icon    size of the calendar paging controls. |
+| `--wui-datepicker-box-paging-iconcolor-out`      | Icon    color of the calendar paging controls in normal state. |
+| `--wui-datepicker-box-paging-iconcolor-over`     | Icon    color of the calendar paging controls in hover state. |
+| `--wui-datepicker-box-paging-iconcolor-disabled` | Icon    color of the calendar paging controls in disabled state. |
 | `--wui-datepicker-box-paging-previcon-src`       | Image source of the calendar previous paging icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-datepicker-box-paging-nexticon-src`       | Image source of the calendar next paging icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-datepicker-box-month-titlecolor`          | Text color of the calendar month title. |
@@ -4879,62 +4252,6 @@ Component for the implementation of date type data inputs based on HTML element 
 | `--wui-datepicker-mobile-overlay-bgcolor`        | Background color of the overlay in mobile mode (screen width less than 768px). |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-datepicker */
-
-	--wui-datepicker-borderradius: 10px;
-	--wui-datepicker-borderwidth: 0px;
-	--wui-datepicker-bordercolor: transparent;
-	--wui-datepicker-bgcolor: #f6f6fa;
-	--wui-datepicker-opener-iconsize: 30px;
-	--wui-datepicker-opener-iconcolor-out: #000;
-	--wui-datepicker-opener-iconcolor-over: #1e90ff;
-	--wui-datepicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-opener-openicon-src: none;
-	--wui-datepicker-opener-closeicon-src: none;
-	--wui-datepicker-viewinput-leftpadding: 10px;
-	--wui-datepicker-viewinput-textcolor-out: #2d3a47;
-	--wui-datepicker-viewinput-textcolor-over: #1f2937;
-	--wui-datepicker-viewinput-textcolor-disabled: #d5dce3;
-	--wui-datepicker-box-shadowcolor: #959da5;
-	--wui-datepicker-box-borderradius: 15px;
-	--wui-datepicker-box-bordercolor: #f0f0f3;
-	--wui-datepicker-box-bgcolor: rgb(from #fdfdfe r g b / 100%);
-	--wui-datepicker-box-period-iconsize: 20px;
-	--wui-datepicker-box-period-iconcolor-out: #000;
-	--wui-datepicker-box-period-iconcolor-over: #1e90ff;
-	--wui-datepicker-box-period-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-box-period-upicon-src: none;
-	--wui-datepicker-box-period-downicon-src: none;
-	--wui-datepicker-box-paging-iconsize: 26px;
-	--wui-datepicker-box-paging-iconcolor-out: #1e90ff;
-	--wui-datepicker-box-paging-iconcolor-over: #1e90ff;
-	--wui-datepicker-box-paging-iconcolor-disabled: #d5dce3;
-	--wui-datepicker-box-paging-previcon-src: none;
-	--wui-datepicker-box-paging-nexticon-src: none;
-	--wui-datepicker-box-month-titlecolor: #888;
-	--wui-datepicker-box-month-bgcolor-today: #f0f0f3;
-	--wui-datepicker-box-month-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-datepicker-box-month-bgcolor-selected: #1e90ff;
-	--wui-datepicker-box-month-textcolor-out: #000;
-	--wui-datepicker-box-month-textcolor-over: #1e90ff;
-	--wui-datepicker-box-month-textcolor-selected: #fff;
-	--wui-datepicker-box-day-bgcolor-today: #f0f0f3;
-	--wui-datepicker-box-day-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-datepicker-box-day-bgcolor-selected: #1e90ff;
-	--wui-datepicker-box-day-textcolor-out: #000;
-	--wui-datepicker-box-day-textcolor-over: #1e90ff;
-	--wui-datepicker-box-day-textcolor-selected: #fff;
-	--wui-datepicker-box-button-textcolor-out: #1e90ff;
-	--wui-datepicker-box-button-textcolor-over: #1e90ff;
-	--wui-datepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-}
-```
 
 CSS code:
 
@@ -4970,8 +4287,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/datepicker/wui-datepicker-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/datepicker/wui-datepicker-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.5.js"></script>
 ```
 
 HTML code:
@@ -5019,22 +4337,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSendbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic).
+> You can check this functional example on CodeSendbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic).
 
-<a name="WUITimepicker"></a>
+<a name="wui-timepicker"></a>
 
 ### WUITimepicker
 
-Versión: `0.2`
+Versión: `0.5`
 
 Component for the implementation of time type data inputs based on HTML element `<input type="time">`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.4.css) |
-| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.5.css) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.5.root.css) |
+| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.5.js) |
 
 #### Constructor
 
@@ -5084,13 +4403,13 @@ Component for the implementation of time type data inputs based on HTML element 
 | `--wui-timepicker-borderwidth`                   | Border width of the timepicker container. |
 | `--wui-timepicker-bordercolor`                   | Border color of the timepicker container. |
 | `--wui-timepicker-bgcolor`                       | Background color of the timepicker container. |
-| `--wui-timepicker-opener-iconsize`               | Icon size of the timepicker opener. |
-| `--wui-timepicker-opener-iconcolor-out`          | Icon color of the timepicker opener in normal state. |
-| `--wui-timepicker-opener-iconcolor-over`         | Icon color of the timepicker opener in hover state. |
-| `--wui-timepicker-opener-iconcolor-disabled`     | Icon color of the timepicker opener in disabled state. |
+| `--wui-timepicker-opener-iconsize`               | Icon    size of the timepicker opener. |
+| `--wui-timepicker-opener-iconcolor-out`          | Icon    color of the timepicker opener in normal state. |
+| `--wui-timepicker-opener-iconcolor-over`         | Icon    color of the timepicker opener in hover state. |
+| `--wui-timepicker-opener-iconcolor-disabled`     | Icon    color of the timepicker opener in disabled state. |
 | `--wui-timepicker-opener-openicon-src`           | Image source of the timepicker open icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-timepicker-opener-closeicon-src`          | Image source of the timepicker close icon<br>(format: `url()` or `none` for the default source). |
-| `--wui-timepicker-viewinput-leftpadding`         | Left padding of the view input fields. |
+| `--wui-timepicker-viewinput-paddingleft`         | Left padding of the view input fields. |
 | `--wui-timepicker-viewinput-textcolor-out`       | Text color of the view input fields in normal state. |
 | `--wui-timepicker-viewinput-textcolor-over`      | Text color of the view input fields in hover state. |
 | `--wui-timepicker-viewinput-textcolor-disabled`  | Text color of the view input fields in disabled state. |
@@ -5111,45 +4430,6 @@ Component for the implementation of time type data inputs based on HTML element 
 | `--wui-timepicker-mobile-overlay-bgcolor`        | Background color of the overlay in mobile mode (screen width less than 768px). |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-timepicker */
-
-	--wui-timepicker-borderradius: 10px;
-	--wui-timepicker-borderwidth: 0px;
-	--wui-timepicker-bordercolor: transparent;
-	--wui-timepicker-bgcolor: #f6f6fa;
-	--wui-timepicker-opener-iconsize: 30px;
-	--wui-timepicker-opener-iconcolor-out: #000;
-	--wui-timepicker-opener-iconcolor-over: #1e90ff;
-	--wui-timepicker-opener-iconcolor-disabled: #d5dce3;
-	--wui-timepicker-opener-openicon-src: none;
-	--wui-timepicker-opener-closeicon-src: none;
-	--wui-timepicker-viewinput-leftpadding: 10px;
-	--wui-timepicker-viewinput-textcolor-out: #2d3a47;
-	--wui-timepicker-viewinput-textcolor-over: #1f2937;
-	--wui-timepicker-viewinput-textcolor-disabled: #d5dce3;
-	--wui-timepicker-box-shadowcolor: #959da5;
-	--wui-timepicker-box-borderradius: 15px;
-	--wui-timepicker-box-bordercolor: #f0f0f3;
-	--wui-timepicker-box-bgcolor: rgb(from #fdfdfe r g b / 100%);
-	--wui-timepicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-timepicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
-	--wui-timepicker-box-option-bgcolor-now: #f0f0f3;
-	--wui-timepicker-box-option-bgcolor-over: rgb(from #1e90ff r g b / 20%);
-	--wui-timepicker-box-option-bgcolor-selected: #1e90ff;
-	--wui-timepicker-box-option-textcolor-out: #000;
-	--wui-timepicker-box-option-textcolor-over: #1e90ff;
-	--wui-timepicker-box-option-textcolor-selected: #fff;
-	--wui-timepicker-box-button-textcolor-out: #1e90ff;
-	--wui-timepicker-box-button-textcolor-over: #1e90ff;
-	--wui-timepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
-}
-```
 
 CSS code:
 
@@ -5185,8 +4465,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/timepicker/wui-timepicker-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/timepicker/wui-timepicker-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.5.js"></script>
 ```
 
 HTML code:
@@ -5232,22 +4513,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/timepicker/basic).
 
-<a name="WUIColorpicker"></a>
+<a name="wui-colorpicker"></a>
 
 ### WUIColorpicker
 
-Version: `0.3`
+Version: `0.5`
 
 Component for the implementation of color picker type data inputs based on HTML element `<input type="color">`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.4.css) |
-| JS   | [src/wui-js/main/colorpicker/wui-colorpicker-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.5.css) |
+| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.5.root.css) |
+| JS   | [src/wui-js/main/colorpicker/wui-colorpicker-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.5.js) |
 
 #### Constructor
 
@@ -5293,10 +4575,12 @@ Component for the implementation of color picker type data inputs based on HTML 
 
 | Variable                                            | Description |
 | --------------------------------------------------- | ----------- |
-| `--wui-colorpicker-opener-iconsize`                 | Icon size of the colorpicker opener. |
-| `--wui-colorpicker-opener-iconcolor-out`            | Icon color of the colorpicker opener in normal state. |
-| `--wui-colorpicker-opener-iconcolor-over`           | Icon color of the colorpicker opener in hover state. |
-| `--wui-colorpicker-opener-iconcolor-disabled`       | Icon color of the colorpicker opener in disabled state. |
+| `--wui-colorpicker-opener-iconsize`                 | Icon    size of the colorpicker opener. |
+| `--wui-colorpicker-opener-iconcolor-out`            | Icon    color of the colorpicker opener in normal state. |
+| `--wui-colorpicker-opener-iconcolor-over`           | Icon    color of the colorpicker opener in hover state. |
+| `--wui-colorpicker-opener-iconcolor-disabled`       | Icon    color of the colorpicker opener in disabled state. |
+| `--wui-colorpicker-opener-openicon-src`             | Source for the open icon<br>(format: `url()` or `none` for the default source). |
+| `--wui-colorpicker-opener-closeicon-src`            | Source for the close icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-colorpicker-viewbutton-size`                 | Size of the color view button. |
 | `--wui-colorpicker-viewbutton-bordercolor-out`      | Border color of the view button in normal state. |
 | `--wui-colorpicker-viewbutton-bgcolor-out`          | Background color of the view button in normal state. |
@@ -5306,6 +4590,7 @@ Component for the implementation of color picker type data inputs based on HTML 
 | `--wui-colorpicker-viewbutton-bgcolor-disabled`     | Background color of the view button in disabled state. |
 | `--wui-colorpicker-viewcolor-borderwidth`           | Border width of the color indicator in the view button. |
 | `--wui-colorpicker-viewcolor-bordercolor`           | Border color of the color indicator in the view button. |
+| `--wui-colorpicker-viewcolor-emptyicon-src`         | Source for the empty color preview icon<br>(format: `url()` or `none` for the default source). |
 | `--wui-colorpicker-box-shadowcolor`                 | Shadow color of the color picker dropdown. |
 | `--wui-colorpicker-box-borderradius`                | Border radius of the color picker dropdown. |
 | `--wui-colorpicker-box-bordercolor`                 | Border color of the color picker dropdown. |
@@ -5314,6 +4599,7 @@ Component for the implementation of color picker type data inputs based on HTML 
 | `--wui-colorpicker-box-scroll-bgcolor-over`         | Scrollbar color of the picker dropdown in hover state. |
 | `--wui-colorpicker-box-tab-textcolor-out`           | Text color of the picker tabs in normal state. |
 | `--wui-colorpicker-box-tab-textcolor-selected`      | Text color of the picker tabs in selected state. |
+| `--wui-colorpicker-box-option-bordercolor-out`      | Border color of the picker options in normal state. |
 | `--wui-colorpicker-box-option-bgcolor-out`          | Background color of the picker options in normal state. |
 | `--wui-colorpicker-box-option-bordercolor-over`     | Border color of the picker options in hover state. |
 | `--wui-colorpicker-box-option-bgcolor-over`         | Background color of the picker options in hover state. |
@@ -5409,8 +4695,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/colorpicker/wui-colorpicker-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.5.js"></script>
 ```
 
 HTML code:
@@ -5455,22 +4742,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/colorpicker/basic).
 
-<a name="WUISwitch"></a>
+<a name="wui-switch"></a>
 
 ### WUISwitch
 
-Version: `0.4`
+Version: `0.6`
 
 Component for the implementation of checkbox type data inputs based on HTML element `<input type="checkbox">`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/switch/wui-switch-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.5.css) |
-| JS   | [src/wui-js/main/switch/wui-switch-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.5.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.6.css) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.6.root.css) |
+| JS   | [src/wui-js/main/switch/wui-switch-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.6.js) |
 
 #### Constructor
 
@@ -5507,7 +4795,6 @@ Component for the implementation of checkbox type data inputs based on HTML elem
 | `--wui-switch-bordercolor-out`              | Border color of the switch in normal state. |
 | `--wui-switch-bordercolor-over`             | Border color of the switch in hover state. |
 | `--wui-switch-bordercolor-activated`        | Border color of the switch in activated state. |
-| `--wui-switch-bordercolor-invalid`          | Border color of the switch in invalid state. |
 | `--wui-switch-bordercolor-disabled`         | Border color of the switch in disabled state. |
 | `--wui-switch-bgcolor-out`                  | Background color of the switch in normal state. |
 | `--wui-switch-bgcolor-over`                 | Background color of the switch in hover state. |
@@ -5523,34 +4810,6 @@ Component for the implementation of checkbox type data inputs based on HTML elem
 | `--wui-switch-button-bgcolor-disabled`      | Background color of the switch button in disabled state. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-switch */
-
-	--wui-switch-button-size: 30px;
-	--wui-switch-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-switch-bordercolor-over: #1e90ff;
-	--wui-switch-bordercolor-activated: #1e90ff;
-	--wui-switch-bordercolor-invalid: #f44343;
-	--wui-switch-bordercolor-disabled: #d5dce3;
-	--wui-switch-bgcolor-out: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-bgcolor-over: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-bgcolor-activated: #1e90ff;
-	--wui-switch-bgcolor-disabled: rgb(from #d5dce3 r g b / 20%);
-	--wui-switch-button-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-switch-button-bordercolor-over: #1e90ff;
-	--wui-switch-button-bordercolor-activated: #1e90ff;
-	--wui-switch-button-bordercolor-disabled: #d5dce3;
-	--wui-switch-button-bgcolor-out: #f6f6fa;
-	--wui-switch-button-bgcolor-over: rgb(from #1e90ff r g b / 4%);
-	--wui-switch-button-bgcolor-activated: #f6f6fa;
-	--wui-switch-button-bgcolor-disabled: #d5dce3;
-}
-```
 
 CSS code:
 
@@ -5579,8 +4838,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.5.css">
-<script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.5.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.6.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.6.js"></script>
 ```
 
 HTML code:
@@ -5618,22 +4878,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/switch/basic).
 
-<a name="WUIIntensity"></a>
+<a name="wui-intensity"></a>
 
 ### WUIIntensity
 
-Version: `0.2`
+Version: `0.4`
 
 Component for the implementation of 4-level intensity selector type data inputs: none, low, half, and high based on HTML element `<input type="range">`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/intensity/wui-intensity-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.3.css) |
-| JS   | [src/wui-js/main/intensity/wui-intensity-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.3.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/intensity/wui-intensity-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.4.css) |
+| CSS  | [src/wui-js/main/intensity/wui-intensity-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.4.root.css) |
+| JS   | [src/wui-js/main/intensity/wui-intensity-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.4.js) |
 
 #### Constructor
 
@@ -5666,31 +4927,14 @@ Component for the implementation of 4-level intensity selector type data inputs:
 | --------------------------------- | ----------- |
 | `--wui-intensity-height`          | Height of the intensity control. |
 | `--wui-intensity-borderradius`    | Border radius of the intensity control. |
-| `--wui-intensity-bordercolor-out` | Border color of the intensity control in normal state. |
-| `--wui-intensity-bgcolor-none`    | Background color of the intensity control at none level. |
+| `--wui-intensity-bordercolor-out`      | Border color of the intensity control in normal state. |
+| `--wui-intensity-bordercolor-disabled` | Border color of the intensity control in disabled state. |
+| `--wui-intensity-bgcolor-none`         | Background color of the intensity control at none level. |
 | `--wui-intensity-bgcolor-low`     | Background color of the intensity control at low level. |
 | `--wui-intensity-bgcolor-half`    | Background color of the intensity control at half level. |
 | `--wui-intensity-bgcolor-high`    | Background color of the intensity control at high level. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-intensity */
-
-	--wui-intensity-height: 30px;
-	--wui-intensity-borderradius: 15px;
-	--wui-intensity-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-intensity-bordercolor-disabled: #d5dce3;
-	--wui-intensity-bgcolor-none: #f6f6fa;
-	--wui-intensity-bgcolor-low: mediumaquamarine;
-	--wui-intensity-bgcolor-half: darkorange;
-	--wui-intensity-bgcolor-high: orangered;
-}
-```
 
 CSS code:
 
@@ -5719,8 +4963,9 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/intensity/wui-intensity-0.3.css">
-<script type="text/javascript" src="./libraries/wui-js/main/intensity/wui-intensity-0.3.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.4.css">
+<script type="text/javascript" src="/libraries/wui-js/main/intensity/wui-intensity-0.4.js"></script>
 ```
 
 HTML code:
@@ -5757,22 +5002,23 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLDivElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/intensity/basic).
 
-<a name="WUIButton"></a>
+<a name="wui-button"></a>
 
 ### WUIButton
 
-Versión: `0.4`
+Versión: `0.5`
 
 Component for the implementation of based on HTML element `<button>`.
 
 #### Sources
 
 | Type | File |
-| ---- | ---- |
-| CSS  | [src/wui-js/main/button/wui-button-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.4.css) |
-| JS   | [src/wui-js/main/button/wui-button-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.4.js) |
+|:----:| ---- |
+| CSS  | [src/wui-js/main/button/wui-button-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.5.css) |
+| CSS  | [src/wui-js/main/button/wui-button-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.5.root.css) |
+| JS   | [src/wui-js/main/button/wui-button-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.5.js) |
 
 #### Constructor
 
@@ -5809,6 +5055,7 @@ Component for the implementation of based on HTML element `<button>`.
 | select       | `select`      | `select()`<br><br>Select the button. |
 | unselect     | `unselect`    | `unselect()`<br><br>Unselect the button. |
 | isSelected   | `isSelected`  | `isSelected()`<br><br>Returns if the button is selected. |
+| destroy      | `void`        | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
@@ -5860,71 +5107,8 @@ Component for the implementation of based on HTML element `<button>`.
 | `--wui-button-mobile-default-height`        | Height of the default button in mobile mode (screen width less than 768px). |
 | `--wui-button-mobile-submit-height`         | Height of the submit button in mobile mode (screen width less than 768px). |
 | `--wui-button-mobile-icon-float-padding`    | Padding of the floating icons in the button in mobile mode (screen width less than 768px). |
-| `--wui-button-form-default-minwidth`        | Minimum width of the default button when used in forms. |
 
 #### Implementation
-
-CSS settings:
-
-```css
-:root {
-
-	/* wui-icon */
-
-	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
-	--wui-icon-bgcolor-over: #353a40;
-
-	/* wui-button */
-
-	--wui-button-default-minwidth: 200px;
-	--wui-button-default-height: 34px;
-	--wui-button-default-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-button-default-bordercolor-over: #1e90ff;
-	--wui-button-default-bordercolor-selected: #1e90ff;
-	--wui-button-default-bordercolor-disabled: #d5dce3;
-	--wui-button-default-bgcolor-out: transparent;
-	--wui-button-default-bgcolor-over: transparent;
-	--wui-button-default-bgcolor-selected: #1e90ff;
-	--wui-button-default-bgcolor-disabled: transparent;
-	--wui-button-default-textcolor-out: #1e90ff;
-	--wui-button-default-textcolor-over: #1e90ff;
-	--wui-button-default-textcolor-selected: #fff;
-	--wui-button-default-textcolor-disabled: #d5dce3;
-	--wui-button-default-textsize: 15px;
-	--wui-button-submit-minwidth: 200px;
-	--wui-button-submit-height: 34px;
-	--wui-button-submit-bordercolor-out: rgb(from #1e90ff r g b / 20%);
-	--wui-button-submit-bordercolor-over: #1e90ff;
-	--wui-button-submit-bordercolor-selected: #1e90ff;
-	--wui-button-submit-bordercolor-disabled: #d5dce3;
-	--wui-button-submit-bgcolor-out: #1e90ff;
-	--wui-button-submit-bgcolor-over: #1e90ff;
-	--wui-button-submit-bgcolor-selected: #1e90ff;
-	--wui-button-submit-bgcolor-disabled: #d5dce3;
-	--wui-button-submit-textcolor-out: #fff;
-	--wui-button-submit-textcolor-over: #fff;
-	--wui-button-submit-textcolor-selected: #fff;
-	--wui-button-submit-textcolor-disabled: #d5dce3;
-	--wui-button-submit-textsize: 15px;
-	--wui-button-warning-bordercolor-out: rgb(from #f44343 r g b / 25%);
-	--wui-button-warning-bordercolor-over: #f44343;
-	--wui-button-warning-bordercolor-selected: #f44343;
-	--wui-button-warning-bordercolor-disabled: #d5dce3;
-	--wui-button-warning-bgcolor-out: #f44343;
-	--wui-button-warning-bgcolor-over: #f44343;
-	--wui-button-warning-bgcolor-selected: #f44343;
-	--wui-button-warning-bgcolor-disabled: #d5dce3;
-	--wui-button-warning-textcolor-out: #fff;
-	--wui-button-warning-textcolor-over: #fff;
-	--wui-button-warning-textcolor-selected: #fff;
-	--wui-button-warning-textcolor-disabled: #d5dce3;
-	--wui-button-icon-float-padding: 5px;
-	--wui-button-mobile-default-height: 40px;
-	--wui-button-mobile-submit-height: 40px;
-	--wui-button-mobile-icon-float-padding: 10px;
-	--wui-button-form-default-minwidth: 100px;
-}
-```
 
 CSS code:
 
@@ -5955,9 +5139,11 @@ nav {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/icon/wui-icon-0.2.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/button/wui-button-0.4.css">
-<script type="text/javascript" src="./libraries/wui-js/main/button/wui-button-0.4.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.5.css">
+<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.5.js"></script>
 ```
 
 HTML code:
@@ -6018,7 +5204,7 @@ window.addEventListener("DOMContentLoaded", init);
 > If the selector defines an element that is not of type `HTMLButtonElement`, the object will not be initialized.
 
 > [!TIP]
-> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic).
+> You can check this functional example on CodeSandbox at the link: [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/button/basic).
 
 <a name="goodpractices"></a>
 
@@ -6116,57 +5302,57 @@ window.addEventListener("DOMContentLoaded", init);
 
 ## Demos
 
-This section contains examples of the implementations from the documentation and other complementary demos, all available in the **WUI/JS Lab** repository [https://github.com/wui-js/wuijs-lab](https://github.com/wui-js/wuijs-lab).
+This section contains examples of the implementations from the documentation and other complementary demos, all available in the **WUI/JS Demos** repository [https://github.com/wui-js/wuijs-demos](https://github.com/wui-js/wuijs-demos).
 
-1.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/resource-loader/basic)<br>
+1.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/resource-loader/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/resource-loader/basic)<br>
 	This demo shows the use of the WUI Resource Loader script.<br><br>
-2.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/cookie/basic)<br>
+2.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/cookie/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/cookie/basic)<br>
 	This demo shows the use of WUICookie's basic functionality.<br><br>
-3.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/body/import)<br>
+3.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/body/import](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/body/import)<br>
 	This demo shows the use of WUIBody's import functionality.<br><br>
-4.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/scrolly/basic)<br>
+4.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/scrolly/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/scrolly/basic)<br>
 	This demo shows the use of WUIScrolly's basic functionality.<br><br>
-5.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/icon/basic)<br>
+5.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/icon/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/icon/basic)<br>
 	This demo shows the use of WUIIcon's basic implementation.<br><br>
-6.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/fade/basic)<br>
+6.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/fade/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/fade/basic)<br>
 	This demo shows the use of WUIFade's basic functionality.<br><br>
-7.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/modal/basic)<br>
+7.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/modal/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/modal/basic)<br>
 	This demo shows the use of WUIModal's basic functionality.<br><br>
-8.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/paging/basic)<br>
+8.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/paging/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/paging/basic)<br>
 	This demo shows the use of WUIPaging's submenu functionality.<br><br>
-9.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/slider/basic)<br>
+9.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/slider/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/slider/basic)<br>
 	This demo shows the use of WUISlider's basic functionality.<br><br>
-10.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/menubar/submenu)<br>
+10.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/menubar/submenu](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/menubar/submenu)<br>
 	This demo shows the use of WUIMenubar's submenu functionality.<br><br>
-11.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/list/paging-buttongroup)<br>
+11.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/list/paging-buttongroup](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/list/paging-buttongroup)<br>
 	This demo shows the use of WUIList's pagination functionality through HTML buttons.<br>
 	The side button group with pull cover is configured with two buttons, one associated with a possible editing functionality and the other with deletion.<br>
 	List data is loaded directly in component creation.<br><br>
-12.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/table/paging)<br>
+12.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/table/paging](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/table/paging)<br>
 	This demo shows the use of WUITable's pagination functionality through HTML buttons.<br>
 	Table data is loaded directly in component creation.<br><br>
-13.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/fillstyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/fillstyle)<br>
+13.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/fillstyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/fillstyle)<br>
 	This demo shows the use of WUIForm with fill style and native HTML inputs.<br><br>
-14.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/linestyle)<br>
+14.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/linestyle](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/linestyle)<br>
 	This demo shows the use of WUIForm with line style and native HTML inputs.<br><br>
-15.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/form/wuiinputs)<br>
+15.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/wuiinputs](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/form/wuiinputs)<br>
 	This demo shows the use of WUIForm with fill style and WUI inputs components.<br><br>
-16.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/format/basic)<br>
+16.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/format/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/format/basic)<br>
 	This demo shows the use of WUIFormat for number, string and date formatting.<br><br>
-17.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/selectpicker/basic)<br>
+17.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/selectpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/selectpicker/basic)<br>
 	This demo shows the use of WUISelectpicker's basic functionality.<br><br>
-18.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
+18.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic)<br>
 	This demo shows the use of WUIDatepicker's basic functionality.<br><br>
-19.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
+19.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/timepicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic)<br>
 	This demo shows the use of WUITimepicker's basic functionality.<br><br>
-20.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/datepicker/basic)<br>
+20.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/colorpicker/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/datepicker/basic)<br>
 	This demo shows the use of WUIColorpicker's basic functionality.<br><br>
-21.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/switch/basic)<br>
+21.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/switch/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/switch/basic)<br>
 	This demo shows the use of WUISwitch's basic functionality.<br><br>
-22.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/intensity/basic)<br>
+22.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/intensity/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/intensity/basic)<br>
 	This demo shows the use of WUIIntensity's basic functionality.<br><br>
-23.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/main/button/basic)<br>
+23.	[https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/button/basic](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/main/button/basic)<br>
 	This demo shows the use of WUIButton's basic functionality.<br><br>
 
 > [!NOTE]
-> All demos from the [wuijs-lab](https://github.com/wui-js/wuijs-lab) repository can be reviewed on CodeSandbox at the following link [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-lab/tree/main/demos/wui).
+> All demos from the [wuijs-demos](https://github.com/wui-js/wuijs-demos) repository can be reviewed on CodeSandbox at the following link [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/wui](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/wui).

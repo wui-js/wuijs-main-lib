@@ -1,6 +1,6 @@
 {
 	"name": "@wui-js/main",
-	"version": "0.5.2",
+	"version": "0.6.0",
 	"license": "Apache-2.0",
 	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
 	"description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",

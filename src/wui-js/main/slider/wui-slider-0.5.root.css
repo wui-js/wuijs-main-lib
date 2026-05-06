@@ -1,0 +1,15 @@
+/*
+ * @file wui-slider-0.5.root.css
+ * @class WUISlider
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-slider */
+
+	--wui-slider-paging-bgcolor-hidden: rgb(from #fff r g b / 20%);
+	--wui-slider-paging-bgcolor-visible: rgb(from #fff r g b / 80%);
+}

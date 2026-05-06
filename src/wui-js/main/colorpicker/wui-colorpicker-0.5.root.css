@@ -1,0 +1,50 @@
+/*
+ * @file wui-colorpicker-0.5.root.css
+ * @class WUIColorpicker
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-colorpicker */
+
+	--wui-colorpicker-opener-iconsize: 30px;
+	--wui-colorpicker-opener-iconcolor-out: #000;
+	--wui-colorpicker-opener-iconcolor-over: #1e90ff;
+	--wui-colorpicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-colorpicker-opener-openicon-src: none;
+	--wui-colorpicker-opener-closeicon-src: none;
+	--wui-colorpicker-viewbutton-size: 30px;
+	--wui-colorpicker-viewbutton-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-colorpicker-viewbutton-bordercolor-over: #1e90ff;
+	--wui-colorpicker-viewbutton-bordercolor-disabled: #d5dce3;
+	--wui-colorpicker-viewbutton-bgcolor-out: transparent;
+	--wui-colorpicker-viewbutton-bgcolor-over: transparent;
+	--wui-colorpicker-viewbutton-bgcolor-disabled: transparent;
+	--wui-colorpicker-viewcolor-borderwidth: 1px;
+	--wui-colorpicker-viewcolor-bordercolor: rgb(from #1e90ff r g b / 20%);
+	--wui-colorpicker-viewcolor-emptyicon-src: none;
+	--wui-colorpicker-box-shadowcolor: #959da5;
+	--wui-colorpicker-box-borderradius: 15px;
+	--wui-colorpicker-box-bordercolor: #f0f0f3;
+	--wui-colorpicker-box-bgcolor: rgb(from #fff r g b / 80%);
+	--wui-colorpicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-colorpicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-colorpicker-box-tab-textcolor-out: #2d3a47;
+	--wui-colorpicker-box-tab-textcolor-selected: #1e90ff;
+	--wui-colorpicker-box-option-bordercolor-out: #f0f0f3;
+	--wui-colorpicker-box-option-bordercolor-over: #f0f0f3;
+	--wui-colorpicker-box-option-bgcolor-out: transparent;
+	--wui-colorpicker-box-option-bgcolor-over: #f6f6fa;
+	--wui-colorpicker-box-option-bgcolor-selected: #1e90ff;
+	--wui-colorpicker-box-option-textcolor-out: #000;
+	--wui-colorpicker-box-option-textcolor-over: #1e90ff;
+	--wui-colorpicker-box-option-textcolor-selected: #fff;
+	--wui-colorpicker-box-preview-textcolor-out: #000;
+	--wui-colorpicker-box-preview-textcolor-empty: rgb(from #2d3a47 r g b / 60%);
+	--wui-colorpicker-box-button-textcolor-out: #1e90ff;
+	--wui-colorpicker-box-button-textcolor-over: #1e90ff;
+	--wui-colorpicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+}

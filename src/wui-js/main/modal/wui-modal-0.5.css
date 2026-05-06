@@ -1,0 +1,490 @@
+/*
+ * @file wui-modal-0.5.css
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+div.wui-modal,
+div.wui-modal *,
+div.wui-modal *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-modal {
+	display: none;
+	visibility: hidden;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+}
+
+div.wui-modal.priority {
+	z-index: 101;
+}
+
+div.wui-modal > .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--wui-modal-overlay-bgcolor);
+}
+
+div.wui-modal > .box {
+	--box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	--box-filter: blur(10px);
+	--box-transition: width .2s ease-out, height .2s ease-out;
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	-webkit-border-radius: var(--wui-modal-box-borderradius);
+	-moz-border-radius: var(--wui-modal-box-borderradius);
+	border-radius: var(--wui-modal-box-borderradius);
+	background-color: var(--wui-modal-box-bgcolor);
+	-webkit-backdrop-filter: var(--box-filter);
+	-moz-backdrop-filter: var(--box-filter);
+	backdrop-filter: var(--box-filter);
+	flex-direction: column;
+	-webkit-transition: var(--box-transition);
+	-moz-transition: var(--box-transition);
+	transition: var(--box-transition);
+}
+
+div.wui-modal > .box.hidden {
+	display: none;
+}
+
+div.wui-modal > .box > .header {
+	display: flex;
+	z-index: 2;
+	flex-shrink: 0;
+	width: 100%;
+	height: 44px;
+	padding-left: 80px;
+	padding-right: 80px;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+div.wui-modal > .box > .header > .back,
+div.wui-modal > .box > .header > .back > .icon,
+div.wui-modal > .box > .header > .back > .text,
+div.wui-modal > .box > .header > .topbar,
+div.wui-modal > .box > .header > .title,
+div.wui-modal > .box > .header > .close {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div.wui-modal > .box > .header > .back {
+	display: flex;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	top: 16px;
+	left: 7px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	color: var(--wui-modal-back-textcolor);
+}
+
+div.wui-modal > .box > .header > .back.hidden {
+	display: none;
+}
+
+div.wui-modal > .box > .header > .back > .icon {
+	width: 14px;
+	height: 14px;
+	background-color: var(--wui-modal-back-textcolor);
+}
+
+div.wui-modal > .box > .header > .back > .text {
+	font-size: 14px;
+}
+
+div.wui-modal > .box > .header > .topbar {
+	display: none;
+}
+
+div.wui-modal > .box > .header > .title {
+	height: 28px;
+	overflow: hidden;
+	padding: 0 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-transform: var(--wui-modal-title-textcase);
+	font-family: var(--wui-modal-title-textfont);
+	font-weight: bold;
+	font-size: 17px;
+	color: var(--wui-modal-title-textcolor);
+}
+
+div.wui-modal > .box > .header > .close {
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background-color: var(--wui-modal-close-bgcolor);
+}
+
+div.wui-modal > .box > .body {
+	display: flex;
+	overflow: hidden;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: flex-start;
+	font-size: 14px;
+}
+
+div.wui-modal > .box > .body.scroll {
+	overflow: auto !important;
+}
+
+div.wui-modal > .box > .body > .text p {
+	font-size: 12px;
+}
+
+div.wui-modal > .box > .footer {
+	display: flex;
+	height: auto;
+	border-top: 1px solid var(--wui-modal-footer-bordercolor);
+	align-items: center;
+	justify-content: center;
+	flex-grow: 0;
+	flex-wrap: wrap;
+}
+
+div.wui-modal > .box > .footer > button {
+	margin: 5px;
+}
+
+div.wui-modal > .box > .footer.hidden,
+div.wui-modal > .box > .footer > button.hidden,
+div.wui-modal > .box > .footer > a.hidden {
+	display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+	div.wui-modal > .box > .header > .back {
+		top: 15px;
+	}
+
+	div.wui-modal > .box > .header > .back > .icon {
+		width: 15px;
+		height: 15px;
+	}
+
+	div.wui-modal > .box > .header > .back > .text {
+		font-size: 17px;
+	}
+
+	div.wui-modal > .box > .header > .title {
+		font-size: 17px;
+	}
+
+	div.wui-modal > .box > .body {
+		font-size: 20px;
+	}
+
+	div.wui-modal > .box > .body > .text p {
+		font-size: 15px;
+	}
+
+	div.wui-modal > .box > .footer {
+		height: 48px;
+		flex-wrap: wrap;
+	}
+
+	div.wui-modal > .box > .footer > button {
+		width: 50%;
+		height: 100%;
+		margin: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border-color: transparent;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		border-top: 0;
+		border-left: 0;
+		border-bottom: 0;
+		background-color: transparent;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: center;
+		font-size: 17px;
+	}
+
+	div.wui-modal > .box > .footer > button:is(:hover, :focus, :focus-within) {
+		border-color: transparent;
+		background-color: var(--wui-modal-button-submit-bgcolor-mobile);
+	}
+
+	div.wui-modal > .box > .footer > button.submit {
+		font-weight: bold;
+		color: var(--wui-modal-button-submit-textcolor-mobile);
+	}
+
+	div.wui-modal > .box > .footer > button.warning {
+		font-weight: bold;
+		color: var(--wui-modal-button-warning-textcolor-mobile);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	div.wui-modal > .box > .body.scroll::-webkit-scrollbar {
+		width: 4px;
+		background-color: transparent;
+	}
+
+	div.wui-modal > .box > .body.scroll::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+		background-color: var(--wui-modal-body-scroll-bgcolor-out);
+	}
+
+	div.wui-modal > .box > .body.scroll::-webkit-scrollbar-thumb:hover,
+	div.wui-modal > .box > .body.scroll::-webkit-scrollbar-thumb:active {
+		background-color: var(--wui-modal-body-scroll-bgcolor-over);
+	}
+
+	div.wui-modal > .box > .body.scroll::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+}
+
+/* wui-modal message */
+
+div.wui-modal.message > .box {
+	width: var(--wui-modal-message-box-width);
+	height: auto;
+	overflow: hidden;
+	min-height: 200px;
+	background-color: var(--wui-modal-message-box-bgcolor);
+}
+
+div.wui-modal.message > .box > .body {
+	align-items: center;
+	justify-content: center;
+}
+
+div.wui-modal.message > .box > .body > .icon {
+	width: 80px;
+	height: 80px;
+	margin-top: 20px;
+}
+
+div.wui-modal.message > .box > .body > .text {
+	padding: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: var(--wui-modal-message-box-textcolor);
+}
+
+div.wui-modal.message > .box > .body > .text p {
+	font-weight: normal;
+	font-size: 13px;
+}
+
+div.wui-modal.message > .box > .body > .text ul {
+	padding-left: 20px;
+}
+
+div.wui-modal.message > .box > .body > .text ul li {
+	text-align: left;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+div.wui-modal.message > .box > .footer > button {
+	min-width: 120px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div.wui-modal.message > .box > .footer > a {
+	margin-bottom: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	color: var(--wui-modal-message-linkcolor);
+}
+
+@media screen and (max-width: 767px) {
+	div.wui-modal.message > .box {
+		width: var(--wui-modal-message-mobile-box-width);
+	}
+
+	div.wui-modal.message > .box > .footer {
+		height: 52px;
+		border-top: 1px solid var(--wui-modal-message-mobile-footer-bordercolor);
+	}
+
+	div.wui-modal.message > .box > .footer > button {
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+		border-top: 0;
+	}
+
+	div.wui-modal.message > .box > .footer > a {
+		display: flex;
+		margin-bottom: 0;
+		align-items: center;
+		justify-content: center;
+	}
+
+	div.wui-modal.message > .box > .footer.list {
+		height: auto;
+		flex-direction: column;
+	}
+
+	div.wui-modal.message > .box > .footer.list > * {
+		width: 100%;
+		height: 48px;
+		border-bottom: 1px solid var(--wui-modal-message-mobile-button-bordercolor);
+	}
+
+	div.wui-modal.message > .box > .footer:not(.list) > button:first-child {
+		border-right: 1px solid var(--wui-modal-message-mobile-button-bordercolor);
+	}
+}
+
+/* wui-modal page */
+
+div.wui-modal.page > .box {
+	width: var(--wui-modal-page-box-width);
+	height: var(--wui-modal-page-box-height);
+	-webkit-border-radius: var(--wui-modal-box-borderradius);
+	-moz-border-radius: var(--wui-modal-box-borderradius);
+	border-radius: var(--wui-modal-box-borderradius);
+	background-color: var(--wui-modal-page-box-bgcolor);
+}
+
+div.wui-modal.page > .box > .header {
+	border-bottom: 1px solid var(--wui-modal-page-header-bordercolor);
+}
+
+div.wui-modal.page > div[data-scroll-body="0"].box > .header,
+div.wui-modal.page > div[data-scroll-body="null"].box > .header {
+	border-bottom-color: transparent;
+}
+
+div.wui-modal.page > .box > .header.border {
+	border-bottom-width: 1px !important;
+	border-bottom-color: var(--wui-modal-page-header-bordercolor) !important;
+}
+
+div.wui-modal.page.slide > .box {
+	top: var(--wui-modal-slidepage-box-margin);
+	bottom: var(--wui-modal-slidepage-box-margin);
+	height: auto;
+	-webkit-border-radius: var(--wui-modal-page-box-borderradius);
+	-moz-border-radius: var(--wui-modal-page-box-borderradius);
+	border-radius: var(--wui-modal-page-box-borderradius);
+}
+
+div.wui-modal.page.small > .box {
+	width: var(--wui-modal-smallpage-box-width);
+	height: var(--wui-modal-smallpage-box-height);
+}
+
+@media screen and (max-width: 767px) {
+
+	div.wui-modal.page > .box,
+	div.wui-modal.page.slide > .box {
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: auto;
+		height: auto;
+		-webkit-border-top-left-radius: var(--wui-modal-box-borderradius);
+		-webkit-border-top-right-radius: var(--wui-modal-box-borderradius);
+		-webkit-border-bottom-left-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-radius-topleft: var(--wui-modal-box-borderradius);
+		-moz-border-radius-topright: var(--wui-modal-box-borderradius);
+		-moz-border-radius-bottomleft: 0;
+		-moz-border-radius-bottomright: 0;
+		border-top-left-radius: var(--wui-modal-box-borderradius);
+		border-top-right-radius: var(--wui-modal-box-borderradius);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	div.wui-modal.page > .box > .header > .topbar {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 0px;
+		left: 50%;
+		width: 100px;
+		height: 44px;
+		margin-left: -50px;
+	}
+
+	div.wui-modal.page > .box > .header > .topbar::after {
+		--topbar-radius: calc(var(--wui-modal-topbar-height) / 2);
+		content: "";
+		position: absolute;
+		top: 10px;
+		display: block;
+		width: 100%;
+		height: var(--wui-modal-topbar-height);
+		-webkit-border-radius: var(--topbar-radius);
+		-moz-border-radius: var(--topbar-radius);
+		border-radius: var(--topbar-radius);
+		background-color: var(--wui-modal-page-header-topbar-bgcolor);
+	}
+
+	div.wui-modal.page.maximized > .box {
+		-webkit-border-top-left-radius: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		-webkit-border-top-right-radius: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		-moz-border-radius-topleft: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		-moz-border-radius-topright: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		border-top-left-radius: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		border-top-right-radius: var(--wui-modal-mobile-page-box-borderradius-maximized);
+		-webkit-transition-duration: .1s;
+		-moz-transition-duration: .1s;
+		transition-duration: .1s;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	div.wui-modal.page:not(.slide) > .box {
+		top: auto !important;
+		left: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		max-height: var(--wui-modal-page-box-maxheight);
+	}
+}
+
+/* wui-button */
+
+div.wui-modal > .box .footer .wui-button {
+	margin-bottom: 20px;
+}

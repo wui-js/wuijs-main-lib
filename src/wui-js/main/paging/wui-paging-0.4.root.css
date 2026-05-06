@@ -1,0 +1,17 @@
+/*
+ * @file wui-paging-0.4.root.css
+ * @class WUIPaging
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-paging */
+
+	--wui-paging-page-transition-time: .4s;
+	--wui-paging-page-bgcolor: transparent;
+	--wui-paging-page-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-paging-page-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+}

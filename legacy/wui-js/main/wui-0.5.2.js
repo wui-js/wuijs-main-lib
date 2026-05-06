@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.6.0
+ * @version 0.5.2
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -24,34 +24,35 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.6.0";
-		const libraries = {};
-		libraries["0.4.0"] = {
-			"cookie": { v: "0.4", js: true, css: false },
-			"head": { v: "0.3", js: true, css: false },
-			"body": { v: "0.3", js: true, css: false },
-			"language": { v: "0.3", js: true, css: false },
-			"scrolly": { v: "0.4", js: true, css: true },
-			"icon": { v: "0.2", js: false, css: true },
-			"fade": { v: "0.2", js: true, css: false },
-			"loader": { v: "0.3", js: true, css: true },
-			"tooltip": { v: "0.2", js: true, css: true },
-			"modal": { v: "0.3", js: true, css: true },
-			"paging": { v: "0.3", js: true, css: true },
-			"slider": { v: "0.4", js: true, css: true },
-			"tabs": { v: "0.2", js: true, css: true },
-			"menubar": { v: "0.2", js: true, css: true },
-			"list": { v: "0.3", js: true, css: true },
-			"table": { v: "0.4", js: true, css: true },
-			"form": { v: "0.4", js: true, css: true },
-			"format": { v: "0.3", js: true, css: true },
-			"selectpicker": { v: "0.3", js: true, css: true },
-			"datepicker": { v: "0.3", js: true, css: true },
-			"timepicker": { v: "0.3", js: true, css: true },
-			"colorpicker": { v: "0.3", js: true, css: true },
-			"switch": { v: "0.4", js: true, css: true },
-			"intensity": { v: "0.2", js: true, css: true },
-			"button": { v: "0.3", js: true, css: true }
+		const version = "0.5.2";
+		const libraries = {
+			"0.4.0": {
+				"cookie": { v: "0.4", js: true, css: false },
+				"head": { v: "0.3", js: true, css: false },
+				"body": { v: "0.3", js: true, css: false },
+				"language": { v: "0.3", js: true, css: false },
+				"scrolly": { v: "0.4", js: true, css: true },
+				"icon": { v: "0.2", js: false, css: true },
+				"fade": { v: "0.2", js: true, css: false },
+				"loader": { v: "0.3", js: true, css: true },
+				"tooltip": { v: "0.2", js: true, css: true },
+				"modal": { v: "0.3", js: true, css: true },
+				"paging": { v: "0.3", js: true, css: true },
+				"slider": { v: "0.4", js: true, css: true },
+				"tabs": { v: "0.2", js: true, css: true },
+				"menubar": { v: "0.2", js: true, css: true },
+				"list": { v: "0.3", js: true, css: true },
+				"table": { v: "0.4", js: true, css: true },
+				"form": { v: "0.4", js: true, css: true },
+				"format": { v: "0.3", js: true, css: true },
+				"selectpicker": { v: "0.3", js: true, css: true },
+				"datepicker": { v: "0.3", js: true, css: true },
+				"timepicker": { v: "0.3", js: true, css: true },
+				"colorpicker": { v: "0.3", js: true, css: true },
+				"switch": { v: "0.4", js: true, css: true },
+				"intensity": { v: "0.2", js: true, css: true },
+				"button": { v: "0.3", js: true, css: true }
+			}
 		};
 		libraries["0.5.0"] = Object.assign({}, libraries["0.4.0"]);
 		libraries["0.5.1"] = Object.assign({}, libraries["0.5.0"]);
@@ -62,30 +63,9 @@
 			"datepicker": { v: "0.4", js: true, css: true },
 			"timepicker": { v: "0.4", js: true, css: true }
 		});
-		libraries["0.6.0"] = Object.assign({}, libraries["0.5.2"], {
-			"colorpicker": { v: "0.5", js: true, css: true },
-			"datepicker": { v: "0.5", js: true, css: true },
-			"fade": { v: "0.3", js: true, css: false },
-			"form": { v: "0.5", js: true, css: true },
-			"intensity": { v: "0.4", js: true, css: true },
-			"list": { v: "0.4", js: true, css: true },
-			"loader": { v: "0.4", js: true, css: true },
-			"menubar": { v: "0.4", js: true, css: true },
-			"modal": { v: "0.5", js: true, css: true },
-			"paging": { v: "0.4", js: true, css: true },
-			"scrolly": { v: "0.5", js: true, css: true },
-			"selectpicker": { v: "0.5", js: true, css: true },
-			"slider": { v: "0.5", js: true, css: true },
-			"switch": { v: "0.6", js: true, css: true },
-			"table": { v: "0.5", js: true, css: true },
-			"tabs": { v: "0.3", js: true, css: true },
-			"timepicker": { v: "0.5", js: true, css: true },
-			"tooltip": { v: "0.3", js: true, css: true }
-		});
 		let tasks = [];
 		let ver = version;
 		let cls = "";
-		let root = true;
 		if (script.src.match(/\?/)) {
 			for (let i in getParams) {
 				const param = getParams[i].split("=");
@@ -96,8 +76,6 @@
 					ver = jsParams[param];
 				} else if (param.match(/^(c|class)$/i)) {
 					cls = jsParams[param];
-				} else if (param.match(/^(r|root)$/i)) {
-					root = jsParams[param] == "0" ? false : true;
 				}
 			}
 		}
@@ -117,13 +95,6 @@
 							type: "text/css",
 							rel: "stylesheet"
 						}));
-						if (root) {
-							tasks.push(createResource("link", {
-								href: `${dir}${name}/wui-${name}-${lib.v}.root.css?${d}`,
-								type: "text/css",
-								rel: "stylesheet"
-							}));
-						}
 					}
 				}
 			});

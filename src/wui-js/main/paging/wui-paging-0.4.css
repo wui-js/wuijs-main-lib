@@ -1,0 +1,89 @@
+/*
+ * @file wui-paging-0.4.css
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+div.wui-paging,
+div.wui-paging * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.wui-paging {
+	position: relative;
+	overflow: hidden;
+}
+
+div.wui-paging,
+div.wui-paging > .page {
+	width: 100%;
+	height: 100%;
+}
+
+div.wui-paging > .page {
+	--page-transition: var(--wui-paging-page-transition-time) ease-out;
+	display: flex;
+	visibility: hidden;
+	-khtml-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	background-color: var(--wui-paging-page-bgcolor);
+	justify-content: center;
+	-webkit-transition: -khtml-opacity var(--page-transition), left var(--page-transition);
+	-moz-transition: -moz-opacity var(--page-transition), left var(--page-transition);
+	transition: opacity var(--page-transition), left var(--page-transition);
+}
+
+div.wui-paging > .page.scroll {
+	overflow-y: auto !important;
+}
+
+div.wui-paging > .page.selected {
+	visibility: visible;
+	left: 0;
+}
+
+div.wui-paging > .page.left {
+	left: -100%;
+}
+
+div.wui-paging > .page.right {
+	left: 100%;
+}
+
+/*div.wui-paging.opacity,
+div.wui-paging.opacity > .page {
+	overflow: visible;
+}
+
+div.wui-paging.opacity > .page.left,
+div.wui-paging.opacity > .page.right {
+	-khtml-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+}*/
+
+div.wui-paging > .page.scroll::-webkit-scrollbar {
+	width: 4px;
+	background-color: transparent;
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-paging-page-scroll-bgcolor-out);
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb:hover,
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-paging-page-scroll-bgcolor-over);
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-track {
+	background-color: transparent;
+}

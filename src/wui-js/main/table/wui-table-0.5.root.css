@@ -1,0 +1,54 @@
+/*
+ * @file wui-table-0.5.root.css
+ * @class WUITable
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-table */
+
+	--wui-table-width: auto;
+	--wui-table-shadowcolor: #959da5;
+	--wui-table-borderradius: 10px;
+	--wui-table-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-table-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-table-column-borderwidth: 1px;
+	--wui-table-column-bordercolor-out: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-bordercolor-over: #1e90ff;
+	--wui-table-column-bordercolor-selected: #1e90ff;
+	--wui-table-column-bordercolor-disabled: #d5dce3;
+	--wui-table-column-bgcolor-out: #f6f6fa;
+	--wui-table-column-bgcolor-over: #f6f6fa;
+	--wui-table-column-bgcolor-selected: #1e90ff;
+	--wui-table-column-bgcolor-disabled: #f0f0f3;
+	--wui-table-column-textcolor-out: #444;
+	--wui-table-column-textcolor-over: #000;
+	--wui-table-column-textcolor-selected: #1e90ff;
+	--wui-table-column-textcolor-disabled: #d5dce3;
+	--wui-table-column-sorter-iconsize: 16px;
+	--wui-table-column-sorter-iconcolor-out: #444;
+	--wui-table-column-sorter-iconcolor-over: #000;
+	--wui-table-column-sorter-iconcolor-disabled: #d5dce3;
+	--wui-table-column-sorter-ascicon-src: none;
+	--wui-table-column-sorter-descicon-src: none;
+	--wui-table-column-resizer-bordercolor-out: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-resizer-bordercolor-over: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-dragger-bordercolor-over: #444;
+	--wui-table-column-dragger-bgcolor-drop: rgb(from #1e90ff r g b / 10%);
+	--wui-table-row-borderwidth: 1px;
+	--wui-table-row-bordercolor-out: #f0f0f3;
+	--wui-table-row-bordercolor-over: #f0f0f3;
+	--wui-table-row-bordercolor-selected: #1e90ff;
+	--wui-table-row-bordercolor-disabled: #f0f0f3;
+	--wui-table-row-bgcolor-out: #fdfdfe;
+	--wui-table-row-bgcolor-over: #f6f6fa;
+	--wui-table-row-bgcolor-selected: #1e90ff;
+	--wui-table-row-bgcolor-disabled: transparent;
+	--wui-table-row-textcolor-out: #2d3a47;
+	--wui-table-row-textcolor-over: #1f2937;
+	--wui-table-row-textcolor-selected: #f6f6fa;
+	--wui-table-row-textcolor-disabled: #d5dce3;
+}

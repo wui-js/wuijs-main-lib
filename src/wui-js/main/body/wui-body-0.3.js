@@ -239,4 +239,10 @@ class WUIBody {
 	openURL() {
 		WUIBody.openURL(...arguments);
 	}
+
+	destroy() {
+		Object.keys(this.#properties).forEach(name => {
+			delete this.#properties[name];
+		});
+	}
 }

@@ -1,0 +1,62 @@
+/*
+ * @file wui-button-0.5.root.css
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-button */
+
+	--wui-button-default-minwidth: 200px;
+	--wui-button-default-height: 34px;
+	--wui-button-default-borderwidth: 1px;
+	--wui-button-default-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-button-default-bordercolor-over: #1e90ff;
+	--wui-button-default-bordercolor-selected: #1e90ff;
+	--wui-button-default-bordercolor-disabled: #d5dce3;
+	--wui-button-default-bgcolor-out: transparent;
+	--wui-button-default-bgcolor-over: transparent;
+	--wui-button-default-bgcolor-selected: #1e90ff;
+	--wui-button-default-bgcolor-disabled: transparent;
+	--wui-button-default-horizpadding: 20px;
+	--wui-button-default-vertpadding: 0px;
+	--wui-button-default-textcolor-out: #1e90ff;
+	--wui-button-default-textcolor-over: #1e90ff;
+	--wui-button-default-textcolor-selected: #fff;
+	--wui-button-default-textcolor-disabled: #d5dce3;
+	--wui-button-default-textsize: 15px;
+	--wui-button-submit-minwidth: 200px;
+	--wui-button-submit-height: 34px;
+	--wui-button-submit-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-button-submit-bordercolor-over: #1e90ff;
+	--wui-button-submit-bordercolor-selected: #1e90ff;
+	--wui-button-submit-bordercolor-disabled: #d5dce3;
+	--wui-button-submit-bgcolor-out: #1e90ff;
+	--wui-button-submit-bgcolor-over: #1e90ff;
+	--wui-button-submit-bgcolor-selected: #1e90ff;
+	--wui-button-submit-bgcolor-disabled: #d5dce3;
+	--wui-button-submit-textcolor-out: #fff;
+	--wui-button-submit-textcolor-over: #fff;
+	--wui-button-submit-textcolor-selected: #fff;
+	--wui-button-submit-textcolor-disabled: #d5dce3;
+	--wui-button-submit-textsize: 15px;
+	--wui-button-warning-bordercolor-out: rgb(from #f44343 r g b / 25%);
+	--wui-button-warning-bordercolor-over: #f44343;
+	--wui-button-warning-bordercolor-selected: #f44343;
+	--wui-button-warning-bordercolor-disabled: #d5dce3;
+	--wui-button-warning-bgcolor-out: #f44343;
+	--wui-button-warning-bgcolor-over: #f44343;
+	--wui-button-warning-bgcolor-selected: #f44343;
+	--wui-button-warning-bgcolor-disabled: #d5dce3;
+	--wui-button-warning-textcolor-out: #fff;
+	--wui-button-warning-textcolor-over: #fff;
+	--wui-button-warning-textcolor-selected: #fff;
+	--wui-button-warning-textcolor-disabled: #d5dce3;
+	--wui-button-icon-float-padding: 5px;
+	--wui-button-mobile-default-minwidth: 40px;
+	--wui-button-mobile-default-height: 40px;
+	--wui-button-mobile-submit-height: 40px;
+	--wui-button-mobile-icon-float-padding: 10px;
+}

@@ -1,0 +1,84 @@
+/*
+ * @file wui-intensity-0.4.css
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+div.wui-intensity {
+	position: relative;
+	width: 120px;
+	height: var(--wui-intensity-height);
+	overflow: hidden;
+	-webkit-border-radius: var(--wui-intensity-borderradius);
+	-moz-border-radius: var(--wui-intensity-borderradius);
+	border-radius: var(--wui-intensity-borderradius);
+	border: 1px solid var(--wui-intensity-bordercolor-out);
+}
+
+div.wui-intensity.disabled {
+	border-color: var(--wui-intensity-bordercolor-disabled);
+}
+
+div.wui-intensity > input[type="range"] {
+	cursor: pointer;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: 4px;
+	bottom: -2px;
+	width: auto;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+}
+
+div.wui-intensity > input[type="range"]::-webkit-slider-runnable-track {
+	height: var(--wui-intensity-height);
+}
+
+div.wui-intensity > input[type="range"]::-moz-range-track {
+	height: var(--wui-intensity-height);
+}
+
+div.wui-intensity > input[type="range"]::-webkit-slider-thumb {
+	width: 0px;
+	height: var(--wui-intensity-height);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: 127px 0 0 120px var(--wui-intensity-bgcolor-none);
+	background-color: transparent;
+}
+
+div.wui-intensity > input[type="range"]::-moz-range-thumb {
+	width: 10px;
+	height: var(--wui-intensity-height);
+	box-shadow: 127px 0 0 120px var(--wui-intensity-bgcolor-none);
+	background-color: transparent;
+}
+
+div[data-value="none"].wui-intensity {
+	background-color: var(--wui-intensity-bgcolor-none);
+}
+
+div[data-value="low"].wui-intensity {
+	background-color: var(--wui-intensity-bgcolor-low);
+}
+
+div[data-value="low"].wui-intensity > input[type="range"] {
+	right: 16px;
+}
+
+div[data-value="half"].wui-intensity {
+	background-color: var(--wui-intensity-bgcolor-half);
+}
+
+div[data-value="half"].wui-intensity > input[type="range"] {
+	right: 6px;
+}
+
+div[data-value="high"].wui-intensity {
+	background-color: var(--wui-intensity-bgcolor-high);
+}

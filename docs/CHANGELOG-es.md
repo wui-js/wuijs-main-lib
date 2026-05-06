@@ -1,31 +1,125 @@
 # Registro de Cambios
 
+## [v0.6.0] - 2026-05-01
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIBody a `0.3`.
+	- Se agregó el método `destroy()`.
+3. Se actualizó versión clase WUILanguage a `0.3`.
+	- Se agregó el método `destroy()`.
+4. Se actualizó versión clase WUIScrolly a `0.5`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+	- Se actualizó el método `init()` para almacenar referencias a los handlers de eventos a nivel de documento para una correcta limpieza.
+5. Se actualizó versión clase WUIIcon a `0.3`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó la clase CSS `.exclamation-octagon-line`.
+	- Se agregó la clase CSS `.warning-octagon-line`.
+	- Se agregó la clase CSS `.exclamation-octagon-fill`.
+	- Se agregó la clase CSS `.warning-octagon-fill`.
+	- Se agregó la clase CSS `.x-triangle-line`.
+	- Se agregó la clase CSS `.close-triangle-line`.
+	- Se agregó la clase CSS `.error-triangle-line`.
+	- Se agregó la clase CSS `.x-triangle-fill`.
+	- Se agregó la clase CSS `.close-triangle-fill`.
+	- Se agregó la clase CSS `.error-triangle-fill`.
+	- Se agregó la clase CSS `.claude-fill`.
+	- Se agregó la clase CSS `.claude-color`.
+6. Se actualizó versión clase WUIFade a `0.3`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+7. Se actualizó versión clase WUILoader a `0.4`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+8. Se actualizó versión clase WUITooltip a `0.3`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+	- Se actualizó el método `init()` para almacenar referencias a los handlers de eventos por elemento para una correcta limpieza.
+9. Se actualizó versión clase WUIModal a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+10. Se actualizó versión clase WUIPaging a `0.4`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+11. Se actualizó versión clase WUISlider a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+	- Se actualizó el método `load()` para almacenar referencias a los handlers de eventos a nivel de documento por slide para una correcta limpieza.
+12. Se actualizó versión clase WUITabs a `0.3`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+13. Se actualizó versión clase WUIMenubar a `0.4`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se corrigió error en la carga del estilo de los botones deshabilitados de la barra de menú (`--wui-menubar-bar-button-textcolor-disabled`).
+	- Se corrigió el método `destroy()`: el elemento raíz no se eliminaba del DOM.
+14. Se actualizó versión clase WUIList a `0.4`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+15. Se actualizó versión clase WUITable a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó la variable CSS `--wui-table-column-bordercolor-disabled`.
+	- Se agregó la variable CSS `--wui-table-row-bordercolor-disabled`.
+16. Se actualizó versión clase WUIForm a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+	- Se actualizó `#darkModeListener()` para almacenar referencias al observer y al handler del media query para una correcta limpieza.
+17. Se actualizó versión clase WUISelectpicker a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se actualizó `#darkModeListener()` para almacenar referencias al observer y al handler del media query para una correcta limpieza.
+	- Se actualizó el método `destroy()` para desconectar el observer de dark mode y el listener del media query.
+	- Se corrigió error en la carga del estilo de los bordes de las opciones (`--wui-selectpicker-box-option-bordercolor-out`).
+18. Se actualizó versión clase WUIDatepicker a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se actualizó `#darkModeListener()` para almacenar referencias al observer y al handler del media query para una correcta limpieza.
+	- Se actualizó el método `destroy()` para desconectar el observer de dark mode y el listener del media query.
+19. Se actualizó versión clase WUITimepicker a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se actualizó `#darkModeListener()` para almacenar referencias al observer y al handler del media query para una correcta limpieza.
+	- Se actualizó el método `destroy()` para desconectar el observer de dark mode y el listener del media query.
+20. Se actualizó versión clase WUIColorpicker a `0.5`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se actualizó `#darkModeListener()` para almacenar referencias al observer y al handler del media query para una correcta limpieza.
+	- Se actualizó el método `destroy()` para desconectar el observer de dark mode y el listener del media query.
+21. Se actualizó versión clase WUISwitch a `0.6`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+22. Se actualizó versión clase WUIIntensity a `0.4`
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se corrigió error en la carga del estilo en estado deshabilitado (`--wui-intensity-bordercolor-disabled`).
+23. Se actualizó versión clase WUIButton a 0.5
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+	- Se agregó el método `destroy()`.
+	- Se agregó la variable CSS `--wui-button-default-borderwidth`.
+	- Se agregó la variable CSS `--wui-button-default-horizpadding`.
+	- Se agregó la variable CSS `--wui-button-default-vertpadding`.
+	- Se agregó la variable CSS `--wui-button-mobile-default-minwidth`.
+	- Se corrigió error en la carga del estilo de botones de tipo submit en estado seleccionado (`--wui-button-submit-bgcolor-selected`) y deshabilitado (`--wui-button-submit-bgcolor-disabled`).
+
 ## [v0.5.2] - 2026-04-19
 
 Características:
 
 1. Se actualizó cargador de recursos `wui.js`.
-2. Se actualizó versión clase WUIModal a 0.4.
+2. Se actualizó versión clase WUIModal a `0.4`.
 	- Se agregó la variable CSS `--wui-modal-mobile-page-box-topmargin` para mejorar compatibilidad con pantallas iPhone.
 	- Se agregó la variable CSS `--wui-modal-mobile-page-box-borderradius-maximized` para mejorar compatibilidad con pantallas iPhone.
 	- Se corrigió error en el método `close()` donde no se redimensionaba el modal subyacente al cerrar el modal actual.
-3. Se actualizó versión clase WUIMenubar a 0.3.
+3. Se actualizó versión clase WUIMenubar a `0.3`.
 	- Se agregó la propiedad `compacted`.
 	- Se agregó la variable CSS `--wui-menubar-mobile-bar-horizpadding` para mejorar compatibilidad con pantallas iPhone.
 	- Se agregó la variable CSS `--wui-menubar-mobile-bar-vertpadding` para mejorar compatibilidad con pantallas iPhone.
-4. Actualización versión clase WUISelectpicker a 0.4.
+4. Actualización versión clase WUISelectpicker a `0.4`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-5. Actualización versión clase WUIDatepicker a 0.4.
+5. Actualización versión clase WUIDatepicker a `0.4`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-6. Actualización versión clase WUITimepicker a 0.4.
+6. Actualización versión clase WUITimepicker a `0.4`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-7. Actualización versión clase WUIColorpicker a 0.4.
+7. Actualización versión clase WUIColorpicker a `0.4`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-8. Actualización versión clase WUISwitch a 0.5.
+8. Actualización versión clase WUISwitch a `0.5`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-9. Actualización versión clase WUIIntensity a 0.3.
+9. Actualización versión clase WUIIntensity a `0.3`.
 	- Se mejoró el método `init()` para soporte de elementos HTML vacíos.
-10. Actualización versión clase WUIButton a 0.4.
+10. Actualización versión clase WUIButton a `0.4`.
 	- Se agregó la propiedad `textClass`.
 	- Se agregó la propiedad `textData`.
 	- Se agregó la propiedad `iconClass`.
@@ -59,60 +153,60 @@ Características:
 
 1. Se renombraron los directorios y archivos fuente a minúscula (ej: `src/WUI/Slider/WUISlider-0.3.js` → `src/wui/slider/wui-slider-0.4.js`).
 2. Se agregó el cargador de recursos `wui.js`.
-3. Actualización versión clase WUICookie a 0.4.
+3. Actualización versión clase WUICookie a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
 	- Se corrigió error en el método `get()` donde un espacio inicial en la cadena de la cookie causaba un desplazamiento de índice, retornando `=valor` en lugar de `valor`.
-4. Actualización versión clase WUIHead a 0.3.
+4. Actualización versión clase WUIHead a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-5. Actualización versión clase WUIBody a 0.3.
+5. Actualización versión clase WUIBody a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-6. Actualización versión clase WUILanguage a 0.3.
+6. Actualización versión clase WUILanguage a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-7. Actualización versión clase WUIScrolly a 0.4.
+7. Actualización versión clase WUIScrolly a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
-8. Actualización versión clase WUIIcon a 0.2.
+8. Actualización versión clase WUIIcon a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
 	- Se corrigió error tipográfico en los nombres de clases CSS de iconos: `excamation` → `exclamation` (clases afectadas: `exclamation-line`, `exclamation-lg-line`, `exclamation-circle-line`, `exclamation-circle-fill`, `exclamation-triangle-line`, `exclamation-triangle-fill`).
-9. Actualización versión clase WUIFade a 0.2.
+9. Actualización versión clase WUIFade a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-10. Actualización versión clase WUILoader a 0.3.
+10. Actualización versión clase WUILoader a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-11. Actualización versión clase WUITooltip a 0.2.
+11. Actualización versión clase WUITooltip a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-12. Actualización versión clase WUIModal a 0.3.
+12. Actualización versión clase WUIModal a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
 	- Se agregó un elemento hijo `.overlay` dedicado para gestionar el fondo de superposición, reemplazando el enfoque anterior basado en la clase CSS `.over`.
 	- Se corrigió la animación del modal de página en móvil, corrigiendo el cálculo de la posición `top` del modal subyacente al apilar modales.
 	- Se corrigió error de la clase `.slide` en modales de página en móvil en la media query responsive.
-13. Actualización versión clase WUIPaging a 0.3.
+13. Actualización versión clase WUIPaging a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-14. Actualización versión clase WUISlider a 0.4.
+14. Actualización versión clase WUISlider a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
-15. Actualización versión clase WUITabs a 0.2.
+15. Actualización versión clase WUITabs a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-16. Actualización versión clase WUIMenubar a 0.2.
+16. Actualización versión clase WUIMenubar a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-17. Actualización versión clase WUIList a 0.3.
+17. Actualización versión clase WUIList a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-18. Actualización versión clase WUITable a 0.4.
+18. Actualización versión clase WUITable a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
-19. Actualización versión clase WUIForm a 0.4.
+19. Actualización versión clase WUIForm a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
-20. Actualización versión clase WUIFormat a 0.3.
+20. Actualización versión clase WUIFormat a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-21. Actualización versión clase WUISelectpicker a 0.3.
+21. Actualización versión clase WUISelectpicker a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-22. Actualización versión clase WUIDatepicker a 0.3.
+22. Actualización versión clase WUIDatepicker a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-23. Actualización versión clase WUITimepicker a 0.3.
+23. Actualización versión clase WUITimepicker a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-24. Actualización versión clase WUIColorpicker a 0.3.
+24. Actualización versión clase WUIColorpicker a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
-25. Actualización versión clase WUISwitch a 0.4.
+25. Actualización versión clase WUISwitch a `0.4`.
 	- Se renombró el directorio y archivos a minúscula.
-26. Actualización versión clase WUIIntensity a 0.2.
+26. Actualización versión clase WUIIntensity a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-27. Actualización versión clase WUIButton a 0.3.
+27. Actualización versión clase WUIButton a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
 
 ## [v0.3.0] - 2026-02-09
@@ -120,24 +214,24 @@ Características:
 Características:
 
 1. Cambio de nombre clase WUICheckbox versión 0.2 a WUISwitch versión 0.3.
-2. Actualización versión clase WUICookie a 0.3.
+2. Actualización versión clase WUICookie a `0.3`.
 	- Se agregó el método `encode()`.
 	- Se agregó un retorno tipo `cadena` al método `set()` con la cookie codificada.
 	- Se reemplazó la sentencia `max-age` por `expires` en la codificación de la cookie.
-3. Actualización versión clase WUIScrolly a 0.3.
+3. Actualización versión clase WUIScrolly a `0.3`.
 	- Se cambié el nombre de la variable CSS `--wui-scrolly-paging-bgcolor` a `--wui-scrolly-paging-bgcolor-hidden`.
 	- Se agregó la variable CSS `--wui-scrolly-paging-bgcolor-visible`.
-4. Actualización versión clase WUISlider a 0.3.
+4. Actualización versión clase WUISlider a `0.3`.
 	- Se cambié el nombre de la variable CSS `--wui-slider-dot-bgcolor` a `--wui-slider-paging-bgcolor-hidden`.
 	- Se cambié el nombre de la variable CSS `--wui-slider-dot-bgcolor-selected` a `--wui-slider-paging-bgcolor-visible`.
 	- Se eliminó la variable CSS `--wui-slider-dots-bgcolor`.
-5. Actualización versión clase WUITable a 0.3.
+5. Actualización versión clase WUITable a `0.3`.
 	- Se agregó la propiedad `resetPaging`.
 	- Se agregó columna de relleno para mantener el ancho de la tabla.
-6. Actualización versión clase WUIForm a 0.3.
+6. Actualización versión clase WUIForm a `0.3`.
 	- Se agregó compatibilidad con WUISwitch versión 0.3.
 	- Se agregó el estilo de formulario "fill".
-7. Actualización versión clase WUIFormat a 0.3.
+7. Actualización versión clase WUIFormat a `0.3`.
 	- Se agregó el método `wuiDayName()` al tipo de dato `Date`.
 	- Se agregó el método `wuiMonthName()` al tipo de dato `Date`.
 
@@ -145,44 +239,44 @@ Características:
 
 Características:
 
-1. Inclusión de [Documentación](./LEEME.md).
+1. Inclusión de [Documentación](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md).
 2. Se agregó clase WUIMenubar versión 0.1.
 3. Se agregó clase WUIIntensity versión 0.1.
-4. Actualización versión clase WUICookie a 0.2.
+4. Actualización versión clase WUICookie a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el método `remove()`, que permite eliminar una cookie mediante su nombre.
 	- Se corrigió error en el método público `remove()`.
-5. Actualización versión clase WUIHead a 0.2.
+5. Actualización versión clase WUIHead a `0.2`.
 	- Se mejoró el código para evitar XSS attacks.
 	- Se corrigió error para asegurar referencia a elementos del DOM.
-6. Actualización versión clase WUIBody a 0.2.
+6. Actualización versión clase WUIBody a `0.2`.
 	- Se agregó soporte para valores privados.
-7. Actualización versión clase WUILanguage a 0.2.
+7. Actualización versión clase WUILanguage a `0.2`.
 	- Se cambió el valor por defecto de la propiedad `lang` a `"en"`.
 	- Se agregó soporte para valores privados.
 	- Se agregó la propiedad `mode`, para dar soporte a archivo de lenguaje en formato JS y JSON.
 	- Se agregó el método `refresh()`, que permite actualizar el contenido de un elemento HTML específico.
 	- Se eliminó la constante global `languajes` y se reemplazó por una definición variable, opcional y externa a la clase, que es asignada mediante la propiedad `onLoad()` (ver ejemplo de implementación en [Documentación](./LEEME.md?#wuiLanguage)).
-8. Actualización versión clase WUIScrolly a 0.2.
+8. Actualización versión clase WUIScrolly a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el alias `.fadein-top` a la clase de estilo `fadein-up`.
 	- Se agregó la propiedad `direction`.
 	- Se agregaron los argumentos `sceneIndex`, `sceneStep` y `sceneProgress` a la propuedad `onMove()`.
-9. Actualización versión clase WUILoader a 0.2.
+9. Actualización versión clase WUILoader a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se corrigió error en el método `init()`.
-10. Actualización versión clase WUIModal a 0.2.
+10. Actualización versión clase WUIModal a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el método `destroy()`.
 	- Se corrigió error en el evento de arrastre al maximizar y cerrar un modal con estilo página usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
-11. Actualización versión clase WUIPaging a 0.2.
+11. Actualización versión clase WUIPaging a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el método `destroy()`.
-12. Actualización versión clase WUISlider a 0.2.
+12. Actualización versión clase WUISlider a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se corrigió error en el evento de arrastre al desplazar una diapositiva usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
 	- Se corrigió error en el método `load()`.
-13. Actualización versión clase WUIList a 0.2.
+13. Actualización versión clase WUIList a `0.2`.
 	- Se agregó soporte para paginado.
 	- Se agregó el método `destroy()`.
 	- Se agregó la variable CSS `--wui-list-shadowcolor`.
@@ -193,7 +287,7 @@ Características:
 	- Se renombró el método `isPrevEnable()` a `hasPrevPage()`.
 	- Se renombró el método `isNextEnable()` a `hasNextPage()`.
 	- Se corrigió error en el evento de arrastre al aperturar y cerrar la botonoera de cada fila usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
-14. Actualización versión clase WUITable a 0.2.
+14. Actualización versión clase WUITable a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó el método `destroy()`.
@@ -204,15 +298,15 @@ Características:
 	- Se renombró el método `next()` a `nextPage()`.
 	- Se renombró el método `isPrevEnable()` a `hasPrevPage()`.
 	- Se renombró el método `isNextEnable()` a `hasNextPage()`.
-15. Actualización versión clase WUIForm a 0.2.
+15. Actualización versión clase WUIForm a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó el método `getIcon()`.
 	- Se agregó la variable CSS `--wui-form-message-shadowcolor`.
-16. Actualización versión clase WUIFormat a 0.2.
+16. Actualización versión clase WUIFormat a `0.2`.
 	- Se agregó soporte para `"Windows Phone"` en los métodos `getOS()` y `getMobileOS()`.
 	- Se agregó manejo de error en el método `wuiToString()`.
-17. Actualización versión clase WUISelectpicker a 0.2.
+17. Actualización versión clase WUISelectpicker a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó la propiedad de sólo lectura `text`.
@@ -224,7 +318,7 @@ Características:
 	- Se corrigió error en el método privado `#addHTMLOption()`.
 	- Se deprecó el método `getValue()`, reemplazado por la propiedad de sólo lectura `value`.
 	- Se deprecó el método `getText()`, reemplazado por la propiedad de sólo lectura `text`.
-18. Actualización versión clase WUIDatepicker a 0.2.
+18. Actualización versión clase WUIDatepicker a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó el método `destroy()`.
@@ -232,7 +326,7 @@ Características:
 	- Se agregó posicionamiento relativo al elemento HTML.
 	- Se corrigió error al cargar la propiedad `value` al instanciar el objeto.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
-19. Actualización versión clase WUITimepicker a 0.2.
+19. Actualización versión clase WUITimepicker a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó el método `destroy()`.
@@ -240,18 +334,18 @@ Características:
 	- Se agregó posicionamiento relativo al elemento HTML.
 	- Se corrigió error al cargar la propiedad `value` al instanciar el objeto.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
-20. Actualización versión clase WUIColorpicker a 0.2.
+20. Actualización versión clase WUIColorpicker a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
 	- Se agregó el método `destroy()`.
 	- Se agregó la variable CSS `--wui-colorpicker-box-shadowcolor`.
 	- Se agregó posicionamiento relativo al elemento HTML.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
-21. Actualización versión clase WUICheckbox a 0.2.
+21. Actualización versión clase WUICheckbox a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se corrigió error en el evento de arrastre al seleccionar y deseleccionar la caja de verificación usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
-22. Actualización versión clase WUIButton a 0.2.
+22. Actualización versión clase WUIButton a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó la propiedad `onDblClick`.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLButtonElement`.

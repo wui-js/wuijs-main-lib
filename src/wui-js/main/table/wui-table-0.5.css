@@ -1,0 +1,256 @@
+/*
+ * @file wui-table-0.5.css
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+div.wui-table,
+div.wui-table * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-table {
+	--table-shadow: rgb(from var(--wui-table-shadowcolor) r g b / 40%) 0px 4px 12px;
+	display: flex;
+	overflow-x: auto;
+	-webkit-box-shadow: var(--table-shadow);
+	-moz-box-shadow: var(--table-shadow);
+	box-shadow: var(--table-shadow);
+	-webkit-border-radius: var(--wui-table-borderradius);
+	-moz-border-radius: var(--wui-table-borderradius);
+	border-radius: var(--wui-table-borderradius);
+	background-color: var(--wui-table-row-bgcolor-out);
+	justify-content: flex-start;
+}
+
+div.wui-table::-webkit-scrollbar {
+	width: 4px;
+	background-color: transparent;
+}
+
+div.wui-table::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-table-scroll-bgcolor-out);
+}
+
+div.wui-table::-webkit-scrollbar-thumb:hover,
+div.wui-table::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-table-scroll-bgcolor-over);
+}
+
+div.wui-table::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div.wui-table > table {
+	z-index: 2;
+	width: auto;
+	border-collapse: collapse;
+}
+
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td) {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	border-bottom-width: 0px;
+	border-bottom-style: solid;
+	padding: 5px;
+	vertical-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+div.wui-table > table > thead > tr > th {
+	border-bottom-width: var(--wui-table-column-borderwidth);
+	border-color: var(--wui-table-column-bordercolor-out);
+	background-color: var(--wui-table-column-bgcolor-out);
+	color: var(--wui-table-column-textcolor-out);
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div.wui-table > table > thead > tr > th:not(.disabled):is(:hover, :focus, :focus-within) {
+	border-color: var(--wui-table-column-bordercolor-over);
+	background-color: var(--wui-table-column-bgcolor-over);
+	color: var(--wui-table-column-textcolor-over);
+}
+
+div.wui-table > table > thead > tr > th.selected {
+	border-color: var(--wui-table-column-bordercolor-selected);
+	background-color: var(--wui-table-column-bgcolor-selected);
+	color: var(--wui-table-column-textcolor-selected);
+}
+
+div.wui-table > table > thead > tr > th.disabled {
+	border-color: var(--wui-table-column-bordercolor-disabled);
+	background-color: var(--wui-table-column-bgcolor-disabled);
+	color: var(--wui-table-column-textcolor-disabled);
+}
+
+div.wui-table > table > thead > tr > th.sortable {
+	padding-right: 24px;
+}
+
+div.wui-table > table > thead > tr > th.sortable > .sorter {
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	width: var(--wui-table-column-sorter-iconsize);
+	height: var(--wui-table-column-sorter-iconsize);
+	-webkit-mask-image: url();
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-moz-mask-image: url();
+	-moz-mask-position: center;
+	-moz-mask-repeat: no-repeat;
+	mask-image: url();
+	mask-position: center;
+	mask-repeat: no-repeat;
+	background-color: var(--wui-table-column-sorter-iconcolor-out);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+div.wui-table > table > thead > tr > th.sortable > .sorter:hover {
+	background-color: var(--wui-table-column-sorter-iconcolor-over);
+}
+
+div.wui-table > table > thead > tr > th.sortable.disabled > .sorter {
+	background-color: var(--wui-table-column-sorter-iconcolor-disabled) !important;
+}
+
+div.wui-table > table > thead > tr > th.resizable > .resizer {
+	cursor: col-resize;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	width: 4px;
+	height: 100%;
+	border-right: 1px solid var(--wui-table-column-resizer-bordercolor-out);
+}
+
+div.wui-table > table > thead > tr > th.resizable > .resizer:hover {
+	border-right: 1px solid var(--wui-table-column-resizer-bordercolor-over);
+}
+
+div.wui-table > table > thead > tr > th.draggable.drag {
+	-khtml-opacity: .5;
+	-moz-opacity: .5;
+	opacity: .5;
+}
+
+div.wui-table > table > thead > tr > th.draggable.over {
+	outline: 2px dashed var(--wui-table-column-dragger-bordercolor-over);
+}
+
+div.wui-table > table > thead > tr > th.draggable.drop {
+	background-color: var(--wui-table-column-dragger-bgcolor-drop);
+}
+
+div.wui-table > table > tbody {
+	overflow-y: auto;
+}
+
+div.wui-table > table > tbody > tr > td,
+div.wui-table > table > tbody > tr > td * {
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div.wui-table > table > tbody > tr > td {
+	border-bottom-width: var(--wui-table-row-borderwidth);
+	border-color: var(--wui-table-row-bordercolor-out);
+	background-color: var(--wui-table-row-bgcolor-out);
+	color: var(--wui-table-row-textcolor-out);
+}
+
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).filler {
+	cursor: default;
+	width: 100%;
+}
+
+div.wui-table > table > thead > tr > th.filler {
+	border-color: var(--wui-table-column-bordercolor-out);
+	background-color: var(--wui-table-column-bgcolor-out);
+}
+
+div.wui-table > table > tbody > tr > td.filler {
+	border-color: var(--wui-table-row-bordercolor-out);
+	background-color: var(--wui-table-row-bgcolor-out);
+}
+
+div.wui-table > table > tbody > tr:is(:hover, :focus, :focus-within) > td {
+	border-color: var(--wui-table-row-bordercolor-over);
+	background-color: var(--wui-table-row-bgcolor-over);
+	color: var(--wui-table-row-textcolor-over);
+}
+
+div.wui-table > table.align-left > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).align-left > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).align-left {
+	text-align: left;
+}
+
+div.wui-table > table.align-center > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).align-center > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).align-center {
+	text-align: center;
+}
+
+div.wui-table > table.align-right > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).align-right > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).align-right {
+	text-align: right;
+}
+
+div.wui-table > table.valign-top > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).valign-top > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).valign-top {
+	vertical-align: top;
+}
+
+div.wui-table > table.valign-middle > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).valign-middle > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).valign-middle {
+	vertical-align: bottom;
+	vertical-align: middle;
+}
+
+div.wui-table > table.valign-bottom > :is(thead, tbody) > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody).valign-bottom > tr > :is(th, td),
+div.wui-table > table > :is(thead, tbody) > tr > :is(th, td).valign-bottom {
+	vertical-align: bottom;
+}
+
+div.wui-table > table > tbody > tr.selected > td {
+	border-color: var(--wui-table-row-bordercolor-selected);
+	background-color: var(--wui-table-row-bgcolor-selected);
+	color: var(--wui-table-row-textcolor-selected);
+}
+
+div.wui-table > table > tbody > tr.disabled > td,
+div.wui-table > table > tbody > tr > td.disabled {
+	border-color: var(--wui-table-row-bordercolor-disabled);
+	background-color: var(--wui-table-row-bgcolor-disabled);
+	color: var(--wui-table-row-textcolor-disabled);
+}
+
+@media screen and (max-width: 767px) {
+	div.wui-table {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	div.wui-table {
+		font-size: 12px;
+	}
+}

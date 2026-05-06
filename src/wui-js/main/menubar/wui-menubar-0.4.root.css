@@ -1,0 +1,64 @@
+/*
+ * @file wui-menubar-0.4.root.css
+ * @class WUIMenubar
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-menubar */
+
+	--wui-menubar-shadowcolor: #959da5;
+	--wui-menubar-margin: 10px;
+	--wui-menubar-borderradius: 10px;
+	--wui-menubar-bar-bordercolor: #f0f0f3;
+	--wui-menubar-bar-bgcolor-top: #f0f0f3;
+	--wui-menubar-bar-bgcolor-bottom: #f0f0f3;
+	--wui-menubar-bar-button-bgcolor-out: transparent;
+	--wui-menubar-bar-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-bar-button-bgcolor-selected: #1e90ff;
+	--wui-menubar-bar-button-bgcolor-disabled: transparent;
+	--wui-menubar-bar-button-iconsize: 24px;
+	--wui-menubar-bar-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-menubar-bar-button-iconcolor-over: #353a40;
+	--wui-menubar-bar-button-iconcolor-selected: #f6f6fa;
+	--wui-menubar-bar-button-iconcolor-disabled: #d5dce3;
+	--wui-menubar-bar-button-textcolor-out: #2d3a47;
+	--wui-menubar-bar-button-textcolor-over: #1f2937;
+	--wui-menubar-bar-button-textcolor-selected: #f6f6fa;
+	--wui-menubar-bar-button-textcolor-disabled: #d5dce3;
+	--wui-menubar-expander-bgcolor-out: transparent;
+	--wui-menubar-expander-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-expander-iconsize: 16px;
+	--wui-menubar-expander-iconcolor-out: #444;
+	--wui-menubar-expander-iconcolor-over: #000;
+	--wui-menubar-expander-expandicon-src: none;
+	--wui-menubar-expander-contracticon-src: none;
+	--wui-menubar-opener-iconsize: 16px;
+	--wui-menubar-opener-openicon-src: none;
+	--wui-menubar-opener-closeicon-src: none;
+	--wui-menubar-submenu-bordercolor: #f0f0f3;
+	--wui-menubar-submenu-bgcolor: #fdfdfe;
+	--wui-menubar-submenu-button-bgcolor-out: transparent;
+	--wui-menubar-submenu-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-submenu-button-bgcolor-selected: #1e90ff;
+	--wui-menubar-submenu-button-bgcolor-disabled: transparent;
+	--wui-menubar-submenu-button-iconsize: 24px;
+	--wui-menubar-submenu-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-menubar-submenu-button-iconcolor-over: #353a40;
+	--wui-menubar-submenu-button-iconcolor-selected: #f6f6fa;
+	--wui-menubar-submenu-button-iconcolor-disabled: #d5dce3;
+	--wui-menubar-submenu-button-textcolor-out: #2d3a47;
+	--wui-menubar-submenu-button-textcolor-over: #1f2937;
+	--wui-menubar-submenu-button-textcolor-selected: #f6f6fa;
+	--wui-menubar-submenu-button-textcolor-disabled: #d5dce3;
+	--wui-menubar-tooltip-bgcolor: #000;
+	--wui-menubar-tooltip-textcolor: #fff;
+	--wui-menubar-bubble-bgcolor: #f44343;
+	--wui-menubar-bubble-textcolor: #fff;
+	--wui-menubar-mobile-bar-horizpadding: 10px;
+	--wui-menubar-mobile-bar-vertpadding: 0px;
+	--wui-menubar-mobile-opener-closeicon-src: none;
+}

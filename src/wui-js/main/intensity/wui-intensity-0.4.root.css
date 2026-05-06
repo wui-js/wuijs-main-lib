@@ -1,0 +1,21 @@
+/*
+ * @file wui-intensity-0.4.root.css
+ * @class WUIIntensity
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-intensity */
+
+	--wui-intensity-height: 30px;
+	--wui-intensity-borderradius: 15px;
+	--wui-intensity-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-intensity-bordercolor-disabled: #d5dce3;
+	--wui-intensity-bgcolor-none: #f6f6fa;
+	--wui-intensity-bgcolor-low: mediumaquamarine;
+	--wui-intensity-bgcolor-half: darkorange;
+	--wui-intensity-bgcolor-high: orangered;
+}

@@ -219,4 +219,13 @@ class WUILanguage {
 			}
 		});
 	}
+
+	destroy() {
+		Object.keys(this.#properties).forEach(name => {
+			delete this.#properties[name];
+		});
+		Object.keys(this.#languages).forEach(name => {
+			delete this.#languages[name];
+		});
+	}
 }

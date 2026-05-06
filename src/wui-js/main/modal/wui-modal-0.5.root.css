@@ -1,0 +1,47 @@
+/*
+ * @file wui-modal-0.5.root.css
+ * @class WUIModal
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-modal */
+
+	--wui-modal-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+	--wui-modal-box-borderradius: 17px;
+	--wui-modal-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-back-textcolor: #1e90ff;
+	--wui-modal-close-bgcolor: #353a40;
+	--wui-modal-topbar-height: 4px;
+	--wui-modal-title-textfont: Arial, Helvetica, Verdana, sans-serif;
+	--wui-modal-title-textcase: none;
+	--wui-modal-title-textcolor: #000;
+	--wui-modal-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-modal-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-modal-footer-bordercolor: transparent;
+	--wui-modal-button-submit-bgcolor-mobile: rgb(from #959da5 r g b / 20%);
+	--wui-modal-button-submit-textcolor-mobile: #1e90ff;
+	--wui-modal-button-warning-textcolor-mobile: #f44343;
+	--wui-modal-message-box-width: 280px;
+	--wui-modal-message-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-message-box-textcolor: #2d3a47;
+	--wui-modal-message-mobile-box-width: 280px;
+	--wui-modal-message-mobile-footer-bordercolor: #d5dce3;
+	--wui-modal-message-mobile-button-bordercolor: #d5dce3;
+	--wui-modal-message-linkcolor: #1e90ff;
+	--wui-modal-page-box-width: 800px;
+	--wui-modal-page-box-height: 90%;
+	--wui-modal-page-box-borderradius: 10px;
+	--wui-modal-page-box-maxheight: 640px;
+	--wui-modal-page-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-page-header-topbar-bgcolor: #d5dce3;
+	--wui-modal-page-header-bordercolor: #d5dce3;
+	--wui-modal-slidepage-box-margin: 10px;
+	--wui-modal-smallpage-box-width: 340px;
+	--wui-modal-smallpage-box-height: 280px;
+	--wui-modal-mobile-page-box-topmargin: 0px;
+	--wui-modal-mobile-page-box-borderradius-maximized: 0px;
+}

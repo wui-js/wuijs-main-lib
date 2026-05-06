@@ -1,0 +1,20 @@
+/*
+ * @file wui-tabs-0.3.root.css
+ * @class WUITabs
+ * @version 0.3
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-tabs */
+
+	--wui-tabs-tab-bgcolor-out: #fdfdfe;
+	--wui-tabs-tab-bgcolor-over: #f6f6fa;
+	--wui-tabs-tab-iconcolor-out: #1e90ff;
+	--wui-tabs-tab-iconcolor-over: #1e90ff;
+	--wui-tabs-tab-iconcolor-mobile: #1e90ff;
+	--wui-tabs-tab-textcolor-out: #2d3a47;
+	--wui-tabs-tab-textcolor-over: #1e90ff;
+}

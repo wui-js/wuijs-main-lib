@@ -1,0 +1,391 @@
+/*
+ * @file wui-selectpicker-0.5.css
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+div.wui-selectpicker,
+div.wui-selectpicker * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-selectpicker {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	-webkit-border-radius: var(--wui-selectpicker-borderradius);
+	-moz-border-radius: var(--wui-selectpicker-borderradius);
+	border-radius: var(--wui-selectpicker-borderradius);
+	border: var(--wui-selectpicker-borderwidth) solid var(--wui-selectpicker-bordercolor);
+	background-color: var(--wui-selectpicker-bgcolor);
+	padding-right: var(--wui-selectpicker-opener-iconsize);
+}
+
+div.wui-selectpicker > select {
+	display: none;
+}
+
+div.wui-selectpicker > .opener {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: var(--wui-selectpicker-opener-iconsize);
+	height: var(--wui-selectpicker-opener-iconsize);
+	-webkit-mask-image: url();
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-moz-mask-image: url();
+	-moz-mask-position: center;
+	-moz-mask-repeat: no-repeat;
+	mask-image: url();
+	mask-position: center;
+	mask-repeat: no-repeat;
+	background-color: var(--wui-selectpicker-opener-iconcolor-out);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+div.wui-selectpicker:not(.disabled):is(:hover, :focus, :focus-within) > .opener {
+	background-color: var(--wui-selectpicker-opener-iconcolor-over);
+}
+
+div.wui-selectpicker.disabled > .opener {
+	background-color: var(--wui-selectpicker-opener-iconcolor-disabled) !important;
+}
+
+div.wui-selectpicker > input[type="text"] {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	outline: none;
+	border: 0;
+	background-color: transparent;
+	padding: 0 0 0 var(--wui-selectpicker-viewinput-paddingleft);
+	text-align: left;
+	font-family: inherit;
+	font-size: 14px;
+	color: var(--wui-selectpicker-viewinput-textcolor-out);
+}
+
+div.wui-selectpicker > input[type="text"]:is(:hover, :focus, :focus-within) {
+	color: var(--wui-selectpicker-viewinput-textcolor-over);
+}
+
+div.wui-selectpicker > input[type="text"]:disabled,
+div.wui-selectpicker.disabled > input[type="text"] {
+	color: var(--wui-selectpicker-viewinput-textcolor-disabled) !important;
+}
+
+div.wui-selectpicker > .overlay {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+div.wui-selectpicker > .overlay.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box,
+div.wui-selectpicker > .box * {
+	display: flex;
+}
+
+div.wui-selectpicker > .box {
+	--box-shadow: rgb(from var(--wui-selectpicker-box-shadowcolor) r g b / 20%) 0px 8px 24px;
+	--box-filter: blur(10px);
+	position: absolute;
+	z-index: 101;
+	left: 0;
+	width: 100%;
+	height: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	-webkit-border-radius: var(--wui-selectpicker-box-borderradius);
+	-moz-border-radius: var(--wui-selectpicker-box-borderradius);
+	border-radius: var(--wui-selectpicker-box-borderradius);
+	border: 1px solid var(--wui-selectpicker-box-bordercolor);
+	background-color: var(--wui-selectpicker-box-bgcolor);
+	-webkit-backdrop-filter: var(--box-filter);
+	-moz-backdrop-filter: var(--box-filter);
+	backdrop-filter: var(--box-filter);
+	flex-direction: column;
+	padding: 0;
+}
+
+div.wui-selectpicker > .box::-webkit-scrollbar {
+	width: 4px;
+	background-color: transparent;
+}
+
+div.wui-selectpicker > .box::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-selectpicker-box-scroll-bgcolor-out);
+}
+
+div.wui-selectpicker > .box::-webkit-scrollbar-thumb:hover,
+div.wui-selectpicker > .box::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-selectpicker-box-scroll-bgcolor-over);
+}
+
+div.wui-selectpicker > .box::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div.wui-selectpicker > .box.down {
+	bottom: auto;
+}
+
+div.wui-selectpicker > .box.up {
+	bottom: 0;
+}
+
+div.wui-selectpicker > .box.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box > .options,
+div.wui-selectpicker > .box > .options > .option {
+	display: flex;
+	position: relative;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+div.wui-selectpicker > .box > .options {
+	min-height: calc(calc(1 * 30px) + 10px - 1px);
+	max-height: calc(calc(11 * 30px) + 10px - 1px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-border-radius: var(--wui-selectpicker-box-borderradius);
+	-moz-border-radius: var(--wui-selectpicker-box-borderradius);
+	border-radius: var(--wui-selectpicker-box-borderradius);
+	padding: 5px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
+div.wui-selectpicker > .box > .options > .option {
+	cursor: pointer;
+	width: 100%;
+	height: 30px;
+	-webkit-border-radius: var(--wui-selectpicker-box-option-borderradius);
+	-moz-border-radius: var(--wui-selectpicker-box-option-borderradius);
+	border-radius: var(--wui-selectpicker-box-option-borderradius);
+	background-color: var(--wui-selectpicker-box-option-bgcolor-out);
+	padding: 0 10px;
+	align-items: center;
+	gap: 10px;
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) {
+	border-color: var(--wui-selectpicker-box-option-bordercolor-over);
+	background-color: var(--wui-selectpicker-box-option-bgcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box > .options > .option > .icon {
+	visibility: hidden;
+	width: var(--wui-selectpicker-box-option-iconsize);
+	height: var(--wui-selectpicker-box-option-iconsize);
+	flex-shrink: 0;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-moz-mask-position: center;
+	-moz-mask-repeat: no-repeat;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+div.wui-selectpicker > .box > .options > .option > .icon.visible,
+div.wui-selectpicker > .box > .options > .option.selected > .icon {
+	visibility: visible;
+}
+
+div.wui-selectpicker > .box > .options > .option > .icon.check {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-out);
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) > .icon.check {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.selected > .icon.check {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-selected);
+}
+
+div.wui-selectpicker > .box > .options > .option.disabled > .icon.check {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-disabled) !important;
+}
+
+div.wui-selectpicker > .box > .options > .option > .text {
+	cursor: default;
+	overflow: hidden;
+	flex-grow: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: var(--wui-selectpicker-box-option-textcolor-out);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+div.wui-selectpicker > .box > .options > .option > .text.empty {
+	font-style: italic;
+	color: var(--wui-selectpicker-box-option-textcolor-empty);
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) > .text {
+	color: var(--wui-selectpicker-box-option-textcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.disabled > .text {
+	color: var(--wui-selectpicker-box-option-textcolor-disabled);
+}
+
+div.wui-selectpicker > .box > .options > .option.selected > .text.selecteable {
+	color: var(--wui-selectpicker-box-option-textcolor-selected) !important;
+}
+
+div.wui-selectpicker > .box > .footer {
+	display: none;
+	height: 30px;
+	border-top: 1px solid var(--wui-selectpicker-box-button-bordercolor);
+	align-items: center;
+	justify-content: center;
+	flex-grow: 0;
+	flex-wrap: wrap;
+}
+
+div.wui-selectpicker > .box > .footer > button {
+	cursor: pointer;
+	height: 100%;
+	margin: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: transparent;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: 0;
+	background-color: transparent;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	text-transform: lowercase;
+	font-size: 14px;
+	color: var(--wui-selectpicker-box-button-textcolor-out);
+}
+
+div.wui-selectpicker > .box > .footer > button:hover {
+	color: var(--wui-selectpicker-box-button-textcolor-over);
+}
+
+div.wui-selectpicker > .box > .footer > button.accept {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+	div.wui-selectpicker > input[type="text"] {
+		font-size: 15px;
+	}
+
+	div.wui-selectpicker > .overlay {
+		display: block;
+		background-color: var(--wui-selectpicker-mobile-overlay-bgcolor);
+	}
+
+	div.wui-selectpicker > .box {
+		--box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+		--box-transform: translate(-50%, -50%);
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		bottom: auto;
+		width: var(--wui-selectpicker-mobile-box-width);
+		margin: auto !important;
+		overflow: hidden;
+		-webkit-border-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		-moz-border-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		border-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		-webkit-transform: var(--box-transform);
+		-moz-transform: var(--box-transform);
+		transform: var(--box-transform);
+	}
+
+	div.wui-selectpicker > .box.up {
+		bottom: auto;
+	}
+
+	div.wui-selectpicker > .box > .options {
+		min-height: calc(calc(2 * 44px) - 1px);
+		max-height: calc(calc(11 * 44px) - 1px);
+		-webkit-border-top-left-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		-webkit-border-top-right-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		-webkit-border-bottom-left-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-radius-topleft: var(--wui-selectpicker-mobile-box-borderradius);
+		-moz-border-radius-topright: var(--wui-selectpicker-mobile-box-borderradius);
+		-moz-border-radius-bottomleft: 0;
+		-moz-border-radius-bottomright: 0;
+		border-top-left-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		border-top-right-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		padding: 0;
+	}
+
+	div.wui-selectpicker > .box > .options > .option {
+		height: 44px;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	div.wui-selectpicker > .box > .options > .option:not(:last-child) {
+		border-bottom: 1px solid var(--wui-selectpicker-box-option-bordercolor-out);
+	}
+
+	div.wui-selectpicker > .box > .footer {
+		display: flex;
+		height: 52px;
+		font-size: 17px;
+	}
+
+	div.wui-selectpicker > .box > .footer > button {
+		width: 50%;
+		font-size: 17px;
+	}
+
+	div.wui-selectpicker > .box > .footer > button:is(:hover, :focus, :focus-within) {
+		border-color: transparent;
+		background-color: rgba(204, 204, 204, 0.3);
+	}
+
+	div.wui-selectpicker > .box > .footer > button:first-child {
+		border-right: 1px solid var(--wui-selectpicker-box-button-bordercolor);
+	}
+}

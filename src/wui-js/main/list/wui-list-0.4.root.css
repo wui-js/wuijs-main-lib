@@ -1,0 +1,38 @@
+/*
+ * @file wui-list-0.4.root.css
+ * @class WUIList
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-list */
+
+	--wui-list-shadowcolor: #959da5;
+	--wui-list-borderradius: 10px;
+	--wui-list-borderwidth: 0px;
+	--wui-list-bordercolor: #f0f0f3;
+	--wui-list-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-list-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-list-row-height: 44px;
+	--wui-list-row-borderwidth: 1px;
+	--wui-list-row-bordercolor-out: #f0f0f3;
+	--wui-list-row-bordercolor-over: #f0f0f3;
+	--wui-list-row-bgcolor-out: #fdfdfe;
+	--wui-list-row-bgcolor-over: #f6f6fa;
+	--wui-list-row-textcolor-out: #2d3a47;
+	--wui-list-row-textcolor-over: #1f2937;
+	--wui-list-row-textcolor-disabled: #d5dce3;
+	--wui-list-innerrow-borderwidth: 1px;
+	--wui-list-innerrow-bordercolor: #f0f0f3;
+	--wui-list-innerrow-bgcolor: rgb(from #f6f6fa r g b / 20%);
+	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
+	--wui-list-buttons-bgcolor: transparent;
+	--wui-list-button-size: 48px;
+	--wui-list-button-hmargin: 8px;
+	--wui-list-button-borderradius: 50%;
+	--wui-list-button-bgcolor-enabled: #1e90ff;
+	--wui-list-button-bgcolor-disabled: #d5dce3;
+}

@@ -1,0 +1,15 @@
+/*
+ * @file wui-scrolly-0.5.root.css
+ * @class WUIScrolly
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-scrolly */
+
+	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 20%);
+	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 80%);
+}
