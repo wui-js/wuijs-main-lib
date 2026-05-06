@@ -1,8 +1,11 @@
 > [!IMPORTANT]
 > The GitHub account `@wuiproject` was migrated to `@wui-js` to match the name with the NPM account.
 
-> [!NOTE]
-> Para la versión en Español de este documento, consulte [README-es.md](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md).
+---
+<p align="right">
+	[English](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md) |
+	[Español](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md)
+</p>
 
 # wuijs-main-lib
 
