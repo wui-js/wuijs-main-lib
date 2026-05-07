@@ -14,6 +14,8 @@ Features:
 1. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
 2. Updated the resource loader `wui.js`.
 3. WUIIcon version class update to `0.4`.
+	- Added `.copy-line` CSS class.
+	- Added `.copy-fill` CSS class.
 	- Added `.sun-line` CSS class.
 	- Added `.sun-fill` CSS class.
 4. WUISelectpicker version class update to `0.6`.
