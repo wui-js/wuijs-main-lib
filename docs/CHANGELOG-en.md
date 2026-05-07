@@ -6,9 +6,12 @@ Features:
 
 1. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
 2. Updated the resource loader `wui.js`.
-3. WUISelectpicker version class update to `0.6`.
+3. WUIIcon version class update to `0.4`.
+	- Added `.sun-line` CSS class.
+	- Added `.sun-fill` CSS class.
+4. WUISelectpicker version class update to `0.6`.
 	- Improved `onChange` event to trigger later on mobile devices (upon pressing the OK button) and immediately on desktop browsers.
-4. WUIButton version class update to `0.6`.
+5. WUIButton version class update to `0.6`.
 	- Added the `selected` argument of `boolean` type to the `onClick` and `onDblClick` parameters.
 
 ## [v0.6.0] - 2026-05-01

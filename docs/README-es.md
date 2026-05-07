@@ -94,7 +94,7 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | [WUIBody](#wui-body)                 | `0.3`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
 | [WUILanguage](#wui-language)         | `0.3`   | Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar archivos de idioma en formato JS o JSON y actualizar dinámicamente el contenido de los elementos HTML según el idioma. |
 | [WUIScrolly](#wui-scrolly)           | `0.5`   | Utilidades para el manejo de animación de elementos HTML mediante el evento "onscroll" del cuerpo de la página HTML. |
-| [WUIIcon](#wui-icon)                 | `0.3`   | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
+| [WUIIcon](#wui-icon)                 | `0.4`   | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
 | [WUIFade](#wui-fade)                 | `0.3`   | Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
 | [WUILoader](#wui-loader)             | `0.4`   | Componente para la implementación de animaciones de carga. |
 | [WUITooltip](#wui-tooltip)           | `0.3`   | Componente para la implementación de textos emergentes. |
@@ -212,8 +212,8 @@ Código HTML:
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.4.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.4.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.root.css">
@@ -1031,7 +1031,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIcon
 
-Versión: `0.3`
+Versión: `0.4`
 
 Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
@@ -1039,8 +1039,8 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.3.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.3.css) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.3.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.3.root.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.4.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.4.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.4.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.4.root.css) |
 
 #### Tabla de Íconos de Señales
 
@@ -1201,38 +1201,38 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 #### Tabla de Íconos de Opciones
 
-| Icono                                   | Estilo            | Icono                                       | Estilo                | Icono                                        | Estilo                 | Icono                                        | Estilo                 |
-| :---:                                   | ------            | :---:                                       | ------                | :---:                                        | ------                 | :---:                                        | ------                 |
-| ![](../imgs/icons/at-line.svg)          | .at-line          | ![](../imgs/icons/at-lg-line.svg)           | .at-lg-line           | ![](../imgs/icons/award-line.svg)            | .award-line            | ![](../imgs/icons/award-fill.svg)            | .award-fill            |
-| ![](../imgs/icons/basket-line.svg)      | .basket-line      | ![](../imgs/icons/basket-fill.svg)          | .basket-fill          | ![](../imgs/icons/bell-line.svg)             | .bell-line             | ![](../imgs/icons/bell-fill.svg)             | .bell-fill             |
-| ![](../imgs/icons/bluetooth-line.svg)   | .bluetooth-line   | ![](../imgs/icons/bluetooth-fill.svg)       | .bluetooth-fill       | ![](../imgs/icons/bug-line.svg)              | .bug-line              | ![](../imgs/icons/bug-fill.svg)              | .bug-fill              |
-| ![](../imgs/icons/cash-line.svg)        | .cash-line        | ![](../imgs/icons/cash-alt-fill.svg)        | .cash-alt-fill        | ![](../imgs/icons/circle-line.svg)           | .circle-line           | ![](../imgs/icons/circle-fill.svg)           | .circle-fill           |
-| ![](../imgs/icons/contacts-line.svg)    | .contacts-line    | ![](../imgs/icons/contacts-fill.svg)        | .contacts-fill        | ![](../imgs/icons/copy-link-line.svg)        | .copy-link-line        | ![](../imgs/icons/copy-link-fill.svg)        | .copy-link-fill        |
-| ![](../imgs/icons/easel-line.svg)       | .easel-line       | ![](../imgs/icons/easel-fill.svg)           | .easel-fill           | ![](../imgs/icons/eye-line.svg)              | .eye-line              | ![](../imgs/icons/eye-fill.svg)              | .eye-fill              |
-| ![](../imgs/icons/eye-slash-line.svg)   | .eye-slash-line   | ![](../imgs/icons/eye-slash-fill.svg)       | .eye-slash-fill       | ![](../imgs/icons/flag-line.svg)             | .flag-line             | ![](../imgs/icons/flag-fill.svg)             | .flag-fill             |
-| ![](../imgs/icons/floppy-line.svg)      | .floppy-line      | ![](../imgs/icons/floppy-fill.svg)          | .floppy-fill          | ![](../imgs/icons/gear-line.svg)             | .gear-line             | ![](../imgs/icons/gear-fill.svg)             | .gear-fill             |
-| ![](../imgs/icons/gears-line.svg)       | .gears-line       | ![](../imgs/icons/gears-fill.svg)           | .gears-fill           | ![](../imgs/icons/grid3x2-line.svg)          | .grid3x2-line          | ![](../imgs/icons/grid3x3-line.svg)          | .grid3x3-line          |
-| ![](../imgs/icons/health-line.svg)      | .health-line      | ![](../imgs/icons/health-fill.svg)          | .health-fill          | ![](../imgs/icons/home-line.svg)             | .home-line             | ![](../imgs/icons/home-fill.svg)             | .home-fill             |
-| ![](../imgs/icons/image-line.svg)       | .image-line       | ![](../imgs/icons/image-fill.svg)           | .image-fill           | ![](../imgs/icons/image-alt-line.svg)        | .image-alt-line        | ![](../imgs/icons/images-line.svg)           | .images-line           |
-| ![](../imgs/icons/key-line.svg)         | .key-line         | ![](../imgs/icons/key-fill.svg)             | .key-fill             | ![](../imgs/icons/keyboard-line.svg)         | .keyboard-line         | ![](../imgs/icons/keyboard-fill.svg)         | .keyboard-fill         |
-| ![](../imgs/icons/layers-line.svg)      | .layers-line      | ![](../imgs/icons/layers-fill.svg)          | .layers-fill          | ![](../imgs/icons/lightbulb-line.svg)        | .lightbulb-line        | ![](../imgs/icons/lightbulb-fill.svg)        | .lightbulb-fill        |
-| ![](../imgs/icons/lock-line.svg)        | .lock-line        | ![](../imgs/icons/lock-fill.svg)            | .lock-fill            | ![](../imgs/icons/mailbox-line.svg)          | .mailbox-line          | ![](../imgs/icons/mailbox-fill.svg)          | .mailbox-fill          |
-| ![](../imgs/icons/moon-line.svg)        | .moon-line        | ![](../imgs/icons/moon-fill.svg)            | .moon-fill            | ![](../imgs/icons/moon-stars-line.svg)       | .moon-stars-line       | ![](../imgs/icons/moon-stars-fill.svg)       | .moon-stars-fill       |
-| ![](../imgs/icons/mortarboard-line.svg) | .mortarboard-line | ![](../imgs/icons/mortarboard-fill.svg)     | .mortarboard-fill     | ![](../imgs/icons/piechart-line.svg)         | .piechart-line         | ![](../imgs/icons/piechart-fill.svg)         | .piechart-fill         |
-| ![](../imgs/icons/palette-line.svg)     | .palette-line     | ![](../imgs/icons/palette-fill.svg)         | .palette-fill         | ![](../imgs/icons/pen-line.svg)              | .pen-line              | ![](../imgs/icons/pen-fill.svg)              | .pen-fill              |
-| ![](../imgs/icons/pencil-line.svg)      | .pencil-line      | ![](../imgs/icons/pencil-fill.svg)          | .pencil-fill          | ![](../imgs/icons/pin-line.svg)              | .pin-line              | ![](../imgs/icons/pin-fill.svg)              | .pin-fill              |
-| ![](../imgs/icons/plant-line.svg)       | .plant-line       | ![](../imgs/icons/plant-fill.svg)           | .plant-fill           | ![](../imgs/icons/play-line.svg)             | .play-line             | ![](../imgs/icons/play-fill.svg)             | .play-fill             |
-| ![](../imgs/icons/play-circle-line.svg) | .play-circle-line | ![](../imgs/icons/play-circle-fill.svg)     | .play-circle-fill     | ![](../imgs/icons/send-line.svg)             | .send-line             | ![](../imgs/icons/send-fill.svg)             | .send-fill             |
-| ![](../imgs/icons/separationh-line.svg) | .separationh-line | ![](../imgs/icons/separationv-line.svg)     | .separationv-line     | ![](../imgs/icons/share-line.svg)            | .share-line            | ![](../imgs/icons/share-fill.svg)            | .share-fill            |
-| ![](../imgs/icons/shop-line.svg)        | .shop-line        | ![](../imgs/icons/shop-alt-fill.svg)        | .shop-alt-fill        | ![](../imgs/icons/signpost-line.svg)         | .signpost-line         | ![](../imgs/icons/signpost-fill.svg)         | .signpost-fill         |
-| ![](../imgs/icons/sim-line.svg)         | .sim-line         | ![](../imgs/icons/sim-fill.svg)             | .sim-fill             | ![](../imgs/icons/star-line.svg)             | .star-line             | ![](../imgs/icons/star-fill.svg)             | .star-fill             |
-| ![](../imgs/icons/star-circle-line.svg) | .star-circle-line | ![](../imgs/icons/star-circle-fill.svg)     | .star-circle-fill     | ![](../imgs/icons/stoplights-line.svg)       | .stoplights-line       | ![](../imgs/icons/stoplights-fill.svg)       | .stoplights-fill       |
-| ![](../imgs/icons/thermometer-line.svg) | .thermometer-line | ![](../imgs/icons/thermometer-low-line.svg) | .thermometer-low-line | ![](../imgs/icons/thermometer-half-line.svg) | .thermometer-half-line | ![](../imgs/icons/thermometer-high-line.svg) | .thermometer-high-line |
-| ![](../imgs/icons/time-line.svg)        | .time-line        | ![](../imgs/icons/time-fill.svg)            | .time-fill            | ![](../imgs/icons/trash-line.svg)            | .trash-line            | ![](../imgs/icons/trash-fill.svg)            | .trash-fill            |
-| ![](../imgs/icons/trophy-line.svg)      | .trophy-line      | ![](../imgs/icons/trophy-fill.svg)          | .trophy-fill          | ![](../imgs/icons/unlock-line.svg)           | .unlock-line           | ![](../imgs/icons/unlock-fill.svg)           | .unlock-fill           |
-| ![](../imgs/icons/wallet-line.svg)      | .wallet-line      | ![](../imgs/icons/wallet-fill.svg)          | .wallet-fill          | ![](../imgs/icons/wifi-on-line.svg)          | .wifi-on-line          | ![](../imgs/icons/wifi-off-line.svg)         | .wifi-off-line         |
-| ![](../imgs/icons/window-app-line.svg)  | .window-app-line  | ![](../imgs/icons/window-app-fill.svg)      | .window-app-fill      | ![](../imgs/icons/wrench-line.svg)           | .wrench-line           | ![](../imgs/icons/wrench-fill.svg)           | .wrench-fill           |
-| ![](../imgs/icons/zoomin-line.svg)      | .zoomin-line      | ![](../imgs/icons/zoomout-line.svg)         | .zoomout-line         |
+| Icono                                        | Estilo                 | Icono                                        | Estilo                 | Icono                                   | Estilo            | Icono                                        | Estilo                |
+| :---:                                        | ------                 | :---:                                        | ------                 | :---:                                   | ------            | :---:                                        | ------                |
+| ![](../imgs/icons/at-line.svg)               | .at-line               | ![](../imgs/icons/at-lg-line.svg)            | .at-lg-line            | ![](../imgs/icons/award-line.svg)       | .award-line       | ![](../imgs/icons/award-fill.svg)            | .award-fill           |
+| ![](../imgs/icons/basket-line.svg)           | .basket-line           | ![](../imgs/icons/basket-fill.svg)           | .basket-fill           | ![](../imgs/icons/bell-line.svg)        | .bell-line        | ![](../imgs/icons/bell-fill.svg)             | .bell-fill            |
+| ![](../imgs/icons/bluetooth-line.svg)        | .bluetooth-line        | ![](../imgs/icons/bluetooth-fill.svg)        | .bluetooth-fill        | ![](../imgs/icons/bug-line.svg)         | .bug-line         | ![](../imgs/icons/bug-fill.svg)              | .bug-fill             |
+| ![](../imgs/icons/cash-line.svg)             | .cash-line             | ![](../imgs/icons/cash-alt-fill.svg)         | .cash-alt-fill         | ![](../imgs/icons/circle-line.svg)      | .circle-line      | ![](../imgs/icons/circle-fill.svg)           | .circle-fill          |
+| ![](../imgs/icons/contacts-line.svg)         | .contacts-line         | ![](../imgs/icons/contacts-fill.svg)         | .contacts-fill         | ![](../imgs/icons/copy-link-line.svg)   | .copy-link-line   | ![](../imgs/icons/copy-link-fill.svg)        | .copy-link-fill       |
+| ![](../imgs/icons/easel-line.svg)            | .easel-line            | ![](../imgs/icons/easel-fill.svg)            | .easel-fill            | ![](../imgs/icons/eye-line.svg)         | .eye-line         | ![](../imgs/icons/eye-fill.svg)              | .eye-fill             |
+| ![](../imgs/icons/eye-slash-line.svg)        | .eye-slash-line        | ![](../imgs/icons/eye-slash-fill.svg)        | .eye-slash-fill        | ![](../imgs/icons/flag-line.svg)        | .flag-line        | ![](../imgs/icons/flag-fill.svg)             | .flag-fill            |
+| ![](../imgs/icons/floppy-line.svg)           | .floppy-line           | ![](../imgs/icons/floppy-fill.svg)           | .floppy-fill           | ![](../imgs/icons/gear-line.svg)        | .gear-line        | ![](../imgs/icons/gear-fill.svg)             | .gear-fill            |
+| ![](../imgs/icons/gears-line.svg)            | .gears-line            | ![](../imgs/icons/gears-fill.svg)            | .gears-fill            | ![](../imgs/icons/grid3x2-line.svg)     | .grid3x2-line     | ![](../imgs/icons/grid3x3-line.svg)          | .grid3x3-line         |
+| ![](../imgs/icons/health-line.svg)           | .health-line           | ![](../imgs/icons/health-fill.svg)           | .health-fill           | ![](../imgs/icons/home-line.svg)        | .home-line        | ![](../imgs/icons/home-fill.svg)             | .home-fill            |
+| ![](../imgs/icons/image-line.svg)            | .image-line            | ![](../imgs/icons/image-fill.svg)            | .image-fill            | ![](../imgs/icons/image-alt-line.svg)   | .image-alt-line   | ![](../imgs/icons/images-line.svg)           | .images-line          |
+| ![](../imgs/icons/key-line.svg)              | .key-line              | ![](../imgs/icons/key-fill.svg)              | .key-fill              | ![](../imgs/icons/keyboard-line.svg)    | .keyboard-line    | ![](../imgs/icons/keyboard-fill.svg)         | .keyboard-fill        |
+| ![](../imgs/icons/layers-line.svg)           | .layers-line           | ![](../imgs/icons/layers-fill.svg)           | .layers-fill           | ![](../imgs/icons/lightbulb-line.svg)   | .lightbulb-line   | ![](../imgs/icons/lightbulb-fill.svg)        | .lightbulb-fill       |
+| ![](../imgs/icons/lock-line.svg)             | .lock-line             | ![](../imgs/icons/lock-fill.svg)             | .lock-fill             | ![](../imgs/icons/mailbox-line.svg)     | .mailbox-line     | ![](../imgs/icons/mailbox-fill.svg)          | .mailbox-fill         |
+| ![](../imgs/icons/moon-line.svg)             | .moon-line             | ![](../imgs/icons/moon-fill.svg)             | .moon-fill             | ![](../imgs/icons/moon-stars-line.svg)  | .moon-stars-line  | ![](../imgs/icons/moon-stars-fill.svg)       | .moon-stars-fill      |
+| ![](../imgs/icons/mortarboard-line.svg)      | .mortarboard-line      | ![](../imgs/icons/mortarboard-fill.svg)      | .mortarboard-fill      | ![](../imgs/icons/piechart-line.svg)    | .piechart-line    | ![](../imgs/icons/piechart-fill.svg)         | .piechart-fill        |
+| ![](../imgs/icons/palette-line.svg)          | .palette-line          | ![](../imgs/icons/palette-fill.svg)          | .palette-fill          | ![](../imgs/icons/pen-line.svg)         | .pen-line         | ![](../imgs/icons/pen-fill.svg)              | .pen-fill             |
+| ![](../imgs/icons/pencil-line.svg)           | .pencil-line           | ![](../imgs/icons/pencil-fill.svg)           | .pencil-fill           | ![](../imgs/icons/pin-line.svg)         | .pin-line         | ![](../imgs/icons/pin-fill.svg)              | .pin-fill             |
+| ![](../imgs/icons/plant-line.svg)            | .plant-line            | ![](../imgs/icons/plant-fill.svg)            | .plant-fill            | ![](../imgs/icons/play-line.svg)        | .play-line        | ![](../imgs/icons/play-fill.svg)             | .play-fill            |
+| ![](../imgs/icons/play-circle-line.svg)      | .play-circle-line      | ![](../imgs/icons/play-circle-fill.svg)      | .play-circle-fill      | ![](../imgs/icons/send-line.svg)        | .send-line        | ![](../imgs/icons/send-fill.svg)             | .send-fill            |
+| ![](../imgs/icons/separationh-line.svg)      | .separationh-line      | ![](../imgs/icons/separationv-line.svg)      | .separationv-line      | ![](../imgs/icons/share-line.svg)       | .share-line       | ![](../imgs/icons/share-fill.svg)            | .share-fill           |
+| ![](../imgs/icons/shop-line.svg)             | .shop-line             | ![](../imgs/icons/shop-alt-fill.svg)         | .shop-alt-fill         | ![](../imgs/icons/signpost-line.svg)    | .signpost-line    | ![](../imgs/icons/signpost-fill.svg)         | .signpost-fill        |
+| ![](../imgs/icons/sim-line.svg)              | .sim-line              | ![](../imgs/icons/sim-fill.svg)              | .sim-fill              | ![](../imgs/icons/star-line.svg)        | .star-line        | ![](../imgs/icons/star-fill.svg)             | .star-fill            |
+| ![](../imgs/icons/star-circle-line.svg)      | .star-circle-line      | ![](../imgs/icons/star-circle-fill.svg)      | .star-circle-fill      | ![](../imgs/icons/stoplights-line.svg)  | .stoplights-line  | ![](../imgs/icons/stoplights-fill.svg)       | .stoplights-fill      |
+| ![](../imgs/icons/sun-line.svg)              | .sun-line              | ![](../imgs/icons/sun-fill.svg)              | .sun-fill              | ![](../imgs/icons/thermometer-line.svg) | .thermometer-line | ![](../imgs/icons/thermometer-low-line.svg)  | .thermometer-low-line |
+| ![](../imgs/icons/thermometer-half-line.svg) | .thermometer-half-line | ![](../imgs/icons/thermometer-high-line.svg) | .thermometer-high-line | ![](../imgs/icons/time-line.svg)        | .time-line        | ![](../imgs/icons/time-fill.svg)             | .time-fill            |
+| ![](../imgs/icons/trash-line.svg)            | .trash-line            | ![](../imgs/icons/trash-fill.svg)            | .trash-fill            | ![](../imgs/icons/trophy-line.svg)      | .trophy-line      | ![](../imgs/icons/trophy-fill.svg)           | .trophy-fill          |
+| ![](../imgs/icons/unlock-line.svg)           | .unlock-line           | ![](../imgs/icons/unlock-fill.svg)           | .unlock-fill           | ![](../imgs/icons/wallet-line.svg)      | .wallet-line      | ![](../imgs/icons/wallet-fill.svg)           | .wallet-fill          |
+| ![](../imgs/icons/wifi-on-line.svg)          | .wifi-on-line          | ![](../imgs/icons/wifi-off-line.svg)         | .wifi-off-line         | ![](../imgs/icons/window-app-line.svg)  | .window-app-line  | ![](../imgs/icons/window-app-fill.svg)       | .window-app-fill      |
+| ![](../imgs/icons/wrench-line.svg)           | .wrench-line           | ![](../imgs/icons/wrench-fill.svg)           | .wrench-fill           | ![](../imgs/icons/zoomin-line.svg)      | .zoomin-line      | ![](../imgs/icons/zoomout-line.svg)          | .zoomout-line         |
 
 #### Tabla de Íconos de Compositor
 
@@ -1280,7 +1280,7 @@ python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s 
 
 | Opción             | Valor predeterminado                       | Descripción |
 | ------------------ | ------------------------------------------ | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.3.css` | Ruta al archivo CSS fuente. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.4.css` | Ruta al archivo CSS fuente. |
 | `-o`,<br>`--out`   | `../imgs/icons/`                           | Directorio de salida para los archivos generados. |
 | `-c`,<br>`--color` | `#a2a9b6`                                  | Color en formato CSS compatible que reemplazará a la sentencia 'currentColor' en el código SVG. |
 | `-s`,<br>`--size`  | `24`                                       | Tamaño en píxeles (ancho y alto) de las imágenes del set. |
@@ -1314,8 +1314,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 ```
 
 Código HTML:
@@ -1744,8 +1744,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.5.css">
 <script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.5.js"></script>
@@ -2431,8 +2431,8 @@ body {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.4.css">
 <script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.4.js"></script>
@@ -2703,8 +2703,8 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.4.css">
 <script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.4.js"></script>
@@ -3318,8 +3318,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.5.css">
 <script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.5.js"></script>
@@ -5071,8 +5071,8 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.3.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.4.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.6.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.6.css">
 <script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.6.js"></script>
