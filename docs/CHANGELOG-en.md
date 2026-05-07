@@ -20,6 +20,8 @@ Features:
 	- Improved `onChange` event to trigger later on mobile devices (upon pressing the OK button) and immediately on desktop browsers.
 5. WUIButton version class update to `0.6`.
 	- Added the `selected` argument of `boolean` type to the `onClick` and `onDblClick` parameters.
+	- Modified set of properties `textClass`, `textData`, `iconClass` and `iconImage` to update HTML button construction.
+	- Modified set of properties `submit`, `warning` and `flat` to update button CSS styles.
 
 ## [v0.6.0] - 2026-05-01
 

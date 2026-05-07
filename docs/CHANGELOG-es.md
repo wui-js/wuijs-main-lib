@@ -20,6 +20,8 @@ Características:
 	- Se mejoró evento `onChange` para que se dispare de manera diferida en dispositivos móviles (al presionar el botón Aceptar) y de manera inmediata en los navegadores de escritorio.
 5. Se actualizó versión clase WUIButton a `0.6`.
 	- Se agregó el argumento `selected` de tipo `booleano` a los parámetros `onClick` y `onDblClick`.
+	- Se modificó set de propiedades `textClass`, `textData`, `iconClass` e `iconImage` para actualizar construcción HTML del botón.
+	- Se modificó set de propiedades `submit`, `warning` y `flat` para actualizar estilos CSS del botón.
 
 ## [v0.6.0] - 2026-05-01
 

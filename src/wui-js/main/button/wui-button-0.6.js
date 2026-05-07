@@ -119,42 +119,49 @@ class WUIButton {
 	set textClass(value) {
 		if (typeof (value) == "string" || value === null) {
 			this.#properties.textClass = value;
+			this.#buildHTML();
 		}
 	}
 
 	set textData(value) {
 		if (Array.isArray(value) || value === null) {
 			this.#properties.textData = value;
+			this.#buildHTML();
 		}
 	}
 
 	set iconClass(value) {
 		if (typeof (value) == "string" || value === null) {
 			this.#properties.iconClass = value;
+			this.#buildHTML();
 		}
 	}
 
 	set iconImage(value) {
 		if (typeof (value) == "string" || value === null) {
 			this.#properties.iconImage = value;
+			this.#buildHTML();
 		}
 	}
 
 	set submit(value) {
 		if (typeof (value) == "boolean") {
 			this.#properties.submit = value;
+			this.#setStyle();
 		}
 	}
 
 	set warning(value) {
 		if (typeof (value) == "boolean") {
 			this.#properties.warning = value;
+			this.#setStyle();
 		}
 	}
 
 	set flat(value) {
 		if (typeof (value) == "boolean") {
 			this.#properties.flat = value;
+			this.#setStyle();
 		}
 	}
 
