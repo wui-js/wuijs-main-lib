@@ -187,6 +187,7 @@ div.wui-datepicker > .box > .header > .period {
 }
 
 div.wui-datepicker > .box > .header > .period > .text {
+	align-items: center;
 	font-size: 14px;
 }
 
