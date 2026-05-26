@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.8.0
+ * @version 0.7.1
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -24,7 +24,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.8.0";
+		const version = "0.7.1";
 		const libraries = {};
 		libraries["0.4.0"] = {
 			"cookie": { v: "0.4", js: true, css: false },
@@ -63,24 +63,24 @@
 			"timepicker": { v: "0.4", js: true, css: true }
 		});
 		libraries["0.6.0"] = Object.assign({}, libraries["0.5.2"], {
-			"scrolly": { v: "0.5", js: true, css: true },
+			"colorpicker": { v: "0.5", js: true, css: true },
+			"datepicker": { v: "0.5", js: true, css: true },
 			"fade": { v: "0.3", js: true, css: false },
+			"form": { v: "0.5", js: true, css: true },
+			"intensity": { v: "0.4", js: true, css: true },
+			"list": { v: "0.4", js: true, css: true },
 			"loader": { v: "0.4", js: true, css: true },
-			"tooltip": { v: "0.3", js: true, css: true },
+			"menubar": { v: "0.4", js: true, css: true },
 			"modal": { v: "0.5", js: true, css: true },
 			"paging": { v: "0.4", js: true, css: true },
-			"slider": { v: "0.5", js: true, css: true },
-			"tabs": { v: "0.3", js: true, css: true },
-			"menubar": { v: "0.4", js: true, css: true },
-			"list": { v: "0.4", js: true, css: true },
-			"table": { v: "0.5", js: true, css: true },
-			"form": { v: "0.5", js: true, css: true },
+			"scrolly": { v: "0.5", js: true, css: true },
 			"selectpicker": { v: "0.5", js: true, css: true },
-			"datepicker": { v: "0.5", js: true, css: true },
-			"timepicker": { v: "0.5", js: true, css: true },
-			"colorpicker": { v: "0.5", js: true, css: true },
+			"slider": { v: "0.5", js: true, css: true },
 			"switch": { v: "0.6", js: true, css: true },
-			"intensity": { v: "0.4", js: true, css: true }
+			"table": { v: "0.5", js: true, css: true },
+			"tabs": { v: "0.3", js: true, css: true },
+			"timepicker": { v: "0.5", js: true, css: true },
+			"tooltip": { v: "0.3", js: true, css: true }
 		});
 		libraries["0.6.1"] = Object.assign({}, libraries["0.6.0"], {
 			"icon": { v: "0.4", js: false, css: true },
@@ -104,19 +104,6 @@
 			"datepicker": { v: "0.7", js: true, css: true },
 			"timepicker": { v: "0.7", js: true, css: true },
 			"colorpicker": { v: "0.7", js: true, css: true }
-		});
-		libraries["0.8.0"] = Object.assign({}, libraries["0.7.1"], {
-			"language": { v: "0.5", js: true, css: false },
-			"icon": { v: "0.6", js: false, css: true },
-			"modal": { v: "0.6", js: true, css: true },
-			"paging": { v: "0.5", js: true, css: true },
-			"list": { v: "0.5", js: true, css: true },
-			"table": { v: "0.6", js: true, css: true },
-			"form": { v: "0.6", js: true, css: true },
-			"selectpicker": { v: "0.8", js: true, css: true },
-			"timepicker": { v: "0.8", js: true, css: true },
-			"colorpicker": { v: "0.8", js: true, css: true },
-			"button": { v: "0.8", js: true, css: true }
 		});
 		let tasks = [];
 		let ver = version;

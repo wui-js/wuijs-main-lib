@@ -1,6 +1,6 @@
 /*
- * @file wui-form-0.5.css
- * @version 0.5
+ * @file wui-form-0.6.css
+ * @version 0.6
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -627,6 +627,7 @@
 
 .wui-form fieldset > .field > progress[value] {
 	width: 100%;
+	margin: 10px 0px;
 	border: var(--wui-form-progress-borderwidth) solid var(--wui-form-progress-bordercolor);
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

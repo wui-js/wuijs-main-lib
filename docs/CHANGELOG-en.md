@@ -7,6 +7,59 @@
 
 # Change Log
 
+## [v0.8.0] - 2026-05-26
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUILanguage version class update to `0.6`.
+	- Added `callback` parameter to the `load()` method.
+	- Fixed `refresh()` method error.
+3. WUIIcon version class update to `0.5`.
+	- Added `.print-line` CSS class.
+	- Added `.print-fill` CSS class.
+	- Added `.blockquote-left-line` CSS class.
+	- Added `.blockquote-right-line` CSS class.
+	- Added `.code-line` CSS class.
+	- Added `.code-slash-line` CSS class.
+4. WUIModal version class update to `0.6`.
+	- Updated CSS variables values in `.root.css` file.
+	- The horizontal padding in the modal title was updated for greater visibility.
+5. WUIPaging version class update to `0.5`.
+	- Updated CSS variables values in `.root.css` file.
+6. WUIList version class update to `0.5`.
+	- Updated CSS variables values in `.root.css` file.
+7. WUITable version class update to `0.6`.
+	- Updated CSS variables values in `.root.css` file.
+8. WUIForm version class update to `0.6`.
+	- Updated CSS variables values in `.root.css` file.
+	- Added `getRighticon()` method.
+9. WUISelectpicker version class update to `0.8`.
+	- Added boolean property `required`.
+	- Added boolean property `hidden`.
+	- Added boolean property `autochange`.
+	- Added text option `textClass`.
+	- Renamed `--wui-selectpicker-box-button-bordercolor` CSS var to `--wui-selectpicker-mobile-box-button-bordercolor`.
+	- Added `--wui-selectpicker-box-button-maxwidth` CSS var.
+	- Added `--wui-selectpicker-box-button-height` CSS var.
+	- Added `--wui-selectpicker-box-button-borderwidth` CSS var.
+	- Added `--wui-selectpicker-box-button-bordercolor-out` CSS var.
+	- Added `--wui-selectpicker-box-button-bordercolor-over` CSS var.
+	- Added `--wui-selectpicker-box-button-bgcolor-out` CSS var.
+	- Added `--wui-selectpicker-box-button-bgcolor-over` CSS var.
+	- Added `--wui-selectpicker-box-button-horizpadding` CSS var.
+	- Added `--wui-selectpicker-box-button-vertpadding` CSS var.
+	- Added `--wui-selectpicker-box-button-textsize` CSS var.
+	- Renamed method `refresh` to `setOptions`.
+	- Updated CSS variables values in `.root.css` file.
+10. WUITimepicker version class update to `0.8`.
+	- Updated CSS variables values in `.root.css` file.
+11. WUIColorpicker version class update to `0.8`.
+	- Updated CSS variables values in `.root.css` file.
+12. WUIButton version class update to `0.8`.
+	- Optimized `init()` method.
+	- Fixed error loading the `textData` property.
+
 ## [v0.7.1] - 2026-05-16
 
 Features:

@@ -7,6 +7,61 @@
 
 # Registro de Cambios
 
+## [v0.8.0] - 2026-05-26
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUILanguage a `0.6`.
+	- Se agregó el parámetro `callback` al método `load()`.
+	- Se corrigió error en el método `refresh()`.
+3. Se actualizó versión clase WUIIcon a `0.5`.
+	- Se agregó la clase CSS `.print-line`.
+	- Se agregó la clase CSS `.print-fill`.
+	- Se agregó la clase CSS `.threedots-horizontal`.
+	- Se agregó la clase CSS `.threedots-vertical`.
+	- Se agregó la clase CSS `.blockquote-left-line`.
+	- Se agregó la clase CSS `.blockquote-right-line`.
+	- Se agregó la clase CSS `.code-line`.
+	- Se agregó la clase CSS `.code-slash-line`.
+4. Se actualizó versión clase WUIModal a `0.6`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+	- Se actualizó el padding horizontal en el título del modal para mayor exposición.
+5. Se actualizó versión clase WUIPaging a `0.5`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+6. Se actualizó versión clase WUIList a `0.5`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+7. Se actualizó versión clase WUITable a `0.6`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+8. Se actualizó versión clase WUIForm a `0.6`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+	- Se agregó el método `getRighticon()`.
+9. Se actualizó versión clase WUISelectpicker a `0.8`.
+	- Se agregó la propiedad booleana `required`.
+	- Se agregó la propiedad booleana `hidden`.
+	- Se agregó la propiedad booleana `autochange`.
+	- Se agregó la opción de texto `textClass`.
+	- Se renombró la variable CSS `--wui-selectpicker-box-button-bordercolor` a `--wui-selectpicker-mobile-box-button-bordercolor`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-maxwidth`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-height`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-borderwidth`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-bordercolor-out`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-bordercolor-over`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-bgcolor-out`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-bgcolor-over`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-horizpadding`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-vertpadding`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-button-textsize`.
+	- Se renombró el método `refresh` a `setOptions`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+10. Se actualizó versión clase WUITimepicker a `0.8`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+11. Se actualizó versión clase WUIColorpicker a `0.8`.
+	- Se actualizó valores de las variables CSS en archivo `.root.css`.
+12. Se actualizó versión clase WUIButton a `0.8`.
+	- Se optimizó el método `init()`.
+	- Se corrigió error al cargar la propiedad `textData`.
+
 ## [v0.7.1] - 2026-05-16
 
 Características:
@@ -87,8 +142,6 @@ Características:
 	- Se corrigió error de posición de la caja del selector de hora al mostrarse en dispositivos móviles.
 4. Se actualizó versión clase WUIColorpicker a `0.6`.
 	- Se corrigió error de posición de la caja del selector de colores al mostrarse en dispositivos móviles.
-
-# Registro de Cambios
 
 ## [v0.6.1] - 2026-05-06
 

@@ -1,0 +1,908 @@
+/*
+ * @file wui-selectpicker-0.8.js
+ * @class WUISelectpicker
+ * @version 0.8
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+class WUISelectpicker {
+
+	static version = "0.8";
+	static #defaults = {
+		selector: ".wui-selectpicker",
+		options: [],
+		value: "",
+		lang: "en",
+		texts: {},
+		openDirection: "down",
+		boxAlign: "center",
+		required: true,
+		hidden: false,
+		autochange: true,
+		multiple: false,
+		separatorValue: ",",
+		separatorText: ", ",
+		filterable: true,
+		viewicon: false,
+		viewtext: true,
+		enabled: true,
+		onOpen: null,
+		onChange: null
+	};
+	static #icons = {
+		"opener-open": ""
+			+ "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>"
+			+ "<path d='M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z'/>"
+			+ "</svg>",
+		"opener-close": ""
+			+ "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>"
+			+ "<path d='M8.12 14.71L12 10.83l3.88 3.88a.996.996 0 1 0 1.41-1.41L12.7 8.71a.996.996 0 0 0-1.41 0L6.7 13.3a.996.996 0 0 0 0 1.41c.39.38 1.03.39 1.42 0z'/>"
+			+ "</svg>",
+		"box-option-check": ""
+			+ "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'>"
+			+ "<path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/>"
+			+ "</svg>"
+	};
+	static #texts = {
+		de: {
+			empty: "leer",
+			cancel: "stornieren",
+			accept: "akzeptieren"
+		},
+		en: {
+			empty: "empty",
+			cancel: "cancel",
+			accept: "accept"
+		},
+		es: {
+			empty: "vacío",
+			cancel: "cancelar",
+			accept: "aceptar"
+		}
+	};
+	static #active = null;
+
+	static _initClass() {
+		document.addEventListener("keydown", event => {
+			const active = WUISelectpicker.#active;
+			const keys = {
+				up: Boolean(event.key == "ArrowUp"),
+				down: Boolean(event.key == "ArrowDown"),
+				intro: Boolean(event.key == "Enter"),
+				esc: Boolean(event.key == "Escape")
+			};
+			if (active != null && active.enabled && (keys.up || keys.down || keys.intro || keys.esc)) {
+				if (!active.isOpen()) {
+					if (keys.down) {
+						active.open();
+					}
+				} else {
+					const activeOptions = active.getBox().querySelector(".options");
+					const focusOption = activeOptions.querySelector(".option.focus");
+					if (keys.up || keys.down) {
+						const options = Array.from(activeOptions.querySelectorAll(".option")).filter(option => !option.classList.contains("hidden"));
+						const focusIndex = options.indexOf(focusOption);
+						const nextIndex =
+							options.length == 0 ? (null
+							) : keys.up && focusOption == null ? (options.length - 1
+							) : keys.up && focusOption != null ? (focusIndex - 1
+							) : keys.down && focusOption == null ? (0
+							) : keys.down && focusOption != null ? (focusIndex + 1
+							) : (null);
+						const nextOption = nextIndex != null ? options[nextIndex] : null;
+						if (focusOption != null) {
+							focusOption.classList.remove("focus");
+						}
+						if (nextOption != null) {
+							activeOptions.scrollTop = nextOption.offsetTop - parseInt(activeOptions.clientHeight / 2);
+							nextOption.classList.add("focus");
+						}
+					} else if (keys.intro) {
+						if (focusOption != null) {
+							const value = focusOption.dataset.value;
+							active.value = value;
+							active.close();
+						}
+					} else if (keys.esc) {
+						active.close();
+					}
+				}
+			}
+		});
+	}
+
+	#properties = {};
+	#htmlElement;
+	#htmlElements = {
+		input: null,
+		opener: null,
+		inputIcon: null,
+		inputText: null,
+		overlay: null,
+		box: null,
+		options: null,
+		footer: null,
+		cancelButton: null,
+		acceptButton: null
+	};
+	#targetValue;
+	#cancelValue;
+	#colorScheme;
+	#darkModeCleanup;
+
+	constructor(properties = {}) {
+		const defaults = structuredClone(WUISelectpicker.#defaults);
+		Object.entries(defaults).forEach(([name, value]) => {
+			this[name] = name in properties ? properties[name] : value;
+		});
+		this.#targetValue = null;
+		this.#cancelValue = null;
+		this.#colorScheme = null;
+		this.#initHTML();
+	}
+
+	get selector() {
+		return this.#properties.selector;
+	}
+
+	get options() {
+		return this.#properties.options;
+	}
+
+	get value() {
+		return this.#getValue();
+	}
+
+	get text() {
+		return this.#getText();
+	}
+
+	get lang() {
+		return this.#properties.lang;
+	}
+
+	get texts() {
+		return this.#properties.texts;
+	}
+
+	get openDirection() {
+		return this.#properties.openDirection;
+	}
+
+	get boxAlign() {
+		return this.#properties.boxAlign;
+	}
+
+	get required() {
+		return this.#properties.required;
+	}
+
+	get hidden() {
+		return this.#properties.hidden;
+	}
+
+	get autochange() {
+		return this.#properties.autochange;
+	}
+
+	get multiple() {
+		return this.#properties.multiple;
+	}
+
+	get separatorValue() {
+		return this.#properties.separatorValue;
+	}
+
+	get separatorText() {
+		return this.#properties.separatorText;
+	}
+
+	get filterable() {
+		return this.#properties.filterable;
+	}
+
+	get viewicon() {
+		return this.#properties.viewicon;
+	}
+
+	get viewtext() {
+		return this.#properties.viewtext;
+	}
+
+	get enabled() {
+		return this.#properties.enabled;
+	}
+
+	get onOpen() {
+		return this.#properties.onOpen;
+	}
+
+	get onChange() {
+		return this.#properties.onChange;
+	}
+
+	set selector(value) {
+		if (typeof (value) == "string" && value != "") {
+			this.#properties.selector = value;
+		}
+	}
+
+	set options(value) {
+		if (Array.isArray(value)) {
+			this.#properties.options = value;
+		}
+	}
+
+	set value(value) {
+		if (typeof (value).toString().match(/string|number/) && (typeof (this.#properties.enabled) == "undefined" || this.#properties.enabled)) {
+			value = value.toString().trim();
+			this.#properties.value = value;
+			if (this.#properties.enabled) {
+				this.#setValue(value);
+				this.#refreshView();
+				this.#prepare();
+			}
+		}
+	}
+
+	set lang(value) {
+		if (typeof (value) == "string" && value.match(/^\w{2}$/)) {
+			this.#properties.lang = value.toLowerCase();
+		}
+	}
+
+	set texts(value) {
+		if (typeof (value) == "object" && !Array.isArray(value) && value !== null) {
+			Object.keys(WUISelectpicker.#texts.en).forEach(text => {
+				if (!(text in value)) {
+					value[text] = "";
+				}
+			});
+			this.#properties.texts = value;
+		}
+	}
+
+	set openDirection(value) {
+		if (typeof (value) == "string" && value.match(/^(up|down)$/i)) {
+			this.#properties.openDirection = value.toLowerCase();
+		}
+	}
+
+	set boxAlign(value) {
+		if (typeof (value) == "string" && value.match(/^(left|center|right)$/i)) {
+			this.#properties.boxAlign = value.toLowerCase();
+		}
+	}
+
+	set required(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.required = value;
+		}
+	}
+
+	set hidden(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.hidden = value;
+		}
+	}
+
+	set autochange(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.autochange = value;
+		}
+	}
+
+	set multiple(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.multiple = value;
+			if (this.#htmlElements.input instanceof HTMLSelectElement) {
+				if (value) {
+					this.#htmlElements.input.setAttribute("multiple", "true");
+				} else {
+					this.#htmlElements.input.removeAttribute("multiple");
+				}
+			}
+		}
+	}
+
+	set separatorValue(value) {
+		if (typeof (value) == "string") {
+			this.#properties.separatorValue = value;
+		}
+	}
+
+	set separatorText(value) {
+		if (typeof (value) == "string") {
+			this.#properties.separatorText = value;
+		}
+	}
+
+	set filterable(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.filterable = value;
+			if (this.#htmlElements.inputText instanceof HTMLInputElement) {
+				this.#htmlElements.inputText.readOnly = !value;
+				this.#htmlElements.inputText.style.cursor = value ? "default" : "pointer";
+				if (value) {
+					this.#htmlElements.inputText.removeAttribute("readonly");
+				} else {
+					this.#htmlElements.inputText.setAttribute("readonly", "true");
+				}
+			}
+		}
+	}
+
+	set viewicon(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.viewicon = value && !this.#properties.multiple && !this.#properties.filterable;
+			this.#refreshView();
+		}
+	}
+
+	set viewtext(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.viewtext = !this.#properties.multiple && !this.#properties.filterable ? value : true;
+			this.#refreshView();
+		}
+	}
+
+	set enabled(value) {
+		if (typeof (value) == "boolean") {
+			this.#properties.enabled = value;
+			if (this.#htmlElements.input instanceof HTMLSelectElement && this.#htmlElements.inputText instanceof HTMLInputElement) {
+				this.#htmlElements.input.disabled = !value;
+				this.#htmlElements.inputText.disabled = !value;
+				if (value) {
+					this.#htmlElements.inputText.removeAttribute("disabled");
+				} else {
+					this.#htmlElements.inputText.setAttribute("disabled", "true");
+				}
+			}
+			this.#setStyle();
+		}
+	}
+
+	set onOpen(value) {
+		if (typeof (value) == "function" || value == null) {
+			this.#properties.onOpen = value;
+		}
+	}
+
+	set onChange(value) {
+		if (typeof (value) == "function" || value == null) {
+			this.#properties.onChange = value;
+		}
+	}
+
+	#loadHTML() {
+		const sel = this.#properties.selector;
+		this.#htmlElement = document.querySelector(sel);
+		this.#htmlElements.input = document.querySelector(sel + " > select");
+		this.#htmlElements.opener = document.querySelector(sel + " > .opener");
+		this.#htmlElements.inputIcon = document.querySelector(sel + " > .icon");
+		this.#htmlElements.inputText = document.querySelector(sel + " > input[type='text']");
+		this.#htmlElements.overlay = document.querySelector(sel + " > .overlay");
+		this.#htmlElements.box = document.querySelector(sel + " > .box");
+		this.#htmlElements.options = document.querySelector(sel + " > .box > .options");
+		this.#htmlElements.footer = document.querySelector(sel + " > .box > .footer");
+		this.#htmlElements.cancelButton = document.querySelector(sel + " > .box > .footer > .cancel");
+		this.#htmlElements.acceptButton = document.querySelector(sel + " > .box > .footer > .accept");
+	}
+
+	#buildHTML() {
+		if (this.#htmlElement instanceof HTMLDivElement) {
+			if (!this.#htmlElements.input) {
+				this.#htmlElements.input = document.createElement("select");
+				this.#htmlElement.appendChild(this.#htmlElements.input);
+			}
+			if (!this.#properties.hidden) {
+				if (!this.#htmlElements.opener) {
+					this.#htmlElements.opener = document.createElement("div");
+					this.#htmlElements.opener.className = "opener";
+					this.#htmlElement.appendChild(this.#htmlElements.opener);
+				}
+				if (!this.#htmlElements.inputIcon) {
+					this.#htmlElements.inputIcon = document.createElement("div");
+					this.#htmlElements.inputIcon.className = "icon";
+					this.#htmlElement.appendChild(this.#htmlElements.inputIcon);
+				}
+				if (!this.#htmlElements.inputText) {
+					this.#htmlElements.inputText = document.createElement("input");
+					this.#htmlElements.inputText.type = "text";
+					this.#htmlElement.appendChild(this.#htmlElements.inputText);
+				}
+			}
+			if (!this.#htmlElements.overlay) {
+				this.#htmlElements.overlay = document.createElement("div");
+				this.#htmlElements.overlay.className = "overlay";
+				this.#htmlElement.appendChild(this.#htmlElements.overlay);
+			}
+			if (!this.#htmlElements.box) {
+				this.#htmlElements.box = document.createElement("div");
+				this.#htmlElements.box.className = "box";
+				this.#htmlElement.appendChild(this.#htmlElements.box);
+			}
+			if (!this.#htmlElements.options) {
+				this.#htmlElements.options = document.createElement("div");
+				this.#htmlElements.options.className = "options";
+				this.#htmlElements.box.appendChild(this.#htmlElements.options);
+			}
+			if (!this.#htmlElements.footer) {
+				this.#htmlElements.footer = document.createElement("div");
+				this.#htmlElements.footer.className = "footer";
+				this.#htmlElements.box.appendChild(this.#htmlElements.footer);
+			}
+			if (!this.#htmlElements.cancelButton) {
+				this.#htmlElements.cancelButton = document.createElement("button");
+				this.#htmlElements.cancelButton.className = "cancel";
+				this.#htmlElements.footer.appendChild(this.#htmlElements.cancelButton);
+			}
+			if (!this.#htmlElements.acceptButton) {
+				this.#htmlElements.acceptButton = document.createElement("button");
+				this.#htmlElements.acceptButton.className = "accept";
+				this.#htmlElements.footer.appendChild(this.#htmlElements.acceptButton);
+			}
+		}
+	}
+
+	#initHTML() {
+		this.#loadHTML();
+		this.#buildHTML();
+	}
+
+	getElement() {
+		return this.#htmlElement;
+	}
+
+	getBox() {
+		return this.#htmlElements.box;
+	}
+
+	getViewElements() {
+		return [this.#htmlElements.inputText];
+	}
+
+	getInput() {
+		return this.#htmlElements.input;
+	}
+
+	#getSelectedOptions() {
+		return Array.from(this.#htmlElements.input.options).filter(opt => opt.selected);
+	}
+
+	#getValue() {
+		return this.#getSelectedOptions().map(opt => opt.value).join(this.#properties.separatorValue) || this.#properties.value || "";
+	}
+
+	#getText() {
+		return this.#getSelectedOptions().map(opt => opt.text).join(this.#properties.separatorText) || "";
+	}
+
+	#getSRCIcon(name) {
+		const element = this.#htmlElement || document.documentElement;
+		const src = getComputedStyle(element).getPropertyValue("--wui-selectpicker-" + name + "icon-src");
+		return src != "" && !src.match(/^(none|url\(\))$/) ? src : "url(\"data:image/svg+xml," + WUISelectpicker.#icons[name] + "\")";
+	}
+
+	#setValue(value) {
+		const valores = value.split(this.#properties.separatorValue);
+		if (!this.#properties.multiple) {
+			this.#properties.value = value;
+		}
+		if (this.#htmlElements.input instanceof HTMLSelectElement) {
+			Array.from(this.#htmlElements.input.options).forEach(opt => {
+				const selected = valores.includes(opt.value);
+				opt.selected = selected;
+				if (selected) {
+					opt.setAttribute("selected", "true");
+				} else {
+					opt.removeAttribute("selected");
+				}
+			});
+			this.#htmlElements.input.dispatchEvent(new Event("change"));
+		}
+	}
+
+	setOptions(options = this.options) {
+		this.clearOptions();
+		this.options = options;
+		this.#properties.options.forEach(opt => {
+			this.addOption(opt);
+		});
+		this.#refreshView();
+		this.close();
+	}
+
+	#refreshView() {
+		if (!this.#properties.hidden) {
+			if (this.#htmlElements.inputText instanceof HTMLInputElement) {
+				const hideText = !this.#properties.viewtext && !this.#properties.multiple && !this.#properties.filterable;
+				this.#htmlElements.inputText.value = hideText ? "" : this.#getText();
+				this.#htmlElements.inputText.style.visibility = hideText ? "hidden" : "";
+			}
+			if (this.#htmlElements.inputIcon instanceof HTMLDivElement) {
+				const active = this.#properties.viewicon && !this.#properties.multiple && !this.#properties.filterable;
+				if (active) {
+					const selected = this.#htmlElements.input instanceof HTMLSelectElement
+						? Array.from(this.#htmlElements.input.options).find(o => o.selected)
+						: null;
+					const iconClass = selected?.dataset.iconClass || "";
+					this.#htmlElements.inputIcon.className = "icon" + (iconClass ? " " + iconClass : "");
+					this.#htmlElement?.classList.toggle("viewicon", Boolean(iconClass));
+				} else {
+					this.#htmlElements.inputIcon.className = "icon";
+					this.#htmlElement?.classList.remove("viewicon");
+				}
+			}
+		}
+	}
+
+	#setStyle() {
+		if (this.#htmlElement instanceof HTMLDivElement && this.#htmlElements.input instanceof HTMLSelectElement) {
+			const disabled = this.#htmlElements.input.disabled;
+			if (disabled) {
+				this.#htmlElement.classList.add("disabled");
+			} else {
+				this.#htmlElement.classList.remove("disabled");
+			}
+		}
+	}
+
+	init() {
+		this.#initHTML();
+		if (this.#htmlElement instanceof HTMLDivElement && this.#htmlElements.input instanceof HTMLSelectElement) {
+			if (this.#properties.hidden) {
+				this.#htmlElement.classList.add("hidden");
+			} else {
+				this.#htmlElements.opener.style.maskImage = this.#getSRCIcon("opener-open");
+				this.#htmlElements.inputText.name = this.#htmlElements.input.name + "Text";
+				this.#htmlElements.inputText.readOnly = !this.#properties.filterable;
+				this.#htmlElements.inputText.style.cursor = this.#properties.filterable ? "default" : "pointer";
+				this.#htmlElements.inputText.addEventListener("focus", () => {
+					if (this.#properties.enabled) {
+						setTimeout(() => {
+							WUISelectpicker.#active = this;
+						}, 10)
+					}
+				});
+				this.#htmlElements.inputText.addEventListener("blur", () => {
+					if (this.#properties.enabled) {
+						WUISelectpicker.#active = null;
+					}
+				});
+				this.#htmlElements.inputText.addEventListener("click", () => {
+					if (this.#properties.enabled) {
+						const mobile = Boolean(window.matchMedia("(max-width: 767px)").matches);
+						if (!mobile && this.#properties.filterable) {
+							if (!this.isOpen()) {
+								this.open();
+							}
+						} else {
+							this.toggle();
+						}
+					}
+				});
+				this.#htmlElements.inputText.addEventListener("keyup", (event) => {
+					const mobile = Boolean(window.matchMedia("(max-width: 767px)").matches);
+					if (!mobile && this.#properties.filterable && !event.key.match(/^(ArrowUp|ArrowDown|Enter|Escape)$/)) {
+						const prepare = str => str.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ñ/g, "n").replace(/\W+/g, "");
+						const key = this.#htmlElements.inputText.value;
+						const regexp = new RegExp(prepare(key));
+						this.#htmlElements.options.querySelectorAll(".option").forEach(option => {
+							const value = option.dataset.value;
+							const text = this.#htmlElements.input.querySelector("option[value='" + value + "']").text.trim().toLowerCase();
+							if (regexp.test(prepare(text))) {
+								option.classList.remove("hidden");
+							} else {
+								option.classList.add("hidden");
+							}
+						});
+						if (!this.isOpen()) {
+							this.open();
+						}
+					}
+				});
+			}
+			if (this.#properties.multiple) {
+				this.#htmlElements.input.setAttribute("multiple", "true");
+			} else {
+				this.#htmlElements.input.removeAttribute("multiple");
+			}
+			if (!this.#properties.enabled) {
+				this.#htmlElement.classList.add("disabled");
+				this.#htmlElements.input.setAttribute("disabled", "true");
+			} else {
+				this.#htmlElements.input.removeAttribute("disabled");
+			}
+			this.#htmlElement.addEventListener("click", event => {
+				if (this.#properties.enabled && (event.target.classList.contains("wui-selectpicker") || (this.#properties.viewicon && event.target.classList.contains("icon")) || event.target.classList.contains("opener"))) {
+					this.toggle();
+				}
+			});
+			if (this.#htmlElements.input.getAttribute("style") != null) {
+				this.#htmlElements.input.removeAttributeNode(this.#htmlElements.input.getAttributeNode("style"));
+			}
+			this.#properties.value = this.#properties.value || "";
+			this.#htmlElements.input.addEventListener("change", () => {
+				const mobile = Boolean(window.matchMedia("(max-width: 767px)").matches);
+				const hidden = this.#properties.hidden;
+				if ((!(mobile || hidden) || this.#properties.autochange) && typeof (this.#properties.onChange) == "function") {
+					this.#properties.onChange(this.value);
+				}
+			});
+			this.#htmlElements.options.innerHTML = "";
+			Array.from(this.#htmlElements.input.options).forEach(opt => {
+				this.#addHTMLOption(opt);
+			});
+			this.#htmlElements.overlay.classList.add("hidden");
+			this.#htmlElements.box.classList.add(this.#properties.boxAlign, this.#properties.openDirection, "hidden");
+			this.#htmlElements.cancelButton.addEventListener("click", () => { this.cancel(); });
+			this.#htmlElements.acceptButton.addEventListener("click", () => { this.accept(); });
+			this.#prepare();
+			this.setOptions();
+			this.#darkModeListener(() => {
+				this.#setStyle();
+			});
+			if (this.#properties.value != "") {
+				this.value = this.#properties.value;
+			}
+		}
+	}
+
+	#prepare(saveCancel = false) {
+		const texts = WUISelectpicker.#texts;
+		const lang = this.#properties.lang;
+		this.#targetValue = this.#properties.value || "";
+		if (saveCancel) {
+			this.#cancelValue = this.#targetValue;
+		}
+		if (this.#htmlElements.cancelButton instanceof HTMLButtonElement && this.#htmlElements.acceptButton instanceof HTMLButtonElement) {
+			this.#htmlElements.cancelButton.textContent = this.#properties.texts.cancel != "" ? this.#properties.texts.cancel : lang in texts ? texts[lang].cancel : "";
+			this.#htmlElements.acceptButton.textContent = this.#properties.texts.accept != "" ? this.#properties.texts.accept : lang in texts ? texts[lang].accept : "";
+		}
+		this.#refreshView();
+	}
+
+	addOption(opt) {
+		this.#addSelectOption(opt);
+		this.#addHTMLOption(opt);
+	}
+
+	#addSelectOption(opt) {
+		if (this.#htmlElements.input instanceof HTMLSelectElement) {
+			const selected = typeof (opt.selected) == "boolean" ? opt.selected : false;
+			const option = new Option(opt.text || "", opt.value || "", selected);
+			if (typeof (opt.iconClass) == "string" && opt.iconClass != "") {
+				option.dataset.iconClass = opt.iconClass;
+			}
+			this.#htmlElements.input.appendChild(option);
+		}
+	}
+
+	#addHTMLOption(opt) {
+		if (this.#htmlElements.options instanceof HTMLElement) {
+			const option = document.createElement("div");
+			const icon = document.createElement("div");
+			const text = document.createElement("div");
+			const selected = Boolean(opt.selected);
+			const iconClass = typeof (opt.iconClass) == "string" ? opt.iconClass : (opt.dataset?.iconClass || "");
+			const textClass = typeof (opt.textClass) == "string" ? opt.textClass : (opt.dataset?.textClass || "");
+			const customIcon = Boolean(iconClass != "");
+			icon.className = "icon " + (customIcon ? iconClass + " visible" : "check");
+			if (!customIcon) {
+				icon.style.maskImage = this.#getSRCIcon("box-option-check", selected ? "focus" : "out");
+			}
+			text.className = "text" + (opt.value == "" ? " empty" : this._selecteableText ? " selecteable" : "") + (textClass ? " " + textClass : "");
+			text.innerHTML = opt.value == "" ? (this.texts.empty != "" ? this.texts.empty : this.lang in WUISelectpicker.#texts ? WUISelectpicker.#texts[this.lang].empty : "") : opt.text;
+			Object.keys(opt.textDataset || []).forEach(key => {
+				text.dataset[key] = opt.textDataset[key];
+			});
+			option.className = "option" + (selected ? " selected" : "");
+			option.dataset.value = opt.value;
+			Object.keys(opt.dataset || []).forEach(key => {
+				option.dataset[key] = opt.dataset[key];
+			});
+			option.appendChild(icon);
+			option.appendChild(text);
+			option.addEventListener("mouseover", () => { option.classList.add("focus"); });
+			option.addEventListener("mouseout", () => { option.classList.remove("focus"); });
+			option.addEventListener("click", () => {
+				const isCurrentlySelected = option.classList.contains("selected");
+				if (this.#properties.required && isCurrentlySelected) {
+					if (!this.#properties.multiple) return;
+					const selectedCount = this.#htmlElements.options.querySelectorAll(".option.selected").length;
+					if (selectedCount <= 1) return;
+				}
+				const mobile = Boolean(window.matchMedia("(max-width: 767px)").matches);
+				const hidden = this.#properties.hidden;
+				const selected = !isCurrentlySelected;
+				const targetValue = option.dataset.value || "";
+				const values = [];
+				let value = "";
+				option.classList.toggle("selected");
+				this.#htmlElements.options.scrollTop = option.offsetTop - parseInt(this.#htmlElements.options.clientHeight / 2);
+				this.#htmlElements.options.querySelectorAll(".option").forEach(option => {
+					if (typeof (option.dataset.value) != "undefined") {
+						option.classList.remove("focus");
+						if (!this.#properties.multiple && option.dataset.value != targetValue) {
+							option.classList.remove("selected");
+						}
+						if (this.#properties.multiple && option.classList.contains("selected")) {
+							values.push(option.dataset.value);
+						}
+					}
+				});
+				value = this.#properties.multiple ? values.join(this.#properties.separatorValue) : selected ? targetValue : "";
+				option.classList.add("focus");
+				this.#targetValue = value;
+				this.value = value;
+				if (!this.#properties.multiple && !(mobile || hidden)) {
+					this.close();
+				}
+			});
+			this.#htmlElements.options.appendChild(option);
+		}
+	}
+
+	#loadBox() {
+		Array.from(this.#htmlElements.input.options).forEach((opt, i) => {
+			const option = this.#htmlElements.options.querySelector(".option:nth-child(" + (i + 1) + ")");
+			if (option instanceof HTMLDivElement && typeof (option.dataset.value) != "undefined") {
+				if (opt.selected) {
+					this.#htmlElements.options.scrollTop = option.offsetTop - parseInt((this.#htmlElements.options.clientHeight - option.clientHeight) / 2);
+					option.classList.add("selected");
+				} else {
+					option.classList.remove("selected", "focus");
+				}
+			}
+		});
+	}
+
+	clearOptions() {
+		this.options = [];
+		if (this.#htmlElements.input instanceof HTMLSelectElement) {
+			this.#htmlElements.input.innerHTML = "";
+			this.#htmlElements.options.innerHTML = "";
+		}
+	}
+
+	open() {
+		const mobile = Boolean(window.matchMedia("(max-width: 767px)").matches);
+		const hidden = this.#properties.hidden;
+		if ((hidden || this.#htmlElements.opener instanceof HTMLDivElement) && this.#htmlElements.overlay instanceof HTMLDivElement && this.#htmlElements.box instanceof HTMLDivElement) {
+			if (this.#htmlElements.input.options.length === 0) return;
+			if (!hidden) {
+				this.#htmlElements.opener.style.maskImage = this.#getSRCIcon("opener-close");
+			}
+			this.#htmlElements.overlay.classList.remove("hidden");
+			this.#htmlElements.box.className = `box ${this.#properties.boxAlign} ${this.#properties.openDirection}`;
+			this.#htmlElements.box.style.marginBottom = !mobile && !hidden && this.#properties.openDirection == "up" ? this.#htmlElement.clientHeight + "px" : "auto";
+			this.#prepare(true);
+			this.#loadBox();
+			if (typeof (this.#properties.onOpen) == "function") {
+				this.#properties.onOpen(this.value);
+			}
+			WUISelectpicker.#active = this;
+		}
+	}
+
+	close() {
+		const hidden = this.#properties.hidden;
+		if ((hidden || this.#htmlElements.opener instanceof HTMLDivElement) && this.#htmlElements.overlay instanceof HTMLDivElement && this.#htmlElements.box instanceof HTMLDivElement) {
+			if (!hidden) {
+				this.#htmlElements.opener.style.maskImage = this.#getSRCIcon("opener-open");
+			}
+			this.#htmlElements.overlay.classList.add("hidden");
+			this.#htmlElements.box.classList.add("hidden");
+			this.#htmlElements.options.querySelectorAll(".option").forEach(option => {
+				option.classList.remove("hidden");
+			});
+		}
+	}
+
+	toggle() {
+		if (this.#htmlElements.box instanceof HTMLDivElement) {
+			if (this.#htmlElements.box.classList.contains("hidden")) {
+				this.open();
+			} else {
+				this.close();
+			}
+		}
+	}
+
+	cancel() {
+		this.value = this.#cancelValue;
+		this.close();
+	}
+
+	accept() {
+		if (typeof (this.#properties.onChange) == "function") {
+			this.#properties.onChange(this.value);
+		}
+		this.close();
+	}
+
+	isOpen() {
+		return Boolean(this.#htmlElements.box instanceof HTMLDivElement ? !this.#htmlElements.box.classList.contains("hidden") : false);
+	}
+
+	isEmpty() {
+		return Boolean(this.#htmlElements.inputText instanceof HTMLInputElement ? this.#properties.value == "" || this.#htmlElements.inputText.value == "" : false);
+	}
+
+	isValid() {
+		return Boolean(this.#htmlElements.input instanceof HTMLSelectElement ? (Array.from(this.#htmlElements.input.options).filter(opt => opt.text == this.#htmlElements.inputText.value).length > 0) : false);
+	}
+
+	#darkModeListener(callback) {
+		const observer = new MutationObserver(() => {
+			const colorScheme = getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();
+			if (this.#colorScheme != colorScheme) {
+				this.#colorScheme = colorScheme;
+				callback();
+			}
+		});
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ["style", "class"],
+			subtree: false
+		});
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+		const handler = () => { callback(); };
+		mediaQuery.addEventListener("change", handler);
+		this.#darkModeCleanup = () => {
+			observer.disconnect();
+			mediaQuery.removeEventListener("change", handler);
+		};
+	}
+
+	destroy() {
+		this.close();
+		if (typeof this.#darkModeCleanup == "function") {
+			this.#darkModeCleanup();
+			this.#darkModeCleanup = undefined;
+		}
+		if (this.#htmlElement instanceof HTMLElement) {
+			Object.entries(this.#htmlElements).forEach(([key, element]) => {
+				if (element) {
+					element.remove();
+				}
+				this.#htmlElements[key] = null;
+			});
+			this.#htmlElement.innerHTML = "";
+			this.#htmlElement.remove();
+		}
+		Object.keys(this.#properties).forEach(name => {
+			delete this.#properties[name];
+		});
+		this.#targetValue = undefined;
+		this.#cancelValue = undefined;
+		this.#colorScheme = undefined;
+	}
+}
+
+WUISelectpicker._initClass();
+
+/*
+HTML output:
+<div class="wui-selector">
+	<select name="(name)">
+		<option value="value1">value 1</option>
+		[...]
+	</select>
+	<div class="opener"></div>
+	<input type="text" value="(name)Text" value="">
+	<div class="overlay"></div>
+	<div class="box">
+		<div class="options">
+			<div class="option" data-value="value1">value 1</div>
+			[...]
+		</div>
+		<div class="footer">
+			<button class="cancel"></button>
+			<button class="accept"></button>
+		</div>
+	</div>
+</div>
+*/

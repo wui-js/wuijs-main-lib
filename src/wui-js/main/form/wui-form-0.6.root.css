@@ -1,7 +1,7 @@
 /*
- * @file wui-form-0.5.root.css
+ * @file wui-form-0.6.root.css
  * @class WUIForm
- * @version 0.5
+ * @version 0.6
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -12,8 +12,8 @@
 
 	--wui-form-header-bordercolor: #d5dce3;
 	--wui-form-header-titlecolor: #000;
-	--wui-form-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
-	--wui-form-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-form-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 40%);
+	--wui-form-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 70%);
 	--wui-form-line-bordercolor: #d5dce3;
 	--wui-form-fieldset-bgcolor: #fff;
 	--wui-form-legend-texttransform: uppercase;
@@ -29,8 +29,8 @@
 	--wui-form-input-bordercolor-focus: #1e90ff;
 	--wui-form-input-bordercolor-invalid: #f44343;
 	--wui-form-input-bordercolor-disabled: #d5dce3;
-	--wui-form-input-bgcolor-out: #f6f6fa;
-	--wui-form-input-bgcolor-focus: #f6f6fa;
+	--wui-form-input-bgcolor-out: #f6f6f6;
+	--wui-form-input-bgcolor-focus: #f6f6f6;
 	--wui-form-input-bgcolor-disabled: #d5dce3;
 	--wui-form-input-textcolor-out: #2d3a47;
 	--wui-form-input-textcolor-over: #1f2937;
@@ -56,8 +56,8 @@
 	--wui-form-range-trackbar-bordercolor-out: #f0f0f3;
 	--wui-form-range-trackbar-bordercolor-focus: #1e90ff;
 	--wui-form-range-trackbar-bordercolor-disabled: #d5dce3;
-	--wui-form-range-trackbar-bgcolor-out: #f6f6fa;
-	--wui-form-range-trackbar-bgcolor-focus: #f6f6fa;
+	--wui-form-range-trackbar-bgcolor-out: #f6f6f6;
+	--wui-form-range-trackbar-bgcolor-focus: #f6f6f6;
 	--wui-form-range-trackbar-bgcolor-disabled: #d5dce3;
 	--wui-form-select-opener-iconsize: 30px;
 	--wui-form-select-opener-iconcolor-out: #000;
@@ -70,7 +70,7 @@
 	--wui-form-progress-borderwidth: 1px;
 	--wui-form-progress-bordercolor: #f0f0f3;
 	--wui-form-progress-valuecolor: #1e90ff;
-	--wui-form-progress-bgcolor: #f6f6fa;
+	--wui-form-progress-bgcolor: #f6f6f6;
 	--wui-form-button-minwidth: 100px;
 	--wui-form-text-textcolor-out: #888;
 	--wui-form-text-textcolor-disabled: #d5dce3;
