@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.8.1] - 2026-05-28
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUIPaging version class update to `0.6`.
+	- Improved handling of out-of-view pages.
+
 ## [v0.8.0] - 2026-05-26
 
 Features:

@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.8.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.8.1` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.8.0.20260526.0` |
+| **Versión documento** | `0.8.1.20260528.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -99,7 +99,7 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | [WUILoader](#wui-loader)             | `0.4`   | Componente para la implementación de animaciones de carga. |
 | [WUITooltip](#wui-tooltip)           | `0.3`   | Componente para la implementación de textos emergentes. |
 | [WUIModal](#wui-modal)               | `0.6`   | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
-| [WUIPaging](#wui-paging)             | `0.5`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
+| [WUIPaging](#wui-paging)             | `0.6`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
 | [WUISlider](#wui-slider)             | `0.5`   | Componente para la implementación de presentaciones de diapositivas controladas por arrastre de ratón/táctil y/o por evento. |
 | [WUITabs](#wui-tabs)                 | `0.3`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
 | [WUIMenubar](#wui-menubar)           | `0.5`   | Componente para la implementación de barras de menú. |
@@ -220,8 +220,8 @@ Código HTML:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.6.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.5.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.6.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.6.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.root.css">
@@ -256,7 +256,7 @@ Código HTML:
 		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.4.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.6.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.3.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.5.js"></script>
@@ -1830,7 +1830,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIPaging
 
-Versión: `0.5`
+Versión: `0.6`
 
 Componente para la implementación de vistas accesibles paginadamente con transiciones animadas.
 
@@ -1838,9 +1838,9 @@ Componente para la implementación de vistas accesibles paginadamente con transi
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/paging/wui-paging-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.js) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.css) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.root.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.js) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.css) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.root.css) |
 
 #### Constructor
 
@@ -1927,9 +1927,9 @@ body {
 Cabecera HTML:
 
 ```html
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.5.root.css">
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.5.css">
-<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.6.root.css">
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.6.js"></script>
 ```
 
 Código HTML:

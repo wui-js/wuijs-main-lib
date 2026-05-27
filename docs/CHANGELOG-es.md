@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.8.1] - 2026-05-28
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIPaging a `0.6`.
+	- Se mejoró el manejo de páginas fuera de vista.
+
 ## [v0.8.0] - 2026-05-26
 
 Características:

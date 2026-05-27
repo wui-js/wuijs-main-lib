@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.8.1
+ * @version 0.8.0
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -24,7 +24,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.8.1";
+		const version = "0.8.0";
 		const libraries = {};
 		libraries["0.4.0"] = {
 			"cookie": { v: "0.4", js: true, css: false },
@@ -117,9 +117,6 @@
 			"timepicker": { v: "0.8", js: true, css: true },
 			"colorpicker": { v: "0.8", js: true, css: true },
 			"button": { v: "0.8", js: true, css: true }
-		});
-		libraries["0.8.1"] = Object.assign({}, libraries["0.8.0"], {
-			"paging": { v: "0.6", js: true, css: true }
 		});
 		let tasks = [];
 		let ver = version;

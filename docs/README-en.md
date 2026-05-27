@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-main-lib` |
-| **Library version**  | `0.8.0` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.8.1` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Document version** | `0.8.0.20260526.0` |
+| **Document version** | `0.8.1.8.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -99,7 +99,7 @@ WUI/JS Main Lib is part of the WUI/JS project, which currently consists of 4 rep
 | [WUILoader](#wui-loader)             | `0.4`   | Component for the implementation of loading animations. |
 | [WUITooltip](#wui-tooltip)           | `0.3`   | Component for the implementation of tooltip texts. |
 | [WUIModal](#wui-modal)               | `0.6`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
-| [WUIPaging](#wui-paging)             | `0.5`   | Component for the implementation of paginated views with animated transitions. |
+| [WUIPaging](#wui-paging)             | `0.6`   | Component for the implementation of paginated views with animated transitions. |
 | [WUISlider](#wui-slider)             | `0.5`   | Component for the implementation of slide presentations controlled by mouse/touch dragging and/or by event. |
 | [WUITabs](#wui-tabs)                 | `0.3`   | Component for the implementation of views accessible by tab selection. |
 | [WUIMenubar](#wui-menubar)           | `0.5`   | Component for the implementation of menu bars. |
@@ -220,8 +220,8 @@ HTML code:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.6.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.5.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.5.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.6.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.6.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.5.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.3.root.css">
@@ -256,7 +256,7 @@ HTML code:
 		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.4.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.3.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.6.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.3.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.5.js"></script>
@@ -1836,7 +1836,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIPaging
 
-Version: `0.5`
+Version: `0.6`
 
 Component for the implementation of paginated views with animated transitions.
 
@@ -1844,9 +1844,9 @@ Component for the implementation of paginated views with animated transitions.
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/paging/wui-paging-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.js) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.css) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.5.root.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.js) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.css) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.6.root.css) |
 
 #### Constructor
 
@@ -1933,9 +1933,9 @@ body {
 HTML header:
 
 ```html
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.5.root.css">
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.5.css">
-<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.6.root.css">
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.6.js"></script>
 ```
 
 HTML code:
