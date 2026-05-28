@@ -381,18 +381,19 @@ class WUISelectpicker {
 		this.#htmlElements.acceptButton = document.querySelector(sel + " > .box > .footer > .accept");
 		if (this.#htmlElements.input) {
 			this.#htmlElements.input.querySelectorAll("option").forEach(option => {
-				const opt = {
-					iconClass: option.dataset.iconClass,
-					test: option.text,
-					value: option.value,
-					selected: option.selected
-				};
-				Object.entries(option.dataset).forEach(([key, val]) => {
-					if (key.match(/^(iconClass|textClass)$/)) {
-						opt[key] = val;
-					}
-				});
-				this.options.push(opt);
+				if (!this.options.some(opt => opt.value === option.value)) {
+					const opt = {
+						test: option.text,
+						value: option.value,
+						selected: option.selected
+					};
+					Object.entries(option.dataset).forEach(([key, val]) => {
+						if (key.match(/^(iconClass|textClass)$/)) {
+							opt[key] = val;
+						}
+					});
+					this.options.push(opt);
+				}
 			});
 		}
 	}
@@ -557,7 +558,6 @@ class WUISelectpicker {
 	}
 
 	init() {
-		this.#initHTML();
 		if (this.#htmlElement instanceof HTMLDivElement && this.#htmlElements.input instanceof HTMLSelectElement) {
 			if (this.#properties.hidden) {
 				this.#htmlElement.classList.add("hidden");

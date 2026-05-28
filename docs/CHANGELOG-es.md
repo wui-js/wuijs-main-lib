@@ -7,6 +7,12 @@
 
 # Registro de Cambios
 
+## [v0.9.1] - 2026-05-28
+
+Características:
+
+1. Revisión clase WUISelectpicker a `0.9`.
+
 ## [v0.9.0] - 2026-05-28
 
 Características:

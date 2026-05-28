@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.9.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.9.1` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.9.0.20260528.0` |
+| **Versión documento** | `0.9.1.20260528.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -4083,14 +4083,21 @@ const init = () => {
 	const output = document.body.querySelector(".my-output");
 	const selectpicker = new WUISelectpicker({
 		selector: ".wui-selectpicker.my-selectpicker",
+		//options: [],
 		value: "2",
 		//lang: "en",
 		//texts: {},
 		//openDirection: "down",
+		//boxAlign: "center",
+		//required: true,
+		//hidden: false,
+		//autochange: true,
 		//multiple: false,
 		//separatorValue: ",",
 		//separatorText: ", ",
 		//filterable: true,
+		//viewicon: false,
+		//viewtext: true,
 		//enabled: true,
 		onOpen: (value) => {
 			output.textContent = `Apertura - valor: ${value}`;
