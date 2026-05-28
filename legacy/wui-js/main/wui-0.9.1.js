@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.9.2
+ * @version 0.9.1
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -24,7 +24,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.9.2";
+		const version = "0.9.1";
 		const libraries = {};
 		libraries["0.4.0"] = {
 			"cookie": { v: "0.4", js: true, css: false },
@@ -125,7 +125,6 @@
 			"selectpicker": { v: "0.9", js: true, css: true },
 		});
 		libraries["0.9.1"] = Object.assign({}, libraries["0.9.0"]);
-		libraries["0.9.2"] = Object.assign({}, libraries["0.9.2"]);
 		let tasks = [];
 		let ver = version;
 		let cls = "";

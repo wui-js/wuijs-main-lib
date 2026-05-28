@@ -383,7 +383,7 @@ class WUISelectpicker {
 			this.#htmlElements.input.querySelectorAll("option").forEach(option => {
 				if (!this.options.some(opt => opt.value === option.value)) {
 					const opt = {
-						test: option.text,
+						text: option.text,
 						value: option.value,
 						selected: option.selected
 					};

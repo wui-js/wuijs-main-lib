@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [v0.9.2] - 2026-05-28
+
+Features:
+
+1. Review WUISelectpicker class to `0.9`.
+
 ## [v0.9.1] - 2026-05-28
 
 Features:
