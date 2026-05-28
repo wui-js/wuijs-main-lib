@@ -305,7 +305,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.1"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Opcionalmente se pueden incluir las librerías de manera individual, para ello s
 Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`) ya que la versión será definida automáticamente por el script de carga simple.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.1&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Los nombres de las librerías pasadas en el parámetro `class` no deben contener
 Adicionalmente se puede omitir la carga de los archivos `root.css` de cada librería agregando el parámetro `root` con el valor `0` (cero) en la URL del archivo `wui.js`.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.1&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
