@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.8.1` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.9.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.8.1.20260528.0` |
+| **Versión documento** | `0.9.0.20260528.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -107,7 +107,7 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | [WUITable](#wui-table)               | `0.6`   | Componente para la implementación de tablas de datos. A diferencia del componente `WUIList`, el componente `WUITable` incluye una cabecera de columnas. |
 | [WUIForm](#wui-form)                 | `0.6`   | Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`. |
 | [WUIFormat](#wui-format)             | `0.3`   | Utilidades para manejo y validación de formatos de datos de tipo `string`, `number` y `Date`. |
-| [WUISelectpicker](#wui-selectpicker) | `0.8`   | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
+| [WUISelectpicker](#wui-selectpicker) | `0.9`   | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
 | [WUIDatepicker](#wui-datepicker)     | `0.7`   | Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`. |
 | [WUITimepicker](#wui-timepicker)     | `0.8`   | Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`. |
 | [WUIColorpicker](#wui-colorpicker)   | `0.8`   | Componente para la implementación de entradas de datos de tipo selector de color basada en el elemento HTML `<input type="color">`. |
@@ -234,8 +234,8 @@ Código HTML:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.6.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.6.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.8.root.css">
@@ -264,7 +264,7 @@ Código HTML:
 		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.3.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.8.js"></script>
@@ -305,7 +305,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.8.0"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Opcionalmente se pueden incluir las librerías de manera individual, para ello s
 Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`) ya que la versión será definida automáticamente por el script de carga simple.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.8.0&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Los nombres de las librerías pasadas en el parámetro `class` no deben contener
 Adicionalmente se puede omitir la carga de los archivos `root.css` de cada librería agregando el parámetro `root` con el valor `0` (cero) en la URL del archivo `wui.js`.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.8.0&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.9.0&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
@@ -3861,7 +3861,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ### WUISelectpicker
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`.
 
@@ -3869,9 +3869,9 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.8.js) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.8.css) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.8.root.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.9.js) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.9.css) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.9.root.css) |
 
 #### Constructor
 
@@ -4037,9 +4037,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.9.js"></script>
 ```
 
 Código HTML:

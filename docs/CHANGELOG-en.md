@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.9.0] - 2026-05-28
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUISelectpicker version class update to `0.9`.
+	- Fixed error in loading component options based on previously loaded `<select>` elements.
+
 ## [v0.8.1] - 2026-05-28
 
 Features:

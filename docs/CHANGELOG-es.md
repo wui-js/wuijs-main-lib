@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.9.0] - 2026-05-28
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUISelectpicker a `0.9`.
+	- Se corrigió error en la carga de las opciones del componente en base a elementos `<select>` previamente cargados.
+
 ## [v0.8.1] - 2026-05-28
 
 Características:
