@@ -7,6 +7,51 @@
 
 # Change Log
 
+## [v0.10.0] - 2026-06-03
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUIModal version class update to `0.7`.
+	- Refactored code.
+3. WUIPaging version class update to `0.7`.
+	- Added boolean argument `instant` to `select` method.
+	- Improved handling of out-of-view pages.
+4. WUIForm version class update to `0.7`.
+	- Adapted CSS for WUISelectpicker `0.10`.
+	- Refactored code.
+5. WUIFormat version class update to `0.4`.
+	- Added `Number.prototype.wuiSetDefaults()` method.
+	- Added `String.prototype.wuiSetDefaults()` method.
+	- Added `Date.prototype.wuiSetDefaults()` method.
+	- Updated TLDs list `String.prototype.wuiConstants.tlds` to version `20260602`.
+	- Updated locales list `Date.prototype.wuiConstants.locales` to version `20250617`.
+	- Refactored code.
+6. WUISelectpicker version class update to `0.10`.
+	- Added function property `onClose`.
+	- Added fade-in and fade-out effect to the opening and closing of the selection box in mobile and hidden mode.
+	- Fixed error of option values load ​​from pre-existing html elements.
+	- Fixed error in z-index priority of the overlay element.
+	- Refactored code.
+7. WUIDatepicker version class update to `0.8`.
+	- Added boolean property `hidden`.
+	- Added function property `onClose`.
+	- Refactored code.
+8. WUITimepicker version class update to `0.9`.
+	- Added boolean property `hidden`.
+	- Added function property `onClose`.
+	- Refactored code.
+9. WUIColorpicker version class update to `0.9`.
+	- Added boolean property `hidden`.
+	- Added function property `onClose`.
+	- Refactored code.
+10. WUISwitch version class update to `0.7`.
+	- Refactored code.
+11. WUIIntensity version class update to `0.5`.
+	- Refactored code.
+12. WUIButton version class update to `0.9`.
+	- Refactored code.
+
 ## [v0.9.2] - 2026-05-28
 
 Features:

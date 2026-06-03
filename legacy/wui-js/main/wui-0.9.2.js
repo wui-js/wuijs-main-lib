@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.10.0
+ * @version 0.9.2
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -24,7 +24,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.10.0";
+		const version = "0.9.2";
 		const libraries = {};
 		libraries["0.4.0"] = {
 			"cookie": { v: "0.4", js: true, css: false },
@@ -125,19 +125,7 @@
 			"selectpicker": { v: "0.9", js: true, css: true },
 		});
 		libraries["0.9.1"] = Object.assign({}, libraries["0.9.0"]);
-		libraries["0.9.2"] = Object.assign({}, libraries["0.9.1"]);
-		libraries["0.10.0"] = Object.assign({}, libraries["0.9.2"], {
-			"modal": { v: "0.7", js: true, css: true },
-			"paging": { v: "0.7", js: true, css: true },
-			"form": { v: "0.7", js: true, css: true },
-			"format": { v: "0.4", js: true, css: true },
-			"selectpicker": { v: "0.10", js: true, css: true },
-			"datepicker": { v: "0.8", js: true, css: true },
-			"timepicker": { v: "0.9", js: true, css: true },
-			"colorpicker": { v: "0.9", js: true, css: true },
-			"switch": { v: "0.7", js: true, css: true },
-			"button": { v: "0.9", js: true, css: true }
-		});
+		libraries["0.9.2"] = Object.assign({}, libraries["0.9.2"]);
 		let tasks = [];
 		let ver = version;
 		let cls = "";
@@ -166,13 +154,6 @@
 							type: "text/javascript",
 							async: false
 						}));
-						/*if (lib.jsTexts) {
-							tasks.push(createResource("script", {
-								src: `${dir}${name}/wui-${name}-${lib.v}.texts.js?${d}`,
-								type: "text/javascript",
-								async: false
-							}));
-						}*/
 					}
 					if (lib.css) {
 						tasks.push(createResource("link", {
@@ -187,13 +168,6 @@
 								rel: "stylesheet"
 							}));
 						}
-						/*if (lib.cssTexts) {
-							tasks.push(createResource("link", {
-								href: `${dir}${name}/wui-${name}-${lib.v}.texts.css?${d}`,
-								type: "text/css",
-								rel: "stylesheet"
-							}));
-						}*/
 					}
 				}
 			});

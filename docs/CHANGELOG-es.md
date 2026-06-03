@@ -7,6 +7,51 @@
 
 # Registro de Cambios
 
+## [v0.10.0] - 2026-06-03
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIModal a `0.7`.
+	- Se refactorizó el código.
+3. Se actualizó versión clase WUIPaging a `0.7`.
+	- Se agregó el parámetro booleano `instant` al método `select`.
+	- Se refactorizó el código.
+4. Se actualizó versión clase WUIForm a `0.7`.
+	- Se adaptó CSS para WUISelectpicker `0.10`.
+	- Se refactorizó el código.
+5. Se actualizó versión clase WUIFormat a `0.4`.
+	- Se agregó el método `Number.prototype.wuiSetDefaults()`.
+	- Se agregó el método `String.prototype.wuiSetDefaults()`.
+	- Se agregó el método `Date.prototype.wuiSetDefaults()`.
+	- Se actualizó la lista de TLDs `String.prototype.wuiConstants.tlds` a versión `20260602`.
+	- Se actualizó la lista de idiomas `Date.prototype.wuiConstants.locales` a versión `20250617`.
+	- Se refactorizó el código.
+6. Se actualizó versión clase WUISelectpicker a `0.10`.
+	- Se agregó la propiedad de función `onClose`.
+	- Se agregó efecto fadein y fadeout en la apertura y cierre de la caja de selección en modo móvil y oculto.
+	- Se corrigió error de carga de valores de opción desde los elemento html preexistentes.
+	- Se corrigió error de prioridad z-index del elemento overlay.
+	- Se refactorizó el código.
+7. Se actualizó versión clase WUIDatepicker a `0.8`.
+	- Se agregó la propiedad booleana `hidden`.
+	- Se agregó la propiedad de función `onClose`.
+	- Se refactorizó el código.
+8. Se actualizó versión clase WUITimepicker a `0.9`.
+	- Se agregó la propiedad booleana `hidden`.
+	- Se agregó la propiedad de función `onClose`.
+	- Se refactorizó el código.
+9. Se actualizó versión clase WUIColorpicker a `0.9`.
+	- Se agregó la propiedad booleana `hidden`.
+	- Se agregó la propiedad de función `onClose`.
+	- Se refactorizó el código.
+10. Se actualizó versión clase WUISwitch a `0.7`.
+	- Se refactorizó el código.
+11. Se actualizó versión clase WUIIntensity a `0.5`.
+	- Se refactorizó el código.
+12. Se actualizó versión clase WUIButton a `0.9`.
+	- Se refactorizó el código.
+
 ## [v0.9.2] - 2026-05-28
 
 Características:
