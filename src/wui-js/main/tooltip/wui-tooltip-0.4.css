@@ -1,0 +1,177 @@
+/*
+ * @file wui-tooltip-0.4.css
+ * @version 0.4
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+.wui-tooltip-target {
+	position: relative;
+}
+
+.wui-tooltip,
+.wui-tooltip-top,
+.wui-tooltip-left,
+.wui-tooltip-right,
+.wui-tooltip-bottom {
+	--tooltip-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	--tooltip-transition: .4s;
+	visibility: hidden;
+	-khtml-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: var(--tooltip-shadow);
+	-moz-box-shadow: var(--tooltip-shadow);
+	box-shadow: var(--tooltip-shadow);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: var(--wui-tooltip-bgcolor);
+	padding: 4px 8px 4px 8px;
+	text-align: center;
+	font-size: 12px;
+	color: var(--wui-tooltip-textcolor);
+	-webkit-transition: -khtml-opacity var(--tooltip-transition);
+	-moz-transition: -moz-opacity var(--tooltip-transition);
+	transition: opacity var(--tooltip-transition);
+}
+
+.wui-tooltip::before,
+.wui-tooltip::after,
+.wui-tooltip-top::after,
+.wui-tooltip-left::before,
+.wui-tooltip-right::before,
+.wui-tooltip-bottom::after {
+	content: " ";
+	position: absolute;
+	z-index: -2;
+	width: 10px;
+	height: 10px;
+	background-color: var(--wui-tooltip-bgcolor);
+}
+
+.wui-tooltip.top::before,
+.wui-tooltip.left::after,
+.wui-tooltip.right::after,
+.wui-tooltip.bottom::before {
+	display: none;
+}
+
+.wui-tooltip.top,
+.wui-tooltip-top {
+	bottom: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.wui-tooltip.top::after,
+.wui-tooltip-top::after {
+	bottom: -5px;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0) rotate(45deg);
+	-moz-transform: translate(-50%, 0) rotate(45deg);
+	transform: translate(-50%, 0) rotate(45deg);
+}
+
+.wui-tooltip.left,
+.wui-tooltip-left {
+	right: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.wui-tooltip.left::before,
+.wui-tooltip-left::before {
+	right: -5px;
+	top: 50%;
+	-webkit-transform: translate(0, -50%) rotate(45deg);
+	-moz-transform: translate(0, -50%) rotate(45deg);
+	transform: translate(0, -50%) rotate(45deg);
+}
+
+.wui-tooltip.right,
+.wui-tooltip-right {
+	left: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.wui-tooltip.right::before,
+.wui-tooltip-right::before {
+	left: -5px;
+	top: 50%;
+	-webkit-transform: translate(0, -50%) rotate(45deg);
+	-moz-transform: translate(0, -50%) rotate(45deg);
+	transform: translate(0, -50%) rotate(45deg);
+}
+
+.wui-tooltip.bottom,
+.wui-tooltip-bottom {
+	top: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.wui-tooltip.bottom::after,
+.wui-tooltip-bottom::after {
+	top: -5px;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0) rotate(45deg);
+	-moz-transform: translate(-50%, 0) rotate(45deg);
+	transform: translate(-50%, 0) rotate(45deg);
+}
+
+.wui-tooltip.nowrap,
+.wui-tooltip-top.nowrap,
+.wui-tooltip-left.nowrap,
+.wui-tooltip-right.nowrap,
+.wui-tooltip-bottom.nowrap {
+	white-space: nowrap;
+}
+
+.wui-tooltip.opened,
+.wui-tooltip-top.opened,
+.wui-tooltip-left.opened,
+.wui-tooltip-right.opened,
+.wui-tooltip-bottom.opened {
+	z-index: 102;
+	visibility: visible;
+	-khtml-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 1;
+	-webkit-transition-delay: var(--wui-tooltip-open-delay);
+	-moz-transition-delay: var(--wui-tooltip-open-delay);
+	transition-delay: var(--wui-tooltip-open-delay);
+}
+
+.wui-tooltip.locked,
+.wui-tooltip-top.locked,
+.wui-tooltip-left.locked,
+.wui-tooltip-right.locked,
+.wui-tooltip-bottom.locked {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+	.wui-tooltip,
+	.wui-tooltip-top,
+	.wui-tooltip-left,
+	.wui-tooltip-right,
+	.wui-tooltip-bottom {
+		display: none;
+	}
+}

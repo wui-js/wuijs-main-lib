@@ -1,0 +1,14 @@
+/*
+ * @file wui-loader-0.5.root.css
+ * @class WUILoader
+ * @version 0.5
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+:root {
+
+	/* wui-loader */
+
+	--wui-loader-color: #353a40;
+}

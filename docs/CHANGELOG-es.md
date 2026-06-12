@@ -7,50 +7,114 @@
 
 # Registro de Cambios
 
+## [v0.11.0] - 2026-06-12
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUICookie a `0.5`.
+	- Se refactorizó el código JS.
+3. Se actualizó versión clase WUIBody a `0.5`.
+	- Se refactorizó el código JS.
+4. Se actualizó versión clase WUILanguage a `0.6`.
+	- Se refactorizó el código JS.
+5. Se actualizó versión clase WUIScrolly a `0.6`.
+	- Se refactorizó el código JS.
+6. Se actualizó versión clase WUIIcon a `0.7`.
+	- Se agregó la clase JS `WUIIcon`.
+	- Se corrigió error en los iconos `claude-color` y `wuijs-color`.
+7. Se actualizó versión clase WUIFade a `0.4`.
+	- Se refactorizó el código JS.
+	- Se corrigió error en caso en métodos `in()` y `out()` cuando el parámetro `target` no existía.
+8. Se actualizó versión clase WUILoader a `0.5`.
+	- Se refactorizó el código JS.
+9. Se actualizó versión clase WUITooltip a `0.4`.
+	- Se refactorizó el código JS.
+	- Se corrigió error en el posicionamiento del tooltip cuando el texto tiene más de una línea.
+10. Se actualizó versión clase WUISlider a `0.6`.
+	- Se refactorizó el código JS.
+11. Se actualizó versión clase WUITabs a `0.4`.
+	- Se agregó la variable CSS `--wui-tabs-shadowcolor`.
+	- Se agregó la variable CSS `--wui-tabs-borderradius`.
+	- Se agregó la variable CSS `--wui-tabs-borderwidth`.
+	- Se agregó la variable CSS `--wui-tabs-bordercolor`.
+	- Se agregó la variable CSS `--wui-tabs-bgcolor`.
+	- Se agregó la variable CSS `--wui-tabs-scroll-bgcolor-out`.
+	- Se agregó la variable CSS `--wui-tabs-scroll-bgcolor-over`.
+	- Se agregó la variable CSS `--wui-tabs-tab-bgcolor-selected`.
+	- Se agregó la variable CSS `--wui-tabs-tab-iconcolor-selected`.
+	- Se agregó la variable CSS `--wui-tabs-tab-textcolor-selected`.
+	- Se eliminó la variable CSS `--wui-tabs-tab-iconcolor-mobile`.
+	- Se agregó la propiedad de selección `layout`.
+	- Se refactorizó el código JS.
+12. Se actualizó versión clase WUIMenubar a `0.6`.
+	- Se agregó la propiedad booleana `centered`.
+	- Se agregó la propiedad booleana `separations`.
+	- Se mejoró la visualización de cierre del submenú en modo móvil.
+	- Se refactorizó el código JS.
+	- Se corrigió error en apertura de submenú en modo móvil.
+13. Se actualizó versión clase WUIList a `0.6`.
+	- Se refactorizó el código JS.
+14. Se actualizó versión clase WUITable a `0.7`.
+	- Se refactorizó el código JS.
+15. Se actualizó versión clase WUIForm a `0.8`.
+	- Se corrigió error de visualización en el estilo del scroll en modo móvil.
+16. Se actualizó versión clase WUISelectpicker a `0.11`.
+	- Se mejoró el cálculo del alto de la caja de selección según el área disponible para despliegue y las propiedades `openDirection` y `hidden`.
+	- Se corrigió error en la ejecución de la propiedad `onChange` en el evento del botón "aceptar", cuando la propiedad `autochange` era verdadera.
+	- Se corrigió error de visualización en el estilo del scroll.
+17. Se actualizó versión clase WUIDatepicker a `0.9`.
+	- Se corrigió error en apertura del calendario.
+18. Se actualizó versión clase WUIColorpicker a `0.10`.
+	- Se corrigió error de visualización en la lista de colores.
+19. Se actualizó versión clase WUIButton a `0.10`.
+	- Se agregó la variable CSS `--wui-button-mobile-submit-minwidth`.
+	- Se agregó el método `getIcon()`.
+
 ## [v0.10.0] - 2026-06-03
 
 Características:
 
 1. Se actualizó cargador de recursos `wui.js`.
 2. Se actualizó versión clase WUIModal a `0.7`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 3. Se actualizó versión clase WUIPaging a `0.7`.
 	- Se agregó el parámetro booleano `instant` al método `select`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 4. Se actualizó versión clase WUIForm a `0.7`.
 	- Se adaptó CSS para WUISelectpicker `0.10`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 5. Se actualizó versión clase WUIFormat a `0.4`.
 	- Se agregó el método `Number.prototype.wuiSetDefaults()`.
 	- Se agregó el método `String.prototype.wuiSetDefaults()`.
 	- Se agregó el método `Date.prototype.wuiSetDefaults()`.
 	- Se actualizó la lista de TLDs `String.prototype.wuiConstants.tlds` a versión `20260602`.
 	- Se actualizó la lista de idiomas `Date.prototype.wuiConstants.locales` a versión `20250617`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 6. Se actualizó versión clase WUISelectpicker a `0.10`.
 	- Se agregó la propiedad de función `onClose`.
 	- Se agregó efecto fadein y fadeout en la apertura y cierre de la caja de selección en modo móvil y oculto.
 	- Se corrigió error de carga de valores de opción desde los elemento html preexistentes.
 	- Se corrigió error de prioridad z-index del elemento overlay.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 7. Se actualizó versión clase WUIDatepicker a `0.8`.
 	- Se agregó la propiedad booleana `hidden`.
 	- Se agregó la propiedad de función `onClose`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 8. Se actualizó versión clase WUITimepicker a `0.9`.
 	- Se agregó la propiedad booleana `hidden`.
 	- Se agregó la propiedad de función `onClose`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 9. Se actualizó versión clase WUIColorpicker a `0.9`.
 	- Se agregó la propiedad booleana `hidden`.
 	- Se agregó la propiedad de función `onClose`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 10. Se actualizó versión clase WUISwitch a `0.7`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 11. Se actualizó versión clase WUIIntensity a `0.5`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 12. Se actualizó versión clase WUIButton a `0.9`.
-	- Se refactorizó el código.
+	- Se refactorizó el código JS.
 
 ## [v0.9.2] - 2026-05-28
 

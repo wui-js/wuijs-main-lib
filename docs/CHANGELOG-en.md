@@ -7,50 +7,114 @@
 
 # Change Log
 
+## [v0.11.0] - 2026-06-12
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. WUICookie version class update to `0.5`.
+	- Refactored JS code.
+3. WUIBody version class update to `0.5`.
+	- Refactored JS code.
+4. WUILanguage version class update to `0.6`.
+	- Refactored JS code.
+5. WUIScrolly version class update to `0.6`.
+	- Refactored JS code.
+6. WUIIcon version class update to `0.7`.
+	- Added `WUIIcon` class.
+	- Fixed error in `claude-color` and `wuijs-color` icons.
+7. WUIFade version class update to `0.4`.
+	- Refactored JS code.
+	- Fixed error in `in()` and `out()` methods when the `target` argument did not exist.
+8. WUILoader version class update to `0.5`.
+	- Refactored JS code.
+9. WUITooltip version class update to `0.4`.
+	- Refactored JS code.
+	- Fixed error in tooltip positioning when the text has more than one line.
+10. WUISlider version class update to `0.6`.
+	- Refactored JS code.
+11. WUITabs version class update to `0.4`.
+	- Added `--wui-tabs-shadowcolor` CSS var.
+	- Added `--wui-tabs-borderradius` CSS var.
+	- Added `--wui-tabs-borderwidth` CSS var.
+	- Added `--wui-tabs-bordercolor` CSS var.
+	- Added `--wui-tabs-bgcolor` CSS var.
+	- Added `--wui-tabs-scroll-bgcolor-out` CSS var.
+	- Added `--wui-tabs-scroll-bgcolor-over` CSS var.
+	- Added `--wui-tabs-tab-bgcolor-selected` CSS var.
+	- Added `--wui-tabs-tab-iconcolor-selected` CSS var.
+	- Added `--wui-tabs-tab-textcolor-selected` CSS var.
+	- Deleted `--wui-tabs-tab-iconcolor-mobile` CSS var.
+	- Added `layout` selection property.
+	- Refactored JS code.
+12. WUIMenubar version class update to `0.6`.
+	- Added `centered` boolean property.
+	- Added `separations` boolean property.
+	- The closing visualization of the submenu in mobile mode has been improved.
+	- Refactored JS code.
+	- Fixed error in opening submenu in mobile mode.
+13. WUIList version class update to `0.6`.
+	- Refactored JS code.
+14. WUITable version class update to `0.7`.
+	- Refactored JS code.
+15. WUIForm version class update to `0.8`.
+	- Fixed a display error in the scroll style in mobile mode.
+16. WUISelectpicker version class update to `0.11`.
+	- Improved calculation of the selection box height based on the area available for deployment and the `openDirection` and `hidden` properties.
+	- Fixed error in the execution of the `onChange` property in the "accept" button event, when the `autochange` property was true.
+	- Fixed a display error in the scroll style.
+17. WUIDatepicker version class update to `0.9`.
+	- Fixed error in opening calendar.
+18. WUIColorpicker version class update to `0.10`.
+	- Fixed display error in the color list.
+19. WUIButton version class update to `0.9`.
+	- Added `--wui-button-mobile-submit-minwidth` CSS var.
+	- Added method `getIcon()`.
+
 ## [v0.10.0] - 2026-06-03
 
 Features:
 
 1. Updated the resource loader `wui.js`.
 2. WUIModal version class update to `0.7`.
-	- Refactored code.
+	- Refactored JS code.
 3. WUIPaging version class update to `0.7`.
 	- Added boolean argument `instant` to `select` method.
 	- Improved handling of out-of-view pages.
 4. WUIForm version class update to `0.7`.
 	- Adapted CSS for WUISelectpicker `0.10`.
-	- Refactored code.
+	- Refactored JS code.
 5. WUIFormat version class update to `0.4`.
 	- Added `Number.prototype.wuiSetDefaults()` method.
 	- Added `String.prototype.wuiSetDefaults()` method.
 	- Added `Date.prototype.wuiSetDefaults()` method.
 	- Updated TLDs list `String.prototype.wuiConstants.tlds` to version `20260602`.
 	- Updated locales list `Date.prototype.wuiConstants.locales` to version `20250617`.
-	- Refactored code.
+	- Refactored JS code.
 6. WUISelectpicker version class update to `0.10`.
-	- Added function property `onClose`.
+	- Added `onClose` function property.
 	- Added fade-in and fade-out effect to the opening and closing of the selection box in mobile and hidden mode.
 	- Fixed error of option values load ​​from pre-existing html elements.
 	- Fixed error in z-index priority of the overlay element.
-	- Refactored code.
+	- Refactored JS code.
 7. WUIDatepicker version class update to `0.8`.
-	- Added boolean property `hidden`.
-	- Added function property `onClose`.
-	- Refactored code.
+	- Added `hidden` boolean property.
+	- Added `onClose` function property.
+	- Refactored JS code.
 8. WUITimepicker version class update to `0.9`.
-	- Added boolean property `hidden`.
-	- Added function property `onClose`.
-	- Refactored code.
+	- Added `hidden` boolean property.
+	- Added `onClose` function property.
+	- Refactored JS code.
 9. WUIColorpicker version class update to `0.9`.
-	- Added boolean property `hidden`.
-	- Added function property `onClose`.
-	- Refactored code.
+	- Added `hidden` boolean property.
+	- Added `onClose` function property.
+	- Refactored JS code.
 10. WUISwitch version class update to `0.7`.
-	- Refactored code.
+	- Refactored JS code.
 11. WUIIntensity version class update to `0.5`.
-	- Refactored code.
+	- Refactored JS code.
 12. WUIButton version class update to `0.9`.
-	- Refactored code.
+	- Refactored JS code.
 
 ## [v0.9.2] - 2026-05-28
 
@@ -108,10 +172,10 @@ Features:
 	- Updated CSS variables values in `.root.css` file.
 	- Added `getRighticon()` method.
 9. WUISelectpicker version class update to `0.8`.
-	- Added boolean property `required`.
-	- Added boolean property `hidden`.
-	- Added boolean property `autochange`.
-	- Added text option `textClass`.
+	- Added `required` boolean property.
+	- Added `hidden` boolean property.
+	- Added `autochange` boolean property.
+	- Added `textClass` text option.
 	- Renamed `--wui-selectpicker-box-button-bordercolor` CSS var to `--wui-selectpicker-mobile-box-button-bordercolor`.
 	- Added `--wui-selectpicker-box-button-maxwidth` CSS var.
 	- Added `--wui-selectpicker-box-button-height` CSS var.
@@ -154,7 +218,7 @@ Features:
 	- Added `.rightbar-line` CSS class.
 	- Added `.rightbar-fill` CSS class.
 5. WUIMenubar version class update to `0.5`.
-	- Added boolean property `hiddenPassiveBorder`, to hide the passive border of the main bar.
+	- Added `hiddenPassiveBorder` boolean property, to hide the passive border of the main bar.
 	- Added `--wui-menubar-shadowopacity` CSS var.
 	- Added `--wui-menubar-bar-borderradius` CSS var.
 	- Added `--wui-menubar-bar-button-borderradius` CSS var.
@@ -164,12 +228,12 @@ Features:
 	- Added `--wui-menubar-mobile-bar-bgcolor-bottom` CSS var.
 	- Removed `--wui-menubar-borderradius` CSS var.
 6. WUISelectpicker version class update to `0.7`.
-	- Added array property `options`.
-	- Added string property `boxAlign`. Values: `"left"`, `"center"`, `"right"`.
-	- Added boolean property `viewicon`, to show the icons of the selected option.
-	- Added boolean property `viewtest`, to show the texts of the selected option.
-	- Renamed method `loadOptions` to `refresh`.
-	- Renamed option property `icon` to `iconClass`.
+	- Added `options` array property.
+	- Added `boxAlign` string property. Values: `"left"`, `"center"`, `"right"`.
+	- Added `viewicon` boolean property, to show the icons of the selected option.
+	- Added `viewtest` boolean property, to show the texts of the selected option.
+	- Renamed `loadOptions` method to `refresh`.
+	- Renamed `icon` option property to `iconClass`.
 	- Renamed `--wui-selectpicker-bordercolor` CSS var to `--wui-selectpicker-bordercolor-out`.
 	- Added `--wui-selectpicker-bordercolor-over` CSS var.
 	- Added `--wui-selectpicker-bordercolor-disabled` CSS var.
@@ -343,7 +407,7 @@ Features:
 	- Added `--wui-modal-mobile-page-box-borderradius-maximized` CSS var to improve compatibility with iPhone screens.
 	- Fixed bug in the `close()` method where the underlying modal was not resized when the current modal was closed.
 3. WUIMenubar version class update to `0.3`.
-	- Added `compacted` property.
+	- Added `compacted` boolean property.
 	- Added `--wui-menubar-mobile-bar-horizpadding` CSS var to improve compatibility with iPhone screens.
 	- Added `--wui-menubar-mobile-bar-vertpadding` CSS var to improve compatibility with iPhone screens.
 4. WUISelectpicker version class update to `0.4`.
@@ -359,13 +423,13 @@ Features:
 9. WUIIntensity version class update to `0.2`.
 	- Improved `init()` method for support of empty HTML elements.
 10. WUIButton version class update to `0.4`.
-	- Added `textClass` property.
-	- Added `textData` property.
-	- Added `iconClass` property.
-	- Added `iconImage` property.
-	- Added `submit` property.
-	- Added `warning` property.
-	- Added `flat` property.
+	- Added `textClass` string property.
+	- Added `textData` map property.
+	- Added `iconClass` string property.
+	- Added `iconImage` string property.
+	- Added `submit` boolean property.
+	- Added `warning` boolean property.
+	- Added `flat` boolean property.
 	- Improved `init()` method for support of empty HTML elements.
 
 ## [v0.5.1] - 2026-04-09
@@ -555,8 +619,8 @@ Features:
 	- Fixed bug to load the `value` property when instantiating the object.
 	- Fixed bug to ensure HTML element references of type `HTMLInputElement`.
 	- Fixed bug in private method `#addHTMLOption()`.
-	- Deprecated `getValue()` method, replaced by the read-only property `value`.
-	- Deprecated `getText()` method, replaced by the read-only property `text`.
+	- Deprecated `getValue()` method, replaced by the read-only `value` property.
+	- Deprecated `getText()` method, replaced by the read-only `text` property.
 18. WUIDatepicker version class update to `0.2`.
 	- Added support for private values.
 	- Added support for light/dark CSS formatting.
