@@ -1,0 +1,152 @@
+/*
+@file wui-scrolly-0.7.css
+@class WUIScrolly
+@version 0.7
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+.wui-scrolly,
+.wui-scrolly > .section,
+.wui-scrolly > .section *,
+.wui-scrolly > .section *::before,
+.wui-scrolly > .section *::after {
+	box-sizing: border-box;
+}
+
+.wui-scrolly {
+	position: relative;
+}
+
+.wui-scrolly > .section {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.wui-scrolly > .section > .scene {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.wui-scrolly > .section > .scene.rows {
+	flex-direction: row;
+}
+
+.wui-scrolly > .section > .scene.columns {
+	flex-direction: column;
+}
+
+.wui-scrolly > .section > .scene.fixed {
+	position: fixed;
+	top: 0;
+}
+
+.wui-scrolly > .section > .scene.shadow {
+	--scene-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: var(--scene-shadow);
+}
+
+.wui-scrolly > .section > .scene.shadow-inset {
+	--scene-shadow: rgb(0, 0, 0, 0.25) 0px -50px 50px -30px inset, rgb(0, 0, 0, 0.06) 0px -15px 15px -15px inset;
+	box-shadow: var(--scene-shadow);
+}
+
+.wui-scrolly > .section > .paging {
+	--paging-transition: .4s;
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	display: flex;
+	height: 10px;
+	opacity: 0;
+	transition: opacity var(--paging-transition);
+	transform: translateX(-50%);
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.wui-scrolly > .section > .paging.fixed {
+	position: fixed;
+	opacity: 1;
+}
+
+.wui-scrolly > .section > .paging > div {
+	background-color: var(--wui-scrolly-paging-bgcolor-hidden);
+}
+
+.wui-scrolly > .section > .paging > div.selected {
+	background-color: var(--wui-scrolly-paging-bgcolor-visible);
+}
+
+.wui-scrolly > .section > .paging.dots > div {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.wui-scrolly > .section > .paging.lines > div {
+	width: 40px;
+	height: 4px;
+	border-radius: 2px;
+}
+
+.wui-scrolly > .section.static {
+	bottom: auto;
+	height: auto;
+}
+
+.wui-scrolly > .section.static > .scene {
+	position: relative;
+	height: auto;
+}
+
+@media screen and (max-width: 999px) {
+
+	.wui-scrolly > .section > .scene {
+		flex-direction: column;
+	}
+}
+
+/* wui-scrolly-load */
+
+.wui-scrolly-load:is(.fadein, .fadein-up, .fadein-top, .fadein-left, .fadein-right) {
+	--fadein-transition: all .8s;
+	opacity: 0;
+	transition: var(--fadein-transition);
+}
+
+.wui-scrolly-load:is(.fadein-up, .fadein-top) {
+	top: 56px;
+}
+
+.wui-scrolly-load.fadein-left {
+	left: 56px;
+}
+
+.wui-scrolly-load.fadein-right {
+	left: -56px;
+}
+
+.wui-scrolly-load:is(.fadein, .fadein-up, .fadein-top, .fadein-left, .fadein-right).loaded {
+	top: 0;
+	left: 0;
+	opacity: 1;
+}

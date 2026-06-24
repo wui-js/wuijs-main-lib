@@ -1,0 +1,181 @@
+/*
+@file wui-tabs-0.5.css
+@class WUITabs
+@version 0.5
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+div.wui-tabs,
+div.wui-tabs * {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-tabs {
+	--tabs-shadow: rgb(from var(--wui-tabs-shadowcolor) r g b / 40%) 0px 4px 12px;
+	display: flex;
+	border: var(--wui-tabs-borderwidth) solid var(--wui-tabs-bordercolor);
+	border-radius: var(--wui-tabs-borderradius);
+	box-shadow: var(--tabs-shadow);
+	height: 100%;
+	background-color: var(--wui-tabs-bgcolor);
+	overflow: hidden;
+}
+
+div.wui-tabs > .bar {
+	display: flex;
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+div.wui-tabs > .bar > .tab {
+	display: flex;
+	cursor: pointer;
+	height: 40px;
+	background-color: var(--wui-tabs-tab-bgcolor-out);
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	line-height: 40px;
+	color: var(--wui-tabs-tab-textcolor-out);
+}
+
+div.wui-tabs > .bar > .tab > .icon {
+	width: 24px;
+	height: 24px;
+	background-color: var(--wui-tabs-tab-iconcolor-out);
+}
+
+div.wui-tabs > .bar > .tab > .text {
+	font-size: 15px;
+}
+
+div.wui-tabs > .bar > .tab:hover {
+	background-color: var(--wui-tabs-tab-bgcolor-over);
+	color: var(--wui-tabs-tab-textcolor-over);
+}
+
+div.wui-tabs > .bar > .tab:hover > .icon {
+	background-color: var(--wui-tabs-tab-iconcolor-over);
+}
+
+div.wui-tabs > .bar > .tab.selected {
+	background-color: var(--wui-tabs-tab-bgcolor-selected);
+	color: var(--wui-tabs-tab-textcolor-over);
+}
+
+div.wui-tabs > .bar > .tab.selected > .icon {
+	background-color: var(--wui-tabs-tab-iconcolor-selected);
+}
+
+div.wui-tabs > .body {
+	position: relative;
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+}
+
+div.wui-tabs > .body > .page {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	overflow: auto;
+}
+
+div.wui-tabs > .body > .page.selected {
+	display: flex;
+}
+
+div.wui-tabs > .body.scroll {
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--wui-tabs-scroll-bgcolor-out) transparent;
+}
+
+div.wui-tabs > .body.scroll::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+	background-color: transparent;
+}
+
+div.wui-tabs > .body.scroll::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-tabs-scroll-bgcolor-out);
+}
+
+div.wui-tabs > .body.scroll::-webkit-scrollbar-thumb:hover,
+div.wui-tabs > .body.scroll::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-tabs-scroll-bgcolor-over);
+}
+
+div.wui-tabs > .body.scroll::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div.wui-tabs:is(.top, .bottom) {
+	flex-direction: column;
+}
+
+div.wui-tabs:is(.top, .bottom) > .bar {
+	height: 40px;
+}
+
+div.wui-tabs:is(.top, .bottom) > .bar > .tab {
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	line-height: 40px;
+}
+
+div.wui-tabs:is(.top, .bottom) > .bar > .tab .icon {
+	margin-right: 10px;
+}
+
+div.wui-tabs.top > .bar {
+	order: 0;
+}
+
+div.wui-tabs.top > .bar > .tab:first-child {
+	border-top-left-radius: var(--wui-tabs-borderradius);
+}
+
+div.wui-tabs.top > .bar > .tab:last-child {
+	border-top-right-radius: var(--wui-tabs-borderradius);
+}
+
+div.wui-tabs.top > .body {
+	order: 1;
+}
+
+div.wui-tabs.bottom > .bar {
+	order: 1;
+}
+
+div.wui-tabs.bottom > .bar > .tab:first-child {
+	border-bottom-left-radius: var(--wui-tabs-borderradius);
+}
+
+div.wui-tabs.bottom > .bar > .tab:last-child {
+	border-bottom-right-radius: var(--wui-tabs-borderradius);
+}
+
+div.wui-tabs.bottom > .body {
+	order: 0;
+}
+
+@media screen and (max-width: 767px) {
+
+	div.wui-tabs.mobile > .bar > .tab,
+	div.wui-tabs.mobile > .bar > .tab:is(:hover, .selected) {
+		background-color: transparent;
+	}
+
+	div.wui-tabs.mobile > .bar > .tab > .text {
+		display: none;
+	}
+}

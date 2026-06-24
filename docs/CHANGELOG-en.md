@@ -7,6 +7,60 @@
 
 # Change Log
 
+## [v0.12.0] - 2026-06-24
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIScrolly class version to `0.7`.
+	- Refactored CSS code.
+3. Updated WUIIcon class version to `0.8`.
+	- Refactored CSS code.
+	- Fixed error in `gitlab-fill`, `gitlab-color`, `google-fill`, `google-color`, `googledrive-fill` and `googledrive-color` icons.
+4. Updated WUILoader class version to `0.6`.
+	- Refactored CSS code.
+5. Updated WUITooltip class version to `0.5`.
+	- Refactored CSS code.
+6. Updated WUIModal class version to `0.8`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+7. Updated WUIPaging class version to `0.8`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+8. Updated WUISlider class version to `0.7`.
+	- Refactored CSS code.
+9. Updated WUITabs class version to `0.5`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+10. Updated WUIMenubar class version to `0.7`.
+	- Refactored CSS code.
+11. Updated WUIList class version to `0.7`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+12. Updated WUITable class version to `0.8`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+13. Updated WUIForm class version to `0.9`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+14. Updated WUISelectpicker class version to `0.12`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+15. Updated WUIDatepicker class version to `0.10`.
+	- Refactored CSS code.
+16. Updated WUITimepicker class version to `0.10`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+17. Updated WUIColorpicker class version to `0.11`.
+	- Refactored CSS code.
+	- Added scroll style support for the Firefox browser.
+18. Updated WUISwitch class version to `0.8`.
+	- Refactored CSS code.
+19. Updated WUIIntensity class version to `0.6`.
+	- Refactored CSS code.
+20. Updated WUIButton class version to `0.11`.
+	- Refactored CSS code.
+
 ## [v0.11.0] - 2026-06-12
 
 Features:

@@ -1,16 +1,15 @@
 /*
- * @file wui-form-0.8.css
- * @version 0.8
- * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
- * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
- */
+@file wui-form-0.9.css
+@class WUIForm
+@version 0.9
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
 
 .wui-form,
 .wui-form *,
 .wui-form *::before {
 	-webkit-tap-highlight-color: transparent;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -84,6 +83,11 @@
 	overflow-y: auto !important;
 }
 
+.wui-form > .body:is(.scroll, .scroll-x, .scroll-y) {
+	scrollbar-width: thin;
+	scrollbar-color: var(--wui-form-body-scroll-bgcolor-out) transparent;
+}
+
 .wui-form > .body:is(.scroll, .scroll-x, .scroll-y)::-webkit-scrollbar {
 	width: 4px;
 	height: 4px;
@@ -146,6 +150,12 @@
 	border: 0;
 }
 
+.wui-form fieldset.center {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .wui-form fieldset > legend {
 	padding: 0 0 10px 0;
 }
@@ -174,7 +184,7 @@
 }
 
 .wui-form fieldset > .field > label {
-	top: calc(-1 * var(--wui-form-input-borderwidth));
+	top: calc(-2 * var(--wui-form-input-borderwidth));
 	display: flex;
 	align-items: center;
 	cursor: text;
@@ -204,28 +214,19 @@
 }
 
 .wui-form fieldset > .field > label {
-	--label-webkit-transition: var(--label-transition-base), -khtml-opacity .2s ease-out;
-	--label-moz-transition: var(--label-transition-base), -moz-opacity .2s ease-out;
-	--label-transition: var(--label-transition-base), opacity .2s ease-out;
-	--label-transition-base: top .2s ease-out, color .2s ease-out;
+	--label-transition: top .2s ease-out, color .2s ease-out, opacity .2s ease-out;
 	position: absolute;
-	top: 0px;
 	left: 10px;
 	width: auto;
 	font-size: 13px;
 	color: var(--wui-form-label-textcolor-out);
 	white-space: nowrap;
-	-webkit-transition: var(--label-webkit-transition);
-	-moz-transition: var(--label-moz-transition);
 	transition: var(--label-transition);
 }
 
 .wui-form fieldset > .field > label.pointer {
 	cursor: pointer !important;
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
 	user-select: none;
 }
 
@@ -272,10 +273,6 @@
 .wui-form fieldset > .field > :is(input, select, textarea):is(:-webkit-autofill, :autofill),
 .wui-form fieldset > .field > :is(input, select, textarea):is(:-webkit-autofill, :autofill):is(:hover, :focus, :active) {
 	--input-transition: color 9999s ease-out, background-color 9999s ease-out;
-	-webkit-transition: var(--input-transition);
-	-webkit-transition-delay: 9999s;
-	-moz-transition: var(--input-transition);
-	-moz-transition-delay: 9999s;
 	transition: var(--input-transition);
 	transition-delay: 9999s;
 }
@@ -288,8 +285,6 @@
 .wui-form fieldset > .field > input[type="time"] {
 	z-index: 2;
 	min-width: 140px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 }
 
@@ -360,10 +355,8 @@
 }
 
 .wui-form fieldset > .field > input[type="color"] {
-	-webkit-border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
-	-moz-border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
-	border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
 	border: var(--wui-form-input-borderwidth) solid var(--wui-form-input-bordercolor-out);
+	border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
 }
 
 .wui-form fieldset > .field:hover > input[type="color"]:enabled,
@@ -384,8 +377,6 @@
 .wui-form fieldset > .field > input[type="range"]::-moz-range-track,
 .wui-form fieldset > .field > input[type="range"]::-ms-thumb,
 .wui-form fieldset > .field > input[type="range"]::-ms-track {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -394,13 +385,9 @@
 	--range-transition: background .2s ease-in-out;
 	width: 100%;
 	height: var(--wui-form-range-trackbar-height);
-	-webkit-border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
-	-moz-border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
-	border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
 	border: var(--wui-form-range-trackbar-borderwidth) solid var(--wui-form-range-trackbar-bordercolor-out);
+	border-radius: calc(var(--wui-form-range-trackbar-height) / 2);
 	background-color: var(--wui-form-range-trackbar-bgcolor-out);
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 }
 
@@ -419,19 +406,19 @@
 .wui-form fieldset > .field > input[type="range"]::-webkit-slider-thumb {
 	width: var(--wui-form-range-thumb-size);
 	height: var(--wui-form-range-thumb-size);
-	-webkit-border-radius: 50%;
-	-webkit-box-shadow: var(--range-shadow);
-	-webkit-transition: var(--range-transition);
-	-webkit-appearance: none;
+	border-radius: 50%;
+	box-shadow: var(--range-shadow);
+	appearance: none;
+	transition: var(--range-transition);
 }
 
 .wui-form fieldset > .field > input[type="range"]::-moz-range-thumb {
 	width: var(--wui-form-range-thumb-size);
 	height: var(--wui-form-range-thumb-size);
-	-moz-border-radius: 50%;
-	-moz-box-shadow: var(--range-shadow);
-	-moz-transition: var(--range-transition);
-	-moz-appearance: none;
+	border-radius: 50%;
+	box-shadow: var(--range-shadow);
+	appearance: none;
+	transition: var(--range-transition);
 }
 
 .wui-form fieldset > .field > input[type="range"]::-ms-thumb {
@@ -439,8 +426,8 @@
 	height: var(--wui-form-range-thumb-size);
 	border-radius: 50%;
 	box-shadow: var(--range-shadow);
-	transition: var(--range-transition);
 	appearance: none;
+	transition: var(--range-transition);
 }
 
 .wui-form fieldset > .field > input[type="range"]:enabled:hover {
@@ -497,39 +484,34 @@
 .wui-form fieldset > .field > input[type="range"]::-webkit-slider-runnable-track {
 	border: none;
 	background: transparent;
-	-webkit-box-shadow: none;
-	-webkit-appearance: none;
+	box-shadow: none;
+	appearance: none;
 }
 
 .wui-form fieldset > .field > input[type="range"]::-moz-range-track {
 	border: none;
 	background: transparent;
-	-moz-box-shadow: none;
-	-moz-appearance: none;
+	box-shadow: none;
+	appearance: none;
 }
 
 .wui-form fieldset > .field > input[type="range"]::-ms-track {
 	border: none;
 	background: transparent;
 	box-shadow: none;
-	-ms-appearance: none;
+	appearance: none;
 }
 
 .wui-form fieldset > .field > input[type="checkbox"] {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 20px;
 	height: 20px;
 	border: 1px solid var(--wui-form-input-bordercolor-out);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
 	background-color: var(--wui-form-input-bgcolor-out);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-o-appearance: none;
 	appearance: none;
+	justify-content: center;
+	align-items: center;
 }
 
 .wui-form fieldset > .field:hover > input[type="checkbox"]:enabled,
@@ -547,8 +529,6 @@
 .wui-form fieldset > .field > input[type="checkbox"]:checked::before {
 	width: 12px;
 	height: 12px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 	background-color: transparent;
 	cursor: pointer;
@@ -567,9 +547,6 @@
 	z-index: 2;
 	min-width: 140px;
 	padding-right: var(--wui-form-select-opener-iconsize);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-o-appearance: none;
 	appearance: none;
 }
 
@@ -649,32 +626,22 @@
 	width: 100%;
 	margin: 10px 0px;
 	border: var(--wui-form-progress-borderwidth) solid var(--wui-form-progress-bordercolor);
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	background: var(--wui-form-progress-bgcolor);
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 }
 
 .wui-form fieldset > .field > progress[value]::-webkit-progress-bar {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	background: var(--wui-form-progress-bgcolor);
 }
 
 .wui-form fieldset > .field > progress[value]::-webkit-progress-value {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	background: var(--wui-form-progress-valuecolor);
 }
 
 .wui-form fieldset > .field > progress[value]::-moz-progress-bar {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	background: var(--wui-form-progress-valuecolor);
 }
@@ -704,23 +671,19 @@
 	position: relative;
 	width: 100%;
 	padding: 10px;
+	background-color: var(--wui-form-message-bgcolor);
+	box-shadow: var(--message-shadow);
 	font-size: 14px;
 	color: var(--wui-form-message-textcolor);
-	background-color: var(--wui-form-message-bgcolor);
-	-webkit-box-shadow: var(--message-shadow);
-	-moz-box-shadow: var(--message-shadow);
-	box-shadow: var(--message-shadow);
 }
 
 .wui-form fieldset > .message.highlight {
-	color: var(--wui-form-message-highlight-textcolor);
 	background-color: var(--wui-form-message-highlight-bgcolor);
+	color: var(--wui-form-message-highlight-textcolor);
 }
 
 .wui-form fieldset > .message,
 .wui-form fieldset > .message > iframe {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
 
@@ -807,6 +770,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
 	.wui-form {
 		padding-top: 0;
 	}
@@ -855,8 +819,7 @@
 	}
 }
 
-/* wui-form fill */
-/* wui-form line */
+/* wui-form fill, line */
 
 .wui-form:is(.fill, .line) fieldset > legend {
 	padding: 0 0 20px 0;
@@ -866,12 +829,9 @@
 	right: 0px;
 }
 
-/* wui-form fill */
-/* wui-form border */
+/* wui-form fill, border */
 
 .wui-form:is(.fill, .border) fieldset > .field:not(.inline, .noborder) {
-	-webkit-border-radius: var(--wui-form-input-borderradius);
-	-moz-border-radius: var(--wui-form-input-borderradius);
 	border-radius: var(--wui-form-input-borderradius);
 	background-color: var(--wui-form-input-bgcolor-out);
 }
@@ -880,8 +840,6 @@
 .wui-form:is(.fill, .border) fieldset > .field > :is(input[type="range"], input[type="color"], input[type="checkbox"]) {
 	--field-transition: border-color .4s ease-out, background-color .4s ease-out;
 	border-color: var(--wui-form-input-bordercolor-out);
-	-webkit-transition: var(--field-transition);
-	-moz-transition: var(--field-transition);
 	transition: var(--field-transition);
 }
 
@@ -903,10 +861,23 @@
 }
 
 @media screen and (max-width: 767px) {
+
 	.wui-form:is(.fill, .border) fieldset > .field:not(.inline) {
-		-webkit-border-radius: var(--wui-form-mobile-input-borderradius);
-		-moz-border-radius: var(--wui-form-mobile-input-borderradius);
 		border-radius: var(--wui-form-mobile-input-borderradius);
+	}
+}
+
+/* wui-form fill, border / round, curve */
+
+.wui-form:is(.fill, .border):is(.round, .curve) fieldset > .field:not(.inline) {
+	--field-radius: calc(var(--wui-form-input-height) / 2);
+	border-radius: var(--field-radius);
+}
+
+@media screen and (max-width: 767px) {
+
+	.wui-form:is(.fill, .border):is(.round, .curve) fieldset > .field:not(.inline) {
+		--field-radius: calc(var(--wui-form-mobile-input-height) / 2);
 	}
 }
 
@@ -914,8 +885,6 @@
 
 .wui-form.line fieldset > .field:not(.inline, .noborder) {
 	border-bottom-color: var(--wui-form-input-bordercolor-out);
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
 
@@ -942,13 +911,9 @@
 	bottom: -1px;
 	left: 0px;
 	display: block;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	height: var(--wui-form-input-borderwidth);
 	background-color: var(--wui-form-input-bordercolor-focus);
-	-webkit-transition: var(--field-transition);
-	-moz-transition: var(--field-transition);
 	transition: var(--field-transition);
 	content: "";
 }
@@ -961,24 +926,10 @@
 	}
 }
 
-/* wui-form border curve */
-
-.wui-form.border.curve fieldset > .field:not(.inline) {
-	--field-radius: calc(var(--wui-form-input-height) / 2);
-	-webkit-border-radius: var(--field-radius);
-	-moz-border-radius: var(--field-radius);
-	border-radius: var(--field-radius);
-}
-
-@media screen and (max-width: 767px) {
-	.wui-form.border.curve fieldset > .field:not(.inline) {
-		--field-radius: calc(var(--wui-form-mobile-input-height) / 2);
-	}
-}
-
 /* wui-form mobile */
 
 @media screen and (max-width: 767px) {
+
 	.wui-form.mobile legend {
 		padding: 10px;
 		font-size: 17px;
@@ -989,12 +940,8 @@
 		--fieldset-shadow: rgba(0, 0, 0, .05) 0px 4px 12px;
 		gap: 0;
 		padding: 0;
-		-webkit-border-radius: var(--fieldset-radius) !important;
-		-moz-border-radius: var(--fieldset-radius) !important;
 		border-radius: var(--fieldset-radius) !important;
 		background-color: var(--wui-form-fieldset-bgcolor);
-		-webkit-box-shadow: var(--fieldset-shadow);
-		-moz-box-shadow: var(--fieldset-shadow);
 		box-shadow: var(--fieldset-shadow);
 	}
 
@@ -1008,8 +955,6 @@
 		border-right: 0 !important;
 		border-bottom: 0 !important;
 		border-left: 0 !important;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
 		border-radius: 0;
 		background-color: #fff !important;
 	}
@@ -1020,19 +965,11 @@
 
 	.wui-form.mobile fieldset > .field:first-child {
 		border-top: 0px !important;
-		-webkit-border-top-left-radius: var(--radius);
-		-webkit-border-top-right-radius: var(--radius);
-		-moz-border-radius-topleft: var(--radius);
-		-moz-border-radius-topright: var(--radius);
 		border-top-left-radius: var(--radius);
 		border-top-right-radius: var(--radius);
 	}
 
 	.wui-form.mobile fieldset > .field:last-child {
-		-webkit-border-bottom-right-radius: var(--radius);
-		-webkit-border-bottom-left-radius: var(--radius);
-		-moz-border-radius-bottomleft: var(--radius);
-		-moz-border-radius-bottomright: var(--radius);
 		border-bottom-right-radius: var(--radius);
 		border-bottom-left-radius: var(--radius);
 	}
@@ -1070,8 +1007,6 @@
 	.wui-form.mobile fieldset > .field > :is(input, select, textarea) {
 		flex: 1;
 		border: var(--wui-form-input-borderwidth) solid var(--wui-form-input-bgcolor-out);
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
 		border-radius: 10px;
 		text-align: right;
 	}
@@ -1081,8 +1016,6 @@
 	}
 
 	.wui-form.mobile fieldset > .field > input[type="checkbox"]:checked::before {
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
 		border-radius: 50%;
 	}
 
@@ -1137,6 +1070,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
 	.wui-form fieldset > .field:is(.icon-left, .icon-right) > .wui-icon {
 		width: 24px;
 		height: 24px;
@@ -1147,9 +1081,7 @@
 	}
 }
 
-/* wui-selectpicker */
-/* wui-datepicker */
-/* wui-timepicker */
+/* wui-selectpicker, wui-datepicker, wui-timepicker */
 
 .wui-form fieldset > .field > .wui-selectpicker {
 	--wui-selectpicker-bgcolor: transparent;
@@ -1197,8 +1129,7 @@
 	padding-right: 40px !important;
 }
 
-/* wui-colorpicker */
-/* wui-switch */
+/* wui-colorpicker, wui-switch */
 
 .wui-form fieldset > .field.inline > label {
 	right: 60px;

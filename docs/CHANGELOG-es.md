@@ -7,6 +7,60 @@
 
 # Registro de Cambios
 
+## [v0.12.0] - 2026-06-24
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIScrolly a `0.7`.
+	- Se refactorizó el código CSS.
+3. Se actualizó versión clase WUIIcon a `0.8`.
+	- Se refactorizó el código CSS.
+	- Se corrigió error en los iconos `gitlab-fill`, `gitlab-color`, `google-fill`, `google-color`, `googledrive-fill` y `googledrive-color`.
+4. Se actualizó versión clase WUILoader a `0.6`.
+	- Se refactorizó el código CSS.
+5. Se actualizó versión clase WUITooltip a `0.5`.
+	- Se refactorizó el código CSS.
+6. Se actualizó versión clase WUIModal a `0.8`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+7. Se actualizó versión clase WUIPaging a `0.8`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+8. Se actualizó versión clase WUISlider a `0.7`.
+	- Se refactorizó el código CSS.
+9. Se actualizó versión clase WUITabs a `0.5`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+10. Se actualizó versión clase WUIMenubar a `0.7`.
+	- Se refactorizó el código CSS.
+11. Se actualizó versión clase WUIList a `0.7`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+12. Se actualizó versión clase WUITable a `0.8`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+13. Se actualizó versión clase WUIForm a `0.9`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+14. Se actualizó versión clase WUISelectpicker a `0.12`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+15. Se actualizó versión clase WUIDatepicker a `0.10`.
+	- Se refactorizó el código CSS.
+16. Se actualizó versión clase WUITimepicker a `0.10`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+17. Se actualizó versión clase WUIColorpicker a `0.11`.
+	- Se refactorizó el código CSS.
+	- Se agregó compatibilidad del estilo del scroll con navegador FireFox.
+18. Se actualizó versión clase WUISwitch a `0.8`.
+	- Se refactorizó el código CSS.
+19. Se actualizó versión clase WUIIntensity a `0.6`.
+	- Se refactorizó el código CSS.
+20. Se actualizó versión clase WUIButton a `0.11`.
+	- Se refactorizó el código CSS.
+
 ## [v0.11.0] - 2026-06-12
 
 Características:

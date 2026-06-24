@@ -1,0 +1,75 @@
+/*
+@file wui-paging-0.8.css
+@class WUIPaging
+@version 0.8
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+div.wui-paging,
+div.wui-paging * {
+	box-sizing: border-box;
+}
+
+div.wui-paging {
+	position: relative;
+	overflow: hidden;
+}
+
+div.wui-paging,
+div.wui-paging > .page {
+	width: 100%;
+	height: 100%;
+}
+
+div.wui-paging > .page {
+	--page-transition: var(--wui-paging-page-transition-time) ease-out;
+	position: absolute;
+	top: 0;
+	display: flex;
+	overflow: hidden;
+	background-color: var(--wui-paging-page-bgcolor);
+	visibility: hidden;
+	opacity: 1;
+	transition: opacity var(--page-transition), left var(--page-transition);
+	justify-content: center;
+}
+
+div.wui-paging > .page.scroll {
+	overflow: auto !important;
+	scrollbar-width: thin;
+	scrollbar-color: var(--wui-paging-page-scroll-bgcolor-out) transparent;
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+	background-color: transparent;
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-paging-page-scroll-bgcolor-out);
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb:hover,
+div.wui-paging > .page.scroll::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-paging-page-scroll-bgcolor-over);
+}
+
+div.wui-paging > .page.scroll::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div.wui-paging > .page.selected {
+	visibility: visible;
+	left: 0;
+}
+
+div.wui-paging > .page.left {
+	left: -100%;
+}
+
+div.wui-paging > .page.right {
+	left: 100%;
+}
