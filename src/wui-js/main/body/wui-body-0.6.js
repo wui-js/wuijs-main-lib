@@ -1,0 +1,254 @@
+/*
+ * @file wui-body-0.6.js
+ * @class WUIBody
+ * @version 0.6
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+class WUIBody {
+
+	static version = "0.6";
+
+	static #defaults = {
+		environment: "web",
+		importDirectory: "",
+		importMode: "fetch",
+		onCompleted: null,
+		debug: false
+	};
+
+	static #htmlCount = 0;
+	static #cssCount = 0;
+	static #jsCount = 0;
+	static #partCount = 0;
+
+	#properties = {};
+
+	static openUrl(url, download = "") {
+		const link = document.createElement("a");
+		link.href = url;
+		link.style.display = "none";
+		if (download !== "") {
+			link.download = download;
+		}
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	}
+
+	constructor(properties = {}) {
+		const defaults = structuredClone(WUIBody.#defaults);
+		Object.entries(defaults).forEach(([name, value]) => {
+			this[name] = name in properties ? properties[name] : value;
+		});
+	}
+
+	get environment() {
+		return this.#properties.environment;
+	}
+
+	get importDirectory() {
+		return this.#properties.importDirectory;
+	}
+
+	get importMode() {
+		return this.#properties.importMode;
+	}
+
+	get onCompleted() {
+		return this.#properties.onCompleted;
+	}
+
+	get debug() {
+		return this.#properties.debug;
+	}
+
+	set environment(value) {
+		if (typeof (value) === "string" && value.match(/^(local\.android|local\.ios|web)?$/i)) {
+			this.#properties.environment = value.toLowerCase();
+		}
+	}
+
+	set importDirectory(value) {
+		if (typeof (value) === "string") {
+			this.#properties.importDirectory = value;
+		}
+	}
+
+	set importMode(value) {
+		if (typeof (value) === "string" && value.match(/^(fetch|xhr)?$/i)) {
+			this.#properties.importMode = value;
+		}
+	}
+
+	set onCompleted(value) {
+		if (typeof (value) === "function" || value == null) {
+			this.#properties.onCompleted = value;
+		}
+	}
+
+	set debug(value) {
+		if (typeof (value) === "boolean") {
+			this.#properties.debug = value;
+		}
+	}
+
+	import(id, path, done) {
+		const cacheBuster = Date.now();
+		const cssPath = `${this.importDirectory}${path}.css?_=${cacheBuster}`;
+		const htmlPath = `${this.importDirectory}${path}.htm?_=${cacheBuster}`;
+		const jsPath = `${this.importDirectory}${path}.js?_=${cacheBuster}`;
+		const checkPath = (url) => {
+			const xhr = new XMLHttpRequest();
+			try {
+				xhr.open("HEAD", url, false);
+				xhr.send();
+			} catch (e) { }
+			return xhr.status !== 404;
+		}
+		const checkStatus = () => {
+			if (2 * WUIBody.#partCount === WUIBody.#htmlCount + WUIBody.#jsCount && typeof (this.onCompleted) === "function") {
+				this.onCompleted();
+			}
+		}
+		const loadHtml = (html) => {
+			if (html) {
+				let section = document.getElementById(id);
+				section.outerHTML = html;
+				section = document.getElementById(id);
+				if (this.debug) {
+					console.log("ui import htm:", id, section);
+				}
+			}
+			WUIBody.#htmlCount++;
+		}
+		const loadCss = (css) => {
+			if (css) {
+				const section = document.getElementById(id);
+				const style = document.createElement("style");
+				style.textContent = css;
+				section.insertAdjacentElement("beforebegin", style);
+				if (this.debug) {
+					console.log("ui import css:", id, style);
+				}
+			}
+			WUIBody.#cssCount++;
+		}
+		const loadJs = (js) => {
+			if (js) {
+				const section = document.getElementById(id);
+				const script = document.createElement("script");
+				script.textContent = js;
+				section.insertAdjacentElement("afterend", script);
+				if (this.debug) {
+					console.log("ui import js:", id, script);
+				}
+			}
+			WUIBody.#jsCount++;
+			if (typeof (done) === "function") {
+				done();
+			}
+			checkStatus();
+		}
+		const xhrRequest = (url, onload) => {
+			const xhr = new XMLHttpRequest();
+			xhr.overrideMimeType("text/plain");
+			xhr.onload = function () {
+				if (xhr.status === 200 || xhr.status === 0) {
+					onload(xhr.responseText);
+				}
+			}
+			xhr.open("GET", url, true);
+			xhr.send();
+		}
+		if (checkPath(htmlPath)) {
+			if (this.importMode === "fetch") {
+				fetch(htmlPath).then(response => {
+					return response.text();
+				}).then(html => {
+					loadHtml(html);
+					if (checkPath(cssPath)) {
+						fetch(cssPath).then(response => {
+							return response.text();
+						}).then(css => {
+							loadCss(css);
+						});
+					}
+					if (checkPath(jsPath)) {
+						fetch(jsPath).then(response => {
+							return response.text();
+						}).then(js => {
+							loadJs(js);
+						});
+					} else {
+						WUIBody.#jsCount++;
+					}
+				});
+			} else if (this.importMode === "xhr") {
+				xhrRequest(htmlPath, html => {
+					loadHtml(html);
+					if (checkPath(cssPath)) {
+						xhrRequest(cssPath, css => {
+							loadCss(css);
+						});
+					}
+					if (checkPath(jsPath)) {
+						xhrRequest(jsPath, js => {
+							loadJs(js);
+						});
+					} else {
+						WUIBody.#jsCount++;
+					}
+				});
+			}
+			WUIBody.#partCount++;
+		}
+	}
+
+	prepare() {
+		const inputsSelector = "input[type=text], input[type=password], input[type=file], input[type=email], input[type=number], input[type=tel], textarea";
+		if (this.environment === "native.android") {
+			document.body.querySelectorAll("a[target=_new], a[target=_blank]").forEach(a => {
+				a.setAttribute("href", "javascript:WUIBody.openUrl('" + a.getAttribute("href") + "', '" + (a.getAttribute("download") || "") + "');");
+				a.removeAttribute("target");
+			});
+			document.body.querySelectorAll(inputsSelector).forEach(input => {
+				input.addEventListener("keyup", event => {
+					const maxlength = input.getAttribute("maxlength");
+					if (typeof (maxlength) !== "undefined" && input.value.length > parseInt(maxlength)) {
+						input.value = input.value.substring(0, parseInt(maxlength));
+					}
+				});
+			});
+		} else if (this.environment === "native.ios") {
+			document.body.querySelectorAll(inputsSelector).forEach(input => {
+				input.addEventListener("keypress", event => {
+					const maxlength = input.getAttribute("maxlength");
+					if (typeof (maxlength) !== "undefined" && input.value.length >= parseInt(maxlength)) {
+						return false;
+					}
+				});
+			});
+		}
+		document.body.querySelectorAll(inputsSelector + ", select").forEach(input => {
+			input.addEventListener("blur", () => {
+				document.activeElement.blur();
+			});
+		});
+	}
+
+	openUrl() {
+		WUIBody.openUrl(...arguments);
+	}
+
+	isCompleted() {
+		return Boolean(WUIBody.#partCount > 0 && 2 * WUIBody.#partCount === WUIBody.#htmlCount + WUIBody.#jsCount);
+	}
+
+	destroy() {
+		Object.keys(this.#properties).forEach(name => {
+			delete this.#properties[name];
+		});
+	}
+}

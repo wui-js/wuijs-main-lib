@@ -7,6 +7,99 @@
 
 # Change Log
 
+## [v0.13.0] - 2026-07-20
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIHead class version to `0.4`.
+	- Refactored JS code.
+3. Updated WUIBody class version to `0.6`.
+	- Refactored JS code.
+	- Forced camelCase naming for acronyms in public methods: `openURL()` → `openUrl()`.
+4. Updated WUIIcon class version to `0.9`.
+	- Added `mail-check-line`, `mail-check-fill`, `mail-exclamation-line` and `mail-exclamation-line` icons.
+	- Refactored CSS code.
+	- Fixed kebab-case naming on 11 color classes (`darkSlateGray`, `slateGrey`, `lightSlateGrey`, `aliceBlue`, `darkTurquoise`, `deepSkyBlue`, `dodgerBlue`, `cornflowerBlue`, `rebeccaPurple`, `darkViolet`, `deepPink`) → `dark-slate-gray`, `slate-grey`, `light-slate-grey`, `alice-blue`, `dark-turquoise`, `deep-sky-blue`, `dodger-blue`, `cornflower-blue`, `rebecca-purple`, `dark-violet`, `deep-pink`. **Breaking change**: HTML using the old class names must be updated.
+5. Updated WUIFade class version to `0.5`.
+	- Refactored JS code.
+	- Replaced the exposed `_initClass()` static method with a static initialization block, run automatically on class evaluation.
+6. Updated WUILoader class version to `0.7`.
+	- Refactored JS code.
+7. Updated WUITooltip class version to `0.6`.
+	- Refactored JS code.
+8. Updated WUIModal class version to `0.9`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Replaced the exposed `_initClass()` static method with a static initialization block, run automatically on class evaluation.
+	- Fixed error in CSS scroll style.
+9. Updated WUIPaging class version to `0.9`.
+	- Fixed error in CSS scroll style.
+10. Updated WUISlider class version to `0.8`.
+	- Refactored JS code.
+	- Refactored CSS code.
+11. Updated WUITabs class version to `0.6`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Fixed error in CSS scroll style.
+12. Updated WUIMenubar class version to `0.8`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Renamed `getButton()` method to `getButtonOptions()`: the method returns the button's options/configuration object, not a DOM element or button instance.
+13. Updated WUIList class version to `0.8`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Fixed error in CSS scroll style.
+14. Updated WUITable class version to `0.9`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Fixed error in CSS scroll style.
+15. Updated WUIForm class version to `0.10`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Fixed error in text size in desktop and mobile mode.
+	- Fixed error in CSS scroll style.
+	- Added `closeKeyboard()` method.
+	- Renamed `getRighticon()` method to `getRightIcon()` to force camelCase naming.
+16. Updated WUIFormat class version to `0.5`.
+	- Replaced the exposed `_initClass()` static method with a static initialization block, run automatically on class evaluation.
+	- Forced camelCase naming for acronyms in public methods: `validateURL()` → `validateUrl()`, `validateURLList()` → `validateUrlList()`, `validateNID()` → `validateNid()`.
+17. Updated WUISelectpicker class version to `0.13`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Added string property `name`.
+	- Fixed error in text size in desktop and mobile mode.
+	- Fixed error in CSS scroll style.
+	- Removed `--wui-selectpicker-box-button-textsize` CSS var.
+	- Replaced the exposed `_initClass()` static method with a static initialization block, run automatically on class evaluation.
+	- `open()` now detects ancestor elements that clip content via `overflow: hidden|auto|scroll|clip` and reduces `maxOptions` so the full option list remains visible within the nearest clipping boundary, instead of only accounting for the viewport (desktop mode only).
+	- Fixed `#loadBox()` scrolling to a `scrollTop` that was not aligned to a multiple of the option row height when centering the selected option, causing the topmost or bottommost visible option to appear clipped. The scroll position is now rounded to the nearest full row, leaving a consistent gap (matching the container's padding) before the first visible option.
+18. Updated WUIDatepicker class version to `0.11`.
+	- Refactored JS code.
+	- Replaced the exposed `_initClass()` static method with a static initialization block, run automatically on class evaluation.
+	- Added string property `name`.
+19. Updated WUITimepicker class version to `0.11`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Added string property `name`.
+	- Fixed error in CSS scroll style.
+20. Updated WUIColorpicker class version to `0.12`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Added string property `name`.
+	- Fixed error in CSS scroll style.
+21. Updated WUISwitch class version to `0.9`.
+	- Refactored JS code.
+	- Added string property `name`.
+	- Added boolean property `boolean`.
+22. Updated WUIIntensity class version to `0.7`.
+	- Refactored JS code.
+	- Refactored CSS code.
+	- Added string property `name`.
+23. Updated WUIButton class version to `0.12`.
+	- Refactored JS code.
+	- Refactored CSS code.
+
 ## [v0.12.0] - 2026-06-24
 
 Features:

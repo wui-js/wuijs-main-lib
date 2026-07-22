@@ -867,6 +867,12 @@
 	}
 }
 
+/* .wui-form fill */
+
+.wui-form.fill fieldset > .field:not(:hover, :focus) {
+	border-color: transparent !important;
+}
+
 /* wui-form fill, border / round, curve */
 
 .wui-form:is(.fill, .border):is(.round, .curve) fieldset > .field:not(.inline) {

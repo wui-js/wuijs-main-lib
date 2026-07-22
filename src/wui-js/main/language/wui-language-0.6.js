@@ -168,8 +168,8 @@ class WUILanguage {
 						if (this.mode === "js") {
 							if (content.trim().replace(/[\n\r]+/g, " ").match(/^return\s*\{.+\}\s*;?$/)) {
 								try {
-									let jsObject = {};
 									const jsCode = "jsObject = (() => {" + content + "})()";
+									let jsObject = {};
 									temp[set] = JSON.parse(JSON.stringify(eval(jsCode)));
 								} catch (error) {
 									console.error(`error stringify-parse JS file '${url}': ${error}`);

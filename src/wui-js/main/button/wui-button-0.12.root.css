@@ -1,7 +1,7 @@
 /*
-@file wui-button-0.11.root.css
+@file wui-button-0.12.root.css
 @class WUIButton
-@version 0.11
+@version 0.12
 @author Sergio E. Belmar V. (wuijs.project@gmail.com)
 @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
 */
@@ -34,7 +34,7 @@
 	--wui-button-submit-bgcolor-out: #1e90ff;
 	--wui-button-submit-bgcolor-over: #1e90ff;
 	--wui-button-submit-bgcolor-selected: #1e90ff;
-	--wui-button-submit-bgcolor-disabled: rgb(from #b5bbc1 r g b / 40%);
+	--wui-button-submit-bgcolor-disabled: rgb(from #b5bbc1 r g b / 20%);
 	--wui-button-submit-textcolor-out: #fff;
 	--wui-button-submit-textcolor-over: #fff;
 	--wui-button-submit-textcolor-selected: #fff;
@@ -43,15 +43,15 @@
 	--wui-button-warning-bordercolor-out: rgb(from #f44343 r g b / 25%);
 	--wui-button-warning-bordercolor-over: #f44343;
 	--wui-button-warning-bordercolor-selected: #f44343;
-	--wui-button-warning-bordercolor-disabled: #d5dce3;
+	--wui-button-warning-bordercolor-disabled: rgb(from #2d3a47 r g b / 20%);
 	--wui-button-warning-bgcolor-out: #f44343;
 	--wui-button-warning-bgcolor-over: #f44343;
 	--wui-button-warning-bgcolor-selected: #f44343;
-	--wui-button-warning-bgcolor-disabled: #d5dce3;
+	--wui-button-warning-bgcolor-disabled: rgb(from #b5bbc1 r g b / 20%);
 	--wui-button-warning-textcolor-out: #fff;
 	--wui-button-warning-textcolor-over: #fff;
 	--wui-button-warning-textcolor-selected: #fff;
-	--wui-button-warning-textcolor-disabled: #d5dce3;
+	--wui-button-warning-textcolor-disabled: rgb(from #2d3a47 r g b / 20%);
 	--wui-button-icon-float-padding: 5px;
 	--wui-button-mobile-default-minwidth: 180px;
 	--wui-button-mobile-default-height: 40px;

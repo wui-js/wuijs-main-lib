@@ -7,6 +7,99 @@
 
 # Registro de Cambios
 
+## [v0.13.0] - 2026-07-20
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIHead a `0.4`.
+	- Se refactorizó el código JS.
+3. Se actualizó versión clase WUIBody a `0.6`.
+	- Se refactorizó el código JS.
+	- Se forzó nomenclatura camelCase en siglas de métodos públicos: `openURL()` → `openUrl()`.
+4. Se actualizó versión clase WUIIcon a `0.9`.
+	- Se agregaron los iconos `mail-check-line`, `mail-check-fill`, `mail-exclamation-line` y `mail-exclamation-line`.
+	- Se refactorizó el código CSS.
+	- Se corrigió nomenclatura kebab-case en 11 clases de color (`darkSlateGray`, `slateGrey`, `lightSlateGrey`, `aliceBlue`, `darkTurquoise`, `deepSkyBlue`, `dodgerBlue`, `cornflowerBlue`, `rebeccaPurple`, `darkViolet`, `deepPink`) → `dark-slate-gray`, `slate-grey`, `light-slate-grey`, `alice-blue`, `dark-turquoise`, `deep-sky-blue`, `dodger-blue`, `cornflower-blue`, `rebecca-purple`, `dark-violet`, `deep-pink`. **Cambio incompatible**: el HTML que use las clases antiguas debe actualizarse.
+5. Se actualizó versión clase WUIFade a `0.5`.
+	- Se refactorizó el código JS.
+	- Se reemplazó el método estático expuesto `_initClass()` por un bloque de inicialización estático, ejecutado automáticamente al evaluarse la clase.
+6. Se actualizó versión clase WUILoader a `0.7`.
+	- Se refactorizó el código JS.
+7. Se actualizó versión clase WUITooltip a `0.6`.
+	- Se refactorizó el código JS.
+8. Se actualizó versión clase WUIModal a `0.9`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se reemplazó el método estático expuesto `_initClass()` por un bloque de inicialización estático, ejecutado automáticamente al evaluarse la clase.
+	- Se corrigió error en estilo CSS de scroll.
+9. Se actualizó versión clase WUIPaging a `0.9`.
+	- Se corrigió error en estilo CSS de scroll.
+10. Se actualizó versión clase WUISlider a `0.8`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+11. Se actualizó versión clase WUITabs a `0.6`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se corrigió error en estilo CSS de scroll.
+12. Se actualizó versión clase WUIMenubar a `0.8`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se renombró el método `getButton()` a `getButtonOptions()`: el método retorna el objeto de opciones/configuración del botón, no un elemento del DOM ni una instancia de botón.
+13. Se actualizó versión clase WUIList a `0.8`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se corrigió error en estilo CSS de scroll.
+14. Se actualizó versión clase WUITable a `0.9`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se corrigió error en estilo CSS de scroll.
+15. Se actualizó versión clase WUIForm a `0.10`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se corrigió error en el tamaño de los textos en modo escritorio y móvil.
+	- Se corrigió error en estilo CSS de scroll.
+	- Se agregó el método `closeKeyboard()`.
+	- Se renombró el método `getRighticon()` a `getRightIcon()` para forzar nomenclatura camelCase.
+16. Se actualizó versión clase WUIFormat a `0.5`.
+	- Se reemplazó el método estático expuesto `_initClass()` por un bloque de inicialización estático, ejecutado automáticamente al evaluarse la clase.
+	- Se forzó nomenclatura camelCase en siglas de métodos públicos: `validateURL()` → `validateUrl()`, `validateURLList()` → `validateUrlList()`, `validateNID()` → `validateNid()`.
+17. Se actualizó versión clase WUISelectpicker a `0.13`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se agregó la propiedad de cadena `name`.
+	- Se corrigió error en el tamaño de los textos en modo escritorio y móvil.
+	- Se corrigió error en estilo CSS de scroll.
+	- Se eliminó la variable CSS `--wui-selectpicker-box-button-textsize`.
+	- Se reemplazó el método estático expuesto `_initClass()` por un bloque de inicialización estático, ejecutado automáticamente al evaluarse la clase.
+	- `open()` ahora detecta elementos ancestros que recortan contenido mediante `overflow: hidden|auto|scroll|clip` y reduce `maxOptions` para que la lista completa de opciones permanezca visible dentro del límite de recorte más cercano, en vez de considerar únicamente el viewport (solo en modo escritorio).
+	- Se corrigió que `#loadBox()` desplazara el scroll a una posición no alineada a un múltiplo del alto de fila al centrar la opción seleccionada, provocando que la primera o la última opción visible se viera recortada. La posición de scroll ahora se redondea a la fila completa más cercana, dejando un espacio consistente (igual al padding del contenedor) antes de la primera opción visible.
+18. Se actualizó versión clase WUIDatepicker a `0.11`.
+	- Se refactorizó el código JS.
+	- Se reemplazó el método estático expuesto `_initClass()` por un bloque de inicialización estático, ejecutado automáticamente al evaluarse la clase.
+	- Se agregó la propiedad de cadena `name`.
+19. Se actualizó versión clase WUITimepicker a `0.11`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se agregó la propiedad de cadena `name`.
+	- Se corrigió error en estilo CSS de scroll.
+20. Se actualizó versión clase WUIColorpicker a `0.12`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se agregó la propiedad de cadena `name`.
+	- Se corrigió error en estilo CSS de scroll.
+21. Se actualizó versión clase WUISwitch a `0.9`.
+	- Se refactorizó el código JS.
+	- Se agregó la propiedad de cadena `name`.
+	- Se agregó la propiedad booleana `boolean`.
+22. Se actualizó versión clase WUIIntensity a `0.7`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+	- Se agregó la propiedad de cadena `name`.
+23. Se actualizó versión clase WUIButton a `0.12`.
+	- Se refactorizó el código JS.
+	- Se refactorizó el código CSS.
+
 ## [v0.12.0] - 2026-06-24
 
 Características:

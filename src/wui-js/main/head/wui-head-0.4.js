@@ -1,14 +1,14 @@
 /*
- * @file wui-head-0.3.js
+ * @file wui-head-0.4.js
  * @class WUIHead
- * @version 0.3
+ * @version 0.4
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
 
 class WUIHead {
 
-	static version = "0.3";
+	static version = "0.4";
 
 	setTitle(value = "") {
 		const title = document.querySelector("head > title");
@@ -32,10 +32,10 @@ class WUIHead {
 		this.setMetaContent("theme-color", value);
 	}
 
-	refresh = () => {
-		const token = Date.now();
+	refresh() {
+		const cacheBuster = Date.now();
 		const url = (url) => {
-			return url + (url.match(/\?/) ? "&" : "?") + token;
+			return url + (url.match(/\?/) ? "&" : "?") + "_=" + cacheBuster;
 		};
 		document.querySelectorAll("head > link[href]").forEach(link => {
 			link.href = url(link.href);

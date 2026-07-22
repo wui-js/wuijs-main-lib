@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.12.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.13.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.12.0.20260624.0` |
+| **Versión documento** | `0.13.0.20260702.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -90,30 +90,30 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | Nombre Clase                         | Version | Descripción |
 | ------------------------------------ | :------:| ----------- |
 | [WUICookie](#wui-cookie)             | `0.5`   | Utilidades para el manejo de cookies. |
-| [WUIHead](#wui-head)                 | `0.3`   | Utilidades para el manejo de la cabecera HTML. |
-| [WUIBody](#wui-body)                 | `0.5`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
+| [WUIHead](#wui-head)                 | `0.4`   | Utilidades para el manejo de la cabecera HTML. |
+| [WUIBody](#wui-body)                 | `0.6`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
 | [WUILanguage](#wui-language)         | `0.6`   | Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar archivos de idioma en formato JS o JSON y actualizar dinámicamente el contenido de los elementos HTML según el idioma. |
 | [WUIScrolly](#wui-scrolly)           | `0.7`   | Utilidades para el manejo de animación de elementos HTML mediante el evento "onscroll" del cuerpo de la página HTML. |
-| [WUIIcon](#wui-icon)                 | `0.8`   | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
-| [WUIFade](#wui-fade)                 | `0.4`   | Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
-| [WUILoader](#wui-loader)             | `0.6`   | Componente para la implementación de animaciones de carga. |
-| [WUITooltip](#wui-tooltip)           | `0.5`   | Componente para la implementación de textos emergentes. |
-| [WUIModal](#wui-modal)               | `0.8`   | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
-| [WUIPaging](#wui-paging)             | `0.8`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
-| [WUISlider](#wui-slider)             | `0.7`   | Componente para la implementación de presentaciones de diapositivas controladas por arrastre de ratón/táctil y/o por evento. |
-| [WUITabs](#wui-tabs)                 | `0.5`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
-| [WUIMenubar](#wui-menubar)           | `0.7`   | Componente para la implementación de barras de menú. |
-| [WUIList](#wui-list)                 | `0.7`   | Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional. |
-| [WUITable](#wui-table)               | `0.8`   | Componente para la implementación de tablas de datos. A diferencia del componente `WUIList`, el componente `WUITable` incluye una cabecera de columnas. |
-| [WUIForm](#wui-form)                 | `0.9`   | Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`. |
-| [WUIFormat](#wui-format)             | `0.4`   | Utilidades para manejo y validación de formatos de datos de tipo `string`, `number` y `Date`. |
-| [WUISelectpicker](#wui-selectpicker) | `0.12`  | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
-| [WUIDatepicker](#wui-datepicker)     | `0.10`  | Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`. |
-| [WUITimepicker](#wui-timepicker)     | `0.10`  | Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`. |
-| [WUIColorpicker](#wui-colorpicker)   | `0.11`  | Componente para la implementación de entradas de datos de tipo selector de color basada en el elemento HTML `<input type="color">`. |
-| [WUISwitch](#wui-switch)             | `0.8`   | Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`. |
-| [WUIIntensity](#wui-intensity)       | `0.6`   | Componente para la implementación de entradas de datos de tipo selector de intensidad de 4 niveles: nada, bajo, medio y alto basada en el elemento HTML `<input type="range">`. |
-| [WUIButton](#wui-button)             | `0.11`  | Componente para la implementación de botones basada en el elemento HTML `<button>`. |
+| [WUIIcon](#wui-icon)                 | `0.9`   | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
+| [WUIFade](#wui-fade)                 | `0.5`   | Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
+| [WUILoader](#wui-loader)             | `0.7`   | Componente para la implementación de animaciones de carga. |
+| [WUITooltip](#wui-tooltip)           | `0.6`   | Componente para la implementación de textos emergentes. |
+| [WUIModal](#wui-modal)               | `0.9`   | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
+| [WUIPaging](#wui-paging)             | `0.9`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
+| [WUISlider](#wui-slider)             | `0.8`   | Componente para la implementación de presentaciones de diapositivas controladas por arrastre de ratón/táctil y/o por evento. |
+| [WUITabs](#wui-tabs)                 | `0.6`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
+| [WUIMenubar](#wui-menubar)           | `0.8`   | Componente para la implementación de barras de menú. |
+| [WUIList](#wui-list)                 | `0.8`   | Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional. |
+| [WUITable](#wui-table)               | `0.9`   | Componente para la implementación de tablas de datos. A diferencia del componente `WUIList`, el componente `WUITable` incluye una cabecera de columnas. |
+| [WUIForm](#wui-form)                 | `0.10`  | Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`. |
+| [WUIFormat](#wui-format)             | `0.5`   | Utilidades para manejo y validación de formatos de datos de tipo `string`, `number` y `Date`. |
+| [WUISelectpicker](#wui-selectpicker) | `0.13`  | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
+| [WUIDatepicker](#wui-datepicker)     | `0.11`  | Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`. |
+| [WUITimepicker](#wui-timepicker)     | `0.11`  | Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`. |
+| [WUIColorpicker](#wui-colorpicker)   | `0.12`  | Componente para la implementación de entradas de datos de tipo selector de color basada en el elemento HTML `<input type="color">`. |
+| [WUISwitch](#wui-switch)             | `0.9`   | Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`. |
+| [WUIIntensity](#wui-intensity)       | `0.7`   | Componente para la implementación de entradas de datos de tipo selector de intensidad de 4 niveles: nada, bajo, medio y alto basada en el elemento HTML `<input type="range">`. |
+| [WUIButton](#wui-button)             | `0.12`  | Componente para la implementación de botones basada en el elemento HTML `<button>`. |
 
 <a name="dirmap"></a>
 
@@ -214,30 +214,30 @@ Código HTML:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/scrolly/wui-scrolly-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.6.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.8.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.8.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.7.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.7.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.7.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.7.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.9.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.9.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.root.css">
@@ -249,23 +249,23 @@ Código HTML:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.3.css">
 		<script type="text/javascript" src="/libraries/wui-js/main/cookie/wui-cookie-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.3.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/language/wui-language-0.6.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/scrolly/wui-scrolly-0.7.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.4.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.6.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.8.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.7.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.9.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.7.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.7.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.5.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.7.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.8.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.9.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.4.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.10.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.5.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.8.js"></script>
@@ -305,7 +305,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.12.0"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.0"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Opcionalmente se pueden incluir las librerías de manera individual, para ello s
 Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`) ya que la versión será definida automáticamente por el script de carga simple.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.12.0&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.0&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Los nombres de las librerías pasadas en el parámetro `class` no deben contener
 Adicionalmente se puede omitir la carga de los archivos `root.css` de cada librería agregando el parámetro `root` con el valor `0` (cero) en la URL del archivo `wui.js`.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.12.0&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.0&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
@@ -445,7 +445,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIHead
 
-Versión: `0.3`
+Versión: `0.4`
 
 Utilidades para el manejo de la cabecera HTML.
 
@@ -453,7 +453,7 @@ Utilidades para el manejo de la cabecera HTML.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/head/wui-head-0.3.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.3.js) |
+| JS   | [src/wui-js/main/head/wui-head-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.4.js) |
 
 #### Constructor
 
@@ -483,7 +483,7 @@ Cabecera HTML:
 <title></title>
 <meta name="application-name" content="">
 <meta name="theme-color" content="">
-<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.3.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.4.js"></script>
 ```
 
 Código JS:
@@ -503,7 +503,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIBody
 
-Versión: `0.5`
+Versión: `0.6`
 
 Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles.
 
@@ -511,7 +511,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/body/wui-body-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.5.js) |
+| JS   | [src/wui-js/main/body/wui-body-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.6.js) |
 
 #### Constructor
 
@@ -535,7 +535,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 | ----------- | ------------ | ----------- |
 | import      | `void`       | `import(id, path[, done])`<br><br>Parámetros:<br>**• id:** `string`, especifica el id del elemento HTML donde se va a cargar el contenido.<br>**• path:** `string`, especifica la ruta del subdirectorio y el nombre de los archivos con extensión `.css`, `.htm` y `.js` que serán importados y cargados.<br>**• done:** `function` *opcional*, esta función que es ejecutada cuando la carga del contenido ha concluido.<br><br>Importa contenido CSS/JS/HTML referenciado a un elemento HTML por medio de su `id`. El contenido también se suele denominar "módulo" y es cargado en tres secciones:<br>**• CSS:** mediante un elemento `<style>` que es insertado antes del contenido HTML.<br>**• HTML:** sobre el elemento identificado mediante su `id`.<br>**• JS:** mediante un elemento `<script>` que es insertado en el cuerpo del documento HTML. |
 | prepare     | `void`       | `prepare()`<br><br>En función del valor del parámetro `environment`, modifica los elementos HTML de etiqueta `a`, `input` y `select` del cuerpo del documento HTML para adaptarlos a entornos nativos. |
-| openURL     | `void`       | `openURL(url[, download])`<br><br>Parámetros:<br>**• id:** `string`, especifica la dirección URL que se requiere abrir o descargar.<br>**• download:** `string` *opcional*, especifica el nombre del archivo con que se descargará el contenido referido mediante la URL.<br><br>Abre o descarga un contenido mediante una dirección URL. Este método es requerido en entornos nativos ya que no se siempre se cuenta con soporte mediante WebView sobre Android o WebKit sobre iOS. |
+| openUrl     | `void`       | `openUrl(url[, download])`<br><br>Parámetros:<br>**• id:** `string`, especifica la dirección URL que se requiere abrir o descargar.<br>**• download:** `string` *opcional*, especifica el nombre del archivo con que se descargará el contenido referido mediante la URL.<br><br>Abre o descarga un contenido mediante una dirección URL. Este método es requerido en entornos nativos ya que no se siempre se cuenta con soporte mediante WebView sobre Android o WebKit sobre iOS. |
 | isCompleted | `boolean`    | `isCompleted()`<br><br>Retorna `true` si todos los contenidos han sido importados y cargados, `false` en caso contrario. |
 | destroy     | `void`       | `destroy()`<br><br>Destructor. |
 
@@ -597,7 +597,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.5.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.6.js"></script>
 ```
 
 Código HTML:
@@ -1116,7 +1116,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIcon
 
-Versión: `0.8`
+Versión: `0.9`
 
 Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
@@ -1124,9 +1124,9 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/icon/wui-icon-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.8.js) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.8.css) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.8.root.css) |
+| JS   | [src/wui-js/main/icon/wui-icon-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.js) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.root.css) |
 
 #### Métodos
 
@@ -1225,13 +1225,14 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 #### Tabla de Íconos de Comunicación
 
-| Icono                                                                                       | Estilo                | Icono                                                                                       | Estilo                | Icono                                                                                      | Estilo               | Icono                                                                                      | Estilo               |
-| :---:                                                                                       | ------                | :---:                                                                                       | ------                | :---:                                                                                      | ------               | :---:                                                                                      | ------               |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phone-line.svg)           | .phone-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phone-fill.svg)           | .phone-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phonebook-line.svg)      | .phonebook-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phonebook-fill.svg)      | .phonebook-fill      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-close-line.svg)      | .mail-close-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-close-fill.svg)      | .mail-close-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-dots-line.svg)      | .chat-dots-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-dots-fill.svg)      | .chat-dots-fill      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-quote-line.svg) | .chat-left-quote-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-quote-fill.svg) | .chat-left-quote-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-text-line.svg) | .chat-left-text-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-text-fill.svg) | .chat-left-text-fill |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-neutral-line.svg)   | .emoji-neutral-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-neutral-fill.svg)   | .emoji-neutral-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-smile-line.svg)    | .emoji-smile-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-smile-fill.svg)    | .emoji-smile-fill    |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-frown-line.svg)     | .emoji-frown-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-frown-fill.svg)     | .emoji-frown-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-surprise-line.svg) | .emoji-surprise-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-surprise-fill.svg) | .emoji-surprise-fill |
+| Icono                                                                                        | Estilo                 | Icono                                                                                        | Estilo                 | Icono                                                                                      | Estilo               | Icono                                                                                      | Estilo               |
+| :---:                                                                                        | ------                 | :---:                                                                                        | ------                 | :---:                                                                                      | ------               | :---:                                                                                      | ------               |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phone-line.svg)            | .phone-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phone-fill.svg)            | .phone-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phonebook-line.svg)      | .phonebook-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/phonebook-fill.svg)      | .phonebook-fill      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-close-line.svg)       | .mail-close-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-close-fill.svg)       | .mail-close-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-check-line.svg)     | .mail-check-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-check-line.svg)     | .mail-check-line     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-exclamation-line.svg) | .mail-exclamation-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mail-exclamation-line.svg) | .mail-exclamation-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-dots-line.svg)      | .chat-dots-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-dots-fill.svg)      | .chat-dots-fill      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-quote-line.svg)  | .chat-left-quote-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-quote-fill.svg)  | .chat-left-quote-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-text-line.svg) | .chat-left-text-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/chat-left-text-fill.svg) | .chat-left-text-fill |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-neutral-line.svg)    | .emoji-neutral-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-neutral-fill.svg)    | .emoji-neutral-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-smile-line.svg)    | .emoji-smile-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-smile-fill.svg)    | .emoji-smile-fill    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-frown-line.svg)      | .emoji-frown-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-frown-fill.svg)      | .emoji-frown-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-surprise-line.svg) | .emoji-surprise-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/emoji-surprise-fill.svg) | .emoji-surprise-fill |
 
 #### Tabla de Íconos de Nube
 
@@ -1385,7 +1386,7 @@ python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s 
 
 | Opción             | Valor predeterminado                       | Descripción |
 | ------------------ | ------------------------------------------ | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.8.css` | Ruta al archivo CSS fuente. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.9.css` | Ruta al archivo CSS fuente. |
 | `-o`,<br>`--out`   | `../imgs/icons/`                           | Directorio de salida para los archivos generados. |
 | `-c`,<br>`--color` | `#a2a9b6`                                  | Color en formato CSS compatible que reemplazará a la sentencia 'currentColor' en el código SVG. |
 | `-s`,<br>`--size`  | `24`                                       | Tamaño en píxeles (ancho y alto) de las imágenes del set. |
@@ -1437,9 +1438,9 @@ nav button {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.9.js"></script>
 ```
 
 Código HTML:
@@ -1479,7 +1480,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIFade
 
-Versión: `0.4`
+Versión: `0.5`
 
 Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
 
@@ -1489,7 +1490,7 @@ Es una clase estática que no posee un constructor ni propiedades.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/fade/wui-fade-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/fade/wui-fade-0.4.js) |
+| JS   | [src/wui-js/main/fade/wui-fade-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/fade/wui-fade-0.5.js) |
 
 #### Métodos
 
@@ -1572,7 +1573,7 @@ nav button {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.4.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.5.js"></script>
 ```
 
 Código HTML:
@@ -1617,7 +1618,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUILoader
 
-Version: `0.6`
+Version: `0.7`
 
 Componente para la implementación de animaciones de carga
 
@@ -1625,9 +1626,9 @@ Componente para la implementación de animaciones de carga
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/loader/wui-loader-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.6.js) |
-| CSS  | [src/wui-js/main/loader/wui-loader-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.6.css) |
-| CSS  | [src/wui-js/main/loader/wui-loader-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.6.root.css) |
+| JS   | [src/wui-js/main/loader/wui-loader-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.7.js) |
+| CSS  | [src/wui-js/main/loader/wui-loader-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.7.css) |
+| CSS  | [src/wui-js/main/loader/wui-loader-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/loader/wui-loader-0.7.root.css) |
 
 #### Constructor
 
@@ -1693,9 +1694,9 @@ nav > div .text {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.6.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.6.css">
-<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.6.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.css">
+<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.7.js"></script>
 ```
 
 Código HTML:
@@ -1755,7 +1756,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITooltip
 
-Versión: `0.5`
+Versión: `0.6`
 
 Componente para la implementación de textos de información emergente (tooltip).
 
@@ -1763,9 +1764,9 @@ Componente para la implementación de textos de información emergente (tooltip)
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/tooltip/wui-tooltip-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.5.js) |
-| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.5.css) |
-| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.5.root.css) |
+| JS   | [src/wui-js/main/tooltip/wui-tooltip-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.6.js) |
+| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.6.css) |
+| CSS  | [src/wui-js/main/tooltip/wui-tooltip-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tooltip/wui-tooltip-0.6.root.css) |
 
 #### Constructor
 
@@ -1840,9 +1841,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.css">
-<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.5.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.js"></script>
 ```
 
 Código HTML:
@@ -1892,7 +1893,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIModal
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`).
 
@@ -1900,9 +1901,9 @@ Componente para la implementación de cuadros de diálogo (tipo `message`) y ven
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/modal/wui-modal-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.8.js) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.8.css) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.8.root.css) |
+| JS   | [src/wui-js/main/modal/wui-modal-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.js) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.css) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.root.css) |
 
 #### Constructor
 
@@ -2041,9 +2042,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.9.js"></script>
 ```
 
 Código HTML:
@@ -2114,7 +2115,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIPaging
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de vistas accesibles paginadamente con transiciones animadas.
 
@@ -2122,9 +2123,9 @@ Componente para la implementación de vistas accesibles paginadamente con transi
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/paging/wui-paging-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.8.js) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.8.css) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.8.root.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.js) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.css) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.root.css) |
 
 #### Constructor
 
@@ -2220,9 +2221,9 @@ body {
 Cabecera HTML:
 
 ```html
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.8.root.css">
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.8.js"></script>
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.9.root.css">
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.9.js"></script>
 ```
 
 Código HTML:
@@ -2300,7 +2301,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUISlider
 
-Versión: `0.7`
+Versión: `0.8`
 
 Componente para la implementación de presentaciones de diapositivas controladas por arrastre de ratón/táctil y/o por evento.
 
@@ -2308,9 +2309,9 @@ Componente para la implementación de presentaciones de diapositivas controladas
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/slider/wui-slider-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.7.js) |
-| CSS  | [src/wui-js/main/slider/wui-slider-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.7.css) |
-| CSS  | [src/wui-js/main/slider/wui-slider-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.7.root.css) |
+| JS   | [src/wui-js/main/slider/wui-slider-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.8.js) |
+| CSS  | [src/wui-js/main/slider/wui-slider-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.8.css) |
+| CSS  | [src/wui-js/main/slider/wui-slider-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/slider/wui-slider-0.8.root.css) |
 
 #### Constructor
 
@@ -2413,9 +2414,9 @@ nav > button {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.7.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.7.css">
-<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.7.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.css">
+<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.8.js"></script>
 ```
 
 Código HTML:
@@ -2471,7 +2472,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITabs
 
-Versión: `0.5`
+Versión: `0.6`
 
 Componente para la implementación de vistas accesibles por selección de pestañas.
 
@@ -2479,9 +2480,9 @@ Componente para la implementación de vistas accesibles por selección de pesta�
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/tabs/wui-tabs-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.5.js) |
-| CSS  | [src/wui-js/main/tabs/wui-tabs-0.5.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.5.css) |
-| CSS  | [src/wui-js/main/tabs/wui-tabs-0.5.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.5.root.css) |
+| JS   | [src/wui-js/main/tabs/wui-tabs-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.js) |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.css) |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.root.css) |
 
 #### Constructor
 
@@ -2572,9 +2573,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.css">
-<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.5.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.6.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.6.css">
+<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.6.js"></script>
 ```
 
 Código HTML:
@@ -2627,7 +2628,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIMenubar
 
-Versión: `0.7`
+Versión: `0.8`
 
 Componente para la implementación de barras de menú.
 
@@ -2635,9 +2636,9 @@ Componente para la implementación de barras de menú.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/menubar/wui-menubar-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.7.js) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.7.css) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.7.root.css) |
+| JS   | [src/wui-js/main/menubar/wui-menubar-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.js) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.css) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.root.css) |
 
 #### Constructor
 
@@ -2683,7 +2684,7 @@ Componente para la implementación de barras de menú.
 | Método       | Tipo retorno  | Descripción |
 | ------------ | ------------- | ----------- |
 | getElement   | `HTMLElement` | `getElement()`<br><br>Retorna el elemento HTML contenedor del objeto. |
-| getButton    | `object`      | `getButton(id)`<br><br>Parámetros:<br>**• id:** `string`, identificador único de botón.<br><br>Retorna el botón de menú según el identificador único botón de menú pasado por parámetro. |
+| getButtonOptions | `object`      | `getButtonOptions(id)`<br><br>Parámetros:<br>**• id:** `string`, identificador único de botón.<br><br>Retorna el objeto de opciones del botón de menú según el identificador único pasado por parámetro, o `null` si no existe. |
 | init         | `void`        | `init()`<br><br>Inicializa el objeto. |
 | selectButton | `void`        | `selectButton(id[, selected[, runCallback]])`<br><br>Parámetros:<br>**• id:** `string`, identificador único de botón.<br>**• selected:** `boolean`, estado de selección del botón. El valor predeterminado `true`.<br>**• runCallback:** `boolean`, ejecuta las funciones `onClick` y `onSelect` del botón. El valor predeterminado `true`.<br><br>Selecciona o deselecciona un botón de menú. |
 | enableButton | `void`        | `enableButton(id[, enabled])`<br><br>Parámetros:<br>**• id:** `string`, identificador único de botón.<br>**• enabled:** `boolean`, estado de habilitación del botón. El valor predeterminado `true`.<br><br>Hablita o deshabilita un botón de menú. |
@@ -2792,9 +2793,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.7.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.7.css">
-<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.7.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.css">
+<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.8.js"></script>
 ```
 
 Cuerpo HTML:
@@ -2896,7 +2897,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIList
 
-Versión: `0.7`
+Versión: `0.8`
 
 Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional.
 
@@ -2904,9 +2905,9 @@ Componente para la implementación de listas de datos y botoneras para cada fila
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/list/wui-list-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.7.js) |
-| CSS  | [src/wui-js/main/list/wui-list-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.7.css) |
-| CSS  | [src/wui-js/main/list/wui-list-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.7.root.css) |
+| JS   | [src/wui-js/main/list/wui-list-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.js) |
+| CSS  | [src/wui-js/main/list/wui-list-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.css) |
+| CSS  | [src/wui-js/main/list/wui-list-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.root.css) |
 
 #### Constructor
 
@@ -3074,9 +3075,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.css">
-<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.7.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.8.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.8.css">
+<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.8.js"></script>
 ```
 
 Código HTML:
@@ -3208,7 +3209,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITable
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de tablas de datos. A diferencia del objeto `WUIList`, el objeto `WUITable` incluye una cabecera de columnas.
 
@@ -3216,9 +3217,9 @@ Componente para la implementación de tablas de datos. A diferencia del objeto `
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/table/wui-table-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.8.js) |
-| CSS  | [src/wui-js/main/table/wui-table-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.8.css) |
-| CSS  | [src/wui-js/main/table/wui-table-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.8.root.css) |
+| JS   | [src/wui-js/main/table/wui-table-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.js) |
+| CSS  | [src/wui-js/main/table/wui-table-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.css) |
+| CSS  | [src/wui-js/main/table/wui-table-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.root.css) |
 
 #### Constructor
 
@@ -3406,9 +3407,9 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.9.js"></script>
 ```
 
 Código HTML:
@@ -3540,7 +3541,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIForm
 
-Versión: `0.9`
+Versión: `0.10`
 
 Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`.
 
@@ -3548,9 +3549,9 @@ Componente para la implementación de formularios de datos. Este componente perm
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/form/wui-form-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.9.js) |
-| CSS  | [src/wui-js/main/form/wui-form-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.9.css) |
-| CSS  | [src/wui-js/main/form/wui-form-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.9.root.css) |
+| JS   | [src/wui-js/main/form/wui-form-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.js) |
+| CSS  | [src/wui-js/main/form/wui-form-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.css) |
+| CSS  | [src/wui-js/main/form/wui-form-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.root.css) |
 
 #### Constructor
 
@@ -3569,32 +3570,33 @@ Componente para la implementación de formularios de datos. Este componente perm
 
 #### Métodos
 
-| Método      | Tipo retorno                                               | Descripción |
-| ----------- | ---------------------------------------------------------- | ----------- |
-| getElement  | `HTMLElement`                                              | `getElement()`<br><br>Retorna el elemento HTML contenedor del objeto. |
-| getForm     | `HTMLFormElement`                                          | `getForm()`<br><br>Retorna el elemento HTML `<form>`. |
-| getFormData | `FormData`                                                 | `getFormData()`<br><br>Retorna los datos del formulario. |
-| getHeader   | `HTMLElement`                                              | `getHeader()`<br><br>Retorna el elemento HTML de la sección de la cabecera del formulario. |
-| getBody     | `HTMLElement`                                              | `getBody()`<br><br>Retorna el elemento HTML de la sección del cuerpo del formulario. |
-| getFooter   | `HTMLElement`                                              | `getFooter()`<br><br>Retorna el elemento HTML de la sección del pie del formulario. |
-| getField    | `HTMLElement`                                              | `getField(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML contenedor del campo identificado por el nombre del campo de entrada. |
-| getIcon     | `HTMLElement`                                              | `getIcon(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección del ícono del campo identificado por el nombre del campo de entrada. |
-| getLabel    | `HTMLLabelElement`                                         | `getLabel(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección de la etiqueta del campo identificado por el nombre del campo de entrada. |
-| getInput    | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `getInput(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección del campo de entrada identificado por el nombre del campo de entrada. |
-| getData     | `HTMLDataElement`                                          | `getData(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección de datos del campo identificado por el nombre de la clase de estilo. |
-| getText     | `HTMLElement`                                              | `getText(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de texto auxiliar identificado por el nombre de la clase de estilo. |
-| getValue    | `string`                                                   | `getValue(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el valor del campo de entrada identificado por el nombre del campo de entrada o el valor del campo de salida identificado por el nombre de la clase de estilo. |
-| setType     | `void`                                                     | `setType(name, type)`<br><br>Parámetros:<br>**• name:** `string`<br>**• type:** `string`<br><br>Establece el tipo del campo de entrada identificado por el nombre del campo de entrada mediante el atributo `type` de la etiqueta `<input>`. |
-| setValue    | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `setValue(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `string`<br><br>Establece el valor del campo de entrada identificado por el nombre del campo de entrada. |
-| setData     | `HTMLDataElement`                                          | `setData(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `mixed`<br><br>Establece el valor del elemento HTML de la sección de datos del campo identificado por el nombre de la clase de estilo. |
-| setText     | `HTMLElement`                                              | `setText(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `string`<br><br>Establece el contenido del elemento HTML de texto auxiliar identificado por el nombre de la clase de estilo. |
-| setEnabled  | `void`                                                     | `setEnabled(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `boolean`<br><br>Habilita o deshabilita el campo identificado por el nombre del campo de entrada. |
-| reset       | `void`                                                     | `reset()`<br><br>Restablece los valores del formulario. |
-| focus       | `void`                                                     | `focus(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Establece el foco en el campo identificado por el nombre del campo de entrada. |
-| blur        | `void`                                                     | `blur(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Quita el foco del campo identificado por el nombre del campo de entrada. |
-| change      | `void`                                                     | `change(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Desencadena el evento change en el campo identificado por el nombre del campo de entrada. |
-| autosize    | `void`                                                     | `autosize(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Ajusta automáticamente la altura de un campo de texto `<textarea>` identificado por el nombre del campo de entrada. |
-| destroy     | `void`                                                     | `destroy()`<br><br>Destructor. |
+| Método        | Tipo retorno                                               | Descripción |
+| ------------- | ---------------------------------------------------------- | ----------- |
+| getElement    | `HTMLElement`                                              | `getElement()`<br><br>Retorna el elemento HTML contenedor del objeto. |
+| getForm       | `HTMLFormElement`                                          | `getForm()`<br><br>Retorna el elemento HTML `<form>`. |
+| getFormData   | `FormData`                                                 | `getFormData()`<br><br>Retorna los datos del formulario. |
+| getHeader     | `HTMLElement`                                              | `getHeader()`<br><br>Retorna el elemento HTML de la sección de la cabecera del formulario. |
+| getBody       | `HTMLElement`                                              | `getBody()`<br><br>Retorna el elemento HTML de la sección del cuerpo del formulario. |
+| getFooter     | `HTMLElement`                                              | `getFooter()`<br><br>Retorna el elemento HTML de la sección del pie del formulario. |
+| getField      | `HTMLElement`                                              | `getField(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML contenedor del campo identificado por el nombre del campo de entrada. |
+| getIcon       | `HTMLElement`                                              | `getIcon(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección del ícono del campo identificado por el nombre del campo de entrada. |
+| getLabel      | `HTMLLabelElement`                                         | `getLabel(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección de la etiqueta del campo identificado por el nombre del campo de entrada. |
+| getInput      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `getInput(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección del campo de entrada identificado por el nombre del campo de entrada. |
+| getData       | `HTMLDataElement`                                          | `getData(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de la sección de datos del campo identificado por el nombre de la clase de estilo. |
+| getText       | `HTMLElement`                                              | `getText(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el elemento HTML de texto auxiliar identificado por el nombre de la clase de estilo. |
+| getValue      | `string`                                                   | `getValue(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Retorna el valor del campo de entrada identificado por el nombre del campo de entrada o el valor del campo de salida identificado por el nombre de la clase de estilo. |
+| setType       | `void`                                                     | `setType(name, type)`<br><br>Parámetros:<br>**• name:** `string`<br>**• type:** `string`<br><br>Establece el tipo del campo de entrada identificado por el nombre del campo de entrada mediante el atributo `type` de la etiqueta `<input>`. |
+| setValue      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `setValue(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `string`<br><br>Establece el valor del campo de entrada identificado por el nombre del campo de entrada. |
+| setData       | `HTMLDataElement`                                          | `setData(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `mixed`<br><br>Establece el valor del elemento HTML de la sección de datos del campo identificado por el nombre de la clase de estilo. |
+| setText       | `HTMLElement`                                              | `setText(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `string`<br><br>Establece el contenido del elemento HTML de texto auxiliar identificado por el nombre de la clase de estilo. |
+| setEnabled    | `void`                                                     | `setEnabled(name, value)`<br><br>Parámetros:<br>**• name:** `string`<br>**• value:** `boolean`<br><br>Habilita o deshabilita el campo identificado por el nombre del campo de entrada. |
+| reset         | `void`                                                     | `reset()`<br><br>Restablece los valores del formulario. |
+| focus         | `void`                                                     | `focus(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Establece el foco en el campo identificado por el nombre del campo de entrada. |
+| blur          | `void`                                                     | `blur(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Quita el foco del campo identificado por el nombre del campo de entrada. |
+| closeKeyboard | `void`                                                     | `closeKeyboard()`<br><br>Quita el foco del elemento activo, cerrando el teclado en pantalla en dispositivos móviles. |
+| change        | `void`                                                     | `change(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Desencadena el evento change en el campo identificado por el nombre del campo de entrada. |
+| autosize      | `void`                                                     | `autosize(name)`<br><br>Parámetros:<br>**• name:** `string`<br><br>Ajusta automáticamente la altura de un campo de texto `<textarea>` identificado por el nombre del campo de entrada. |
+| destroy       | `void`                                                     | `destroy()`<br><br>Destructor. |
 
 #### Variables CSS
 
@@ -3698,9 +3700,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.10.js"></script>
 ```
 
 Código HTML:
@@ -3802,7 +3804,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIFormat
 
-Versión: `0.4`
+Versión: `0.5`
 
 Utilidades para manejo y validación de formatos de datos de tipo `string`, `number` y `Date`.
 
@@ -3810,7 +3812,7 @@ Utilidades para manejo y validación de formatos de datos de tipo `string`, `num
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/format/wui-format-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/format/wui-format-0.4.js) |
+| JS   | [src/wui-js/main/format/wui-format-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/format/wui-format-0.5.js) |
 
 #### Métodos Estáticos
 
@@ -3826,12 +3828,12 @@ Utilidades para manejo y validación de formatos de datos de tipo `string`, `num
 | validateEmailList  | `boolean`    | `validateEmailList(list[, separator])`<br><br>Parámetros:<br>**• list:** `string`, lista de direcciones de correo.<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de correos electrónicos. |
 | validatePhone      | `boolean`    | `validatePhone(phone[, length])`<br><br>Parámetros:<br>**• phone:** `string`, número telefónico.<br>**• length:** `number` *opcional*, largo del número telefónico.<br><br>Valida un número de teléfono. |
 | validatePhoneList  | `boolean`    | `validatePhoneList(list[, length[, separator]])`<br><br>Parámetros:<br>**• list:** `string`, lista de números telefónicos.<br>**• length:** `number` *opcional*, largo del número telefónico.<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de números de teléfono. |
-| validateURL        | `boolean`    | `validateURL(url)`<br><br>Parámetros:<br>**• url:** `string`, dirección URL.<br><br>Valida una dirección URL. |
-| validateURLList    | `boolean`    | `validateURLList(list[, separator])`<br><br>Parámetros:<br>**• list:** `string`, lista de direcciones URL.<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de URLs. |
-| validateIPv4       | `boolean`    | `validateIPv4(ipv4)`<br><br>Parámetros:<br>**• ipv4:** `string`, dirección de IPv4.<br><br>Valida una dirección IPv4. |
+| validateUrl        | `boolean`    | `validateUrl(url)`<br><br>Parámetros:<br>**• url:** `string`, dirección URL.<br><br>Valida una dirección URL. |
+| validateUrlList    | `boolean`    | `validateUrlList(list[, separator])`<br><br>Parámetros:<br>**• list:** `string`, lista de direcciones URL.<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de URLs. |
+| validateIpv4       | `boolean`    | `validateIpv4(ipv4)`<br><br>Parámetros:<br>**• ipv4:** `string`, dirección de IPv4.<br><br>Valida una dirección IPv4. |
 | validateModule11   | `boolean`    | `validateModule11(value, codeTen)`<br><br>Parámetros:<br>**• value:** `string`, cadena a validar (incluido dígito verificador).<br>**• codeTen:** `string`, carácter por el que se reemplazará el dígito verificador en caso que sea 10.<br><br>Valida una cadena incluido el dígito verificador módulo 11. |
 | validateModule23   | `boolean`    | `validateModule23(value, map)`<br><br>Parámetros:<br>**• value:** `string`, cadena a validar (incluido dígito verificador).<br>**• map:** `string`, cadena de caracteres de mapeo.<br><br>Valida una cadena incluido el dígito verificador módulo 23. |
-| validateNID        | `boolean`    | `validateNID(nid, countryCode)`<br><br>Parámetros:<br>**• nid:** `string`, valor a validar.<br>**• countryCode:** `string`, código de país en formato ISO 3166-1 alpha-2 con soporte para CL, PY y ES.<br><br>Valida un documento de identidad nacional. |
+| validateNid        | `boolean`    | `validateNid(nid, countryCode)`<br><br>Parámetros:<br>**• nid:** `string`, valor a validar.<br>**• countryCode:** `string`, código de país en formato ISO 3166-1 alpha-2 con soporte para CL, PY y ES.<br><br>Valida un documento de identidad nacional. |
 | loadDate           | `Date`       | `loadDate(date[, format[, options]])`<br><br>Parámetros:<br>**• date:** `string`, fecha a cargar.<br>**• format:** `string` *opcional*, formato de fecha.<br>**• options:** `object` *opcional*, opciones de fecha, según la definición de **Valores predeterminados** `<Date.prototype.wuiDefaults>`.<br><br>Carga una fecha a partir de una cadena. |
 
 #### Extensiones de Prototipo Number `Number.prototype`
@@ -3877,12 +3879,12 @@ Utilidades para manejo y validación de formatos de datos de tipo `string`, `num
 | wuiValidateEmailList | `boolean`    | `wuiValidateEmailList([separator])`<br><br>Parámetros:<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de correos electrónicos. |
 | wuiValidatePhone     | `boolean`    | `wuiValidatePhone([length])`<br><br>Parámetros:<br>**• length:** `number` *opcional*, largo del número telefónico.<br><br>Valida un número de teléfono. |
 | wuiValidatePhoneList | `boolean`    | `wuiValidatePhoneList([length, separator])`<br><br>Parámetros:<br>**• length:** `number` *opcional*, largo del número telefónico.<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de números de teléfono. |
-| wuiValidateURL       | `boolean`    | `wuiValidateURL()`<br><br>Valida una dirección URL. |
-| wuiValidateURLList   | `boolean`    | `wuiValidateURLList([separator])`<br><br>Parámetros:<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de URLs. |
-| wuiValidateIPv4      | `boolean`    | `wuiValidateIPv4()`<br><br>Valida una dirección IPv4. |
+| wuiValidateUrl       | `boolean`    | `wuiValidateUrl()`<br><br>Valida una dirección URL. |
+| wuiValidateUrlList   | `boolean`    | `wuiValidateUrlList([separator])`<br><br>Parámetros:<br>**• separator:** `string` *opcional*, carácter(es) de separación de lista.<br><br>Valida una lista de URLs. |
+| wuiValidateIpv4      | `boolean`    | `wuiValidateIpv4()`<br><br>Valida una dirección IPv4. |
 | wuiValidateModule11  | `boolean`    | `wuiValidateModule11(codeTen)`<br><br>Parámetros:<br>**• codeTen:** `string`, carácter por el que se reemplazará el dígito verificador en caso que sea 10.<br><br>Valida una cadena incluido el dígito verificador módulo 11. |
 | wuiValidateModule23  | `boolean`    | `wuiValidateModule23(map)`<br><br>Parámetros:<br>**• map:** `string`, cadena de caracteres de mapeo.<br><br>Valida una cadena incluido el dígito verificador módulo 23. |
-| wuiValidateNID       | `boolean`    | `wuiValidateNID(countryCode)`<br><br>Parámetros:<br>**• countryCode:** `string`, código de país en formato ISO 3166-1 alpha-2 con soporte para CL, PY y ES.<br><br>Valida un documento de identidad nacional. |
+| wuiValidateNid       | `boolean`    | `wuiValidateNid(countryCode)`<br><br>Parámetros:<br>**• countryCode:** `string`, código de país en formato ISO 3166-1 alpha-2 con soporte para CL, PY y ES.<br><br>Valida un documento de identidad nacional. |
 
 #### Extensiones de Prototipo Date `Date.prototype`
 
@@ -3974,7 +3976,7 @@ Código CSS:
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.4.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.5.js"></script>
 ```
 
 HTML code:
@@ -4090,7 +4092,7 @@ const stringEmailValidation = () => {
 const stringURLValidation = () => {
 	const inputValue = "https://www.example.com";
 	const output = document.body.querySelector(".output.stringURLValidation");
-	const outputValid = inputValue.wuiValidateURL();
+	const outputValid = inputValue.wuiValidateUrl();
 	output.innerHTML = "<pre>"
 		+ `<b>Validación de URL</b>\n`
 		+ `valor entrada     : ${inputValue}\n`
@@ -4101,7 +4103,7 @@ const stringURLValidation = () => {
 const stringIPv4Validation = () => {
 	const inputValue = "127.0.0.1";
 	const output = document.body.querySelector(".output.stringIPv4Validation");
-	const outputValid = inputValue.wuiValidateIPv4();
+	const outputValid = inputValue.wuiValidateIpv4();
 	output.innerHTML = "<pre>"
 		+ `<b>Validación de IP v4</b>\n`
 		+ `valor entrada     : ${inputValue}\n`
@@ -4139,7 +4141,7 @@ const stringNIDValidation = () => {
 	const inputValue = "1.234.567-4";
 	const inputCountryCode = "CL";
 	const output = document.body.querySelector(".output.stringNIDValidation");
-	const outputValid = inputValue.wuiValidateNID(inputCountryCode);
+	const outputValid = inputValue.wuiValidateNid(inputCountryCode);
 	output.innerHTML = "<pre>"
 		+ `<b>Validación de DNI</b>\n`
 		+ `valor entrada       : ${inputValue}\n`
@@ -4223,7 +4225,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ### WUISelectpicker
 
-Versión: `0.12`
+Versión: `0.13`
 
 Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`.
 
@@ -4231,9 +4233,9 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.12.js) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.12.css) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.12.root.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.js) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.css) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css) |
 
 #### Constructor
 
@@ -4247,8 +4249,9 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 | -------------- | ---------- | --------------------- | ----------- |
 | selector       | `string`   | `".wui-selectpicker"` | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
 | lang           | `string`   | `"en"`                | (get/set)<br><br>Idioma del componente.<br><br>Valores:<br>• `"de"`, Alemán.<br>• `"en"`, Inglés.<br>• `"es"`, Español. |
-| options        | `array`    | `[]`                  | (get/set)<br><br>Arreglo de opciones del selector según la definición de **Opciones de Menú**. |
+| name           | `string`   | `""`                  | (get/set)<br><br>Define el nombre de la entrada de datos `<select>`. |
 | value          | `string`   | `""`                  | (get/set)<br><br>Valor de la selección de opciones inicial. |
+| options        | `array`    | `[]`                  | (get/set)<br><br>Arreglo de opciones del selector según la definición de **Opciones de Menú**. |
 | text           | `string`   | `""`                  | (get)<br><br>Texto de la selección de opciones inicial. |
 | texts          | `object`   | `{}`                  | (get/set)<br><br>Textos personalizados para los botones y mensajes del componente. |
 | openDirection  | `string`   | `"down"`              | (get/set)<br><br>Dirección de apertura del selector.<br><br>Valores:<br>• `"up"`, hacia arriba.<br>• `"down"`, hacia abajo. |
@@ -4290,7 +4293,7 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 | ~~loadOptions~~ | `void`               | `loadOptions(options)` **Deprecado**, usar `refresh()` en su lugar.<br><br>Parámetros:<br>**• options:** `array`.<br><br>Carga un arreglo de opciones, limpiando las existentes previamente. |
 | clearOptions    | `void`               | `clearOptions()`<br><br>Elimina todas las opciones de la lista. |
 | refresh         | `void`               | `refresh(options)`<br><br>Parámetros:<br>**• options:** `array`.<br><br>Carga un arreglo de opciones, limpiando las existentes previamente. |
-| open            | `void`               | `open()`<br><br>Abre la lista de opciones. |
+| open            | `void`               | `open()`<br><br>Abre la lista de opciones. En modo escritorio, reduce automáticamente la cantidad de opciones visibles para que la lista se ajuste dentro del ancestro más cercano que recorte contenido (`overflow: hidden`, `auto`, `scroll` o `clip`), además del límite del viewport. |
 | close           | `void`               | `close()`<br><br>Cierra la lista de opciones. |
 | toggle          | `void`               | `toggle()`<br><br>Alterna el estado de apertura de la lista de opciones. |
 | cancel          | `void`               | `cancel()`<br><br>Cancela la selección actual y revierte al valor anterior, cerrando la lista. |
@@ -4400,9 +4403,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.css">
-<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.12.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.css">
+<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.js"></script>
 ```
 
 Código HTML:
@@ -4488,7 +4491,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIDatepicker
 
-Versión: `0.10`
+Versión: `0.11`
 
 Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`.
 
@@ -4496,9 +4499,9 @@ Componente para la implementación de entradas de datos de tipo fecha basada en 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.10.js) |
-| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.10.css) |
-| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.10.root.css) |
+| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.js) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.css) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.root.css) |
 
 #### Constructor
 
@@ -4512,6 +4515,7 @@ Componente para la implementación de entradas de datos de tipo fecha basada en 
 | ------------- | ---------- | -------------------- | ----------- |
 | selector      | `string`   | `".wui-datepicker"`  | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
 | locales       | `string`   | `"en-US"`            | (get/set)<br><br>Código de configuración regional en formato `<ISO 639-1>-<ISO 3166-1 alpha-2>`. Por ejemplo: `es-CL`, `en-US`, `fr-FR`, etc. |
+| name          | `string`   | `""`                 | (get/set)<br><br>Define el nombre de la entrada de datos `<input type="date">`. |
 | value         | `string`   | `""`                 | (get/set)<br><br>Fecha seleccionada en formato `yyyy-mm-dd`. |
 | min           | `string`   | `""`                 | (get/set)<br><br>Fecha mínima permitida en formato `yyyy-mm-dd`. |
 | max           | `string`   | `""`                 | (get/set)<br><br>Fecha máxima permitida en formato `yyyy-mm-dd`. |
@@ -4637,9 +4641,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.css">
-<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.10.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.css">
+<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.js"></script>
 ```
 
 Código HTML:
@@ -4697,7 +4701,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITimepicker
 
-Versión: `0.10`
+Versión: `0.11`
 
 Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`.
 
@@ -4705,9 +4709,9 @@ Componente para la implementación de entradas de datos de tipo hora basada en e
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.10.js) |
-| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.10.css) |
-| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.10.root.css) |
+| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.js) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.css) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.root.css) |
 
 #### Constructor
 
@@ -4721,6 +4725,7 @@ Componente para la implementación de entradas de datos de tipo hora basada en e
 | ------------- | ---------- | -------------------- | ----------- |
 | selector      | `string`   | `".wui-timepicker"`  | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
 | lang          | `string`   | `"en"`               | (get/set)<br><br>Idioma del componente.<br><br>Valores:<br>• `"de"`, Alemán.<br>• `"en"`, Inglés.<br>• `"es"`, Español. |
+| name          | `string`   | `""`                 | (get/set)<br><br>Define el nombre de la entrada de datos `<input type="time">`. |
 | value         | `string`   | `""`                 | (get/set)<br><br>Hora seleccionada en formato `hh:mm` (24 horas). |
 | min           | `string`   | `"00:00"`            | (get/set)<br><br>Hora mínima permitida en formato `hh:mm`. |
 | max           | `string`   | `"23:59"`            | (get/set)<br><br>Hora máxima permitida en formato `hh:mm`. |
@@ -4824,9 +4829,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.css">
-<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.css">
+<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.js"></script>
 ```
 
 Código HTML:
@@ -4882,7 +4887,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIColorpicker
 
-Versión: `0.11`
+Versión: `0.12`
 
 Componente para la implementación de entradas de datos de tipo selector de color basada en el elemento HTML `<input type="color">`.
 
@@ -4890,9 +4895,9 @@ Componente para la implementación de entradas de datos de tipo selector de colo
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/colorpicker/wui-colorpicker-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.11.js) |
-| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.11.css) |
-| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.11.root.css) |
+| JS   | [src/wui-js/main/colorpicker/wui-colorpicker-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.12.js) |
+| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.12.css) |
+| CSS  | [src/wui-js/main/colorpicker/wui-colorpicker-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/colorpicker/wui-colorpicker-0.12.root.css) |
 
 #### Constructor
 
@@ -4906,6 +4911,7 @@ Componente para la implementación de entradas de datos de tipo selector de colo
 | ------------- | ---------- | -------------------- | ----------- |
 | selector      | `string`   | `".wui-colorpicker"` | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
 | lang          | `string`   | `"en"`               | (get/set)<br><br>Idioma del componente.<br><br>Valores:<br>• `"de"`, Alemán.<br>• `"en"`, Inglés.<br>• `"es"`, Español. |
+| name          | `string`   | `""`                 | (get/set)<br><br>Define el nombre de la entrada de datos `<input type="color">`. |
 | value         | `string`   | `""`                 | (get/set)<br><br>Color seleccionado en formato hexadecimal o nombre de color CSS. Retorna el valor en hexadecimal. |
 | emptyValue    | `string`   | `"#000001"`          | (get/set)<br><br>Valor hexadecimal que representa un color vacío o no seleccionado. |
 | texts         | `object`   | `{}`                 | (get/set)<br><br>Textos personalizados para los botones y mensajes del componente. |
@@ -5061,9 +5067,9 @@ nav {
 Código HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.12.js"></script>
 ```
 
 Código HTML:
@@ -5118,7 +5124,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUISwitch
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`.
 
@@ -5126,9 +5132,9 @@ Componente para la implementación de entradas de datos de tipo casilla de verif
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/switch/wui-switch-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.8.js) |
-| CSS  | [src/wui-js/main/switch/wui-switch-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.8.css) |
-| CSS  | [src/wui-js/main/switch/wui-switch-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.8.root.css) |
+| JS   | [src/wui-js/main/switch/wui-switch-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.js) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.css) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.root.css) |
 
 #### Constructor
 
@@ -5141,7 +5147,9 @@ Componente para la implementación de entradas de datos de tipo casilla de verif
 | Propiedad | Tipo       | Valor predeterminado | Descripción |
 | --------- | ---------- | -------------------- | ----------- |
 | selector  | `string`   | `".wui-switch"`      | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
+| name      | `string`   | `""`                 | (get/set)<br><br>Define el nombre de la entrada de datos `<input type="checkbox">`. |
 | value     | `string`   | `"1"`                | (get/set)<br><br>Valor que tomará la casilla de verificación cuando esté marcado. |
+| boolean   | `boolean`  | `false`              | (get/set)<br><br>Define si el componente está en modo booleano. Cuando el componente está en modo booleano el evento `change` modifica automáticamente la propiedad `value` a `1` si la propiedad `activated` es verdadera y a `0` si es falsa. |
 | activated | `boolean`  | `false`              | (get/set)<br><br>Define si la casilla de verificación está marcada. |
 | enabled   | `boolean`  | `true`               | (get/set)<br><br>Define si la casilla de verificación está habilitada. |
 | onChange  | `function` | `null`               | (get/set)<br><br>Función que se ejecuta cuando el estado de la casilla de verificación cambia. La función recibe como parámetros el estado booleano `activated` y el valor de la casilla de verificación. |
@@ -5208,9 +5216,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.9.js"></script>
 ```
 
 Código HTML:
@@ -5254,7 +5262,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIntensity
 
-Versión: `0.6`
+Versión: `0.7`
 
 Componente para la implementación de entradas de datos de tipo selector de intensidad de 4 niveles: nada, bajo, medio y alto basada en el elemento HTML `<input type="range">`.
 
@@ -5262,9 +5270,9 @@ Componente para la implementación de entradas de datos de tipo selector de inte
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/intensity/wui-intensity-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.6.js) |
-| CSS  | [src/wui-js/main/intensity/wui-intensity-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.6.css) |
-| CSS  | [src/wui-js/main/intensity/wui-intensity-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.6.root.css) |
+| JS   | [src/wui-js/main/intensity/wui-intensity-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.7.js) |
+| CSS  | [src/wui-js/main/intensity/wui-intensity-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.7.css) |
+| CSS  | [src/wui-js/main/intensity/wui-intensity-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/intensity/wui-intensity-0.7.root.css) |
 
 #### Constructor
 
@@ -5277,6 +5285,7 @@ Componente para la implementación de entradas de datos de tipo selector de inte
 | Propiedad | Tipo       | Valor predeterminado | Descripción |
 | --------- | ---------- | -------------------- | ----------- |
 | selector  | `string`   | `".wui-intensity"`   | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del objeto. En caso de existir más de un elemento coincidente con el selector se incluirá únicamente la primera coincidencia. |
+| name      | `string`   | `""`                 | (get/set)<br><br>Define el nombre de la entrada de datos `<input type="range">`. |
 | value     | `number`   | `0`                  | (get/set)<br><br>Valor de la intensidad (0: nada, 1: bajo, 2: medio, 3: alto). Acepta también las cadenas `"none"`, `"low"`, `"half"`, `"high"`. |
 | enabled   | `boolean`  | `true`               | (get/set)<br><br>Define si el selector está habilitado. |
 | onChange  | `function` | `null`               | (get/set)<br><br>Función que se ejecuta cuando el valor cambia. La función recibe como parámetros el valor entero (0-3) y la cadena asociada. |
@@ -5333,9 +5342,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.6.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.6.css">
-<script type="text/javascript" src="/libraries/wui-js/main/intensity/wui-intensity-0.6.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.7.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/intensity/wui-intensity-0.7.css">
+<script type="text/javascript" src="/libraries/wui-js/main/intensity/wui-intensity-0.7.js"></script>
 ```
 
 Código HTML:
@@ -5378,7 +5387,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIButton
 
-Versión: `0.11`
+Versión: `0.12`
 
 Componente para la implementación de botones basada en el elemento HTML `<button>`.
 
@@ -5386,9 +5395,9 @@ Componente para la implementación de botones basada en el elemento HTML `<butto
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/button/wui-button-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.11.js) |
-| CSS  | [src/wui-js/main/button/wui-button-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.11.css) |
-| CSS  | [src/wui-js/main/button/wui-button-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.11.root.css) |
+| JS   | [src/wui-js/main/button/wui-button-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.js) |
+| CSS  | [src/wui-js/main/button/wui-button-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.css) |
+| CSS  | [src/wui-js/main/button/wui-button-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.root.css) |
 
 #### Constructor
 
@@ -5517,9 +5526,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.12.js"></script>
 ```
 
 Código HTML:

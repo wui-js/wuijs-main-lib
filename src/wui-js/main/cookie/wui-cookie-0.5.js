@@ -24,6 +24,13 @@ class WUICookie {
 		overssl: null
 	};
 
+	constructor(properties = {}) {
+		const defaults = structuredClone(WUICookie.#defaults);
+		Object.entries(defaults).forEach(([key, value]) => {
+			this[key] = key in properties ? properties[key] : value;
+		});
+	}
+
 	get domain() {
 		return this.#properties.domain;
 	}
@@ -62,13 +69,6 @@ class WUICookie {
 		if (typeof (value) === "boolean") {
 			this.#properties.overssl = value;
 		}
-	}
-
-	constructor(properties) {
-		const defaults = structuredClone(WUICookie.#defaults);
-		Object.entries(defaults).forEach(([key, value]) => {
-			this[key] = key in properties ? properties[key] : value;
-		});
 	}
 
 	encode(name, value, options = {}) {

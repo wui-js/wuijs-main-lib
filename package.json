@@ -1,61 +1,61 @@
 {
-	"name": "@wui-js/main",
-	"version": "0.12.0",
-	"license": "Apache-2.0",
-	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
-	"description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
-	"keywords": [
-		"ui",
-		"components",
-		"vanilla",
-		"javascript",
-		"css",
-		"wui",
-		"frontend",
-		"library"
-	],
-	"homepage": "https://wuijs.dev",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/wui-js/wuijs-main-lib.git"
-	},
-	"bugs": {
-		"url": "https://github.com/wui-js/wuijs-main-lib/issues"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"main": "wui.js",
-	"files": [
-		"wui.js",
-		"body/",
-		"button/",
-		"colorpicker/",
-		"cookie/",
-		"datepicker/",
-		"fade/",
-		"form/",
-		"format/",
-		"head/",
-		"icon/",
-		"intensity/",
-		"language/",
-		"list/",
-		"loader/",
-		"menubar/",
-		"modal/",
-		"paging/",
-		"scrolly/",
-		"selectpicker/",
-		"slider/",
-		"switch/",
-		"table/",
-		"tabs/",
-		"timepicker/",
-		"tooltip/"
-	],
-	"scripts": {
-		"prepack": "rm README.md && cp NPM.md README.md && cp -r src/wui-js/main/. .",
-		"postpack": "rm -f README.md && ln -s docs/README-en.md README.md && ls src/wui-js/main/ | grep -v '^LICENSE$' | xargs rm -rf"
-	}
+  "name": "@wui-js/main",
+  "version": "0.13.0",
+  "license": "Apache-2.0",
+  "author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
+  "description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
+  "keywords": [
+    "ui",
+    "components",
+    "vanilla",
+    "javascript",
+    "css",
+    "wui",
+    "frontend",
+    "library"
+  ],
+  "homepage": "https://wuijs.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wui-js/wuijs-main-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wui-js/wuijs-main-lib/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "wui.js",
+  "files": [
+    "wui.js",
+    "body/",
+    "button/",
+    "colorpicker/",
+    "cookie/",
+    "datepicker/",
+    "fade/",
+    "form/",
+    "format/",
+    "head/",
+    "icon/",
+    "intensity/",
+    "language/",
+    "list/",
+    "loader/",
+    "menubar/",
+    "modal/",
+    "paging/",
+    "scrolly/",
+    "selectpicker/",
+    "slider/",
+    "switch/",
+    "table/",
+    "tabs/",
+    "timepicker/",
+    "tooltip/"
+  ],
+  "scripts": {
+    "prepack": "rm README.md && cp NPM.md README.md && cp -r src/wui-js/main/. .",
+    "postpack": "rm -f README.md && ln -s docs/README-en.md README.md && ls src/wui-js/main/ | grep -v '^LICENSE$' | xargs rm -rf"
+  }
 }
