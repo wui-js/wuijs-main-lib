@@ -7,6 +7,31 @@
 
 # Registro de Cambios
 
+## [v0.13.2] - 2026-07-22
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIBody a `0.7`.
+	- Se agregó el método `importSections()`.
+3. Se actualizó versión clase WUIIcon a `0.10`.
+	- Se agregaron los iconos `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` y `person-gear-fill`.
+4. Se actualizó versión clase WUIModal a `0.10`.
+	- Se corrigió en la apertura de modal con estilo `page small`. Métodos `open()` y `resposive()` forzaran `height: auto` y un desplazamiento `top` de página completa en modo móvil para el estilo `page small`, lo que impedía que la caja se ajustara a `--wui-modal-smallpage-box-height` y emergiera desde la parte inferior de la pantalla.
+	- Se corrigió que el efecto `under` en modo móvil (clase `.under`, atenuado del overlay y animación de compresión de la caja) se aplicara sin importar el tipo de modal. Ahora requiere que tanto el modal que se abre como el que queda debajo sean de tipo `page` y no `small`.
+	- `onStartOpen` y `onStartClose` ahora cancelan la apertura/cierre cuando retornan exactamente `false`.
+5. Se actualizó versión clase WUIMenubar a `0.9`.
+	- Los tooltips de los botones ahora muestran una pestaña en la parte izquierda, al igual que el estilo `.left` de `WUITooltip`, y ajustan su ancho al contenido de texto en vez de usar un tamaño fijo.
+	- Se agregó la propiedad booleana `fixed` (por defecto `false`) para fijar la barra al borde de la pantalla. |
+	- Se agregó la propiedad booleana `nowrapTooltips` (por defecto `false`) para mantener el texto de los tooltips en una sola línea.
+6. Se actualizó versión clase WUIForm a `0.11`.
+	- Se extendió el alcance de la regla `.hidden` a `.field`, `text` y `.message`.
+	- Se agregó soporte para entradas de datos de tipo arreglo (`[name="...[]"]`). Los métodos `getField()`, `getIcon()`, `getRightIcon()`, `getLabel()`, `getInput()`, `getData()`, `getText()`, `getValue()`, `setType()`, `setValue()`, `setData()`, `setText()`, `setEnabled()`, `focus()`, `blur()`, `change()` y `autosize()` ahora aceptan un parámetro `position` (por defecto `0`) para apuntar a una ocurrencia específica.
+	- Se eliminaron selectores CSS muertos que dependían de una clase `.field.disabled` que `setEnabled()` nunca asignaba (openers de date/time/select). El color de la etiqueta deshabilitada ahora usa `label:has(~ input:disabled, ...)` en vez de una clase `.disabled` gestionada por JS; `setEnabled()` ya no alterna `.disabled` en la etiqueta ni en el input mismo (el input ya dependía del selector nativo `:disabled`).
+7. Se actualizó versión clase WUIButton a `0.13`.
+	- Se agregó el método `getText()`.
+	- El estilo del estado deshabilitado ahora usa las pseudo-clases nativas `:disabled`/`:enabled` en vez de una clase `.disabled` gestionada por JS, simplificando `#setStyle()` y el setter `enabled`.
+
 ## [v0.13.1] - 2026-07-20
 
 Características:

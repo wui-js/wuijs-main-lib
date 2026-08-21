@@ -7,6 +7,31 @@
 
 # Change Log
 
+## [v0.13.2] - 2026-07-22
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIBody class version to `0.7`.
+	- Added `importSections()` method.
+3. Updated WUIIcon class version to `0.10`.
+	- Added `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` and `person-gear-fill` icons.
+4. Updated WUIModal class version to `0.10`.
+	- Fixed in opening modal with the `page small` style. `open()` and `resposive()` methods forcing `height: auto` and a full-page `top` offset on mobile for the `page small` style, which prevented the box from being constrained to `--wui-modal-smallpage-box-height` and emerging from the bottom of the screen.
+	- Fixed the mobile `under` effect (`.under` class, overlay dimming, and box squish animation) applying regardless of modal type. It now requires both the opening modal and the modal underneath to be `page` type and not `small`.
+	- `onStartOpen` and `onStartClose` now cancel the opening/closing when they return exactly `false`.
+5. Updated WUIMenubar class version to `0.9`.
+	- Button tooltips now display a left-side tab, matching `WUITooltip`'s `.left` style, and adapt their width to the text content instead of using a fixed size.
+	- Added `fixed` boolean property (default `false`) to fix the bar to the edge of the screen.
+	- Added `nowrapTooltips` boolean property (default `false`) to keep tooltip text on a single line.
+6. Updated WUIForm class version to `0.11`.
+	- The scope of the `.hidden` rule was extended to `.field`, `text` and `.message`.
+	- Added support for array-type inputs (`[name="...[]"]`). `getField()`, `getIcon()`, `getRightIcon()`, `getLabel()`, `getInput()`, `getData()`, `getText()`, `getValue()`, `setType()`, `setValue()`, `setData()`, `setText()`, `setEnabled()`, `focus()`, `blur()`, `change()` and `autosize()` now accept a `position` parameter (default `0`) to target a specific occurrence.
+	- Removed dead CSS selectors that relied on a `.field.disabled` class never set by `setEnabled()` (date/time/select openers). The disabled label color now uses `label:has(~ input:disabled, ...)` instead of a JS-managed `.disabled` class; `setEnabled()` no longer toggles `.disabled` on the label or the input itself (the input already relied on the native `:disabled` selector).
+7. Updated WUIButton class version to `0.13`.
+	- Added `getText()` method.
+	- Disabled state styling now relies on the native `:disabled`/`:enabled` pseudo-classes instead of a JS-managed `.disabled` class, simplifying `#setStyle()` and the `enabled` setter.
+
 ## [v0.13.1] - 2026-07-20
 
 Features:

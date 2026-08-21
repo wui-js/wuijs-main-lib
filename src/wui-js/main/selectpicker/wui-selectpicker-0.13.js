@@ -658,7 +658,6 @@ class WUISelectpicker {
 				input.removeAttribute("multiple");
 			}
 			if (!this.enabled) {
-				htmlElement.classList.add("disabled");
 				input.setAttribute("disabled", "true");
 			} else {
 				input.removeAttribute("disabled");

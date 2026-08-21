@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-main-lib` |
-| **Library version**  | `0.13.1` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.13.2` ([Change Log](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Document version** | `0.13.1.20260702.0` |
+| **Document version** | `0.13.2.20260822.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -91,21 +91,21 @@ WUI/JS Main Lib is part of the WUI/JS project, which currently consists of 4 rep
 | ------------------------------------ | :------:| ----------- |
 | [WUICookie](#wui-cookie)             | `0.5`   | Utilities for cookies management. |
 | [WUIHead](#wui-head)                 | `0.4`   | Utilities for HTML head management. |
-| [WUIBody](#wui-body)                 | `0.6`   | Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments. |
+| [WUIBody](#wui-body)                 | `0.7`   | Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments. |
 | [WUILanguage](#wui-language)         | `0.6`   | Utilities for interfaces with different languages managment. Allows you to load language files in JS or JSON format and dynamically update the content of HTML elements based on the language. |
 | [WUIScrolly](#wui-scrolly)           | `0.7`   | Utilities for animating HTML elements managment using the "onscroll" event of the HTML page body. |
-| [WUIIcon](#wui-icon)                 | `0.9`   | Pre-designed icons set loaded via CSS, for use in interfaces. |
+| [WUIIcon](#wui-icon)                 | `0.10`   | Pre-designed icons set loaded via CSS, for use in interfaces. |
 | [WUIFade](#wui-fade)                 | `0.5`   | Utilities for fading out and fading control in HTML elements with opacity. |
 | [WUILoader](#wui-loader)             | `0.7`   | Component for the implementation of loading animations. |
 | [WUITooltip](#wui-tooltip)           | `0.6`   | Component for the implementation of tooltip texts. |
-| [WUIModal](#wui-modal)               | `0.9`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
+| [WUIModal](#wui-modal)               | `0.10`   | Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`). |
 | [WUIPaging](#wui-paging)             | `0.9`   | Component for the implementation of paginated views with animated transitions. |
 | [WUISlider](#wui-slider)             | `0.8`   | Component for the implementation of slide presentations controlled by mouse/touch dragging and/or by event. |
 | [WUITabs](#wui-tabs)                 | `0.6`   | Component for the implementation of views accessible by tab selection. |
-| [WUIMenubar](#wui-menubar)           | `0.8`   | Component for the implementation of menu bars. |
+| [WUIMenubar](#wui-menubar)           | `0.9`   | Component for the implementation of menu bars. |
 | [WUIList](#wui-list)                 | `0.8`   | Component for the implementation of data lists and buttons for each row optionally. |
 | [WUITable](#wui-table)               | `0.9`   | Component for the implementation of data tables. Unlike the `WUIList` component, the `WUITable` component includes a column header. |
-| [WUIForm](#wui-form)                 | `0.10`  | Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`. |
+| [WUIForm](#wui-form)                 | `0.11`  | Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`. |
 | [WUIFormat](#wui-format)             | `0.5`   | Utilities for management and validation `string`, `number` and `Date` data formats. |
 | [WUISelectpicker](#wui-selectpicker) | `0.13`  | Component for the implementation of multiple or exclusive selection list data inputs based on HTML element `<select>`. |
 | [WUIDatepicker](#wui-datepicker)     | `0.11`  | Component for the implementation of date type data inputs based on HTML element `<input type="date">`. |
@@ -113,7 +113,7 @@ WUI/JS Main Lib is part of the WUI/JS project, which currently consists of 4 rep
 | [WUIColorpicker](#wui-colorpicker)   | `0.12`  | Component for the implementation of color picker type data inputs based on HTML element `<input type="color">`. |
 | [WUISwitch](#wui-switch)             | `0.9`   | Component for the implementation of checkbox type data inputs based on HTML element `<input type="checkbox">`. |
 | [WUIIntensity](#wui-intensity)       | `0.7`   | Component for the implementation of 4-level intensity selector type data inputs: none, low, half, and high based on HTML element `<input type="range">`. |
-| [WUIButton](#wui-button)             | `0.12`  | Component for the implementation of based on HTML element `<button>`. |
+| [WUIButton](#wui-button)             | `0.13`  | Component for the implementation of based on HTML element `<button>`. |
 
 <a name="dirmap"></a>
 
@@ -218,22 +218,22 @@ HTML code:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.root.css">
@@ -255,14 +255,14 @@ HTML code:
 		<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.9.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.10.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.5.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.8.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.9.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.8.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.10.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.js"></script>
@@ -305,7 +305,7 @@ This loader allows you to integrate all WUI libraries into a web page, either fu
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.1"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.2"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Optionally, libraries can be included individually. To do this, add them to the 
 Library names passed in the `class` parameter should not contain the version suffix (`-x.x`) as the version will be automatically defined by the simple load script.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.1&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.2&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Library names passed in the `class` parameter should not contain the version suf
 Additionally, you can omit loading the `root.css` files for each library by adding the `root` parameter with the value `0` (zero) to the `wui.js` file URL.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.1&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.2&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
@@ -509,7 +509,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIBody
 
-Version: `0.6`
+Version: `0.7`
 
 Utilities for HTML body management. Allows the import of CSS/JS/HTML content and facilitates implementation in native mobile environments.
 
@@ -517,7 +517,7 @@ Utilities for HTML body management. Allows the import of CSS/JS/HTML content and
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/body/wui-body-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.6.js) |
+| JS   | [src/wui-js/main/body/wui-body-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.7.js) |
 
 #### Constructor
 
@@ -537,13 +537,14 @@ Utilities for HTML body management. Allows the import of CSS/JS/HTML content and
 
 #### Methods
 
-| Method      | Return type | Description |
-| ----------- | ----------- | ----------- |
-| import      | `void`      | `import(id, path[, done])`<br><br>Arguments:<br>**• id:** `string`, specifies the id of the HTML element where the content is to be loaded.<br>**• path:** `string`, specifies the subdirectory path and filename of the files with extension `.css`, `.htm` and `.js` that will be imported and loaded.<br>**• done:** `function` *optional*, this function is executed when the content loading has finished.<br><br>Imports CSS/JS/HTML content referenced to an HTML element by its `id`. The content is also commonly referred to as a "module" and is loaded in three sections:<br>**• CSS:** using a `<style>` element inserted before the HTML content.<br>**• HTML:** over the element identified by its `id`.<br>**• JS:** using a `<script>` element inserted into the body of the HTML document. |
-| prepare     | `void`      | `prepare()`<br><br>Depending on the value of the `environment` parameter, modifies the HTML elements `a`, `input`, and `select` in the HTML document body to adapt them to native environments. |
-| openUrl     | `void`      | `openUrl(url[, download])`<br><br>Arguments:<br><br>**• id:** `string`, specifies the URL that is required to be opened or downloaded.<br>**• download:** `string` *optional*, specifies the name of the file that will be used to download the content referenced by the URL.<br><br>Open or download content using a URL. This method is required in native environments since WebView on Android or WebKit on iOS aren't always supported. |
-| isCompleted | `boolean`   | `isCompleted()`<br><br>Returns `true` if all contents have been imported and loaded, `false` in case contr. |
-| destroy     | `void`      | `destroy()`<br><br>Destroyer. |
+| Method         | Return type | Description |
+| -------------- | ----------- | ----------- |
+| import         | `void`      | `import(id, path[, done])`<br><br>Arguments:<br>**• id:** `string`, specifies the id of the HTML element where the content is to be loaded.<br>**• path:** `string`, specifies the subdirectory path and filename of the files with extension `.css`, `.htm` and `.js` that will be imported and loaded.<br>**• done:** `function` *optional*, this function is executed when the content loading has finished.<br><br>Imports CSS/JS/HTML content referenced to an HTML element by its `id`. The content is also commonly referred to as a "module" and is loaded in three sections:<br>**• CSS:** using a `<style>` element inserted before the HTML content.<br>**• HTML:** over the element identified by its `id`.<br>**• JS:** using a `<script>` element inserted into the body of the HTML document. |
+| importSections | `void`      | `importSections(sections[, target][, auto])`<br><br>Arguments:<br>**• sections:** `array`, array of objects describing the sections to import. Each object accepts:<br>&nbsp;&nbsp;**◦ id:** `string`, id of the container HTML element for the section; also used as the `id` for `import()`.<br>&nbsp;&nbsp;**◦ path:** `string`, subdirectory path and filename of the files to import (equivalent to `import()`'s `path` argument).<br>&nbsp;&nbsp;**◦ tag:** `string` *optional*, tag name of the container element to create (default `"div"`). Only used when `auto` is `false`.<br>&nbsp;&nbsp;**◦ enabled:** `boolean` \\| `function` *optional*, determines whether the section is imported. If a `function`, its return value is evaluated. Enabled by default.<br>&nbsp;&nbsp;**◦ sections:** `array` *optional*, array of sub-sections imported recursively once the current section's import finishes, targeting container elements already present in the imported content.<br>&nbsp;&nbsp;**◦ done:** `function` *optional*, function executed when the section (and its sub-sections) finish importing.<br>**• target:** `HTMLElement` *optional*, HTML element the top-level sections' containers are appended to. Defaults to `document.body`.<br>**• auto:** `boolean` *optional*, defaults to `true`. When `true`, the container tag is inferred from the section's `id`: `section` if it ends in "section", `form` if it ends in "form", `div` otherwise. When `false`, each section's `tag` value is used.<br><br>Declaratively imports multiple CSS/JS/HTML content sections from an array of descriptors. For each enabled section, creates a container element — not necessarily `<section>`, it can be `<div>`, `<form>` or another tag — and delegates the import to `import()`. Sub-sections declared in `sections` are imported recursively targeting container elements already present in the imported content. |
+| prepare        | `void`      | `prepare()`<br><br>Depending on the value of the `environment` parameter, modifies the HTML elements `a`, `input`, and `select` in the HTML document body to adapt them to native environments. |
+| openUrl        | `void`      | `openUrl(url[, download])`<br><br>Arguments:<br><br>**• id:** `string`, specifies the URL that is required to be opened or downloaded.<br>**• download:** `string` *optional*, specifies the name of the file that will be used to download the content referenced by the URL.<br><br>Open or download content using a URL. This method is required in native environments since WebView on Android or WebKit on iOS aren't always supported. |
+| isCompleted    | `boolean`   | `isCompleted()`<br><br>Returns `true` if all contents have been imported and loaded, `false` in case contr. |
+| destroy        | `void`      | `destroy()`<br><br>Destroyer. |
 
 #### Implementation
 
@@ -603,7 +604,7 @@ body {
 HTML head:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.6.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.7.js"></script>
 ```
 
 HTML code:
@@ -1122,7 +1123,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIcon
 
-Version: `0.9`
+Version: `0.10`
 
 Pre-designed icons set loaded via CSS, for use in interfaces.
 
@@ -1130,9 +1131,9 @@ Pre-designed icons set loaded via CSS, for use in interfaces.
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/icon/wui-icon-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.js) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.css) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.9.root.css) |
+| JS   | [src/wui-js/main/icon/wui-icon-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.js) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.root.css) |
 
 #### Methods
 
@@ -1193,14 +1194,15 @@ Pre-designed icons set loaded via CSS, for use in interfaces.
 
 #### Person Icon Table
 
-| Icon                                                                                      | Style               | Icon                                                                                      | Style               | Icon                                                                                       | Style                | Icon                                                                                       | Style                |
-| :--:                                                                                      | -----               | :--:                                                                                      | -----               | :--:                                                                                       | -----                | :--:                                                                                       | -----                |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/man-fill.svg)           | .man-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/woman-fill.svg)         | .woman-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-line.svg)         | .person-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-fill.svg)         | .person-fill         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-plus-line.svg)   | .person-plus-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-plus-fill.svg)   | .person-plus-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-dash-line.svg)    | .person-dash-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-dash-fill.svg)    | .person-dash-fill    |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-check-line.svg)  | .person-check-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-check-fill.svg)  | .person-check-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-x-line.svg)       | .person-x-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-x-fill.svg)       | .person-x-fill       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/people-line.svg)        | .people-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/people-fill.svg)        | .people-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-contact-line.svg) | .person-contact-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-contact-fill.svg) | .person-contact-fill |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-card-line.svg)   | .person-card-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-card-fill.svg)   | .person-card-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-names-line.svg)   | .person-names-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-names-fill.svg)   | .person-names-fill   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-circle-line.svg) | .person-circle-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-circle-fill.svg) | .person-circle-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/user-line.svg)           | .user-line           |                                            |                      |
+| Icon                                                                                           | Style                    | Icon                                                                                           | Style                    | Icon                                                                                       | Style                | Icon                                                                                       | Style                |
+| :--:                                                                                           | -----                    | :--:                                                                                           | -----                    | :--:                                                                                       | -----                | :--:                                                                                       | -----                |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/man-fill.svg)                | .man-fill                | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/woman-fill.svg)              | .woman-fill              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-line.svg)         | .person-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-fill.svg)         | .person-fill         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-plus-line.svg)        | .person-plus-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-plus-fill.svg)        | .person-plus-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-dash-line.svg)    | .person-dash-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-dash-fill.svg)    | .person-dash-fill    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-check-line.svg)       | .person-check-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-check-fill.svg)       | .person-check-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-x-line.svg)       | .person-x-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-x-fill.svg)       | .person-x-fill       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-exclamation-line.svg) | .person-exclamation-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-exclamation-fill.svg) | .person-exclamation-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-gear-line.svg)    | .person-gear-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-gear-fill.svg)    | .person-gear-fill    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/people-line.svg)             | .people-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/people-fill.svg)             | .people-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-contact-line.svg) | .person-contact-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-contact-fill.svg) | .person-contact-fill |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-card-line.svg)        | .person-card-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-card-fill.svg)        | .person-card-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-names-line.svg)   | .person-names-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-names-fill.svg)   | .person-names-fill   |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-circle-line.svg)      | .person-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/person-circle-fill.svg)      | .person-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/user-line.svg)           | .user-line           |                                            |                      |
 
 #### File Icon Table
 
@@ -1392,7 +1394,7 @@ python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s 
 
 | Option             | Default value                              | Description |
 | ------------------ | ------------------------------------------ | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.9.css` | Path to the source CSS file. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.10.css` | Path to the source CSS file. |
 | `-o`,<br>`--out`   | `../imgs/icons/`                           | Output directory for the generated files. |
 | `-c`,<br>`--color` | `#a2a9b6`                                  | CSS-compatible color format that will replace the 'currentColor' statement in the SVG code. |
 | `-s`,<br>`--size`  | `24`                                       | Size in pixels (width and height) of the images in the set. |
@@ -1444,9 +1446,9 @@ nav button {
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.10.js"></script>
 ```
 
 HTML code:
@@ -1899,7 +1901,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIModal
 
-Version: `0.9`
+Version: `0.10`
 
 Component for the implementation of dialog boxes (type `message`) and pop-up windows (type `page`).
 
@@ -1907,9 +1909,9 @@ Component for the implementation of dialog boxes (type `message`) and pop-up win
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/modal/wui-modal-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.js) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.css) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.9.root.css) |
+| JS   | [src/wui-js/main/modal/wui-modal-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.js) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.css) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.root.css) |
 
 #### Constructor
 
@@ -1923,11 +1925,11 @@ Component for the implementation of dialog boxes (type `message`) and pop-up win
 | ------------ | ---------- | ------------- | ----------- |
 | selector     | `string`   | `""`          | (get/set)<br><br>CSS selector that defines the HTML container element of the object. If there is more than one matching element with the selector, only the first match will be included. |
 | openDelay    | `number`   | `200`         | (get/set)<br><br>Modal opening duration in milliseconds. |
-| onStartOpen  | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal starts opening. |
+| onStartOpen  | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal starts opening. If it returns exactly `false`, the opening is cancelled. |
 | onOpen       | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal has completely opened. |
 | onMaximize   | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal is maximized. |
 | onScrolling  | `function` | `null`        | (get/set)<br><br>Function that is executed during scrolling of the modal body. |
-| onStartClose | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal starts closing. |
+| onStartClose | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal starts closing. If it returns exactly `false`, the closing is cancelled. |
 | onClose      | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal has completely closed. |
 | onBack       | `function` | `null`        | (get/set)<br><br>Function that is executed when the modal back button is pressed. |
 
@@ -2048,9 +2050,9 @@ HTML head:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.10.js"></script>
 ```
 
 HTML code:
@@ -2636,7 +2638,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIMenubar
 
-Version: `0.8`
+Version: `0.9`
 
 Component for the implementation of menu bars.
 
@@ -2644,9 +2646,9 @@ Component for the implementation of menu bars.
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/menubar/wui-menubar-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.js) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.css) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.8.root.css) |
+| JS   | [src/wui-js/main/menubar/wui-menubar-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.js) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.css) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.root.css) |
 
 #### Constructor
 
@@ -2659,12 +2661,14 @@ Component for the implementation of menu bars.
 | Property            | Type       | Default value.   | Description |
 | ------------------- | ---------- | ---------------- | ----------- |
 | selector            | `string`   | `".wui-menubar"` | (get/set)<br><br>CSS selector that defines the HTML element that will be converted into the object. If more than one element matches the selector, only the first match will be included. |
+| fixed               | `boolean`  | `false`          | (get/set)<br><br>Defines whether the menu is fixed to the edge of the screen.
 | centered            | `boolean`  | `true`           | (get/set)<br><br>Defines whether the menu is displayed vertically centered. |
-| separations         | `boolean`  | `false`          | (get/set)<br><br>Defines whether a separator line is included between the menu bar sections. |
 | compacted           | `boolean`  | `false`          | (get/set)<br><br>Defines whether the menu is displayed in a compact format. |
 | expansive           | `boolean`  | `true`           | (get/set)<br><br>Defines whether the menu expands.. The function of expansion is not visible in mobile mode (when the screen width is less than `768px`). |
 | autoClose           | `boolean`  | `true`           | (get/set)<br><br>Defines whether the submenu closes automatically when a button within it is clicked. If the property is `false`, a button to close the submenu manually will be loaded at the top. |
 | hiddenPassiveBorder | `boolean`  | `false`          | (get/set)<br><br>Hides the passive border of the main bar (top, left and bottom in normal mode and left, right and bottom in mobile mode). |
+| separations         | `boolean`  | `false`          | (get/set)<br><br>Defines whether a separator line is included between the menu bar sections. |
+| nowrapTooltips      | `boolean`  | `false`          | (get/set)<br><br>Defines whether button tooltips keep their text on a single line (`white-space: nowrap`) instead of wrapping to fit their content width. |
 | topButtons          | `array`    | `[]`             | (get/set)<br><br>List of menu top buttons, as defined by **Button Options**. These buttons are not visible in mobile mode (when the screen width is less than `768px`). |
 | mainButtons         | `array`    | `[]`             | (get/set)<br><br>List of menu main buttons, as defined by **Button Options**. |
 | bottomButtons       | `array`    | `[]`             | (get/set)<br><br>List of menu bottom buttons, as defined by **Button Options**. These buttons are not visible in mobile mode (when the screen width is less than `768px`). |
@@ -2689,17 +2693,17 @@ Component for the implementation of menu bars.
 
 #### Methods
 
-| Method       | Return type   | Description |
-| ------------ | ------------- | ----------- |
-| getElement   | `HTMLElement` | `getElement()`<br><br>Returns the HTML container element of the object. |
+| Method           | Return type   | Description |
+| ---------------- | ------------- | ----------- |
+| getElement       | `HTMLElement` | `getElement()`<br><br>Returns the HTML container element of the object. |
 | getButtonOptions | `object`      | `getButtonOptions(id)`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br><br>Returns the menu button options object according to the unique button identifier passed as argument, or `null` if it does not exist. |
-| init         | `void`        | `init()`<br><br>Initializes the object. |
-| selectButton | `void`        | `selectButton(id[, selected[, runCallback]])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• selected:** `boolean`, button selection state. The default value is `true`. <br>**• runCallback:** `boolean`, run the `onClick` and `onSelect` callbacks. The default value is `true`.<br><br>Select or unselect a menu button. |
-| enableButton | `void`        | `enableButton(id[, enabled])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• enabled:** `boolean`, button enable state. The default value is `true`.<br><br>Enables or disables a menu button. |
-| setPhoto     | `void`        | `setPhoto(id[, src])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• src:** `string`, image source. The default value is `""`.<br><br>Upload an image above a button icon. |
-| setBubble    | `void`        | `setBubble(id, number)`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• number:** `number`, number that will appear in the bubble. The value `0` hides the bubble. |
-| close        | `void`        | `close()`<br><br>Close the submenu if it is open. |
-| destroy      | `void`        | `destroy()`<br><br>Destroyer. |
+| init             | `void`        | `init()`<br><br>Initializes the object. |
+| selectButton     | `void`        | `selectButton(id[, selected[, runCallback]])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• selected:** `boolean`, button selection state. The default value is `true`. <br>**• runCallback:** `boolean`, run the `onClick` and `onSelect` callbacks. The default value is `true`.<br><br>Select or unselect a menu button. |
+| enableButton     | `void`        | `enableButton(id[, enabled])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• enabled:** `boolean`, button enable state. The default value is `true`.<br><br>Enables or disables a menu button. |
+| setPhoto         | `void`        | `setPhoto(id[, src])`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• src:** `string`, image source. The default value is `""`.<br><br>Upload an image above a button icon. |
+| setBubble        | `void`        | `setBubble(id, number)`<br><br>Arguments:<br>**• id:** `string`, unique button identifier.<br>**• number:** `number`, number that will appear in the bubble. The value `0` hides the bubble. |
+| close            | `void`        | `close()`<br><br>Close the submenu if it is open. |
+| destroy          | `void`        | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
 
@@ -2801,9 +2805,9 @@ HTML head:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.9.js"></script>
 ```
 
 HTML code:
@@ -2820,12 +2824,14 @@ const init = () => {
 	const output = document.body.querySelector(".output");
 	const menubar = new WUIMenubar({
 		selector: ".wui-menubar.my-menubar",
+		//fixed: false,
 		centered: false,
-		separations: true,
 		//compacted: false,
 		//expansive: true,
 		autoClose: false,
 		//hiddenPassiveBorder: false,
+		separations: true,
+		//nowrapTooltips: false,
 		topButtons: [{
 			id: "logo",
 			iconImage: "https://wuijs.dev/Images/Logo/wuijs-isotype-color.svg",
@@ -3549,7 +3555,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIForm
 
-Version: `0.10`
+Version: `0.11`
 
 Component for the implementation of data forms. This component allows the implementation of HTML data input elements such as `<input>`, `<select>`, and `<textarea>`, and WUI library objects such as `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity`, and `WUIButton`.
 
@@ -3557,9 +3563,9 @@ Component for the implementation of data forms. This component allows the implem
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/form/wui-form-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.js) |
-| CSS  | [src/wui-js/main/form/wui-form-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.css) |
-| CSS  | [src/wui-js/main/form/wui-form-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.10.root.css) |
+| JS   | [src/wui-js/main/form/wui-form-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.js) |
+| CSS  | [src/wui-js/main/form/wui-form-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.css) |
+| CSS  | [src/wui-js/main/form/wui-form-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.root.css) |
 
 #### Constructor
 
@@ -3586,24 +3592,25 @@ Component for the implementation of data forms. This component allows the implem
 | getHeader     | `HTMLElement`                                              | `getHeader()`<br><br>Returns the HTML element of the form header section. |
 | getBody       | `HTMLElement`                                              | `getBody()`<br><br>Returns the HTML element of the form body section. |
 | getFooter     | `HTMLElement`                                              | `getFooter()`<br><br>Returns the HTML element of the form footer section. |
-| getField      | `HTMLElement`                                              | `getField(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the HTML element containing the field identified by the input field name. |
-| getIcon       | `HTMLElement`                                              | `getIcon(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the HTML element of the field icon section identified by the input field name. |
-| getLabel      | `HTMLLabelElement`                                         | `getLabel(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the HTML element of the section of the field label identified by the input field name. |
-| getInput      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `getInput(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the HTML element of the input field section identified by the input field name. |
-| getData       | `HTMLDataElement`                                          | `getData(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the HTML element of the data section of the field identified by the style class name. |
-| getText       | `HTMLElement`                                              | `getText(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the auxiliary HTML text element identified by the style class name. |
-| getValue      | `string`                                                   | `getValue(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Returns the value of the input field identified by the input field name or the value of the output field identified by the style class name. |
-| setType       | `void`                                                     | `setType(name, type)`<br><br>Arguments:<br>**• name:** `string`<br>**• type:** `string`<br><br>Sets the type of the input field identified by the input field name using the `type` attribute of the `<input>` tag. |
-| setValue      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `setValue(name, value)`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `string`<br><br>Sets the value of the input field identified by the input field name. |
-| setData       | `HTMLDataElement`                                          | `setData(name, value)`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `mixed`<br><br>Sets the value of the HTML element in the data section of the field identified by the style class name. |
-| setText       | `HTMLElement`                                              | `setText(name, value)`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `string`<br><br>Sets the content of the auxiliary text HTML element identified by the style class name. |
-| setEnabled    | `void`                                                     | `setEnabled(name, value)`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `boolean`<br><br>Enables or disables the field identified by the input field name. |
+| getField      | `HTMLElement`                                              | `getField(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element containing the field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getIcon       | `HTMLElement`                                              | `getIcon(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element of the field icon section identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getRightIcon  | `HTMLElement`                                              | `getRightIcon(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element of the field's trailing icon section identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getLabel      | `HTMLLabelElement`                                         | `getLabel(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element of the section of the field label identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getInput      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `getInput(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element of the input field section identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getData       | `HTMLDataElement`                                          | `getData(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the HTML element of the data section of the field identified by the style class name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getText       | `HTMLElement`                                              | `getText(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the auxiliary HTML text element identified by the style class name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| getValue      | `string`                                                   | `getValue(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Returns the value of the input field identified by the input field name or the value of the output field identified by the style class name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| setType       | `void`                                                     | `setType(name, type[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• type:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Sets the type of the input field identified by the input field name using the `type` attribute of the `<input>` tag. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| setValue      | `HTMLInputElement\|HTMLSelectElement\|HTMLTextAreaElement` | `setValue(name, value[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Sets the value of the input field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| setData       | `HTMLDataElement`                                          | `setData(name, value[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `mixed`<br>**• position:** `number` (optional, default `0`)<br><br>Sets the value of the HTML element in the data section of the field identified by the style class name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| setText       | `HTMLElement`                                              | `setText(name, value[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Sets the content of the auxiliary text HTML element identified by the style class name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| setEnabled    | `void`                                                     | `setEnabled(name, value[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• value:** `boolean`<br>**• position:** `number` (optional, default `0`)<br><br>Enables or disables the field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
 | reset         | `void`                                                     | `reset()`<br><br>Resets the form values. |
-| focus         | `void`                                                     | `focus(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Sets the focus to the field identified by the input field name. |
-| blur          | `void`                                                     | `blur(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Removes focus from the field identified by the input field name. |
+| focus         | `void`                                                     | `focus(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Sets the focus to the field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| blur          | `void`                                                     | `blur(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Removes focus from the field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
 | closeKeyboard | `void`                                                     | `closeKeyboard()`<br><br>Blurs the currently focused element, closing the on-screen keyboard on mobile devices. |
-| change        | `void`                                                     | `change(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Triggers the change event in the field identified by the input field name. |
-| autosize      | `void`                                                     | `autosize(name)`<br><br>Arguments:<br>**• name:** `string`<br><br>Automatically adjusts the height of a text field `<textarea>` identified by the input field name. |
+| change        | `void`                                                     | `change(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Triggers the change event in the field identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
+| autosize      | `void`                                                     | `autosize(name[, position])`<br><br>Arguments:<br>**• name:** `string`<br>**• position:** `number` (optional, default `0`)<br><br>Automatically adjusts the height of a text field `<textarea>` identified by the input field name. For array-type inputs (`name="...[]"`), `position` selects which occurrence to target. |
 | destroy       | `void`                                                     | `destroy()`<br><br>Destroyer. |
 
 #### CSS Variables
@@ -3715,9 +3722,9 @@ HTML Head:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.10.css">
-<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.10.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.css">
+<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.11.js"></script>
 ```
 
 HTML code:
@@ -5398,7 +5405,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIButton
 
-Version: `0.12`
+Version: `0.13`
 
 Component for the implementation of based on HTML element `<button>`.
 
@@ -5406,9 +5413,9 @@ Component for the implementation of based on HTML element `<button>`.
 
 | Type | File |
 |:----:| ---- |
-| JS   | [src/wui-js/main/button/wui-button-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.js) |
-| CSS  | [src/wui-js/main/button/wui-button-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.css) |
-| CSS  | [src/wui-js/main/button/wui-button-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.12.root.css) |
+| JS   | [src/wui-js/main/button/wui-button-0.13.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.js) |
+| CSS  | [src/wui-js/main/button/wui-button-0.13.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.css) |
+| CSS  | [src/wui-js/main/button/wui-button-0.13.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.root.css) |
 
 #### Constructor
 
@@ -5441,6 +5448,7 @@ Component for the implementation of based on HTML element `<button>`.
 | ------------ | ------------- | ----------- |
 | getElement   | `HTMLElement` | `getElement()`<br><br>Returns the HTML container element of the object. |
 | getIcon      | `HTMLElement` | `getIcon()`<br><br>Returns the HTML element containing the icon. This can be a `<div>` or `<img>` element depending on the property used for its implementation, `iconClass` or `iconImage` respectively. |
+| getText      | `HTMLElement` | `getText()`<br><br>Returns the HTML element containing the text. This can be a `<span>` or the same `<button>` element depending on the properties used for its implementation. |
 | init         | `void`        | `init()`<br><br>Initializes the object. |
 | focus        | `void`        | `focus()`<br><br>Focus on the button. |
 | select       | `select`      | `select()`<br><br>Select the button. |
@@ -5537,9 +5545,9 @@ HTML head:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.12.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.12.css">
-<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.12.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.13.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.13.css">
+<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.13.js"></script>
 ```
 
 HTML code:
