@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.13.2
+ * @version 0.13.3
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -15,7 +15,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.13.2";
+		const version = "0.13.3";
 		const libraries = {};
 		const createResource = (tag, attributes) => {
 			return new Promise((resolve, reject) => {
@@ -210,6 +210,8 @@
 			"menubar": { v: "0.9", js: true, css: true },
 			"form": { v: "0.11", js: true, css: true },
 			"button": { v: "0.13", js: true, css: true }
+		});
+		libraries["0.13.3"] = Object.assign({}, libraries["0.13.2"], {
 		});
 		const tasks = [];
 		let ver = version;

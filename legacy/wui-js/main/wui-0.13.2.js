@@ -204,6 +204,12 @@
 			"button": { v: "0.12", js: true, css: true }
 		});
 		libraries["0.13.2"] = Object.assign({}, libraries["0.13.1"], {
+			"body": { v: "0.7", js: true, css: false },
+			"icon": { v: "0.10", js: true, css: true },
+			"modal": { v: "0.10", js: true, css: true },
+			"menubar": { v: "0.9", js: true, css: true },
+			"form": { v: "0.11", js: true, css: true },
+			"button": { v: "0.13", js: true, css: true }
 		});
 		const tasks = [];
 		let ver = version;

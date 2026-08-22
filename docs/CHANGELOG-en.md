@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [v0.13.3] - 2026-08-21
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+
 ## [v0.13.2] - 2026-07-22
 
 Features:

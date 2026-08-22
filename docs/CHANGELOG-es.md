@@ -7,6 +7,12 @@
 
 # Registro de Cambios
 
+## [v0.13.3] - 2026-08-21
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+
 ## [v0.13.2] - 2026-07-22
 
 Características:
