@@ -1,0 +1,560 @@
+/*
+@file wui-selectpicker-0.14.css
+@class WUISelectpicker
+@version 0.14
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+div.wui-selectpicker,
+div.wui-selectpicker * {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-selectpicker {
+	--selectpicker-transition: border-color .2s, background-color .2s;
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	border: var(--wui-selectpicker-borderwidth) solid var(--wui-selectpicker-bordercolor-out);
+	border-radius: var(--wui-selectpicker-borderradius);
+	background-color: var(--wui-selectpicker-bgcolor);
+	padding-right: var(--wui-selectpicker-opener-iconsize);
+	transition: var(--selectpicker-transition);
+}
+
+div.wui-selectpicker:hover {
+	border-color: var(--wui-selectpicker-bordercolor-over);
+}
+
+div.wui-selectpicker.disabled {
+	border-color: var(--wui-selectpicker-bordercolor-disabled) !important;
+}
+
+div.wui-selectpicker > select {
+	display: none;
+}
+
+div.wui-selectpicker > .opener {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: var(--wui-selectpicker-opener-iconsize);
+	height: var(--wui-selectpicker-opener-iconsize);
+	background-color: var(--wui-selectpicker-opener-iconcolor-out);
+	cursor: pointer;
+	mask-image: url();
+	mask-position: center;
+	mask-repeat: no-repeat;
+	transform: translateY(-50%);
+}
+
+div.wui-selectpicker:not(.disabled):is(:hover, :focus, :focus-within) > .opener {
+	background-color: var(--wui-selectpicker-opener-iconcolor-over);
+}
+
+div.wui-selectpicker.disabled > .opener {
+	background-color: var(--wui-selectpicker-opener-iconcolor-disabled) !important;
+}
+
+div.wui-selectpicker > input[type="text"] {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	outline: none;
+	border: 0;
+	background-color: transparent;
+	padding: 0 0 0 var(--wui-selectpicker-viewinput-leftpadding);
+	text-align: left;
+	font-family: inherit;
+	font-size: 14px;
+	color: var(--wui-selectpicker-viewinput-textcolor-out);
+}
+
+div.wui-selectpicker > input[type="text"]:is(:hover, :focus, :focus-within) {
+	color: var(--wui-selectpicker-viewinput-textcolor-over);
+}
+
+div.wui-selectpicker > input[type="text"]:disabled,
+div.wui-selectpicker.disabled > input[type="text"] {
+	color: var(--wui-selectpicker-viewinput-textcolor-disabled) !important;
+}
+
+div.wui-selectpicker > .icon {
+	position: absolute;
+	top: 50%;
+	left: var(--wui-selectpicker-viewinput-leftpadding);
+	display: none;
+	width: var(--wui-selectpicker-viewicon-iconsize);
+	height: var(--wui-selectpicker-viewicon-iconsize);
+	background-color: var(--wui-selectpicker-viewicon-iconcolor);
+	mask-position: center;
+	mask-repeat: no-repeat;
+	transform: translateY(-50%);
+}
+
+div.wui-selectpicker.viewicon > .icon {
+	display: block;
+}
+
+div.wui-selectpicker.viewicon > input[type="text"] {
+	padding-left: calc(var(--wui-selectpicker-viewinput-leftpadding) + var(--wui-selectpicker-viewicon-iconsize) + var(--wui-selectpicker-viewicon-icongap));
+}
+
+div.wui-selectpicker > :is(.overlay, .box) {
+	--hidden-transition: opacity .2s ease-out;
+}
+
+div.wui-selectpicker > .overlay {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+}
+
+div.wui-selectpicker > .overlay.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box,
+div.wui-selectpicker > .box * {
+	display: flex;
+}
+
+div.wui-selectpicker > .box {
+	--box-shadow: rgb(from var(--wui-selectpicker-box-shadowcolor) r g b / var(--wui-selectpicker-box-shadowopacity)) 0px 8px 24px;
+	--box-filter: blur(10px);
+	position: absolute;
+	z-index: 101;
+	width: var(--wui-selectpicker-box-width);
+	height: auto;
+	box-shadow: var(--box-shadow);
+	border: 1px solid var(--wui-selectpicker-box-bordercolor);
+	border-radius: var(--wui-selectpicker-box-borderradius);
+	background-color: var(--wui-selectpicker-box-bgcolor);
+	-webkit-backdrop-filter: var(--box-filter);
+	backdrop-filter: var(--box-filter);
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex-direction: column;
+}
+
+div.wui-selectpicker > .box.left {
+	left: 0;
+}
+
+div.wui-selectpicker > .box.center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+div.wui-selectpicker > .box.right {
+	right: 0;
+}
+
+div.wui-selectpicker > .box.down {
+	bottom: auto;
+}
+
+div.wui-selectpicker > .box.up {
+	bottom: 0;
+}
+
+div.wui-selectpicker > .box.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box > .options,
+div.wui-selectpicker > .box > .options > .option {
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+div.wui-selectpicker > .box > .options {
+	min-height: calc(calc(1 * 30px) + 10px);
+	max-height: calc(calc(11 * 30px) + 10px);
+	border-radius: var(--wui-selectpicker-box-borderradius);
+	padding: 5px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
+div.wui-selectpicker > .box > .options::-webkit-scrollbar {
+	width: 4px;
+	background-color: transparent;
+}
+
+div.wui-selectpicker > .box > .options::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--wui-selectpicker-box-scroll-bgcolor-out);
+}
+
+div.wui-selectpicker > .box > .options::-webkit-scrollbar-thumb:hover,
+div.wui-selectpicker > .box > .options::-webkit-scrollbar-thumb:active {
+	background-color: var(--wui-selectpicker-box-scroll-bgcolor-over);
+}
+
+div.wui-selectpicker > .box > .options::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div.wui-selectpicker > .box > .options > .option {
+	width: 100%;
+	height: 30px;
+	border-radius: var(--wui-selectpicker-box-option-borderradius);
+	background-color: var(--wui-selectpicker-box-option-bgcolor-out);
+	padding: 0 10px;
+	cursor: pointer;
+	align-items: center;
+	gap: 10px;
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) {
+	border-color: var(--wui-selectpicker-box-option-bordercolor-over);
+	background-color: var(--wui-selectpicker-box-option-bgcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.hidden {
+	display: none;
+}
+
+div.wui-selectpicker > .box > .options > .option > .icon {
+	width: var(--wui-selectpicker-box-option-iconsize);
+	height: var(--wui-selectpicker-box-option-iconsize);
+	background-color: var(--wui-selectpicker-box-option-iconcolor-out);
+	mask-position: center;
+	mask-repeat: no-repeat;
+	visibility: hidden;
+	flex-shrink: 0;
+}
+
+div.wui-selectpicker > .box > .options > .option > .icon.visible,
+div.wui-selectpicker > .box > .options > .option.selected > .icon {
+	visibility: visible;
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) > .icon {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.selected > .icon {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-selected);
+}
+
+div.wui-selectpicker > .box > .options > .option.disabled > .icon {
+	background-color: var(--wui-selectpicker-box-option-iconcolor-disabled) !important;
+}
+
+div.wui-selectpicker > .box > .options > .option > .text {
+	cursor: default;
+	user-select: none;
+	-webkit-touch-callout: none;
+	overflow: hidden;
+	flex-grow: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: var(--wui-selectpicker-box-option-textcolor-out);
+}
+
+div.wui-selectpicker > .box > .options > .option > .text.empty {
+	font-style: italic;
+	color: var(--wui-selectpicker-box-option-textcolor-empty);
+}
+
+div.wui-selectpicker > .box > .options > .option:not(.disabled):is(:hover, :focus, :focus-within, .focus) > .text {
+	color: var(--wui-selectpicker-box-option-textcolor-over);
+}
+
+div.wui-selectpicker > .box > .options > .option.disabled > .text {
+	color: var(--wui-selectpicker-box-option-textcolor-disabled);
+}
+
+div.wui-selectpicker > .box > .options > .option.selected > .text.selecteable {
+	color: var(--wui-selectpicker-box-option-textcolor-selected) !important;
+}
+
+div.wui-selectpicker > .box > .footer {
+	display: none;
+	height: 30px;
+	border-top: 0px;
+	flex-wrap: wrap;
+	flex-grow: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+div.wui-selectpicker > .box > .footer > button {
+	position: relative;
+	display: flex;
+	height: 100%;
+	box-shadow: none;
+	margin: 0;
+	border: 0;
+	border-color: transparent;
+	border-radius: 0;
+	background-color: transparent;
+	padding: var(--wui-selectpicker-box-button-vertpadding) var(--wui-selectpicker-box-button-horizpadding);
+	cursor: pointer;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	text-transform: lowercase;
+	font-size: 14px;
+	color: var(--wui-selectpicker-box-button-textcolor-out);
+}
+
+div.wui-selectpicker > .box > .footer > button:hover {
+	color: var(--wui-selectpicker-box-button-textcolor-over);
+}
+
+div.wui-selectpicker > .box > .footer > button.accept {
+	font-weight: bold;
+}
+
+div.wui-selectpicker.hidden {
+	width: 0;
+	height: 0;
+	border-color: transparent !important;
+	background-color: transparent !important;
+	padding: 0;
+	pointer-events: none;
+}
+
+div.wui-selectpicker.hidden > select,
+div.wui-selectpicker.hidden > input[type="text"],
+div.wui-selectpicker.hidden > .opener {
+	display: none;
+}
+
+div.wui-selectpicker.hidden > :is(.overlay, .box) {
+	opacity: 1;
+	transition: var(--hidden-transition);
+}
+
+div.wui-selectpicker.hidden > :is(.overlay, .box).hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+div.wui-selectpicker.hidden > .overlay {
+	display: block;
+	background-color: var(--wui-selectpicker-mobile-overlay-bgcolor);
+}
+
+div.wui-selectpicker.hidden > .overlay.hidden {
+	display: block;
+}
+
+div.wui-selectpicker.hidden > .box.hidden {
+	display: flex;
+}
+
+div.wui-selectpicker.hidden > .overlay:not(.hidden),
+div.wui-selectpicker.hidden > .box:not(.hidden) {
+	pointer-events: auto;
+}
+
+div.wui-selectpicker.hidden > .box,
+div.wui-selectpicker.hidden > .box:is(.left, .center, .right, .down, .up) {
+	--box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	--box-transform: translate(-50%, -50%);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	bottom: auto;
+	width: var(--wui-selectpicker-mobile-box-width);
+	margin: auto !important;
+	border-radius: var(--wui-selectpicker-mobile-box-borderradius);
+	overflow: hidden;
+	transform: var(--box-transform);
+}
+
+div.wui-selectpicker.hidden > .box > .options {
+	min-height: calc(2 * 44px);
+	max-height: calc(11 * 44px);
+	border-top-left-radius: var(--wui-selectpicker-mobile-box-borderradius);
+	border-top-right-radius: var(--wui-selectpicker-mobile-box-borderradius);
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 0;
+}
+
+div.wui-selectpicker.hidden > .box > .options > .option {
+	height: 44px;
+	border-radius: 0;
+}
+
+div.wui-selectpicker.hidden > .box > .options > .option:not(:last-child) {
+	border-bottom: 1px solid var(--wui-selectpicker-box-option-bordercolor-out);
+}
+
+div.wui-selectpicker.hidden > .box > .footer {
+	display: flex;
+	height: auto;
+}
+
+div.wui-selectpicker.hidden > .box > .footer > button {
+	--button-shadow: rgba(50, 50, 93, .25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	--button-radius: calc(var(--wui-selectpicker-box-button-height) / 2);
+	--button-transition: border-color .2s, background-color .2s, color .2s;
+	min-width: 120px;
+	max-width: var(--wui-selectpicker-box-button-maxwidth);
+	height: var(--wui-selectpicker-box-button-height);
+	box-shadow: var(--button-shadow);
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	outline: none;
+	border-width: var(--wui-selectpicker-box-button-borderwidth);
+	border-style: solid;
+	border-color: var(--wui-selectpicker-box-button-bordercolor-out);
+	border-radius: var(--button-radius);
+	background-color: var(--wui-selectpicker-box-button-bgcolor-out);
+	padding: var(--wui-selectpicker-box-button-vertpadding) var(--wui-selectpicker-box-button-horizpadding);
+	transition: var(--button-transition);
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	white-space: nowrap;
+	font-size: 15px;
+	color: var(--wui-selectpicker-box-button-textcolor-out);
+}
+
+div.wui-selectpicker.hidden > .box > .footer > button:is(:hover, :focus, :focus-within) {
+	border-color: var(--wui-selectpicker-box-button-bordercolor-over);
+	background-color: var(--wui-selectpicker-box-button-bgcolor-over);
+	color: var(--wui-selectpicker-box-button-textcolor-over);
+}
+
+@supports (scrollbar-color: auto auto) {
+
+	div.wui-selectpicker > .box > .options {
+		scrollbar-width: thin;
+		scrollbar-color: var(--wui-selectpicker-box-scroll-bgcolor-out) transparent;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	div.wui-selectpicker > input[type="text"] {
+		font-size: 15px;
+	}
+
+	div.wui-selectpicker > :is(.overlay, .box) {
+		opacity: 1;
+		transition: var(--hidden-transition);
+	}
+
+	div.wui-selectpicker > :is(.overlay, .box).hidden {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	div.wui-selectpicker > .overlay {
+		background-color: var(--wui-selectpicker-mobile-overlay-bgcolor);
+		display: block;
+	}
+
+	div.wui-selectpicker > .overlay.hidden {
+		display: block;
+	}
+
+	div.wui-selectpicker > .box.hidden {
+		display: flex;
+	}
+
+	div.wui-selectpicker > .box,
+	div.wui-selectpicker > .box:is(.left, .center, .right, .down, .up) {
+		--box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+		--box-transform: translate(-50%, -50%);
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		bottom: auto;
+		border-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		width: var(--wui-selectpicker-mobile-box-width);
+		overflow: hidden;
+		margin: auto !important;
+		transform: var(--box-transform);
+	}
+
+	div.wui-selectpicker > .box.up {
+		bottom: auto;
+	}
+
+	div.wui-selectpicker > .box > .options {
+		border-top-left-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		border-top-right-radius: var(--wui-selectpicker-mobile-box-borderradius);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		min-height: calc(2 * 44px);
+		max-height: calc(11 * 44px);
+		padding: 0;
+	}
+
+	div.wui-selectpicker > .box > .options > .option {
+		border-radius: 0;
+		height: 44px;
+	}
+
+	div.wui-selectpicker > .box > .options > .option:not(:last-child) {
+		border-bottom: 1px solid var(--wui-selectpicker-box-option-bordercolor-out);
+	}
+
+	div.wui-selectpicker > .box > .footer,
+	div.wui-selectpicker.hidden > .box > .footer {
+		display: flex;
+		height: 52px;
+		border-top: 1px solid var(--wui-selectpicker-mobile-box-button-bordercolor);
+		padding: 0;
+	}
+
+	div.wui-selectpicker > .box > .footer > button,
+	div.wui-selectpicker.hidden > .box > .footer > button {
+		width: 50% !important;
+		min-width: 50%;
+		max-width: 50%;
+		height: 100%;
+		box-shadow: none;
+		margin: 0 !important;
+		border-top: 0;
+		border-left: 0;
+		border-bottom: 0;
+		border-color: transparent;
+		border-radius: 0;
+		background-color: transparent;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: center;
+		text-transform: lowercase;
+		font-size: 17px;
+		color: var(--wui-selectpicker-box-button-textcolor-out);
+	}
+
+	div.wui-selectpicker > .box > .footer > button:is(:hover, :focus, :focus-within),
+	div.wui-selectpicker.hidden > .box > .footer > button:is(:hover, :focus, :focus-within) {
+		border-color: transparent;
+		background-color: rgba(204, 204, 204, 0.3);
+	}
+
+	div.wui-selectpicker > .box > .footer > button:first-child,
+	div.wui-selectpicker.hidden > .box > .footer > button:first-child {
+		border-right: 1px solid var(--wui-selectpicker-mobile-box-button-bordercolor);
+	}
+
+}

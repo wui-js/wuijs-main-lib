@@ -1,0 +1,29 @@
+/*
+@file wui-tabs-0.7.root.css
+@class WUITabs
+@version 0.7
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+:root {
+	--wui-tabs-shadowcolor: #959da5;
+	--wui-tabs-borderradius: 10px;
+	--wui-tabs-borderwidth: 1px;
+	--wui-tabs-bordercolor: #f0f0f3;
+	--wui-tabs-bgcolor: #fdfdfe;
+	--wui-tabs-scroll-bgcolor-out: rgb(from #353a40 r g b / 40%);
+	--wui-tabs-scroll-bgcolor-over: rgb(from #353a40 r g b / 70%);
+	--wui-tabs-tab-bordercolor-out: #d5dce3;
+	--wui-tabs-tab-bordercolor-over: #1e90ff;
+	--wui-tabs-tab-bordercolor-selected: #f0f0f3;
+	--wui-tabs-tab-bgcolor-out: transparent;
+	--wui-tabs-tab-bgcolor-over: #f6f6f6;
+	--wui-tabs-tab-bgcolor-selected: #fdfdfe;
+	--wui-tabs-tab-iconcolor-out: #1e90ff;
+	--wui-tabs-tab-iconcolor-over: #1e90ff;
+	--wui-tabs-tab-iconcolor-selected: #1e90ff;
+	--wui-tabs-tab-textcolor-out: #2d3a47;
+	--wui-tabs-tab-textcolor-over: #1e90ff;
+	--wui-tabs-tab-textcolor-selected: #1e90ff;
+}

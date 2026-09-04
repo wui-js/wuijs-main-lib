@@ -7,11 +7,84 @@
 
 # Registro de Cambios
 
-## [v0.13.3] - 2026-08-21
+## [v0.14.0] - 2026-09-04
 
 Características:
 
 1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIHead a `0.5`.
+	- Se agregó el método `addLink()`.
+	- Se agregó el método `addScript()`.
+	- Se agregó el método `addCss()`.
+	- Se agregó el método `addJs()`.
+	- Se agregó el método `addResources()`.
+3. Se actualizó versión clase WUIBody a `0.8`.
+	- Se agregó el sufijo `fieldset` como sufijo válido del módo automático (`auto=true`) para ids de secciones en el método `importSections()`.
+4. Se actualizó versión clase WUILanguage a `0.7`.
+	- Se agregaron los elementos de carga HTML `<ol>`, `<strong>`, `<b>` y `<select>`.
+5. Se actualizó versión clase WUIIcon a `0.11`.
+	- Se agregó el ícono `credit-card-line`.
+	- Se agregó el ícono `credit-card-fill`.
+	- Se agregó el ícono `crown-line`.
+	- Se agregó el ícono `crown-fill`.
+	- Se agregó el ícono `hourglass-empty-line`.
+	- Se agregó el ícono `hourglass-bottom-line`.
+	- Se agregó el ícono `hourglass-middle-line`.
+	- Se agregó el ícono `hourglass-top-line`.
+	- Se agregó el ícono `arrow-circle-clockwise-line`.
+	- Se agregó el ícono `arrow-circle-counterclockwise-line`.
+	- Se agregó el ícono `arrow-circle-dual-clockwise-line`.
+	- Se agregó el ícono `arrow-circle-dual-counterclockwise-line`.
+	- Se agregó el ícono `calendar-check-line`.
+	- Se agregó el ícono `calendar-check-fill`.
+	- Se agregó el ícono `calendar-plus-line`.
+	- Se agregó el ícono `calendar-plus-fill`.
+	- Se agregó el ícono `calendar-dash-line`.
+	- Se agregó el ícono `calendar-dash-fill`.
+	- Se agregó el ícono `calendar-x-line`.
+	- Se agregó el ícono `calendar-x-fill`.
+	- Se renombró el ícono `cash-alt-fill` a `cash-alt-fill`.
+6. Se actualizó versión clase WUIModal a `0.11`.
+	- Se corrigió error en las reglas CSS para botones del footer en modo móvil.
+7. Se actualizó versión clase WUIPaging a `0.10`.
+	- Se corrigió `#index2target()`: el parámetro `index` recibido era ignorado, retornando siempre el target del índice actual en vez del solicitado.
+	- Se corrigió `select()`: la propiedad interna de target ahora almacena el valor resuelto desde el dataset en vez del argumento crudo recibido (que podía ser numérico).
+8. Se actualizó versión clase WUITabs a `0.7`.
+	- Se agregó la variable CSS `--wui-tabs-tab-bordercolor-out`.
+	- Se agregó la variable CSS `--wui-tabs-tab-bordercolor-over`.
+	- Se agregó la variable CSS `--wui-tabs-tab-bordercolor-selected`.
+	- Se agregó el estilo CSS `border` para mostrar borde de las pestañas.
+	- Se agregó el estilo CSS `fill` para omitir borde de las pestañas.
+	- Se agregó el estilo CSS `curve` para acentuar el radio de los bordes de las pestañas.
+	- Se trasladó el estilo CSS `scroll` del elemento `.body` a `.page`.
+	- Se agregó la propiedad `dataTarget` (por defecto `"target"`) y la propiedad de solo lectura `target`, con el mismo manejo de índice/target de `WUIPaging`.
+	- Se agregaron los métodos `getIndex()`, `getTarget()`, `getTabs()` y `getPages()`.
+	- El método `select()` ahora acepta un identificador de pestaña (`string`) además de un índice (`number`).
+9. Se actualizó versión clase WUIMenubar a `0.10`.
+	- Se corrigió posición de inicio del submenú en modo móvil.
+10. Se actualizó versión clase WUIList a `0.9`.
+	- Se agregó la variable CSS `--wui-list-cell-leftpadding`.
+	- Se agregó la variable CSS `--wui-list-cell-rightpaddingt`.
+	- Se renombró la variable CSS `--wui-list-button-hmargin` a `--wui-list-button-horizontalmargin`.
+11. Se actualizó versión clase WUITable a `0.10`.
+	- Se agregó `min-width: 0` a la regla CSS `div.wui-table`, para que el elemento pueda encogerse por debajo del ancho de su contenido cuando se usa como flex item.
+	- Con `resizable: false`, el `width` de una columna ahora se aplica como `width` y `min-width` a la vez (antes solo `width`, que `table-layout: auto` trata como sugerencia y terminaba comprimiendo): se respetan los anchos pedidos y la tabla scrollea horizontalmente dentro de `div.wui-table` cuando su suma excede el contenedor. Con `resizable: true` (default) el `width` sigue actuando como `max-width`, sin cambios.
+12. Se actualizó versión clase WUIForm a `0.12`.
+	- Se agregó la variable CSS `--wui-form-label-inline-right`.
+	- Se agregó la regla CSS `.wui-form fieldset > :is(.text, .message).small` para textos pequeños bajo la entrada de datos.
+	- Se agregó la regla CSS `.wui-form fieldset > .text:is(.left, .center, .right)` para alineación de textos.
+	- Se agregó `min-width: 0` a la regla CSS `.wui-form fieldset`: el user agent stylesheet del navegador aplica `min-inline-size: min-content` al `fieldset`, lo que fijaba un piso igual al ancho min-content de su contenido — un hijo ancho (por ejemplo un `.wui-table` con anchos de columna fijos) hacía crecer al fieldset, y a todo su entorno, más allá del ancho del contenedor.
+13. Se actualizó versión clase WUISelectpicker a `0.14`.
+	- Se renombró la variable CSS `--wui-selectpicker-viewinput-paddingleft` a `--wui-selectpicker-viewinput-leftpadding`.
+14. Se actualizó versión clase WUIDatepicker a `0.12`.
+	- Se renombró la variable CSS `--wui-datepicker-viewinput-paddingleft` a `--wui-datepicker-viewinput-leftpadding`.
+15. Se actualizó versión clase WUITimepicker a `0.12`.
+	- Se renombró la variable CSS `--wui-timepicker-viewinput-paddingleft` a `--wui-timepicker-viewinput-leftpadding`.
+16. Se actualizó versión clase WUISwitch a `0.10`.
+	- Se agregó el evento `change` a la propiedad `activated`.
+	- Se agregó el evento `change` al método `toggle()`.
+17. Se actualizó versión clase WUIButton a `0.14`.
+	- Se agregó la regla CSS `.wui-button > .wui-icon:is(.float-left, .float-right).mobile-disabled` para deshabilitar en modo móvil.
 
 ## [v0.13.2] - 2026-07-22
 
@@ -21,7 +94,7 @@ Características:
 2. Se actualizó versión clase WUIBody a `0.7`.
 	- Se agregó el método `importSections()`.
 3. Se actualizó versión clase WUIIcon a `0.10`.
-	- Se agregaron los iconos `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` y `person-gear-fill`.
+	- Se agregaron los íconos `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` y `person-gear-fill`.
 4. Se actualizó versión clase WUIModal a `0.10`.
 	- Se corrigió en la apertura de modal con estilo `page small`. Métodos `open()` y `resposive()` forzaran `height: auto` y un desplazamiento `top` de página completa en modo móvil para el estilo `page small`, lo que impedía que la caja se ajustara a `--wui-modal-smallpage-box-height` y emergiera desde la parte inferior de la pantalla.
 	- Se corrigió que el efecto `under` en modo móvil (clase `.under`, atenuado del overlay y animación de compresión de la caja) se aplicara sin importar el tipo de modal. Ahora requiere que tanto el modal que se abre como el que queda debajo sean de tipo `page` y no `small`.
@@ -49,7 +122,7 @@ Características:
 	- Se refactorizó el código JS.
 	- Se forzó nomenclatura camelCase en siglas de métodos públicos: `openURL()` → `openUrl()`.
 4. Se actualizó versión clase WUIIcon a `0.9`.
-	- Se agregaron los iconos `mail-check-line`, `mail-check-fill`, `mail-exclamation-line` y `mail-exclamation-line`.
+	- Se agregaron los íconos `mail-check-line`, `mail-check-fill`, `mail-exclamation-line` y `mail-exclamation-line`.
 	- Se refactorizó el código CSS.
 	- Se corrigió nomenclatura kebab-case en 11 clases de color (`darkSlateGray`, `slateGrey`, `lightSlateGrey`, `aliceBlue`, `darkTurquoise`, `deepSkyBlue`, `dodgerBlue`, `cornflowerBlue`, `rebeccaPurple`, `darkViolet`, `deepPink`) → `dark-slate-gray`, `slate-grey`, `light-slate-grey`, `alice-blue`, `dark-turquoise`, `deep-sky-blue`, `dodger-blue`, `cornflower-blue`, `rebecca-purple`, `dark-violet`, `deep-pink`. **Cambio incompatible**: el HTML que use las clases antiguas debe actualizarse.
 5. Se actualizó versión clase WUIFade a `0.5`.
@@ -140,7 +213,7 @@ Características:
 	- Se refactorizó el código CSS.
 3. Se actualizó versión clase WUIIcon a `0.8`.
 	- Se refactorizó el código CSS.
-	- Se corrigió error en los iconos `gitlab-fill`, `gitlab-color`, `google-fill`, `google-color`, `googledrive-fill` y `googledrive-color`.
+	- Se corrigió error en los íconos `gitlab-fill`, `gitlab-color`, `google-fill`, `google-color`, `googledrive-fill` y `googledrive-color`.
 4. Se actualizó versión clase WUILoader a `0.6`.
 	- Se refactorizó el código CSS.
 5. Se actualizó versión clase WUITooltip a `0.5`.
@@ -200,7 +273,7 @@ Características:
 	- Se refactorizó el código JS.
 6. Se actualizó versión clase WUIIcon a `0.7`.
 	- Se agregó la clase JS `WUIIcon`.
-	- Se corrigió error en los iconos `claude-color` y `wuijs-color`.
+	- Se corrigió error en los íconos `claude-color` y `wuijs-color`.
 7. Se actualizó versión clase WUIFade a `0.4`.
 	- Se refactorizó el código JS.
 	- Se corrigió error en caso en métodos `in()` y `out()` cuando el parámetro `target` no existía.
@@ -642,7 +715,7 @@ Características:
 	- Se renombró el directorio y archivos a minúscula.
 8. Actualización versión clase WUIIcon a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
-	- Se corrigió error tipográfico en los nombres de clases CSS de iconos: `excamation` → `exclamation` (clases afectadas: `exclamation-line`, `exclamation-lg-line`, `exclamation-circle-line`, `exclamation-circle-fill`, `exclamation-triangle-line`, `exclamation-triangle-fill`).
+	- Se corrigió error tipográfico en los nombres de clases CSS de íconos: `excamation` → `exclamation` (clases afectadas: `exclamation-line`, `exclamation-lg-line`, `exclamation-circle-line`, `exclamation-circle-fill`, `exclamation-triangle-line`, `exclamation-triangle-fill`).
 9. Actualización versión clase WUIFade a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
 10. Actualización versión clase WUILoader a `0.3`.

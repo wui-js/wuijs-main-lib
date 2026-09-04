@@ -1,0 +1,122 @@
+/*
+@file wui-switch-0.10.css
+@class WUISwitch
+@version 0.10
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+div.wui-switch,
+div.wui-switch::before,
+div.wui-switch::after {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div.wui-switch,
+div.wui-switch::before {
+	--radius: calc(var(--wui-switch-button-size) / 2);
+	width: calc(1.7 * var(--wui-switch-button-size)) !important;
+	height: var(--wui-switch-button-size);
+	border-radius: var(--radius);
+}
+
+div.wui-switch {
+	--off-transition: border-color .2s ease-out;
+	position: relative;
+	display: flex;
+	margin: 0;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0;
+	cursor: pointer;
+	overflow: hidden;
+	transition: var(--off-transition);
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+div.wui-switch:not(.disabled) {
+	border-color: var(--wui-switch-bordercolor-out);
+	background-color: var(--wui-switch-bgcolor-out);
+}
+
+div.wui-switch:not(.disabled):hover,
+div.wui-switch:not(.disabled):focus-within {
+	border-color: var(--wui-switch-bordercolor-over);
+	background-color: var(--wui-switch-bgcolor-over);
+}
+
+div.wui-switch::before {
+	content: "";
+	position: absolute;
+	left: calc(calc(-0.7 * var(--wui-switch-button-size)) - 1px);
+}
+
+div.wui-switch::after {
+	--button-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	--button-transition: left .2s ease-out;
+	content: "";
+	position: absolute;
+	left: -1px;
+	width: var(--wui-switch-button-size);
+	height: var(--wui-switch-button-size);
+	box-shadow: var(--button-shadow);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: var(--button-transition);
+}
+
+div.wui-switch:not(.disabled)::before {
+	background-color: var(--wui-switch-bgcolor-activated);
+}
+
+div.wui-switch:not(.disabled)::after {
+	border-color: var(--wui-switch-button-bordercolor-out);
+	background-color: var(--wui-switch-button-bgcolor-out);
+}
+
+div.wui-switch:not(.disabled)::after:hover,
+div.wui-switch:not(.disabled)::after:focus-within {
+	border-color: var(--wui-switch-button-bordercolor-over);
+	background-color: var(--wui-switch-button-bgcolor-over);
+}
+
+div.wui-switch > input[type="checkbox"] {
+	opacity: 0;
+}
+
+div.wui-switch.activated::before {
+	left: 0;
+}
+
+div.wui-switch.activated::after {
+	left: calc(calc(0.7 * var(--wui-switch-button-size)) - 1px);
+}
+
+div.wui-switch:not(.disabled).activated {
+	border-color: var(--wui-switch-bordercolor-activated);
+}
+
+div.wui-switch:not(.disabled).activated::after {
+	border-color: var(--wui-switch-button-bordercolor-activated);
+	background-color: var(--wui-switch-button-bgcolor-activated);
+}
+
+div.wui-switch.disabled {
+	border-color: var(--wui-switch-bordercolor-disabled);
+	background-color: var(--wui-switch-bgcolor-disabled);
+}
+
+div.wui-switch.disabled::before {
+	box-shadow: none;
+	background-color: var(--wui-switch-bgcolor-disabled);
+}
+
+div.wui-switch.disabled::after {
+	border-color: var(--wui-switch-button-bordercolor-disabled);
+	background-color: var(--wui-switch-button-bgcolor-disabled);
+}

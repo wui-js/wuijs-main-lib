@@ -7,11 +7,84 @@
 
 # Change Log
 
-## [v0.13.3] - 2026-08-21
+## [v0.14.0] - 2026-09-04
 
 Features:
 
 1. Updated the resource loader `wui.js`.
+2. Updated WUIHead class version to `0.5`.
+	- Added `addLink()` method.
+	- Added `addScript()` method.
+	- Added `addCss()` method.
+	- Added `addJs()` method.
+	- Added `addResources()` method.
+3. Updated WUIBody class version to `0.8`.
+	- Added `fieldset` suffix as a valid automatic mode suffix (`auto=true`) for section ids in the `importSections()` method.
+4. Updated WUILanguage class version to `0.7`.
+	- Added `<ol>`, `<strong>`, `<b>` and `<select>` HTML load elements.
+5. Updated WUIIcon class version to `0.11`.
+	- Added `credit-card-line` icon.
+	- Added `credit-card-fill` icon.
+	- Added `crown-line` icon.
+	- Added `crown-fill` icon.
+	- Added `hourglass-empty-line` icon.
+	- Added `hourglass-bottom-line` icon.
+	- Added `hourglass-middle-line` icon.
+	- Added `hourglass-top-line` icon.
+	- Added `arrow-circle-clockwise-line` icon.
+	- Added `arrow-circle-counterclockwise-line` icon.
+	- Added `arrow-circle-dual-clockwise-line` icon.
+	- Added `arrow-circle-dual-counterclockwise-line` icon.
+	- Added `calendar-check-line` icon.
+	- Added `calendar-check-fill` icon.
+	- Added `calendar-plus-line` icon.
+	- Added `calendar-plus-fill` icon.
+	- Added `calendar-dash-line` icon.
+	- Added `calendar-dash-fill` icon.
+	- Added `calendar-x-line` icon.
+	- Added `calendar-x-fill` icon.
+	- Renamed `cash-alt-fill` icon to `cash-alt-fill`.
+6. Updated WUIModal class version to `0.11`.
+	- Fixed error in CSS rules for footer buttons in mobile mode.
+7. Updated WUIPaging class version to `0.10`.
+	- Fixed `#index2target()`: the received `index` parameter was ignored, always returning the current index's target instead of the requested one.
+	- Fixed `select()`: the internal target property now stores the value resolved from the dataset instead of the raw argument received (which could be numeric).
+8. Updated WUITabs class version to `0.7`.
+	- Added `--wui-tabs-tab-bordercolor-out` CSS var.
+	- Added `--wui-tabs-tab-bordercolor-over` CSS var.
+	- Added `--wui-tabs-tab-bordercolor-selected` CSS var.
+	- Added `border` CSS style to display tab borders.
+	- Added `fill`  CSS style to omit tab borders.
+	- Added `curve` CSS style to accentuate the radius of the tab edges.
+	- Moved `scroll` CSS style from the `.body` element to `.page`.
+	- Added `dataTarget` property (default `"target"`) and the read-only `target` property, with the same index/target handling as `WUIPaging`.
+	- Added `getIndex()`, `getTarget()`, `getTabs()` and `getPages()` methods.
+	- The `select()` method now accepts a tab identifier (`string`) in addition to an index (`number`).
+9. Updated WUIMenubar class version to `0.10`.
+	- Fixed the starting position of the submenu in mobile mode.
+10. Updated WUIList class version to `0.9`.
+	- Added `--wui-list-cell-leftpadding` CSS var.
+	- Added `--wui-list-cell-rightpadding` CSS var.
+	- Renamed `--wui-list-button-hmargin` CSS var to `--wui-list-button-horizontalmargin`.
+11. Updated WUITable class version to `0.10`.
+	- Added `min-width: 0` to the `div.wui-table` CSS rule, so the element can shrink below its content's width when used as a flex item.
+	- With `resizable: false`, a column's `width` is now applied as both `width` and `min-width` (before, only `width`, which `table-layout: auto` treats as a suggestion and compressed away): the requested widths are honored and the table scrolls horizontally inside `div.wui-table` when their sum exceeds the container. With `resizable: true` (default) `width` keeps acting as `max-width`, unchanged.
+12. Updated WUIForm class version to `0.12`.
+	- Added `--wui-form-label-inline-right` CSS var.
+	- Added `.wui-form fieldset > :is(.text, .message).small` CSS rule for small texts below the data entry.
+	- Added `.wui-form fieldset > .text:is(.left, .center, .right)`  CSS rule for text alignment.
+	- Added `min-width: 0` to the `.wui-form fieldset` CSS rule: the browser's user agent stylesheet applies `min-inline-size: min-content` to `fieldset`, which floored the element at its content's min-content width — a wide child (e.g. a `.wui-table` with fixed column widths) made the fieldset, and everything around it, grow past the container's width.
+13. Updated WUISelectpicker class version to `0.14`.
+	- Renamed `--wui-selectpicker-viewinput-paddingleft` CSS var to `--wui-selectpicker-viewinput-leftpadding`.
+14. Updated WUIDatepicker class version to `0.12`.
+	- Renamed `--wui-datepicker-viewinput-paddingleft` CSS var to `--wui-datepicker-viewinput-leftpadding`.
+15. Updated WUITimepicker class version to `0.12`.
+	- Renamed `--wui-timepicker-viewinput-paddingleft` CSS var to `--wui-timepicker-viewinput-leftpadding`.
+16. Updated WUISwitch class version to `0.10`.
+	- Added `change` event to the `activated` property.
+	- Added `change` event to the `toggle()` method.
+17. Updated WUIButton class version to `0.14`.
+	- Added `.wui-button > .wui-icon:is(.float-left, .float-right).mobile-disabled` CSS rule to disable in mobile mode.
 
 ## [v0.13.2] - 2026-07-22
 

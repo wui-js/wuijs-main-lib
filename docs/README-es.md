@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.13.3` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.14.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.13.3.20260821.0` |
+| **Versión documento** | `0.14.0.20260904.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -90,30 +90,30 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | Nombre Clase                         | Version | Descripción |
 | ------------------------------------ | :------:| ----------- |
 | [WUICookie](#wui-cookie)             | `0.5`   | Utilidades para el manejo de cookies. |
-| [WUIHead](#wui-head)                 | `0.4`   | Utilidades para el manejo de la cabecera HTML. |
-| [WUIBody](#wui-body)                 | `0.7`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
-| [WUILanguage](#wui-language)         | `0.6`   | Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar archivos de idioma en formato JS o JSON y actualizar dinámicamente el contenido de los elementos HTML según el idioma. |
+| [WUIHead](#wui-head)                 | `0.5`   | Utilidades para el manejo de la cabecera HTML. |
+| [WUIBody](#wui-body)                 | `0.8`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
+| [WUILanguage](#wui-language)         | `0.7`   | Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar archivos de idioma en formato JS o JSON y actualizar dinámicamente el contenido de los elementos HTML según el idioma. |
 | [WUIScrolly](#wui-scrolly)           | `0.7`   | Utilidades para el manejo de animación de elementos HTML mediante el evento "onscroll" del cuerpo de la página HTML. |
-| [WUIIcon](#wui-icon)                 | `0.10`   | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
+| [WUIIcon](#wui-icon)                 | `0.11`  | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
 | [WUIFade](#wui-fade)                 | `0.5`   | Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
 | [WUILoader](#wui-loader)             | `0.7`   | Componente para la implementación de animaciones de carga. |
 | [WUITooltip](#wui-tooltip)           | `0.6`   | Componente para la implementación de textos emergentes. |
-| [WUIModal](#wui-modal)               | `0.10`   | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
-| [WUIPaging](#wui-paging)             | `0.9`   | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
+| [WUIModal](#wui-modal)               | `0.11`  | Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`). |
+| [WUIPaging](#wui-paging)             | `0.10`  | Componente para la implementación de vistas accesibles paginadamente con transiciones animadas. |
 | [WUISlider](#wui-slider)             | `0.8`   | Componente para la implementación de presentaciones de diapositivas controladas por arrastre de ratón/táctil y/o por evento. |
-| [WUITabs](#wui-tabs)                 | `0.6`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
-| [WUIMenubar](#wui-menubar)           | `0.9`   | Componente para la implementación de barras de menú. |
-| [WUIList](#wui-list)                 | `0.8`   | Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional. |
-| [WUITable](#wui-table)               | `0.9`   | Componente para la implementación de tablas de datos. A diferencia del componente `WUIList`, el componente `WUITable` incluye una cabecera de columnas. |
-| [WUIForm](#wui-form)                 | `0.11`  | Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`. |
+| [WUITabs](#wui-tabs)                 | `0.7`   | Componente para la implementación de vistas accesibles mediante selección por pestaña. |
+| [WUIMenubar](#wui-menubar)           | `0.10`  | Componente para la implementación de barras de menú. |
+| [WUIList](#wui-list)                 | `0.9`   | Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional. |
+| [WUITable](#wui-table)               | `0.10`  | Componente para la implementación de tablas de datos. A diferencia del componente `WUIList`, el componente `WUITable` incluye una cabecera de columnas. |
+| [WUIForm](#wui-form)                 | `0.12`  | Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`. |
 | [WUIFormat](#wui-format)             | `0.5`   | Utilidades para manejo y validación de formatos de datos de tipo `string`, `number` y `Date`. |
-| [WUISelectpicker](#wui-selectpicker) | `0.13`  | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
-| [WUIDatepicker](#wui-datepicker)     | `0.11`  | Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`. |
-| [WUITimepicker](#wui-timepicker)     | `0.11`  | Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`. |
+| [WUISelectpicker](#wui-selectpicker) | `0.14`  | Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`. |
+| [WUIDatepicker](#wui-datepicker)     | `0.12`  | Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`. |
+| [WUITimepicker](#wui-timepicker)     | `0.12`  | Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`. |
 | [WUIColorpicker](#wui-colorpicker)   | `0.12`  | Componente para la implementación de entradas de datos de tipo selector de color basada en el elemento HTML `<input type="color">`. |
-| [WUISwitch](#wui-switch)             | `0.9`   | Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`. |
+| [WUISwitch](#wui-switch)             | `0.10`  | Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`. |
 | [WUIIntensity](#wui-intensity)       | `0.7`   | Componente para la implementación de entradas de datos de tipo selector de intensidad de 4 niveles: nada, bajo, medio y alto basada en el elemento HTML `<input type="range">`. |
-| [WUIButton](#wui-button)             | `0.13`  | Componente para la implementación de botones basada en el elemento HTML `<button>`. |
+| [WUIButton](#wui-button)             | `0.14`  | Componente para la implementación de botones basada en el elemento HTML `<button>`. |
 
 <a name="dirmap"></a>
 
@@ -218,26 +218,26 @@ Código HTML:
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/loader/wui-loader-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.11.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.11.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/paging/wui-paging-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/slider/wui-slider-0.8.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.5.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.10.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.10.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.7.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.8.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.root.css">
-		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.root.css">
+		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.root.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.css">
 		<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.root.css">
@@ -255,17 +255,17 @@ Código HTML:
 		<script type="text/javascript" src="/libraries/wui-js/main/fade/wui-fade-0.5.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/loader/wui-loader-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tooltip/wui-tooltip-0.6.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.10.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/slider/wui-slider-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.5.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.9.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.10.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.7.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.8.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/format/wui-format-0.5.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.js"></script>
-		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.js"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.10.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/colorpicker/wui-colorpicker-0.11.js"></script>
 		<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.8.js"></script>
@@ -305,7 +305,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.3"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Opcionalmente se pueden incluir las librerías de manera individual, para ello s
 Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`) ya que la versión será definida automáticamente por el script de carga simple.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.3&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Los nombres de las librerías pasadas en el parámetro `class` no deben contener
 Adicionalmente se puede omitir la carga de los archivos `root.css` de cada librería agregando el parámetro `root` con el valor `0` (cero) en la URL del archivo `wui.js`.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.13.3&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
@@ -445,7 +445,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIHead
 
-Versión: `0.4`
+Versión: `0.5`
 
 Utilidades para el manejo de la cabecera HTML.
 
@@ -453,7 +453,7 @@ Utilidades para el manejo de la cabecera HTML.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/head/wui-head-0.4.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.4.js) |
+| JS   | [src/wui-js/main/head/wui-head-0.5.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/head/wui-head-0.5.js) |
 
 #### Constructor
 
@@ -473,6 +473,11 @@ Clase sin propiedades.
 | setMetaContent     | `void`       | `setMetaContent(name, content)`<br><br>Parámetros:<br>**• name:** `string` <br>**• content:** `string`<br><br>Establece un meta valor en la cabecera del documento HTML mediante la etiqueta `<meta>`.<br>Revisar especificaciones y compatibilidad en [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name). |
 | setApplicationName | `void`       | `setApplicationName(content)`<br>Alias de `setMetaContent("application-name", content)`<br><br>Parámetros:<br>**• content:** `string`<br><br>Establece el meta valor `application-name` en la cabecera del documento HTML. |
 | setThemeColor      | `void`       | `setThemeColor(content)`<br>Alias de `setMetaContent("theme-color", content)`<br><br>Parámetros:<br>**• content:** `string`<br><br>Establece el meta valor `theme-color` en la cabecera del documento HTML.<br>Revisar especificaciones y compatibilidad en [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color). |
+| addLink            | `void`       | `addLink(path, options)`<br><br>Parámetros:<br>**• path:** `string`, URL del recurso.<br>**• options:** `object`, propiedades a asignar al elemento `<link>` creado (por ejemplo `rel`, `type`). Si `options.refresh` es `true`, se agrega un parámetro dinámico get a `path` para forzar la recarga del recurso.<br><br>Agrega un elemento `<link>` a la cabecera del documento HTML. |
+| addCss             | `void`       | `addCss(path)`<br>Alias de `addLink(path, { type: "text/css", rel: "stylesheet" })`<br><br>Parámetros:<br>**• path:** `string`, URL del archivo CSS.<br><br>Agrega una hoja de estilos CSS a la cabecera del documento HTML. |
+| addScript          | `void`       | `addScript(path, options)`<br><br>Parámetros:<br>**• path:** `string`, URL del recurso.<br>**• options:** `object`, propiedades a asignar al elemento `<script>` creado (por ejemplo `type`, `async`). Si `options.refresh` es `true`, se agrega un parámetro dinámico get a `path` para forzar la recarga del recurso.<br><br>Agrega un elemento `<script>` a la cabecera del documento HTML. |
+| addJs              | `void`       | `addJs(path)`<br>Alias de `addScript(path, { type: "text/javascript" })`<br><br>Parámetros:<br>**• path:** `string`, URL del archivo JavaScript.<br><br>Agrega un archivo JavaScript a la cabecera del documento HTML. |
+| addResources       | `void`       | `addResources(resources)`<br><br>Parámetros:<br>**• resources:** `array`, lista de objetos de recurso con las claves:<br>**- path:** `string`, URL del recurso.<br>**- type:** `string` *opcional*, `"css"` o `"js"`. Si se omite, se infiere desde la extensión de `path` (`.css` o `.js`).<br>**- enabled:** `boolean` o `function` *opcional*, determina si el recurso se agrega. El valor por defecto es `true`.<br><br>Agrega en lote una lista de hojas de estilo CSS y archivos JavaScript a la cabecera del documento HTML, delegando en `addCss()` o `addJs()` según corresponda. Cada recurso se omite si `enabled` es `false` o retorna `false`. |
 | refresh            | `void`       | `refresh()`<br><br>Recarga los archivos JS y CSS llamados desde la sección `<head>` del documennto HTML, mediante el anexo de un parámetro dinámico get. |
 
 #### Implementación
@@ -483,7 +488,7 @@ Cabecera HTML:
 <title></title>
 <meta name="application-name" content="">
 <meta name="theme-color" content="">
-<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.4.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/head/wui-head-0.5.js"></script>
 ```
 
 Código JS:
@@ -503,7 +508,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIBody
 
-Versión: `0.7`
+Versión: `0.8`
 
 Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles.
 
@@ -511,7 +516,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/body/wui-body-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.7.js) |
+| JS   | [src/wui-js/main/body/wui-body-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.8.js) |
 
 #### Constructor
 
@@ -534,7 +539,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 | Método         | Tipo retorno | Descripción |
 | -------------- | ------------ | ----------- |
 | import         | `void`       | `import(id, path[, done])`<br><br>Parámetros:<br>**• id:** `string`, especifica el id del elemento HTML donde se va a cargar el contenido.<br>**• path:** `string`, especifica la ruta del subdirectorio y el nombre de los archivos con extensión `.css`, `.htm` y `.js` que serán importados y cargados.<br>**• done:** `function` *opcional*, esta función que es ejecutada cuando la carga del contenido ha concluido.<br><br>Importa contenido CSS/JS/HTML referenciado a un elemento HTML por medio de su `id`. El contenido también se suele denominar "módulo" y es cargado en tres secciones:<br>**• CSS:** mediante un elemento `<style>` que es insertado antes del contenido HTML.<br>**• HTML:** sobre el elemento identificado mediante su `id`.<br>**• JS:** mediante un elemento `<script>` que es insertado en el cuerpo del documento HTML. |
-| importSections | `void`       | `importSections(sections[, target][, auto])`<br><br>Parámetros:<br>**• sections:** `array`, arreglo de objetos que describen las secciones a importar. Cada objeto admite:<br>&nbsp;&nbsp;**◦ id:** `string`, id del elemento HTML contenedor de la sección; también se utiliza como `id` para `import()`.<br>&nbsp;&nbsp;**◦ path:** `string`, ruta del subdirectorio y nombre de los archivos a importar (equivalente al parámetro `path` de `import()`).<br>&nbsp;&nbsp;**◦ tag:** `string` *opcional*, nombre de la etiqueta HTML del elemento contenedor a crear (por defecto `"div"`). Solo se utiliza cuando `auto` es `false`.<br>&nbsp;&nbsp;**◦ enabled:** `boolean` \\| `function` *opcional*, determina si la sección se importa. Si es `function`, se evalúa su resultado. Por defecto se considera habilitada.<br>&nbsp;&nbsp;**◦ sections:** `array` *opcional*, arreglo de sub-secciones que se importan de forma recursiva una vez concluida la importación de la sección actual, sobre elementos contenedores ya existentes en el contenido importado.<br>&nbsp;&nbsp;**◦ done:** `function` *opcional*, función ejecutada cuando la sección (y sus sub-secciones) concluyen su importación.<br>**• target:** `HTMLElement` *opcional*, elemento HTML al que se agregan los contenedores de las secciones de primer nivel. Por defecto `document.body`.<br>**• auto:** `boolean` *opcional*, por defecto `true`. Cuando es `true`, la etiqueta del contenedor se infiere del `id` de la sección: `section` si termina en "section", `form` si termina en "form", `div` en cualquier otro caso. Cuando es `false`, se utiliza el valor de `tag` de cada sección.<br><br>Importa múltiples secciones de contenido CSS/JS/HTML de forma declarativa a partir de un arreglo de descriptores. Por cada sección habilitada, crea un elemento contenedor —no necesariamente `<section>`, puede ser `<div>`, `<form>` u otra etiqueta— y delega la importación en `import()`. Las sub-secciones declaradas en `sections` se importan recursivamente sobre elementos contenedores ya existentes en el contenido importado. |
+| importSections | `void`       | `importSections(sections[, target][, auto])`<br><br>Parámetros:<br>**• sections:** `array`, arreglo de objetos que describen las secciones a importar. Cada objeto admite:<br>&nbsp;&nbsp;**◦ id:** `string`, id del elemento HTML contenedor de la sección; también se utiliza como `id` para `import()`.<br>&nbsp;&nbsp;**◦ path:** `string`, ruta del subdirectorio y nombre de los archivos a importar (equivalente al parámetro `path` de `import()`).<br>&nbsp;&nbsp;**◦ tag:** `string` *opcional*, nombre de la etiqueta HTML del elemento contenedor a crear (por defecto `"div"`). Solo se utiliza cuando `auto` es `false`.<br>&nbsp;&nbsp;**◦ enabled:** `boolean` \\| `function` *opcional*, determina si la sección se importa. Si es `function`, se evalúa su resultado. Por defecto se considera habilitada.<br>&nbsp;&nbsp;**◦ sections:** `array` *opcional*, arreglo de sub-secciones que se importan de forma recursiva una vez concluida la importación de la sección actual, sobre elementos contenedores ya existentes en el contenido importado.<br>&nbsp;&nbsp;**◦ done:** `function` *opcional*, función ejecutada cuando la sección (y sus sub-secciones) concluyen su importación.<br>**• target:** `HTMLElement` *opcional*, elemento HTML al que se agregan los contenedores de las secciones de primer nivel. Por defecto `document.body`.<br>**• auto:** `boolean` *opcional*, por defecto `true`. Cuando es `true`, la etiqueta del contenedor se infiere del `id` de la sección: `section` si termina en "section", `form` si termina en "form", `fieldset` si termina en "fieldset", `div` en cualquier otro caso. Cuando es `false`, se utiliza el valor de `tag` de cada sección.<br><br>Importa múltiples secciones de contenido CSS/JS/HTML de forma declarativa a partir de un arreglo de descriptores. Por cada sección habilitada, crea un elemento contenedor —no necesariamente `<section>`, puede ser `<form>`, `<fieldset>`, `<div>` u otra etiqueta— y delega la importación en `import()`. Las sub-secciones declaradas en `sections` se importan recursivamente sobre elementos contenedores ya existentes en el contenido importado. |
 | prepare        | `void`       | `prepare()`<br><br>En función del valor del parámetro `environment`, modifica los elementos HTML de etiqueta `a`, `input` y `select` del cuerpo del documento HTML para adaptarlos a entornos nativos. |
 | openUrl        | `void`       | `openUrl(url[, download])`<br><br>Parámetros:<br>**• id:** `string`, especifica la dirección URL que se requiere abrir o descargar.<br>**• download:** `string` *opcional*, especifica el nombre del archivo con que se descargará el contenido referido mediante la URL.<br><br>Abre o descarga un contenido mediante una dirección URL. Este método es requerido en entornos nativos ya que no se siempre se cuenta con soporte mediante WebView sobre Android o WebKit sobre iOS. |
 | isCompleted    | `boolean`    | `isCompleted()`<br><br>Retorna `true` si todos los contenidos han sido importados y cargados, `false` en caso contrario. |
@@ -598,7 +603,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.7.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.8.js"></script>
 ```
 
 Código HTML:
@@ -644,7 +649,7 @@ Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/language/wui-language-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/language/wui-language-0.6.js) |
+| JS   | [src/wui-js/main/language/wui-language-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/language/wui-language-0.7.js) |
 
 #### Constructor
 
@@ -765,7 +770,7 @@ nav select {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/language/wui-language-0.6.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/language/wui-language-0.7.js"></script>
 ```
 
 Código HTML:
@@ -1117,7 +1122,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIcon
 
-Versión: `0.10`
+Versión: `0.11`
 
 Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
@@ -1125,9 +1130,9 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/icon/wui-icon-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.js) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.css) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.10.root.css) |
+| JS   | [src/wui-js/main/icon/wui-icon-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.js) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.root.css) |
 
 #### Métodos
 
@@ -1155,26 +1160,27 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 #### Tabla de Íconos de Flecha
 
-| Icono                                                                                                | Estilo                         | Icono                                                                                              | Estilo                       | Icono                                                                                                  | Estilo                           | Icono                                                                                                | Estilo                         |
-| :---:                                                                                                | ------                         | :---:                                                                                              | ------                       | :---:                                                                                                  | ------                           | :---:                                                                                                | ------                         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-line.svg)                 | .arrow-up-line                 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-line.svg)             | .arrow-left-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-line.svg)                | .arrow-right-line                | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-line.svg)               | .arrow-down-line               |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-lg-line.svg)              | .arrow-up-lg-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-lg-line.svg)          | .arrow-left-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-lg-line.svg)             | .arrow-right-lg-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-lg-line.svg)            | .arrow-down-lg-line            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-lg-line.svg)          | .arrow-upleft-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-lg-line.svg)       | .arrow-upright-lg-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-lg-line.svg)          | .arrow-downleft-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-lg-line.svg)       | .arrow-downright-lg-line       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-line.svg)             | .arrowhead-up-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-line.svg)         | .arrowhead-left-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-line.svg)            | .arrowhead-right-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-line.svg)           | .arrowhead-down-line           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-lg-line.svg)          | .arrowhead-up-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-lg-line.svg)      | .arrowhead-left-lg-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-lg-line.svg)         | .arrowhead-right-lg-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-lg-line.svg)        | .arrowhead-down-lg-line        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-stg-line.svg)         | .arrowhead-up-stg-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-stg-line.svg)     | .arrowhead-left-stg-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-stg-line.svg)        | .arrowhead-right-stg-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-stg-line.svg)       | .arrowhead-down-stg-line       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-fill.svg)             | .arrowhead-up-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-fill.svg)         | .arrowhead-left-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-fill.svg)            | .arrowhead-right-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-fill.svg)           | .arrowhead-down-fill           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-circle-line.svg)          | .arrow-up-circle-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-circle-line.svg)      | .arrow-left-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-circle-line.svg)         | .arrow-right-circle-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-circle-line.svg)        | .arrow-down-circle-line        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-circle-line.svg)      | .arrow-upleft-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-circle-line.svg)   | .arrow-upright-circle-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-circle-line.svg)      | .arrow-downleft-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-circle-line.svg)   | .arrow-downright-circle-line   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-circle-fill.svg)          | .arrow-up-circle-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-circle-fill.svg)      | .arrow-left-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-circle-fill.svg)         | .arrow-right-circle-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-circle-fill.svg)        | .arrow-down-circle-fill        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-circle-fill.svg)      | .arrow-upleft-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-circle-fill.svg)   | .arrow-upright-circle-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-circle-fill.svg)      | .arrow-downleft-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-circle-fill.svg)   | .arrow-downright-circle-fill   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-up-line.svg)              | .arrowbar-up-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-left-line.svg)          | .arrowbar-left-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-right-line.svg)             | .arrowbar-right-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-down-line.svg)            | .arrowbar-down-line            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-horizontal-line.svg) | .arrows-expand-horizontal-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-vertical-line.svg) | .arrows-expand-vertical-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-horizontal-line.svg) | .arrows-collapse-horizontal-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-vertical-line.svg) | .arrows-collapse-vertical-line |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-horizontal-line.svg)        | .arrows-horizontal-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-vertical-line.svg)        | .arrows-vertical-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-diagonal-line.svg)     | .arrows-expand-diagonal-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-diagonal-line.svg) | .arrows-collapse-diagonal-line |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-up-line.svg)          | .arrowbox-out-up-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-left-line.svg)      | .arrowbox-out-left-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-right-line.svg)         | .arrowbox-out-right-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-down-line.svg)        | .arrowbox-out-down-line        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-upleft-line.svg)      | .arrowbox-out-upleft-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-upright-line.svg)   | .arrowbox-out-upright-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-downleft-line.svg)      | .arrowbox-out-downleft-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-downright-line.svg)   | .arrowbox-out-downright-line   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-up-line.svg)           | .arrowbox-in-up-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-left-line.svg)       | .arrowbox-in-left-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-right-line.svg)          | .arrowbox-in-right-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-down-line.svg)         | .arrowbox-in-down-line         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-upleft-line.svg)       | .arrowbox-in-upleft-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-upright-line.svg)    | .arrowbox-in-upright-line    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-downleft-line.svg)       | .arrowbox-in-downleft-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-downright-line.svg)    | .arrowbox-in-downright-line    |
+| Icono                                                                                                | Estilo                         | Icono                                                                                                     | Estilo                              | Icono                                                                                                   | Estilo                            | Icono                                                                                                          | Estilo                                   |
+| :---:                                                                                                | ------                         | :---:                                                                                                     | ------                              | :---:                                                                                                   | ------                            | :---:                                                                                                          | ------                                   |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-circle-clockwise-line.svg)   | .arrow-circle-clockwise-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-circle-counterclockwise-line.svg) | .arrow-circle-counterclockwise-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-circle-dual-clockwise-line.svg) | .arrow-circle-dual-clockwise-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-circle-dual-counterclockwise-line.svg) | .arrow-circle-dual-counterclockwise-line |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-line.svg)                 | .arrow-up-line                 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-line.svg)                    | .arrow-left-line                    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-line.svg)                 | .arrow-right-line                 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-line.svg)                         | .arrow-down-line                         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-lg-line.svg)              | .arrow-up-lg-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-lg-line.svg)                 | .arrow-left-lg-line                 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-lg-line.svg)              | .arrow-right-lg-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-lg-line.svg)                      | .arrow-down-lg-line                      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-lg-line.svg)          | .arrow-upleft-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-lg-line.svg)              | .arrow-upright-lg-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-lg-line.svg)           | .arrow-downleft-lg-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-lg-line.svg)                 | .arrow-downright-lg-line                 |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-line.svg)             | .arrowhead-up-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-line.svg)                | .arrowhead-left-line                | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-line.svg)             | .arrowhead-right-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-line.svg)                     | .arrowhead-down-line                     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-lg-line.svg)          | .arrowhead-up-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-lg-line.svg)             | .arrowhead-left-lg-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-lg-line.svg)          | .arrowhead-right-lg-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-lg-line.svg)                  | .arrowhead-down-lg-line                  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-stg-line.svg)         | .arrowhead-up-stg-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-stg-line.svg)            | .arrowhead-left-stg-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-stg-line.svg)         | .arrowhead-right-stg-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-stg-line.svg)                 | .arrowhead-down-stg-line                 |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-up-fill.svg)             | .arrowhead-up-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-left-fill.svg)                | .arrowhead-left-fill                | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-right-fill.svg)             | .arrowhead-right-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowhead-down-fill.svg)                     | .arrowhead-down-fill                     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-circle-line.svg)          | .arrow-up-circle-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-circle-line.svg)             | .arrow-left-circle-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-circle-line.svg)          | .arrow-right-circle-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-circle-line.svg)                  | .arrow-down-circle-line                  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-circle-line.svg)      | .arrow-upleft-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-circle-line.svg)          | .arrow-upright-circle-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-circle-line.svg)       | .arrow-downleft-circle-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-circle-line.svg)             | .arrow-downright-circle-line             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-up-circle-fill.svg)          | .arrow-up-circle-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-left-circle-fill.svg)             | .arrow-left-circle-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-right-circle-fill.svg)          | .arrow-right-circle-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-down-circle-fill.svg)                  | .arrow-down-circle-fill                  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upleft-circle-fill.svg)      | .arrow-upleft-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-upright-circle-fill.svg)          | .arrow-upright-circle-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downleft-circle-fill.svg)       | .arrow-downleft-circle-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrow-downright-circle-fill.svg)             | .arrow-downright-circle-fill             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-up-line.svg)              | .arrowbar-up-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-left-line.svg)                 | .arrowbar-left-line                 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-right-line.svg)              | .arrowbar-right-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbar-down-line.svg)                      | .arrowbar-down-line                      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-horizontal-line.svg) | .arrows-expand-horizontal-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-vertical-line.svg)        | .arrows-expand-vertical-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-horizontal-line.svg)  | .arrows-collapse-horizontal-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-vertical-line.svg)           | .arrows-collapse-vertical-line           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-horizontal-line.svg)        | .arrows-horizontal-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-vertical-line.svg)               | .arrows-vertical-line               | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-expand-diagonal-line.svg)      | .arrows-expand-diagonal-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrows-collapse-diagonal-line.svg)           | .arrows-collapse-diagonal-line           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-up-line.svg)          | .arrowbox-out-up-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-left-line.svg)             | .arrowbox-out-left-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-right-line.svg)          | .arrowbox-out-right-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-down-line.svg)                  | .arrowbox-out-down-line                  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-upleft-line.svg)      | .arrowbox-out-upleft-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-upright-line.svg)          | .arrowbox-out-upright-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-downleft-line.svg)       | .arrowbox-out-downleft-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-out-downright-line.svg)             | .arrowbox-out-downright-line             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-up-line.svg)           | .arrowbox-in-up-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-left-line.svg)              | .arrowbox-in-left-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-right-line.svg)           | .arrowbox-in-right-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-down-line.svg)                   | .arrowbox-in-down-line                   |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-upleft-line.svg)       | .arrowbox-in-upleft-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-upright-line.svg)           | .arrowbox-in-upright-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-downleft-line.svg)        | .arrowbox-in-downleft-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/arrowbox-in-downright-line.svg)              | .arrowbox-in-downright-line              |
 
 #### Tabla de Íconos de Número
 
@@ -1212,8 +1218,10 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Icono                                                                                       | Estilo                | Icono                                                                                       | Estilo                | Icono                                                                                      | Estilo               | Icono                                                                                      | Estilo               |
 | :---:                                                                                       | ------                | :---:                                                                                       | ------                | :---:                                                                                      | ------               | :---:                                                                                      | ------               |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-check-fill.svg)  | .calendar-check-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-check-line.svg)  | .calendar-check-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-dash-fill.svg)  | .calendar-dash-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-dash-line.svg)  | .calendar-dash-line  |
 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-line.svg)        | .calendar-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-fill.svg)        | .calendar-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-day-line.svg)   | .calendar-day-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-day-fill.svg)   | .calendar-day-fill   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-week-line.svg)   | .calendar-week-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-week-fill.svg)   | .calendar-week-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-range-line.svg) | .calendar-range-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-range-fill.svg) | .calendar-range-fill |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-plus-fill.svg)   | .calendar-plus-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-plus-line.svg)   | .calendar-plus-line   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-week-line.svg)  | .calendar-week-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-week-fill.svg)  | .calendar-week-fill  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-range-line.svg)  | .calendar-range-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-range-fill.svg)  | .calendar-range-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-x-fill.svg)     | .calendar-x-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/calendar-x-line.svg)     | .calendar-x-line     |
 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/clipboard-check-line.svg) | .clipboard-check-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/clipboard-check-fill.svg) | .clipboard-check-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/clipboard-data-line.svg) | .clipboard-data-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/clipboard-data-fill.svg) | .clipboard-data-fill |
 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-line.svg)        | .bookmark-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-fill.svg)        | .bookmark-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmarks-line.svg)      | .bookmarks-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmarks-fill.svg)      | .bookmarks-fill      |
 | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-check-line.svg)  | .bookmark-check-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-check-fill.svg)  | .bookmark-check-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-x-line.svg)     | .bookmark-x-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bookmark-x-fill.svg)     | .bookmark-x-fill     |
@@ -1300,39 +1308,41 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 #### Tabla de Íconos de Opciones
 
-| Icono                                                                                       | Estilo                | Icono                                                                                       | Estilo                | Icono                                                                                        | Estilo                 | Icono                                                                                        | Estilo                 |
-| :---:                                                                                       | ------                | :---:                                                                                       | ------                | :---:                                                                                        | ------                 | :---:                                                                                        | ------                 |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/at-line.svg)              | .at-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/at-lg-line.svg)           | .at-lg-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/award-line.svg)            | .award-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/award-fill.svg)            | .award-fill            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/basket-line.svg)          | .basket-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/basket-fill.svg)          | .basket-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bell-line.svg)             | .bell-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bell-fill.svg)             | .bell-fill             |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bluetooth-line.svg)       | .bluetooth-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bluetooth-fill.svg)       | .bluetooth-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bug-line.svg)              | .bug-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bug-fill.svg)              | .bug-fill              |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/cash-line.svg)            | .cash-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/cash-alt-fill.svg)        | .cash-alt-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/circle-line.svg)           | .circle-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/circle-fill.svg)           | .circle-fill           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/contacts-line.svg)        | .contacts-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/contacts-fill.svg)        | .contacts-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-line.svg)             | .copy-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-fill.svg)             | .copy-fill             |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-link-line.svg)       | .copy-link-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-link-fill.svg)       | .copy-link-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/easel-line.svg)            | .easel-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/easel-fill.svg)            | .easel-fill            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-line.svg)             | .eye-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-fill.svg)             | .eye-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-slash-line.svg)        | .eye-slash-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-slash-fill.svg)        | .eye-slash-fill        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/flag-line.svg)            | .flag-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/flag-fill.svg)            | .flag-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/floppy-line.svg)           | .floppy-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/floppy-fill.svg)           | .floppy-fill           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gear-line.svg)            | .gear-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gear-fill.svg)            | .gear-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gears-line.svg)            | .gears-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gears-fill.svg)            | .gears-fill            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/health-line.svg)          | .health-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/health-fill.svg)          | .health-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/home-line.svg)             | .home-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/home-fill.svg)             | .home-fill             |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-line.svg)           | .image-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-fill.svg)           | .image-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-alt-line.svg)        | .image-alt-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/images-line.svg)           | .images-line           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/key-line.svg)             | .key-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/key-fill.svg)             | .key-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/keyboard-line.svg)         | .keyboard-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/keyboard-fill.svg)         | .keyboard-fill         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/layers-line.svg)          | .layers-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/layers-fill.svg)          | .layers-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lightbulb-line.svg)        | .lightbulb-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lightbulb-fill.svg)        | .lightbulb-fill        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lock-line.svg)            | .lock-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lock-fill.svg)            | .lock-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mailbox-line.svg)          | .mailbox-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mailbox-fill.svg)          | .mailbox-fill          |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-line.svg)            | .moon-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-fill.svg)            | .moon-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-stars-line.svg)       | .moon-stars-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-stars-fill.svg)       | .moon-stars-fill       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mortarboard-line.svg)     | .mortarboard-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mortarboard-fill.svg)     | .mortarboard-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/piechart-line.svg)         | .piechart-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/piechart-fill.svg)         | .piechart-fill         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/palette-line.svg)         | .palette-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/palette-fill.svg)         | .palette-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pen-line.svg)              | .pen-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pen-fill.svg)              | .pen-fill              |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pencil-line.svg)          | .pencil-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pencil-fill.svg)          | .pencil-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pin-line.svg)              | .pin-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pin-fill.svg)              | .pin-fill              |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/plant-line.svg)           | .plant-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/plant-fill.svg)           | .plant-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-line.svg)             | .play-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-fill.svg)             | .play-fill             |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-circle-line.svg)     | .play-circle-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-circle-fill.svg)     | .play-circle-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/print-line.svg)            | .play-print            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/print-fill.svg)            | .play-print            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/send-line.svg)            | .send-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/send-fill.svg)            | .send-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/separationh-line.svg)      | .separationh-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/separationv-line.svg)      | .separationv-line      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/share-line.svg)           | .share-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/share-fill.svg)           | .share-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/shop-line.svg)             | .shop-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/shop-alt-fill.svg)         | .shop-alt-fill         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/signpost-line.svg)        | .signpost-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/signpost-fill.svg)        | .signpost-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sim-line.svg)              | .sim-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sim-fill.svg)              | .sim-fill              |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-line.svg)            | .star-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-fill.svg)            | .star-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-circle-line.svg)      | .star-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-circle-fill.svg)      | .star-circle-fill      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stoplights-line.svg)      | .stoplights-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stoplights-fill.svg)      | .stoplights-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sun-line.svg)              | .sun-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sun-fill.svg)              | .sun-fill              |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-line.svg)     | .thermometer-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-low-line.svg) | .thermometer-low-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-half-line.svg) | .thermometer-half-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-high-line.svg) | .thermometer-high-line |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/time-line.svg)            | .time-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/time-fill.svg)            | .time-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trash-line.svg)            | .trash-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trash-fill.svg)            | .trash-fill            |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/threedots-horizontal.svg) | .threedots-horizontal | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/threedots-vertical.svg)   | .threedots-vertical   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trophy-line.svg)           | .trophy-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trophy-fill.svg)           | .trophy-fill           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/unlock-line.svg)          | .unlock-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/unlock-fill.svg)           | .unlock-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wallet-line.svg)         | .wallet-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wallet-fill.svg)           | .wallet-fill           |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wifi-on-line.svg)         | .wifi-on-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wifi-off-line.svg)         | .wifi-off-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/window-app-line.svg)     | .window-app-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/window-app-fill.svg)       | .window-app-fill       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wrench-line.svg)          | .wrench-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wrench-fill.svg)           | .wrench-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/zoomin-line.svg)         | .zoomin-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/zoomout-line.svg)          | .zoomout-line          |
+| Icono                                                                                       | Estilo                | Icono                                                                                        | Estilo                 | Icono                                                                                        | Estilo                 | Icono                                                                                        | Estilo                 |
+| :---:                                                                                       | ------                | :---:                                                                                        | ------                 | :---:                                                                                        | ------                 | :---:                                                                                        | ------                 |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/at-line.svg)              | .at-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/at-lg-line.svg)            | .at-lg-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/award-line.svg)            | .award-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/award-fill.svg)            | .award-fill            |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/basket-line.svg)          | .basket-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/basket-fill.svg)           | .basket-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bell-line.svg)             | .bell-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bell-fill.svg)             | .bell-fill             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bluetooth-line.svg)       | .bluetooth-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bluetooth-fill.svg)        | .bluetooth-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bug-line.svg)              | .bug-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bug-fill.svg)              | .bug-fill              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/cash-line.svg)            | .cash-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/cash-alt-line.svg)         | .cash-alt-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/circle-line.svg)           | .circle-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/circle-fill.svg)           | .circle-fill           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/contacts-line.svg)        | .contacts-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/contacts-fill.svg)         | .contacts-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-line.svg)             | .copy-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-fill.svg)             | .copy-fill             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-link-line.svg)       | .copy-link-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/copy-link-fill.svg)        | .copy-link-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/credit-card-line.svg)      | .credit-card-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/credit-card-fill.svg)      | .credit-card-fill      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/crown-line.svg)           | .crown-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/crown-fill.svg)            | .crown-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/easel-line.svg)            | .easel-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/easel-fill.svg)            | .easel-fill            |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-line.svg)             | .eye-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-fill.svg)              | .eye-fill              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-slash-line.svg)        | .eye-slash-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/eye-slash-fill.svg)        | .eye-slash-fill        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/flag-line.svg)            | .flag-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/flag-fill.svg)             | .flag-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/floppy-line.svg)           | .floppy-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/floppy-fill.svg)           | .floppy-fill           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gear-line.svg)            | .gear-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gear-fill.svg)             | .gear-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gears-line.svg)            | .gears-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gears-fill.svg)            | .gears-fill            |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/health-line.svg)          | .health-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/health-fill.svg)           | .health-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/home-line.svg)             | .home-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/home-fill.svg)             | .home-fill             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/hourglass-empty-line.svg) | .hourglass-empty-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/hourglass-bottom-line.svg) | .hourglass-bottom-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/hourglass-middle-line.svg) | .hourglass-middle-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/hourglass-top-line.svg)    | .hourglass-top-line    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-line.svg)           | .image-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-fill.svg)            | .image-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/image-alt-line.svg)        | .image-alt-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/images-line.svg)           | .images-line           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/key-line.svg)             | .key-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/key-fill.svg)              | .key-fill              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/keyboard-line.svg)         | .keyboard-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/keyboard-fill.svg)         | .keyboard-fill         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/layers-line.svg)          | .layers-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/layers-fill.svg)           | .layers-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lightbulb-line.svg)        | .lightbulb-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lightbulb-fill.svg)        | .lightbulb-fill        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lock-line.svg)            | .lock-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/lock-fill.svg)             | .lock-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mailbox-line.svg)          | .mailbox-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mailbox-fill.svg)          | .mailbox-fill          |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-line.svg)            | .moon-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-fill.svg)             | .moon-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-stars-line.svg)       | .moon-stars-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/moon-stars-fill.svg)       | .moon-stars-fill       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mortarboard-line.svg)     | .mortarboard-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/mortarboard-fill.svg)      | .mortarboard-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/piechart-line.svg)         | .piechart-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/piechart-fill.svg)         | .piechart-fill         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/palette-line.svg)         | .palette-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/palette-fill.svg)          | .palette-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pen-line.svg)              | .pen-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pen-fill.svg)              | .pen-fill              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pencil-line.svg)          | .pencil-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pencil-fill.svg)           | .pencil-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pin-line.svg)              | .pin-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/pin-fill.svg)              | .pin-fill              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/plant-line.svg)           | .plant-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/plant-fill.svg)            | .plant-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-line.svg)             | .play-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-fill.svg)             | .play-fill             |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-circle-line.svg)     | .play-circle-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/play-circle-fill.svg)      | .play-circle-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/print-line.svg)            | .play-print            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/print-fill.svg)            | .play-print            |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/send-line.svg)            | .send-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/send-fill.svg)             | .send-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/separationh-line.svg)      | .separationh-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/separationv-line.svg)      | .separationv-line      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/share-line.svg)           | .share-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/share-fill.svg)            | .share-fill            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/shop-line.svg)             | .shop-line             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/shop-alt-fill.svg)         | .shop-alt-fill         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/signpost-line.svg)        | .signpost-line        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/signpost-fill.svg)         | .signpost-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sim-line.svg)              | .sim-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sim-fill.svg)              | .sim-fill              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-line.svg)            | .star-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-fill.svg)             | .star-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-circle-line.svg)      | .star-circle-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/star-circle-fill.svg)      | .star-circle-fill      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stoplights-line.svg)      | .stoplights-line      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stoplights-fill.svg)       | .stoplights-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sun-line.svg)              | .sun-line              | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/sun-fill.svg)              | .sun-fill              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-line.svg)     | .thermometer-line     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-low-line.svg)  | .thermometer-low-line  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-half-line.svg) | .thermometer-half-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/thermometer-high-line.svg) | .thermometer-high-line |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/time-line.svg)            | .time-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/time-fill.svg)             | .time-fill             | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trash-line.svg)            | .trash-line            | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trash-fill.svg)            | .trash-fill            |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/threedots-horizontal.svg) | .threedots-horizontal | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/threedots-vertical.svg)    | .threedots-vertical    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trophy-line.svg)           | .trophy-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/trophy-fill.svg)           | .trophy-fill           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/unlock-line.svg)          | .unlock-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/unlock-fill.svg)           | .unlock-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wallet-line.svg)           | .wallet-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wallet-fill.svg)           | .wallet-fill           |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wifi-on-line.svg)         | .wifi-on-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wifi-off-line.svg)         | .wifi-off-line         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/window-app-line.svg)       | .window-app-line       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/window-app-fill.svg)       | .window-app-fill       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wrench-line.svg)          | .wrench-line          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wrench-fill.svg)           | .wrench-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/zoomin-line.svg)           | .zoomin-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/zoomout-line.svg)          | .zoomout-line          |
 
 #### Tabla de Íconos de Compositor
 
@@ -1388,7 +1398,7 @@ python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s 
 
 | Opción             | Valor predeterminado                       | Descripción |
 | ------------------ | ------------------------------------------ | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.10.css` | Ruta al archivo CSS fuente. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.11.css` | Ruta al archivo CSS fuente. |
 | `-o`,<br>`--out`   | `../imgs/icons/`                           | Directorio de salida para los archivos generados. |
 | `-c`,<br>`--color` | `#a2a9b6`                                  | Color en formato CSS compatible que reemplazará a la sentencia 'currentColor' en el código SVG. |
 | `-s`,<br>`--size`  | `24`                                       | Tamaño en píxeles (ancho y alto) de las imágenes del set. |
@@ -1440,9 +1450,9 @@ nav button {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.10.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.10.css">
-<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.10.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.11.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.11.css">
+<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.11.js"></script>
 ```
 
 Código HTML:
@@ -1895,7 +1905,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIModal
 
-Versión: `0.10`
+Versión: `0.11`
 
 Componente para la implementación de cuadros de diálogo (tipo `message`) y ventanas emergentes (tipo `page`).
 
@@ -1903,9 +1913,9 @@ Componente para la implementación de cuadros de diálogo (tipo `message`) y ven
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/modal/wui-modal-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.js) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.css) |
-| CSS  | [src/wui-js/main/modal/wui-modal-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.10.root.css) |
+| JS   | [src/wui-js/main/modal/wui-modal-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.11.js) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.11.css) |
+| CSS  | [src/wui-js/main/modal/wui-modal-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/modal/wui-modal-0.11.root.css) |
 
 #### Constructor
 
@@ -2044,9 +2054,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.10.css">
-<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.10.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.11.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/modal/wui-modal-0.11.css">
+<script type="text/javascript" src="/libraries/wui-js/main/modal/wui-modal-0.11.js"></script>
 ```
 
 Código HTML:
@@ -2117,7 +2127,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIPaging
 
-Versión: `0.9`
+Versión: `0.10`
 
 Componente para la implementación de vistas accesibles paginadamente con transiciones animadas.
 
@@ -2125,9 +2135,9 @@ Componente para la implementación de vistas accesibles paginadamente con transi
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/paging/wui-paging-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.js) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.css) |
-| CSS  | [src/wui-js/main/paging/wui-paging-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.9.root.css) |
+| JS   | [src/wui-js/main/paging/wui-paging-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.10.js) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.10.css) |
+| CSS  | [src/wui-js/main/paging/wui-paging-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/paging/wui-paging-0.10.root.css) |
 
 #### Constructor
 
@@ -2157,7 +2167,7 @@ Componente para la implementación de vistas accesibles paginadamente con transi
 | getPages   | `NodeList`     | `getPages()`<br><br>Retorna una lista con todos los elementos HTML de tipo página (con clase `.page`). |
 | getPage    | `HTMLElement`  | `getPage(target)`<br><br>Parámetros:<br>**• target:** `string` o `number`, identificador o índice de la página.<br><br>Retorna el elemento HTML de una página específica. |
 | init       | `void`         | `init()`<br><br>Inicializa el objeto, estableciendo la página inicial y configurando los eventos de scroll. |
-| select     | `void`         | `select(target[, onChange[, instant]])`<br><br>Parámetros:<br>**• target:** `string` o `number`, identificador o índice de la página a seleccionar.<br>**• onChange:** `function` *opcional*, función que se ejecuta al completar el cambio. El valor predeterminado corresponde al de la propiedad `onChange`.<br>**• instant:** `boolean` *opcional*, ejecuta el cambio de página de manera instantanea. El valor predeterminado es `false`.<br><br>Selecciona y muestra una página con animación de transición. |
+| select     | `void`         | `select([target][, onChange[, instant]])`<br><br>Parámetros:<br>**• target:** `string` o `number` *opcional*, identificador o índice de la página a seleccionar. El valor por defecto es `0`.<br>**• onChange:** `function` *opcional*, función que se ejecuta al completar el cambio. El valor predeterminado corresponde al de la propiedad `onChange`.<br>**• instant:** `boolean` *opcional*, ejecuta el cambio de página de manera instantanea. El valor predeterminado es `false`.<br><br>Selecciona y muestra una página con animación de transición. |
 | setHistory | `void`         | `setHistory([history])`<br><br>Parámetros:<br>**• history:** `array` *opcional*, lista de identificadores o índices de páginas que conforman el historial.<br><br>Establece manualmente el historial de navegación. |
 | back       | `void`         | `back([onBack])`<br><br>Parámetros:<br>**• onBack:** `function` *opcional*, función que se ejecuta al completar el retroceso. El valor predeterminado corresponde al de la propiedad `onBack`.<br><br>Retrocede a la página anterior del historial. |
 | reset      | `void`         | `reset()`<br><br>Reinicia el componente, seleccionando la primera página y limpiando el historial. |
@@ -2223,9 +2233,9 @@ body {
 Cabecera HTML:
 
 ```html
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.9.root.css">
-<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.9.js"></script>
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.10.root.css">
+<link rel="stylesheet" type="text/css" href="/libraries/wui-js/main/paging/wui-paging-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/paging/wui-paging-0.10.js"></script>
 ```
 
 Código HTML:
@@ -2474,7 +2484,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITabs
 
-Versión: `0.6`
+Versión: `0.7`
 
 Componente para la implementación de vistas accesibles por selección de pestañas.
 
@@ -2482,9 +2492,9 @@ Componente para la implementación de vistas accesibles por selección de pesta�
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/tabs/wui-tabs-0.6.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.js) |
-| CSS  | [src/wui-js/main/tabs/wui-tabs-0.6.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.css) |
-| CSS  | [src/wui-js/main/tabs/wui-tabs-0.6.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.6.root.css) |
+| JS   | [src/wui-js/main/tabs/wui-tabs-0.7.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.7.js) |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.7.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.7.css) |
+| CSS  | [src/wui-js/main/tabs/wui-tabs-0.7.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/tabs/wui-tabs-0.7.root.css) |
 
 #### Constructor
 
@@ -2494,19 +2504,25 @@ Componente para la implementación de vistas accesibles por selección de pesta�
 
 #### Propiedades
 
-| Propiedad | Tipo     | Valor por defecto | Descripción |
-| --------- | -------- | ----------------- | ----------- |
-| selector  | `string` | `""`              | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del componente de pestañas. Si más de un elemento coincide con el selector, solo se incluirá el primero. |
-| layout    | `string` | `"top"`           | (get/set)<br><br>Posición de la barra de pestañas.<br><br>Valores:<br>• `"top"`, en la parte superior al principio del despliegue (valor por defecto).<br>• `"bottom"`, en la parte inferior al final del despliegue. |
-| index     | `number` | `0`               | (get/set)<br><br>Índice de la pestaña seleccionada por defecto al inicializar. |
+| Propiedad  | Tipo     | Valor por defecto | Descripción |
+| ---------- | -------- | ------------------ | ----------- |
+| selector   | `string` | `""`               | (get/set)<br><br>Selector CSS que define el elemento HTML contenedor del componente de pestañas. Si más de un elemento coincide con el selector, solo se incluirá el primero. |
+| layout     | `string` | `"top"`            | (get/set)<br><br>Posición de la barra de pestañas.<br><br>Valores:<br>• `"top"`, en la parte superior al principio del despliegue (valor por defecto).<br>• `"bottom"`, en la parte inferior al final del despliegue. |
+| index      | `number` | `null`             | (get/set)<br><br>Índice de la pestaña actualmente seleccionada. |
+| dataTarget | `string` | `"target"`         | (get/set)<br><br>Nombre del atributo `data-*` que contiene el identificador de cada pestaña. |
+| target     | `string` | `null`             | (solo get)<br><br>Identificador de la pestaña actualmente seleccionada. |
 
 #### Métodos
 
 | Método     | Tipo de retorno | Descripción |
 | ---------- | --------------- | ----------- |
 | getElement | `HTMLElement`   | `getElement()`<br><br>Retorna el elemento HTML contenedor del objeto. |
+| getIndex   | `number`        | `getIndex([target])`<br><br>Parámetros:<br>**• target:** `string` *opcional*, identificador de la pestaña. Si no se especifica, utiliza el target actual.<br><br>Retorna el índice de una pestaña según su identificador. |
+| getTarget  | `string`        | `getTarget([index])`<br><br>Parámetros:<br>**• index:** `number` *opcional*, índice de la pestaña. Si no se especifica, utiliza el índice actual.<br><br>Retorna el identificador de una pestaña según su índice. |
+| getTabs    | `NodeList`      | `getTabs()`<br><br>Retorna una lista con todos los elementos HTML de tipo pestaña (con clase `.tab`). |
+| getPages   | `NodeList`      | `getPages()`<br><br>Retorna una lista con todos los elementos HTML de tipo página (con clase `.page`). |
 | init       | `void`          | `init()`<br><br>Inicializa el objeto, vinculando los eventos de clic a las pestañas y seleccionando la pestaña por defecto. |
-| select     | `void`          | `select([index])`<br><br>Argumentos:<br>**• index:** `number`, índice de la pestaña a seleccionar. El valor por defecto es `0`.<br><br>Selecciona la pestaña en el índice indicado, mostrando la página correspondiente. |
+| select     | `void`          | `select(target)`<br><br>Parámetros:<br>**• target:** `string` o `number` *opcional*, identificador o índice de la pestaña a seleccionar. El valor por defecto es `0`.<br><br>Selecciona la pestaña indicada, mostrando la página correspondiente. |
 | destroy    | `void`          | `destroy()`<br><br>Destructor. |
 
 #### Variables CSS
@@ -2520,13 +2536,16 @@ Componente para la implementación de vistas accesibles por selección de pesta�
 | `--wui-tabs-bgcolor`                  | Color de fondo del controlador y de las páginas. |
 | `--wui-tabs-scroll-bgcolor-out`       | Color de fondo de la barra de desplazamiento en estado normal. |
 | `--wui-tabs-scroll-bgcolor-over`      | Color de fondo de la barra de desplazamiento en estado hover/activo. |
+| `--wui-tabs-tab-bordercolor-out`      | Color de borde de la pestaña en estado normal. |
+| `--wui-tabs-tab-bordercolor-over`     | Color de borde de la pestaña en estado hover. |
+| `--wui-tabs-tab-bordercolor-selected` | Color de borde de la pestaña en estado seleccionado. |
 | `--wui-tabs-tab-bgcolor-out`          | Color de fondo de las pestañas en estado normal. |
 | `--wui-tabs-tab-bgcolor-over`         | Color de fondo de las pestañas en estado hover. |
 | `--wui-tabs-tab-bgcolor-selected`     | Color de fondo de las pestañas en estado seleccionado. |
 | `--wui-tabs-tab-iconcolor-out`        | Color de ícono de las pestañas en estado normal. |
 | `--wui-tabs-tab-iconcolor-over`       | Color de ícono de las pestañas en estado hover. |
-| `~~--wui-tabs-tab-iconcolor-mobile~~` | Color de ícono de las pestañas en modo móvil. |
 | `--wui-tabs-tab-iconcolor-selected`   | Color de ícono de las pestañas en estado seleccionado. |
+| `~~--wui-tabs-tab-iconcolor-mobile~~` | Color de ícono de las pestañas en modo móvil. |
 | `--wui-tabs-tab-textcolor-out`        | Color de texto de las pestañas en estado normal. |
 | `--wui-tabs-tab-textcolor-over`       | Color de texto de las pestañas en estado hover. |
 | `--wui-tabs-tab-textcolor-selected`   | Color de texto de las pestañas en estado seleccionado. |
@@ -2575,9 +2594,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.6.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.6.css">
-<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.6.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.7.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/tabs/wui-tabs-0.7.css">
+<script type="text/javascript" src="/libraries/wui-js/main/tabs/wui-tabs-0.7.js"></script>
 ```
 
 Código HTML:
@@ -2586,15 +2605,15 @@ Código HTML:
 <nav>
 	<div class="wui-tabs my-tabs">
 		<div class="bar">
-			<div class="tab">
+			<div class="tab" data-target="home">
 				<div class="icon wui-icon home-line"></div>
 				<div class="text">Home</div>
 			</div>
-			<div class="tab">
+			<div class="tab" data-target="profile">
 				<div class="icon wui-icon user-line"></div>
 				<div class="text">Profile</div>
 			</div>
-			<div class="tab">
+			<div class="tab" data-target="settings">
 				<div class="icon wui-icon gear-line"></div>
 				<div class="text">Settings</div>
 			</div>
@@ -2615,7 +2634,8 @@ const init = () => {
 	const tabs = new WUITabs({
 		selector: ".wui-tabs.my-tabs",
 		//layout: "top",
-		//index: 0
+		//index: null,
+		//dataTarget: "target"
 	});
 	tabs.init();
 }
@@ -2630,7 +2650,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIMenubar
 
-Versión: `0.9`
+Versión: `0.10`
 
 Componente para la implementación de barras de menú.
 
@@ -2638,9 +2658,9 @@ Componente para la implementación de barras de menú.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/menubar/wui-menubar-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.js) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.css) |
-| CSS  | [src/wui-js/main/menubar/wui-menubar-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.9.root.css) |
+| JS   | [src/wui-js/main/menubar/wui-menubar-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.10.js) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.10.css) |
+| CSS  | [src/wui-js/main/menubar/wui-menubar-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/menubar/wui-menubar-0.10.root.css) |
 
 #### Constructor
 
@@ -2797,9 +2817,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/menubar/wui-menubar-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/menubar/wui-menubar-0.10.js"></script>
 ```
 
 Cuerpo HTML:
@@ -2903,7 +2923,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIList
 
-Versión: `0.8`
+Versión: `0.9`
 
 Componente para la implementación de listas de datos y botoneras para cada fila de manera opcional.
 
@@ -2911,9 +2931,9 @@ Componente para la implementación de listas de datos y botoneras para cada fila
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/list/wui-list-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.js) |
-| CSS  | [src/wui-js/main/list/wui-list-0.8.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.css) |
-| CSS  | [src/wui-js/main/list/wui-list-0.8.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.8.root.css) |
+| JS   | [src/wui-js/main/list/wui-list-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.9.js) |
+| CSS  | [src/wui-js/main/list/wui-list-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.9.css) |
+| CSS  | [src/wui-js/main/list/wui-list-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/list/wui-list-0.9.root.css) |
 
 #### Constructor
 
@@ -3005,13 +3025,16 @@ Componente para la implementación de listas de datos y botoneras para cada fila
 | `--wui-list-row-textcolor-out`       | Color del texto de las filas en estado normal. |
 | `--wui-list-row-textcolor-over`      | Color del texto de las filas en estado hover/focus. |
 | `--wui-list-row-textcolor-disabled`  | Color del texto de las filas en estado deshabilitado. |
+| `--wui-list-cell-leftpadding`        | Padding izquierdo de celda. |
+| `--wui-list-cell-rightpadding`       | Padding derecho de celda. |
 | `--wui-list-innerrow-borderwidth`    | Ancho del borde de las filas internas (contenido expandible). |
 | `--wui-list-innerrow-bordercolor`    | Color del borde de las filas internas (contenido expandible). |
 | `--wui-list-innerrow-bgcolor`        | Color de fondo de las filas internas (contenido expandible). |
 | `--wui-list-innerrow-textcolor`      | Color del texto de las filas internas (contenido expandible). |
 | `--wui-list-buttons-bgcolor`         | Color de fondo del área de botones deslizables de fila. |
 | `--wui-list-button-size`             | Tamaño de los botones de fila. |
-| `--wui-list-button-hmargin`          | Margen horizontal entre botones de fila. |
+| `~~--wui-list-button-hmargin~~`      | Margen horizontal entre botones de fila. |
+| `--wui-list-button-horizontalmargin` | Margen horizontal entre botones de fila. |
 | `--wui-list-button-borderradius`     | Radio de borde de los botones de fila. |
 | `--wui-list-button-bgcolor-enabled`  | Color de fondo de los botones de fila en estado habilitado. |
 | `--wui-list-button-bgcolor-disabled` | Color de fondo de los botones de fila en estado deshabilitado. |
@@ -3081,9 +3104,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.8.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.8.css">
-<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.8.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.9.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/list/wui-list-0.9.css">
+<script type="text/javascript" src="/libraries/wui-js/main/list/wui-list-0.9.js"></script>
 ```
 
 Código HTML:
@@ -3215,7 +3238,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITable
 
-Versión: `0.9`
+Versión: `0.10`
 
 Componente para la implementación de tablas de datos. A diferencia del objeto `WUIList`, el objeto `WUITable` incluye una cabecera de columnas.
 
@@ -3223,9 +3246,9 @@ Componente para la implementación de tablas de datos. A diferencia del objeto `
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/table/wui-table-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.js) |
-| CSS  | [src/wui-js/main/table/wui-table-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.css) |
-| CSS  | [src/wui-js/main/table/wui-table-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.9.root.css) |
+| JS   | [src/wui-js/main/table/wui-table-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.10.js) |
+| CSS  | [src/wui-js/main/table/wui-table-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.10.css) |
+| CSS  | [src/wui-js/main/table/wui-table-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/table/wui-table-0.10.root.css) |
 
 #### Constructor
 
@@ -3413,9 +3436,9 @@ footer {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/table/wui-table-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/table/wui-table-0.10.js"></script>
 ```
 
 Código HTML:
@@ -3547,7 +3570,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIForm
 
-Versión: `0.11`
+Versión: `0.12`
 
 Componente para la implementación de formularios de datos. Este componente permite la implementación de elementos HTML de entrada de datos tales como `<input>`, `<select>` y `<textarea>` y objetos de la librería WUI como `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker`, `WUIColorpicker`, `WUISwitch`, `WUIIntensity` y `WUIButton`.
 
@@ -3555,9 +3578,9 @@ Componente para la implementación de formularios de datos. Este componente perm
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/form/wui-form-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.js) |
-| CSS  | [src/wui-js/main/form/wui-form-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.css) |
-| CSS  | [src/wui-js/main/form/wui-form-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.11.root.css) |
+| JS   | [src/wui-js/main/form/wui-form-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.12.js) |
+| CSS  | [src/wui-js/main/form/wui-form-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.12.css) |
+| CSS  | [src/wui-js/main/form/wui-form-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/form/wui-form-0.12.root.css) |
 
 #### Constructor
 
@@ -3617,6 +3640,7 @@ Componente para la implementación de formularios de datos. Este componente perm
 | `--wui-form-fieldset-bgcolor`                    | Color de fondo de los conjuntos de campos (fieldset). |
 | `--wui-form-legend-texttransform`                | Transformación de texto para las leyendas (legend) de los conjuntos de campos. |
 | `--wui-form-legend-textcolor`                    | Color del texto de las leyendas (legend) de los conjuntos de campos. |
+| `--wui-form-label-inline-right`                  | Distancia de la etiqueta desde el lado derecho del borde del campo en modo `inline`. |
 | `--wui-form-label-textcolor-out`                 | Color del texto de las etiquetas (label) en estado normal. |
 | `--wui-form-label-textcolor-focus`               | Color del texto de las etiquetas (label) en estado focus. |
 | `--wui-form-label-textcolor-notempty`            | Color del texto de las etiquetas (label) cuando el campo no está vacío. |
@@ -3707,9 +3731,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/form/wui-form-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/form/wui-form-0.12.js"></script>
 ```
 
 Código HTML:
@@ -4232,7 +4256,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ### WUISelectpicker
 
-Versión: `0.13`
+Versión: `0.14`
 
 Componente para la implementación de entradas de datos de tipo lista de selección múltiple o excluyente basada en el elemento HTML `<select>`.
 
@@ -4240,9 +4264,9 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.js) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.css) |
-| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css) |
+| JS   | [src/wui-js/main/selectpicker/wui-selectpicker-0.14.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.14.js) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.14.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.14.css) |
+| CSS  | [src/wui-js/main/selectpicker/wui-selectpicker-0.14.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/selectpicker/wui-selectpicker-0.14.root.css) |
 
 #### Constructor
 
@@ -4329,7 +4353,8 @@ Componente para la implementación de entradas de datos de tipo lista de selecci
 | `--wui-selectpicker-viewicon-iconsize`              | Tamaño del icono de visualización. |
 | `--wui-selectpicker-viewicon-icongap`               | Espacio entre el texto de la opción seleccionada y el icono de visualización. |
 | `--wui-selectpicker-viewicon-iconcolor`             | Color del icono de la opción seleccionada. |
-| `--wui-selectpicker-viewinput-paddingleft`          | Padding izquierdo del campo de entrada de visualización. |
+| `~~--wui-selectpicker-viewinput-paddingleft~~`      | Padding izquierdo del campo de entrada de visualización. |
+| `--wui-selectpicker-viewinput-leftpadding`          | Padding izquierdo del campo de entrada de visualización. |
 | `--wui-selectpicker-viewinput-textcolor-out`        | Color del texto del campo de entrada de visualización en estado normal. |
 | `--wui-selectpicker-viewinput-textcolor-over`       | Color del texto del campo de entrada de visualización en estado hover. |
 | `--wui-selectpicker-viewinput-textcolor-disabled`   | Color del texto del campo de entrada de visualización en estado deshabilitado. |
@@ -4410,9 +4435,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.css">
-<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.13.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.css">
+<script type="text/javascript" src="/libraries/wui-js/main/selectpicker/wui-selectpicker-0.14.js"></script>
 ```
 
 Código HTML:
@@ -4498,7 +4523,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIDatepicker
 
-Versión: `0.11`
+Versión: `0.12`
 
 Componente para la implementación de entradas de datos de tipo fecha basada en el elemento HTML `<input type="date">`.
 
@@ -4506,9 +4531,9 @@ Componente para la implementación de entradas de datos de tipo fecha basada en 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.js) |
-| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.css) |
-| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.11.root.css) |
+| JS   | [src/wui-js/main/datepicker/wui-datepicker-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.12.js) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.12.css) |
+| CSS  | [src/wui-js/main/datepicker/wui-datepicker-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/datepicker/wui-datepicker-0.12.root.css) |
 
 #### Constructor
 
@@ -4648,9 +4673,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/datepicker/wui-datepicker-0.12.js"></script>
 ```
 
 Código HTML:
@@ -4708,7 +4733,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUITimepicker
 
-Versión: `0.11`
+Versión: `0.12`
 
 Componente para la implementación de entradas de datos de tipo hora basada en el elemento HTML `<input type="time">`.
 
@@ -4716,9 +4741,9 @@ Componente para la implementación de entradas de datos de tipo hora basada en e
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.js) |
-| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.css) |
-| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.11.root.css) |
+| JS   | [src/wui-js/main/timepicker/wui-timepicker-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.12.js) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.12.css) |
+| CSS  | [src/wui-js/main/timepicker/wui-timepicker-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/timepicker/wui-timepicker-0.12.root.css) |
 
 #### Constructor
 
@@ -4779,7 +4804,8 @@ Componente para la implementación de entradas de datos de tipo hora basada en e
 | `--wui-timepicker-opener-iconcolor-disabled`     | Color del icono del abridor del timepicker en estado deshabilitado. |
 | `--wui-timepicker-opener-openicon-src`           | Fuente de la imagen del icono de apertura del timepicker<br>(formato: `url()` o `none` para utilizar la fuente predeterminada). |
 | `--wui-timepicker-opener-closeicon-src`          | Fuente de la imagen del icono de cierre del timepicker<br>(formato: `url()` o `none` para utilizar la fuente predeterminada). |
-| `--wui-timepicker-viewinput-paddingleft`         | Padding izquierdo de los campos de entrada de visualización. |
+| `~~--wui-timepicker-viewinput-paddingleft~~`     | Padding izquierdo de los campos de entrada de visualización. |
+| `--wui-timepicker-viewinput-leftpadding`         | Padding izquierdo de los campos de entrada de visualización. |
 | `--wui-timepicker-viewinput-textcolor-out`       | Color del texto de los campos de entrada de visualización en estado normal. |
 | `--wui-timepicker-viewinput-textcolor-over`      | Color del texto de los campos de entrada de visualización en estado hover. |
 | `--wui-timepicker-viewinput-textcolor-disabled`  | Color del texto de los campos de entrada de visualización en estado deshabilitado. |
@@ -4836,9 +4862,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/timepicker/wui-timepicker-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/timepicker/wui-timepicker-0.12.js"></script>
 ```
 
 Código HTML:
@@ -5131,7 +5157,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUISwitch
 
-Versión: `0.9`
+Versión: `0.10`
 
 Componente para la implementación de entradas de datos de tipo casilla de verificación basada en el elemento HTML `<input type="checkbox">`.
 
@@ -5139,9 +5165,9 @@ Componente para la implementación de entradas de datos de tipo casilla de verif
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/switch/wui-switch-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.js) |
-| CSS  | [src/wui-js/main/switch/wui-switch-0.9.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.css) |
-| CSS  | [src/wui-js/main/switch/wui-switch-0.9.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.9.root.css) |
+| JS   | [src/wui-js/main/switch/wui-switch-0.10.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.10.js) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.10.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.10.css) |
+| CSS  | [src/wui-js/main/switch/wui-switch-0.10.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/switch/wui-switch-0.10.root.css) |
 
 #### Constructor
 
@@ -5223,9 +5249,9 @@ nav {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.9.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.9.css">
-<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.9.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.10.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/switch/wui-switch-0.10.css">
+<script type="text/javascript" src="/libraries/wui-js/main/switch/wui-switch-0.10.js"></script>
 ```
 
 Código HTML:
@@ -5394,7 +5420,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIButton
 
-Versión: `0.13`
+Versión: `0.14`
 
 Componente para la implementación de botones basada en el elemento HTML `<button>`.
 
@@ -5402,9 +5428,9 @@ Componente para la implementación de botones basada en el elemento HTML `<butto
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/button/wui-button-0.13.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.js) |
-| CSS  | [src/wui-js/main/button/wui-button-0.13.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.css) |
-| CSS  | [src/wui-js/main/button/wui-button-0.13.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.13.root.css) |
+| JS   | [src/wui-js/main/button/wui-button-0.14.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.14.js) |
+| CSS  | [src/wui-js/main/button/wui-button-0.14.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.14.css) |
+| CSS  | [src/wui-js/main/button/wui-button-0.14.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/button/wui-button-0.14.root.css) |
 
 #### Constructor
 
@@ -5534,9 +5560,9 @@ Cabecera HTML:
 ```html
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.root.css">
 <link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.8.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.13.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.13.css">
-<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.13.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.14.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/button/wui-button-0.14.css">
+<script type="text/javascript" src="/libraries/wui-js/main/button/wui-button-0.14.js"></script>
 ```
 
 Código HTML:
