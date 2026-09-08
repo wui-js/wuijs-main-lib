@@ -7,6 +7,20 @@
 
 # Registro de Cambios
 
+## [v0.14.1] - 2026-09-08
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIBody a `0.9`.
+	- Se agregaron los sufijos `button` y `script` como sufijos válidos del módo automático (`auto=true`) para ids de secciones en el método `importSections()`.
+	- Se corrigió error en el método `prepare()`.
+3. Se actualizó versión clase WUIIcon a `0.12`.
+	- Se agregó el ícono `stripe-fill`.
+	- Se agregó el ícono `stripe-color`.
+	- Se agregó el ícono `paypal-fill`.
+	- Se agregó el ícono `paypal-color`.
+
 ## [v0.14.0] - 2026-09-04
 
 Características:
@@ -47,8 +61,8 @@ Características:
 6. Se actualizó versión clase WUIModal a `0.11`.
 	- Se corrigió error en las reglas CSS para botones del footer en modo móvil.
 7. Se actualizó versión clase WUIPaging a `0.10`.
-	- Se corrigió `#index2target()`: el parámetro `index` recibido era ignorado, retornando siempre el target del índice actual en vez del solicitado.
-	- Se corrigió `select()`: la propiedad interna de target ahora almacena el valor resuelto desde el dataset en vez del argumento crudo recibido (que podía ser numérico).
+	- Se corrigió error en el método `#index2target()`: el parámetro `index` recibido era ignorado, retornando siempre el target del índice actual en vez del solicitado.
+	- Se corrigió error en el método `select()`: la propiedad interna de target ahora almacena el valor resuelto desde el dataset en vez del argumento crudo recibido (que podía ser numérico).
 8. Se actualizó versión clase WUITabs a `0.7`.
 	- Se agregó la variable CSS `--wui-tabs-tab-bordercolor-out`.
 	- Se agregó la variable CSS `--wui-tabs-tab-bordercolor-over`.
@@ -94,7 +108,10 @@ Características:
 2. Se actualizó versión clase WUIBody a `0.7`.
 	- Se agregó el método `importSections()`.
 3. Se actualizó versión clase WUIIcon a `0.10`.
-	- Se agregaron los íconos `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` y `person-gear-fill`.
+	- Se agregó el ícono `person-exclamation-line`.
+	- Se agregó el ícono `person-exclamation-fill`.
+	- Se agregó el ícono `person-gear-line`.
+	- Se agregó el ícono `person-gear-fill`.
 4. Se actualizó versión clase WUIModal a `0.10`.
 	- Se corrigió en la apertura de modal con estilo `page small`. Métodos `open()` y `resposive()` forzaran `height: auto` y un desplazamiento `top` de página completa en modo móvil para el estilo `page small`, lo que impedía que la caja se ajustara a `--wui-modal-smallpage-box-height` y emergiera desde la parte inferior de la pantalla.
 	- Se corrigió que el efecto `under` en modo móvil (clase `.under`, atenuado del overlay y animación de compresión de la caja) se aplicara sin importar el tipo de modal. Ahora requiere que tanto el modal que se abre como el que queda debajo sean de tipo `page` y no `small`.
@@ -404,14 +421,14 @@ Características:
 	- Se agregó el parámetro `callback` al método `load()`.
 	- Se corrigió error en el método `refresh()`.
 3. Se actualizó versión clase WUIIcon a `0.5`.
-	- Se agregó la clase CSS `.print-line`.
-	- Se agregó la clase CSS `.print-fill`.
-	- Se agregó la clase CSS `.threedots-horizontal`.
-	- Se agregó la clase CSS `.threedots-vertical`.
-	- Se agregó la clase CSS `.blockquote-left-line`.
-	- Se agregó la clase CSS `.blockquote-right-line`.
-	- Se agregó la clase CSS `.code-line`.
-	- Se agregó la clase CSS `.code-slash-line`.
+	- Se agregó el ícono `.print-line`.
+	- Se agregó el ícono `.print-fill`.
+	- Se agregó el ícono `.threedots-horizontal`.
+	- Se agregó el ícono `.threedots-vertical`.
+	- Se agregó el ícono `.blockquote-left-line`.
+	- Se agregó el ícono `.blockquote-right-line`.
+	- Se agregó el ícono `.code-line`.
+	- Se agregó el ícono `.code-slash-line`.
 4. Se actualizó versión clase WUIModal a `0.6`.
 	- Se actualizó valores de las variables CSS en archivo `.root.css`.
 	- Se actualizó el padding horizontal en el título del modal para mayor exposición.
@@ -461,15 +478,15 @@ Características:
 	- Se corrigió error en el método `load()`.
 4. Se actualizó versión clase WUIIcon a `0.5`.
 	- Se renombró la clase `.columnsgap-line` a `.columns-gap-line`.
-	- Se agregó la clase CSS `.columns-line`.
-	- Se agregó la clase CSS `.columns-x2-line`.
-	- Se agregó la clase CSS `.columns-x3-line`.
-	- Se agregó la clase CSS `.grid3x2-gap-line`.
-	- Se agregó la clase CSS `.grid3x3-gap-line`.
-	- Se agregó la clase CSS `.leftbar-line`.
-	- Se agregó la clase CSS `.leftbar-fill`.
-	- Se agregó la clase CSS `.rightbar-line`.
-	- Se agregó la clase CSS `.rightbar-fill`.
+	- Se agregó el ícono `.columns-line`.
+	- Se agregó el ícono `.columns-x2-line`.
+	- Se agregó el ícono `.columns-x3-line`.
+	- Se agregó el ícono `.grid3x2-gap-line`.
+	- Se agregó el ícono `.grid3x3-gap-line`.
+	- Se agregó el ícono `.leftbar-line`.
+	- Se agregó el ícono `.leftbar-fill`.
+	- Se agregó el ícono `.rightbar-line`.
+	- Se agregó el ícono `.rightbar-fill`.
 5. Se actualizó versión clase WUIMenubar a `0.5`.
 	- Se agregó la propiedad booleana `hiddenPassiveBorder`.
 	- Se agregó la variable CSS `--wui-menubar-shadowopacity`.
@@ -538,10 +555,10 @@ Características:
 1. Liberación del sitio oficial de documentación de WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
 2. Se actualizó cargador de recursos `wui.js`.
 3. Se actualizó versión clase WUIIcon a `0.4`.
-	- Se agregó la clase CSS `.copy-line`.
-	- Se agregó la clase CSS `.copy-fill`.
-	- Se agregó la clase CSS `.sun-line`.
-	- Se agregó la clase CSS `.sun-fill`.
+	- Se agregó el ícono `.copy-line`.
+	- Se agregó el ícono `.copy-fill`.
+	- Se agregó el ícono `.sun-line`.
+	- Se agregó el ícono `.sun-fill`.
 4. Se actualizó versión clase WUISelectpicker a `0.6`.
 	- Se mejoró evento `onChange` para que se dispare de manera diferida en dispositivos móviles (al presionar el botón Aceptar) y de manera inmediata en los navegadores de escritorio.
 5. Se actualizó versión clase WUIButton a `0.6`.
@@ -564,18 +581,18 @@ Características:
 	- Se actualizó el método `init()` para almacenar referencias a los handlers de eventos a nivel de documento para una correcta limpieza.
 5. Se actualizó versión clase WUIIcon a `0.3`.
 	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
-	- Se agregó la clase CSS `.exclamation-octagon-line`.
-	- Se agregó la clase CSS `.warning-octagon-line`.
-	- Se agregó la clase CSS `.exclamation-octagon-fill`.
-	- Se agregó la clase CSS `.warning-octagon-fill`.
-	- Se agregó la clase CSS `.x-triangle-line`.
-	- Se agregó la clase CSS `.close-triangle-line`.
-	- Se agregó la clase CSS `.error-triangle-line`.
-	- Se agregó la clase CSS `.x-triangle-fill`.
-	- Se agregó la clase CSS `.close-triangle-fill`.
-	- Se agregó la clase CSS `.error-triangle-fill`.
-	- Se agregó la clase CSS `.claude-fill`.
-	- Se agregó la clase CSS `.claude-color`.
+	- Se agregó el ícono `.exclamation-octagon-line`.
+	- Se agregó el ícono `.warning-octagon-line`.
+	- Se agregó el ícono `.exclamation-octagon-fill`.
+	- Se agregó el ícono `.warning-octagon-fill`.
+	- Se agregó el ícono `.x-triangle-line`.
+	- Se agregó el ícono `.close-triangle-line`.
+	- Se agregó el ícono `.error-triangle-line`.
+	- Se agregó el ícono `.x-triangle-fill`.
+	- Se agregó el ícono `.close-triangle-fill`.
+	- Se agregó el ícono `.error-triangle-fill`.
+	- Se agregó el ícono `.claude-fill`.
+	- Se agregó el ícono `.claude-color`.
 6. Se actualizó versión clase WUIFade a `0.3`
 	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
 7. Se actualizó versión clase WUILoader a `0.4`.

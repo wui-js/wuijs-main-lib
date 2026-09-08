@@ -7,6 +7,20 @@
 
 # Change Log
 
+## [v0.14.1] - 2026-09-08
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIBody class version to `0.9`.
+	- Added `button` and `script` suffix as a valid automatic mode suffixes (`auto=true`) for section ids in the `importSections()` method.
+	- Fixed error in `prepare()` methid.
+3. Updated WUIIcon class version to `0.12`.
+	- Added `stripe-fill` icon.
+	- Added `stripe-color` icon.
+	- Added `paypal-fill` icon.
+	- Added `paypal-color` icon.
+
 ## [v0.14.0] - 2026-09-04
 
 Features:
@@ -47,8 +61,8 @@ Features:
 6. Updated WUIModal class version to `0.11`.
 	- Fixed error in CSS rules for footer buttons in mobile mode.
 7. Updated WUIPaging class version to `0.10`.
-	- Fixed `#index2target()`: the received `index` parameter was ignored, always returning the current index's target instead of the requested one.
-	- Fixed `select()`: the internal target property now stores the value resolved from the dataset instead of the raw argument received (which could be numeric).
+	- Fixed error in `#index2target()` methid: the received `index` parameter was ignored, always returning the current index's target instead of the requested one.
+	- Fixed error in `select()` methid: the internal target property now stores the value resolved from the dataset instead of the raw argument received (which could be numeric).
 8. Updated WUITabs class version to `0.7`.
 	- Added `--wui-tabs-tab-bordercolor-out` CSS var.
 	- Added `--wui-tabs-tab-bordercolor-over` CSS var.
@@ -94,7 +108,10 @@ Features:
 2. Updated WUIBody class version to `0.7`.
 	- Added `importSections()` method.
 3. Updated WUIIcon class version to `0.10`.
-	- Added `person-exclamation-line`, `person-exclamation-fill`, `person-gear-line` and `person-gear-fill` icons.
+	- Added `person-exclamation-line` icon.
+	- Added `person-exclamation-fill` icon.
+	- Added `person-gear-line` icon.
+	- Added `person-gear-fill` icon.
 4. Updated WUIModal class version to `0.10`.
 	- Fixed in opening modal with the `page small` style. `open()` and `resposive()` methods forcing `height: auto` and a full-page `top` offset on mobile for the `page small` style, which prevented the box from being constrained to `--wui-modal-smallpage-box-height` and emerging from the bottom of the screen.
 	- Fixed the mobile `under` effect (`.under` class, overlay dimming, and box squish animation) applying regardless of modal type. It now requires both the opening modal and the modal underneath to be `page` type and not `small`.
@@ -404,12 +421,12 @@ Features:
 	- Added `callback` parameter to the `load()` method.
 	- Fixed `refresh()` method error.
 3. WUIIcon version class update to `0.5`.
-	- Added `.print-line` CSS class.
-	- Added `.print-fill` CSS class.
-	- Added `.blockquote-left-line` CSS class.
-	- Added `.blockquote-right-line` CSS class.
-	- Added `.code-line` CSS class.
-	- Added `.code-slash-line` CSS class.
+	- Added `.print-line` icon.
+	- Added `.print-fill` icon.
+	- Added `.blockquote-left-line` icon.
+	- Added `.blockquote-right-line` icon.
+	- Added `.code-line` icon.
+	- Added `.code-slash-line` icon.
 4. WUIModal version class update to `0.6`.
 	- Updated CSS variables values in `.root.css` file.
 	- The horizontal padding in the modal title was updated for greater visibility.
@@ -458,16 +475,16 @@ Features:
 3. WUILanguage version class update to `0.4`.
 	- Fixed `load()` method error.
 4. WUIIcon version class update to `0.5`.
-	- Renamed `.columnsgap-line` CSS class to `.columns-gap-line`.
-	- Added `.columns-line` CSS class.
-	- Added `.columns-x2-line` CSS class.
-	- Added `.columns-x3-line` CSS class.
-	- Added `.grid3x2-gap-line` CSS class.
-	- Added `.grid3x3-gap-line` CSS class.
-	- Added `.leftbar-line` CSS class.
-	- Added `.leftbar-fill` CSS class.
-	- Added `.rightbar-line` CSS class.
-	- Added `.rightbar-fill` CSS class.
+	- Renamed `.columnsgap-line` icon to `.columns-gap-line`.
+	- Added `.columns-line` icon.
+	- Added `.columns-x2-line` icon.
+	- Added `.columns-x3-line` icon.
+	- Added `.grid3x2-gap-line` icon.
+	- Added `.grid3x3-gap-line` icon.
+	- Added `.leftbar-line` icon.
+	- Added `.leftbar-fill` icon.
+	- Added `.rightbar-line` icon.
+	- Added `.rightbar-fill` icon.
 5. WUIMenubar version class update to `0.5`.
 	- Added `hiddenPassiveBorder` boolean property, to hide the passive border of the main bar.
 	- Added `--wui-menubar-shadowopacity` CSS var.
@@ -536,10 +553,10 @@ Features:
 1. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
 2. Updated the resource loader `wui.js`.
 3. WUIIcon version class update to `0.4`.
-	- Added `.copy-line` CSS class.
-	- Added `.copy-fill` CSS class.
-	- Added `.sun-line` CSS class.
-	- Added `.sun-fill` CSS class.
+	- Added `.copy-line` icon.
+	- Added `.copy-fill` icon.
+	- Added `.sun-line` icon.
+	- Added `.sun-fill` icon.
 4. WUISelectpicker version class update to `0.6`.
 	- Improved `onChange` event to trigger later on mobile devices (upon pressing the OK button) and immediately on desktop browsers.
 5. WUIButton version class update to `0.6`.
@@ -562,18 +579,18 @@ Features:
 	- Updated `init()` method to store document-level event handler references for proper cleanup.
 5. WUIIcon version class update to `0.3`.
 	- Added `.root.css` file with CSS default variable values.
-	- Added `.exclamation-octagon-line` CSS class.
-	- Added `.warning-octagon-line` CSS class.
-	- Added `.exclamation-octagon-fill` CSS class.
-	- Added `.warning-octagon-fill` CSS class.
-	- Added `.x-triangle-line` CSS class.
-	- Added `.close-triangle-line` CSS class.
-	- Added `.error-triangle-line` CSS class.
-	- Added `.x-triangle-fill` CSS class.
-	- Added `.close-triangle-fill` CSS class.
-	- Added `.error-triangle-fill` CSS class.
-	- Added `.claude-fill` CSS class.
-	- Added `.claude-color` CSS class.
+	- Added `.exclamation-octagon-line` icon.
+	- Added `.warning-octagon-line` icon.
+	- Added `.exclamation-octagon-fill` icon.
+	- Added `.warning-octagon-fill` icon.
+	- Added `.x-triangle-line` icon.
+	- Added `.close-triangle-line` icon.
+	- Added `.error-triangle-line` icon.
+	- Added `.x-triangle-fill` icon.
+	- Added `.close-triangle-fill` icon.
+	- Added `.error-triangle-fill` icon.
+	- Added `.claude-fill` icon.
+	- Added `.claude-color` icon.
 6. WUIFade version class update to `0.3`.
 	- Added `.root.css` file with CSS default variable values.
 7. WUILoader version class update to `0.4`.

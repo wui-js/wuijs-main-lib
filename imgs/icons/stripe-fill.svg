@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' width="24" height="24" viewBox='0 0 512 512'><defs><clipPath id='stripe_clip'><rect width='512' height='512' rx='64' fill='white'/></clipPath><mask id='stripe_hole'><rect width='512' height='512' fill='white'/><path fill-rule='evenodd' clip-rule='evenodd' d='M120 392L392 334.317V120L120 178.357V392Z' fill='black'/></mask></defs><g clip-path='url(#stripe_clip)'><rect width='512' height='512' fill='#a2a9b6' mask='url(#stripe_hole)'/></g></svg>

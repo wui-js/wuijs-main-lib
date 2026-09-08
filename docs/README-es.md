@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-main-lib` |
-| **Versión librería**  | `0.14.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.14.1` ([Registro de Cambios](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/main` ([npm](https://www.npmjs.com/package/@wui-js/main)) |
-| **Versión documento** | `0.14.0.20260904.0` |
+| **Versión documento** | `0.14.1.20260908.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-main-lib](https://github.com/wui-js/wuijs-main-lib) |
@@ -91,10 +91,10 @@ WUI/JS Main Lib es parte del proyecto WUI/JS, que consta actualmente de 4 reposi
 | ------------------------------------ | :------:| ----------- |
 | [WUICookie](#wui-cookie)             | `0.5`   | Utilidades para el manejo de cookies. |
 | [WUIHead](#wui-head)                 | `0.5`   | Utilidades para el manejo de la cabecera HTML. |
-| [WUIBody](#wui-body)                 | `0.8`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
+| [WUIBody](#wui-body)                 | `0.9`   | Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles. |
 | [WUILanguage](#wui-language)         | `0.7`   | Utilidades para el manejo de interfaces con distintos lenguajes. Permite cargar archivos de idioma en formato JS o JSON y actualizar dinámicamente el contenido de los elementos HTML según el idioma. |
 | [WUIScrolly](#wui-scrolly)           | `0.7`   | Utilidades para el manejo de animación de elementos HTML mediante el evento "onscroll" del cuerpo de la página HTML. |
-| [WUIIcon](#wui-icon)                 | `0.11`  | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
+| [WUIIcon](#wui-icon)                 | `0.12`  | Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces. |
 | [WUIFade](#wui-fade)                 | `0.5`   | Utilidades para control de salida y entrada con opacidad (fade-out y fade-in respectivamente) de elementos HTML. |
 | [WUILoader](#wui-loader)             | `0.7`   | Componente para la implementación de animaciones de carga. |
 | [WUITooltip](#wui-tooltip)           | `0.6`   | Componente para la implementación de textos emergentes. |
@@ -160,7 +160,7 @@ Para instalar la librería WUI/JS desde GitHub, se debe clonar el repositorio of
 Suponiendo que el proyecto donde se implementará tenga un directorio de código fuente `./src` y, dentro de este, un directorio de librerías `./src/libraries`, debe escribir lo siguiente en la terminal:
 
 ```bash
-git clone https://git@github.com/wui-js/wuijs-main-lib.git
+git clone --branch v0.14.1 https://git@github.com/wui-js/wuijs-main-lib.git
 cp -r ./wuijs-main-lib/src/wui-js/ ../src/libraries/
 ```
 
@@ -305,7 +305,7 @@ Este cargador permite integrar todas las librerías WUI en una página web, ya s
 		<meta name="application-name" content="">
 		<meta name="theme-color" content="">
 		<link type="text/css" rel="stylesheet" href="./settings/wui.root.css">
-		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0"></script>
+		<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.1"></script>
 	</head>
 	<body>
 	</body>
@@ -325,7 +325,7 @@ Opcionalmente se pueden incluir las librerías de manera individual, para ello s
 Los nombres de las librerías pasadas en el parámetro `class` no deben contener el sufijo de versión (`-x.x`) ya que la versión será definida automáticamente por el script de carga simple.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0&c=selectpicker,switch"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.1&c=selectpicker,switch"></script>
 ```
 
 > [!NOTE]
@@ -334,7 +334,7 @@ Los nombres de las librerías pasadas en el parámetro `class` no deben contener
 Adicionalmente se puede omitir la carga de los archivos `root.css` de cada librería agregando el parámetro `root` con el valor `0` (cero) en la URL del archivo `wui.js`.
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.0&c=selectpicker,switch&r=0"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/wui.js?v=0.14.1&c=selectpicker,switch&r=0"></script>
 ```
 
 > [!TIP]
@@ -508,7 +508,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIBody
 
-Versión: `0.8`
+Versión: `0.9`
 
 Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido CSS/JS/HTML y facilita la implementación en entornos nativos móviles.
 
@@ -516,7 +516,7 @@ Utilidades para el manejo del cuerpo HTML. Permite la importación de contenido 
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/body/wui-body-0.8.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.8.js) |
+| JS   | [src/wui-js/main/body/wui-body-0.9.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/body/wui-body-0.9.js) |
 
 #### Constructor
 
@@ -603,7 +603,7 @@ body {
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.8.js"></script>
+<script type="text/javascript" src="/libraries/wui-js/main/body/wui-body-0.9.js"></script>
 ```
 
 Código HTML:
@@ -1122,7 +1122,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 ### WUIIcon
 
-Versión: `0.11`
+Versión: `0.12`
 
 Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
@@ -1130,9 +1130,9 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 | Tipo | Archivo |
 |:----:| ------- |
-| JS   | [src/wui-js/main/icon/wui-icon-0.11.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.js) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.11.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.css) |
-| CSS  | [src/wui-js/main/icon/wui-icon-0.11.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.11.root.css) |
+| JS   | [src/wui-js/main/icon/wui-icon-0.12.js](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.12.js) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.12.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.12.css) |
+| CSS  | [src/wui-js/main/icon/wui-icon-0.12.root.css](https://github.com/wui-js/wuijs-main-lib/blob/main/src/wui-js/main/icon/wui-icon-0.12.root.css) |
 
 #### Métodos
 
@@ -1282,29 +1282,30 @@ Conjunto de íconos prediseñados y carga mediante CSS, para uso en interfaces.
 
 #### Tabla de Íconos de Aplicaciones
 
-| Icono                                                                                     | Estilo              | Icono                                                                                        | Estilo                 | Icono                                                                                     | Estilo              | Icono                                                                                      | Estilo               |
-| :---:                                                                                     | ------              | :---:                                                                                        | ------                 | :---:                                                                                     | ------              | :---:                                                                                      | ------               |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/app-line.svg)           | .app-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/app-notification-line.svg) | .app-notification-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/acrobat-fill.svg)       | .acrobat-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/acrobat-color.svg)       | .acrobat-color       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/applemail-fill.svg)     | .applemail-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/applemail-color.svg)       | .applemail-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-fill.svg)      | .appstore-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-color.svg)      | .appstore-color      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-alt-fill.svg)  | .appstore-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-alt-color.svg)    | .appstore-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bcardy-fill.svg)        | .bcardy-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bcardy-color.svg)        | .bcardy-color        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/behance-fill.svg)       | .behance-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/behance-color.svg)         | .behance-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/claude-fill.svg)        | .claude-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/claude-color.svg)        | .claude-color        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-fill.svg)      | .facebook-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-color.svg)        | .facebook-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-alt-fill.svg)  | .facebook-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-alt-color.svg)  | .facebook-alt-color  |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/github-fill.svg)        | .github-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/github-color.svg)          | .github-color          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gitlab-fill.svg)        | .gitlab-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gitlab-color.svg)        | .gitlab-color        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gmail-fill.svg)         | .gmail-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gmail-color.svg)           | .gmail-color           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/google-fill.svg)        | .google-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/google-color.svg)        | .google-color        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googledrive-fill.svg)   | .googledrive-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googledrive-color.svg)     | .googledrive-color     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googlemaps-fill.svg)    | .googlemaps-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googlemaps-color.svg)    | .googlemaps-color    |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googleplay-fill.svg)    | .googleplay-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googleplay-color.svg)      | .googleplay-color      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-fill.svg)     | .instagram-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-color.svg)     | .instagram-color     |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-alt-fill.svg) | .instagram-alt-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-alt-color.svg)   | .instagram-alt-color   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-fill.svg)          | .line-fill          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-color.svg)          | .line-color          |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-alt-fill.svg)      | .line-alt-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-alt-color.svg)        | .line-alt-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-fill.svg)      | .linkedin-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-color.svg)      | .linkedin-color      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-alt-fill.svg)  | .linkedin-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-alt-color.svg)    | .linkedin-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/messenger-fill.svg)     | .messenger-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/messenger-color.svg)     | .messenger-color     |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/outlook-fill.svg)       | .outlook-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/outlook-color.svg)         | .outlook-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/samsungemail-fill.svg)  | .samsungemail-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/samsungemail-color.svg)  | .samsungemail-color  |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/skype-fill.svg)         | .skype-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/skype-color.svg)           | .skype-color           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-fill.svg)      | .telegram-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-color.svg)      | .telegram-color      |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-alt-fill.svg)  | .telegram-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-alt-color.svg)    | .telegram-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/tiktok-fill.svg)        | .tiktok-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/tiktok-color.svg)        | .tiktok-color        |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-fill.svg)       | .twitter-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-color.svg)         | .twitter-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-alt-fill.svg)   | .twitter-alt-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-alt-color.svg)   | .twitter-alt-color   |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-x-fill.svg)     | .twitter-x-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-x-color.svg)       | .twitter-x-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-fill.svg)         | .vimeo-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-color.svg)         | .vimeo-color         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-alt-fill.svg)     | .vimeo-alt-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-alt-color.svg)       | .vimeo-alt-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-fill.svg)         | .yahoo-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-color.svg)         | .yahoo-color         |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-alt-fill.svg)     | .yahoo-alt-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-alt-color.svg)       | .yahoo-alt-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/youtube-fill.svg)       | .youtube-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/youtube-color.svg)       | .youtube-color       |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-fill.svg)      | .whatsapp-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-color.svg)        | .whatsapp-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-alt-fill.svg)  | .whatsapp-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-alt-color.svg)  | .whatsapp-alt-color  |
-| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wuijs-fill.svg)         | .wuijs-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wuijs-color.svg)           | .wuijs-color           |
+| Icono                                                                                     | Estilo              | Icono                                                                                        | Estilo                 | Icono                                                                                    | Estilo             | Icono                                                                                     | Estilo              |
+| :---:                                                                                     | ------              | :---:                                                                                        | ------                 | :---:                                                                                    | ------             | :---:                                                                                     | ------              |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/app-line.svg)           | .app-line           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/app-notification-line.svg) | .app-notification-line | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/acrobat-fill.svg)      | .acrobat-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/acrobat-color.svg)      | .acrobat-color      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/applemail-fill.svg)     | .applemail-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/applemail-color.svg)       | .applemail-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-fill.svg)     | .appstore-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-color.svg)     | .appstore-color     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-alt-fill.svg)  | .appstore-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/appstore-alt-color.svg)    | .appstore-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bcardy-fill.svg)       | .bcardy-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/bcardy-color.svg)       | .bcardy-color       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/behance-fill.svg)       | .behance-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/behance-color.svg)         | .behance-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/claude-fill.svg)       | .claude-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/claude-color.svg)       | .claude-color       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-fill.svg)      | .facebook-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-color.svg)        | .facebook-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-alt-fill.svg) | .facebook-alt-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/facebook-alt-color.svg) | .facebook-alt-color |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/github-fill.svg)        | .github-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/github-color.svg)          | .github-color          | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gitlab-fill.svg)       | .gitlab-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gitlab-color.svg)       | .gitlab-color       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gmail-fill.svg)         | .gmail-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/gmail-color.svg)           | .gmail-color           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/google-fill.svg)       | .google-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/google-color.svg)       | .google-color       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googledrive-fill.svg)   | .googledrive-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googledrive-color.svg)     | .googledrive-color     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googlemaps-fill.svg)   | .googlemaps-fill   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googlemaps-color.svg)   | .googlemaps-color   |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googleplay-fill.svg)    | .googleplay-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/googleplay-color.svg)      | .googleplay-color      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-fill.svg)    | .instagram-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-color.svg)    | .instagram-color    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-alt-fill.svg) | .instagram-alt-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/instagram-alt-color.svg)   | .instagram-alt-color   | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-fill.svg)         | .line-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-color.svg)         | .line-color         |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-alt-fill.svg)      | .line-alt-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/line-alt-color.svg)        | .line-alt-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-fill.svg)     | .linkedin-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-color.svg)     | .linkedin-color     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-alt-fill.svg)  | .linkedin-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/linkedin-alt-color.svg)    | .linkedin-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/messenger-fill.svg)    | .messenger-fill    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/messenger-color.svg)    | .messenger-color    |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/outlook-fill.svg)       | .outlook-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/outlook-color.svg)         | .outlook-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/paypal-color.svg)      | .paypal-color      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/paypal-fill.svg)        | .paypal-fill        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/samsungemail-fill.svg)  | .samsungemail-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/samsungemail-color.svg)    | .samsungemail-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/skype-fill.svg)        | .skype-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/skype-color.svg)        | .skype-color        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stripe-color.svg)       | .stripe-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/stripe-fill.svg)           | .stripe-fill           | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-fill.svg)     | .telegram-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-color.svg)     | .telegram-color     |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-alt-fill.svg)  | .telegram-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/telegram-alt-color.svg)    | .telegram-alt-color    | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/tiktok-fill.svg)       | .tiktok-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/tiktok-color.svg)       | .tiktok-color       |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-fill.svg)       | .twitter-fill       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-color.svg)         | .twitter-color         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-alt-fill.svg)  | .twitter-alt-fill  | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-alt-color.svg)  | .twitter-alt-color  |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-x-fill.svg)     | .twitter-x-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/twitter-x-color.svg)       | .twitter-x-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-fill.svg)        | .vimeo-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-color.svg)        | .vimeo-color        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-alt-fill.svg)     | .vimeo-alt-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/vimeo-alt-color.svg)       | .vimeo-alt-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-fill.svg)        | .yahoo-fill        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-color.svg)        | .yahoo-color        |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-alt-fill.svg)     | .yahoo-alt-fill     | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/yahoo-alt-color.svg)       | .yahoo-alt-color       | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/youtube-fill.svg)      | .youtube-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/youtube-color.svg)      | .youtube-color      |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-fill.svg)      | .whatsapp-fill      | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-color.svg)        | .whatsapp-color        | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-alt-fill.svg) | .whatsapp-alt-fill | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/whatsapp-alt-color.svg) | .whatsapp-alt-color |
+| ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wuijs-fill.svg)         | .wuijs-fill         | ![](https://github.com/wui-js/wuijs-main-lib/blob/main/imgs/icons/wuijs-color.svg)           | .wuijs-color           |                                                                                          |                    |                                                                                           |                     |
 
 #### Tabla de Íconos de Opciones
 
@@ -1398,7 +1399,7 @@ python ./svg-icon-maker.py --css <css-path> -o <output-directory> -c <color> -s 
 
 | Opción             | Valor predeterminado                       | Descripción |
 | ------------------ | ------------------------------------------ | ----------- |
-| `--css`            | `../src/wui-js/main/icon/wui-icon-0.11.css` | Ruta al archivo CSS fuente. |
+| `--css`            | `../src/wui-js/main/icon/wui-icon-0.12.css` | Ruta al archivo CSS fuente. |
 | `-o`,<br>`--out`   | `../imgs/icons/`                           | Directorio de salida para los archivos generados. |
 | `-c`,<br>`--color` | `#a2a9b6`                                  | Color en formato CSS compatible que reemplazará a la sentencia 'currentColor' en el código SVG. |
 | `-s`,<br>`--size`  | `24`                                       | Tamaño en píxeles (ancho y alto) de las imágenes del set. |
@@ -1450,9 +1451,9 @@ nav button {
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.11.root.css">
-<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.11.css">
-<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.11.js"></script>
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.12.root.css">
+<link type="text/css" rel="stylesheet" href="/libraries/wui-js/main/icon/wui-icon-0.12.css">
+<script type="text/javascript" src="/libraries/wui-js/main/icon/wui-icon-0.12.js"></script>
 ```
 
 Código HTML:

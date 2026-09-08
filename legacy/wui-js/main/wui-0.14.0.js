@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.14.1
+ * @version 0.14.0
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -15,7 +15,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.14.1";
+		const version = "0.14.0";
 		const libraries = {};
 		const createResource = (tag, attributes) => {
 			return new Promise((resolve, reject) => {
@@ -228,10 +228,6 @@
 			"timepicker": { v: "0.12", js: true, css: true },
 			"switch": { v: "0.10", js: true, css: true },
 			"button": { v: "0.14", js: true, css: true }
-		});
-		libraries["0.14.1"] = Object.assign({}, libraries["0.14.0"], {
-			"body": { v: "0.9", js: true, css: false },
-			"icon": { v: "0.12", js: true, css: true }
 		});
 		const tasks = [];
 		let ver = version;

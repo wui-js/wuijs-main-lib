@@ -1,6 +1,6 @@
 {
   "name": "@wui-js/main",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "license": "Apache-2.0",
   "author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
   "description": "WUI/JS - A vanilla JavaScript/CSS UI component library for building web interfaces.",
@@ -55,6 +55,7 @@
     "tooltip/"
   ],
   "scripts": {
+    "prepare": "test -d .git && exit 0 || (rm -f README.md && cp NPM.md README.md && cp -r src/wui-js/main/. .)",
     "prepack": "rm README.md && cp NPM.md README.md && cp -r src/wui-js/main/. .",
     "postpack": "rm -f README.md && ln -s docs/README-en.md README.md && ls src/wui-js/main/ | grep -v '^LICENSE$' | xargs rm -rf"
   }
