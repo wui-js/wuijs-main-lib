@@ -11,11 +11,12 @@
 
 Features:
 
-1. Updated the resource loader `wui.js`.
-2. Updated WUIBody class version to `0.9`.
+1. Added a `prepare` script to `package.json` so a git-tag install (`npm install github:wui-js/wuijs-main-lib#vX.Y.Z`) produces the same flattened file layout as an npm-registry install.
+2. Updated the resource loader `wui.js`.
+3. Updated WUIBody class version to `0.9`.
 	- Added `button` and `script` suffix as a valid automatic mode suffixes (`auto=true`) for section ids in the `importSections()` method.
 	- Fixed error in `prepare()` methid.
-3. Updated WUIIcon class version to `0.12`.
+4. Updated WUIIcon class version to `0.12`.
 	- Added `stripe-fill` icon.
 	- Added `stripe-color` icon.
 	- Added `paypal-fill` icon.

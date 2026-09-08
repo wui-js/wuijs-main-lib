@@ -11,11 +11,12 @@
 
 Características:
 
-1. Se actualizó cargador de recursos `wui.js`.
-2. Se actualizó versión clase WUIBody a `0.9`.
+1. Se agregó el script `prepare` a `package.json` para que una instalación vía tag de git (`npm install github:wui-js/wuijs-main-lib#vX.Y.Z`) produzca la misma estructura de archivos aplanada que una instalación desde el registro de npm.
+2. Se actualizó cargador de recursos `wui.js`.
+3. Se actualizó versión clase WUIBody a `0.9`.
 	- Se agregaron los sufijos `button` y `script` como sufijos válidos del módo automático (`auto=true`) para ids de secciones en el método `importSections()`.
 	- Se corrigió error en el método `prepare()`.
-3. Se actualizó versión clase WUIIcon a `0.12`.
+4. Se actualizó versión clase WUIIcon a `0.12`.
 	- Se agregó el ícono `stripe-fill`.
 	- Se agregó el ícono `stripe-color`.
 	- Se agregó el ícono `paypal-fill`.
