@@ -7,6 +7,66 @@
 
 # Change Log
 
+## [v0.15.0] - 2026-09-27
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIBody class version to `0.10`.
+	- Renamed the `importSections()` method to `compose()`, along with its `sections` argument and the `sections` key of its descriptors, now `fragments`. The "section" concept is now called "fragment" to avoid the clash with the `<section>` HTML tag, which is only one of the possible container tags. The `compose` verb sets this declarative operation apart from the `import()` method, which operates on a single already existing element.
+	- Added `header` and `footer` suffix as a valid automatic mode suffixes (`auto=true`) for fragment ids in the `compose()` method.
+	- Fixed error: in `compose()` methid.
+3. Updated WUILanguage class version to `0.8`.
+	- Fixed error: `load()` setting `responseType` to `"json"` in `json` mode while `onload` reads `responseText`, a combination the XHR spec forbids: every language load threw `InvalidStateError` and the page stalled. The mime type override alone is enough.
+	- Fixed error: `load()` merging language sets with a shallow `Object.assign` two levels deep, which let a set that only patches a few leaf keys (e.g. a `-custom` overlay file) wipe out sibling keys nested under the same object. Merging is now recursive.
+	- Added the `fixedDictionary` property that defines a dictionary of terms whose keys are replaced by their value in the texts of every loaded language.
+	- Added the `langDictionary` property that defines a dictionary of terms per language whose keys are replaced by their value only in the texts of the matching language.
+	- Added the private `#translate()` method that applies the replacement of the terms of both dictionaries while the language files are being loaded. This makes it possible to use the `json` mode instead of the `js` mode when value insertions are required in the texts.
+4. Updated WUIScrolly class version to `0.8`.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+5. Updated WUIIcon class version to `0.13`.
+	- Added `database-line` icon.
+	- Added `database-fill` icon.
+	- Added `database-add-line` icon.
+	- Added `database-add-fill` icon.
+	- Added `database-dash-line` icon.
+	- Added `database-dash-fill` icon.
+	- Added `database-check-line` icon.
+	- Added `database-check-fill` icon.
+	- Added `database-down-line` icon.
+	- Added `database-down-fill` icon.
+	- Added `database-up-line` icon.
+	- Added `database-up-fill` icon.
+6. Updated WUIFade class version to `0.6`.
+	- Replaced the `wuiFadein()`/`wuiFadeout()` animation loop, based on `setInterval` with fixed steps, with one based on `requestAnimationFrame` interpolating by elapsed time.
+7. Updated WUIModal class version to `0.12`.
+	- Replaced the three animation loops (open, close and maximize), based on `setInterval` with fixed steps, with loops based on `requestAnimationFrame` by elapsed time, keeping the existing easing curve.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+8. Updated WUIPaging class version to `0.11`.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+9. Updated WUISlider class version to `0.9`.
+	- Replaced the `prev()`/`next()` animation loop, based on `setInterval` with fixed steps, with one based on `requestAnimationFrame` by elapsed time.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+10. Updated WUIList class version to `0.10`.
+	- Tmproved the button visualization in `stretch` mode when the row strip is closed.
+11. Updated WUITable class version to `0.11`.
+	- Added the `getSelectedIds()` method.
+	- Added support for `.wui-icon` compatibility.
+	- Fixed error: the row was not selected when `selectable` was `true` if the `onSelect` property was not a function.
+	- Fixed error: the width assigned to a column was not respected when the table was `resizable`.
+12. Updated WUIForm class version to `0.13`.
+	- Added declarative HTML building support: `bodyItems`/`footerItems` properties and `buildHtml()` method.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+13. Updated WUIFormat class version to `0.6`.
+	- Fixed error: `Number.prototype.wuiToSizeString()` showed the `TB` unit for sizes in the gigabyte range. It now uses `B`, `KB`, `MB`, `GB` and `TB` as appropriate.
+	- Fixed error: `Number.prototype.wuiToSizeString()` overrode the `prefix`/`sufix` options, which `wuiToString()` does not read, instead of `numberPrefix`/`numberSufix`, so a default number prefix or suffix showed up in sizes.
+14. Updated WUIDatepicker class version to `0.13`.
+	- Fixed error: with the `value` property blank, the visible year/month/day fields showed the current date even though no date was actually selected. `#refreshView()` painted those fields from `#targetDate` (the anchor date used for calendar navigation, which falls back to today when there is no `value`), without distinguishing that anchor from an actually chosen value.
+15. Updated WUIColorpicker class version to `0.13`.
+	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
+16. Updated WUIButton class version to `0.15`.
+	- Added `blur()` method.
+
 ## [v0.14.1] - 2026-09-08
 
 Features:
@@ -828,7 +888,7 @@ Features:
 	- Added support for private values.
 	- Added the `mode` property, to support files in JS and JSON format.
 	- Added the `refresh()` method, which allows updating the content of a specific HTML element.
-	- Removed global constant `languages` and replaced with a variable definition, optional and external to the class, which is assigned using the `onLoad()` property (see implementation example in [Documentation](./README.md?#wuiLanguage)).
+	- Removed global constant `languages` and replaced with a variable definition, optional and external to the class, which is assigned using the `onLoad()` property (see implementation example in [Documentation](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-language)).
 8. WUIScrolly version class update to `0.2`.
 	- Added support for private values.
 	- Added `.fadein-top` alias to the style class `fadein-up`.

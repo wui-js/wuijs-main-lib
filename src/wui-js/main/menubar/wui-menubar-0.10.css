@@ -347,7 +347,7 @@ div.wui-menubar.fixed > .bar > .header > .expander {
 		right: var(--wui-menubar-margin);
 		bottom: var(--wui-menubar-margin);
 		width: auto;
-		height: calc(50px + 2 * var(--wui-menubar-mobile-bar-vertpadding));
+		height: calc(50px + 2 * var(--wui-menubar-mobile-bar-vertpadding) + 1px);
 		transition: var(--transition);
 	}
 
