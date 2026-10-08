@@ -1,7 +1,7 @@
 /*
  * @file wui.js
  * @class WUI
- * @version 0.16.0
+ * @version 0.15.0
  * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
  * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
  */
@@ -15,7 +15,7 @@
 		const getParams = get.split("&");
 		const jsParams = {};
 		const d = new Date().getTime();
-		const version = "0.16.0";
+		const version = "0.15.0";
 		const libraries = {};
 		const createResource = (tag, attributes) => {
 			return new Promise((resolve, reject) => {
@@ -249,22 +249,6 @@
 			"datepicker": { v: "0.13", js: true, css: true },
 			"colorpicker": { v: "0.13", js: true, css: true },
 			"button": { v: "0.15", js: true, css: true }
-		});
-		libraries["0.16.0"] = Object.assign({}, libraries["0.15.0"], {
-			"icon": { v: "0.14", js: true, css: true },
-			"fade": { v: "0.7", js: true, css: false },
-			"modal": { v: "0.13", js: true, css: true },
-			"paging": { v: "0.12", js: true, css: true },
-			"slider": { v: "0.10", js: true, css: true },
-			"list": { v: "0.11", js: true, css: true },
-			"table": { v: "0.12", js: true, css: true },
-			"form": { v: "0.14", js: true, css: true },
-			"format": { v: "0.7", js: true, css: false },
-			"selectpicker": { v: "0.15", js: true, css: true },
-			"datepicker": { v: "0.14", js: true, css: true },
-			"timepicker": { v: "0.13", js: true, css: true },
-			"colorpicker": { v: "0.14", js: true, css: true },
-			"button": { v: "0.16", js: true, css: true }
 		});
 		const tasks = [];
 		let ver = version;

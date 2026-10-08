@@ -7,6 +7,122 @@
 
 # Change Log
 
+## [v0.16.0] - 2026-10-04
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+2. Updated WUIIcon class version to `0.14`.
+	- Added `opacity-0` CSS class which assigns an opacity of 0%.
+	- Added `opacity-25` CSS class which assigns an opacity of 25%.
+	- Added `opacity-50` CSS class which assigns an opacity of 50%.
+	- Added `opacity-75` CSS class which assigns an opacity of 75%.
+	- Added `page-line` icon.
+	- Added `page-fill` icon.
+	- Added `pages-line` icon.
+	- Added `pages-fill` icon.
+	- Added `page-check-line` icon.
+	- Added `page-check-fill` icon.
+	- Added `pages-check-line` icon.
+	- Added `pages-check-fill` icon.
+3. Updated WUIFade class version to `0.7`.
+	- The fade in and fade out transitions were reimplemented with CSS `transition` on `opacity`, replacing `requestAnimationFrame()`. The `transition` property is applied inline during the effect and its previous value is restored afterwards.
+	- An effect executed while another one is in progress on the same element interrupts the previous one and continues from the current opacity. The `callback` of the interrupted effect is not executed.
+	- Fixed error: a `wuiFadeout()` executed during a `wuiFadein()` left the element visible, because both animation loops competed for the opacity.
+4. Updated WUIModal class version to `0.13`.
+	- Added the `mode` property of list type with the values ​​`message`, `page`, `smallpage`, and `slidepage` (default: `page`) to specify the display mode—a task previously handled directly via CSS classes.
+	- Added the boolean `overlay` property (default: `true`) to disable the background overlay.
+	- Added the boolean `priority` property (default: `false`) to give the modal stacking priority (`z-index`).
+	- Added the `slidePosition` property of list type with the values `left` and `right` (default: `right`) to define the opening and closing side when the `mode` property is `slidepage`.
+	- Renamed the `openDelay` property to `transitionDelay`, and its default value changed from `200` to `300`.
+	- Added the `--wui-modal-transition-delay` CSS variable.
+	- Added the `--wui-modal-slidepage-box-width` CSS variable.
+	- Added the `--wui-modal-box-borderwidth` CSS variable.
+	- Added the `--wui-modal-box-bordercolor` CSS variable.
+	- The opening, maximizing and closing animations were reimplemented with CSS `transition` on `transform` and `opacity`, replacing `requestAnimationFrame()` and avoiding layout recalculation on every frame. The `prefers-reduced-motion` preference is respected.
+	- When the `mode` property is `slidepage` and `overlay` is `false`, the container element fits the modal box and takes over the margin, shadow and movement, allowing interaction with the background page.
+	- Fixed error: in `slidepage` mode the container element was trimmed by the top and bottom margin, leaving strips without overlay.
+	- Fixed error: in `smallpage` mode on mobile, dragging the header `topbar` upward ran `maximize()` (and `onMaximize`) but the box was not maximized, since the maximized rule excluded the `small` class. The box is now positioned with a numeric `top` so it animates like `page` mode.
+	- Fixed error: on mobile, the box `backdrop-filter` made it the containing block of its `position: fixed` descendants, so the overlay and box of a `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker` or `WUIColorpicker` inside a modal opened trapped within the modal box instead of full screen. The background blur of the box is disabled on mobile.
+	- Removed 4 CSS declarations with no effect (they repeated values already applied by a less specific rule), relocated 2 rules according to the structure in `docs/specs/code-css.md` and fixed the indentation of 1 declaration.
+5. Updated WUIPaging class version to `0.12`.
+	- Page movement was reimplemented with CSS `transition` on `transform`, replacing `left` and avoiding layout recalculation on every frame. The selected page is left with `transform: none` so that `position: fixed` elements inside it are not affected. The `prefers-reduced-motion` preference is respected.
+	- The end of the page change is detected with the `transitionend` event, replacing a `setTimeout()` computed from the `--wui-paging-page-transition-time` CSS variable.
+	- Added the `static` CSS class for page changes without animation (`select()` with `instant` set to `true`).
+	- Fixed error: when `select()` was executed during an ongoing transition, the delayed completion of the previous transition assigned the `left`/`right` class to the newly selected page, leaving it out of view. The ongoing transition is now completed before starting the new one.
+	- Fixed error: `back()` always went back to the first page when the history index was greater than `0`, because `getTarget()` returned an empty identifier for those indexes.
+	- `onSelect` and `onChange` always receive the identifier (`data-target`) of the selected page, even when `select()` is called with a numeric index. This fixes the error in `back()`, which passed the index instead of the identifier.
+	- `back()` executes `onBack` when the transition ends instead of using an independent `setTimeout()`.
+	- The HTML element is located when the object is constructed (`#loadHtml()`), following the class structure specification. Assigning `selector` after construction no longer relocates the element.
+	- Fixed the order of 2 CSS declarations.
+6. Updated WUISlider class version to `0.10`.
+	- Added the numeric `transitionDelay` property (default: `200`), replacing the fixed animation duration.
+	- Added the `--wui-slider-transition-delay` CSS variable.
+	- The slide animation was reimplemented with CSS `transition` on `transform`, replacing `requestAnimationFrame()` on `left` and avoiding layout recalculation on every frame. The `prefers-reduced-motion` preference is respected.
+	- `prev()` and `next()` are ignored while a transition is in progress; `go()` cancels the ongoing transition before positioning.
+	- The creation of the pagination indicators was moved from `init()` to the constructor.
+	- Removed redundant CSS rules from the `image` class.
+	- Fixed error: the drag direction was not reset on release, so a later click without dragging could move the slider.
+	- The active slide is left with `transform: none` so that `position: fixed` elements inside it are not affected.
+7. Updated WUIList class version to `0.11`.
+	- The `under` class of the button group is assigned when the row slide transition ends (`transitionend` event) instead of a fixed 400 ms `setTimeout()`.
+	- The suppression of the click after a drag was decoupled from the timer: the drag direction is reset when a new drag starts or when the click is processed.
+	- The `prefers-reduced-motion` preference is respected.
+	- Removed 1 CSS rule and 1 declaration with no effect (the `.strip` element has no border), 1 rule that repeated the values of another one, and 2 selectors for elements the component does not generate (`.footer` and `.message`).
+	- Fixed the CSS declaration order in 5 rules and relocated 1 rule according to the structure in `docs/specs/code-css.md`.
+8. Updated WUITable class version to `0.12`.
+	- Added the `selectPageRows(page, selected)` method, to select or unselect all rows of a page.
+	- Added the `selectAllRows(selected)` method, to select or unselect all rows of the data.
+	- Fixed error: `selectRow()` and `enableRow()` located the row by its position in `<tbody>` (`nth-of-type`) using the global index, so with paging enabled, on any page other than the first one they did not update the row or updated a different one. The row is now located by its `data-index` attribute.
+9. Updated WUIForm class version to `0.14`.
+	- Added style support for the indeterminate `<progress>` bar (without the `value` attribute), which kept the browser's native style: the base styles now apply to every `progress` element, and the indeterminate bar shows an animated gradient built from the `--wui-form-progress-bgcolor` and `--wui-form-progress-valuecolor` CSS variables. The `prefers-reduced-motion` preference is respected.
+10. Updated WUIFormat class version to `0.7`.
+	- Renamed the `locales` property to `locale`.
+11. Updated WUISelectpicker class version to `0.15`.
+	- Added the `--wui-selectpicker-box-option-iconopacity-out` CSS variable.
+	- Added the `--wui-selectpicker-box-option-iconopacity-over` CSS variable.
+	- Added the `--wui-selectpicker-box-option-iconopacity-selected` CSS variable.
+	- Added the `--wui-selectpicker-box-option-iconopacity-disabled` CSS variable.
+	- Added the `onStartOpen` function property (default: `null`), run when the selector starts opening. If it returns exactly `false`, the opening is cancelled.
+	- Added the boolean `hidden` property (default: `false`) to the **Menu Options** definition, to hide an option from the list. The option stays hidden after the selector is closed.
+	- Added the `hiddenOption(index, hidden)` method, to hide or show an option of the list by its position.
+	- Added the boolean `enabled` property (default: `true`) to the **Menu Options** definition, to disable an option of the list.
+	- Added the `enabledOption(index, enabled)` method, to enable or disable an option of the list by its position.
+	- Fixed error: the footer's `cancel`/`accept` buttons were created without `type="button"`, so by HTML default they
+	  acted as `type="submit"`. Inside an ancestor `<form>` (e.g. a filter modal's form), clicking either one triggered
+	  that form's native submit instead of just closing/accepting the picker.
+	- Fixed the CSS declaration order in the forced mobile-width hiding block, which did not follow the rules in
+	  `docs/specs/code-css.md`.
+	- Removed 2 CSS rules with no effect (they duplicated a `display: block` already applied by a less specific rule).
+	- In mobile mode, the hidden overlay keeps `display: block` with `0` opacity, as in `WUIDatepicker`, `WUITimepicker` and `WUIColorpicker`, so it opens and closes with an opacity transition.
+	- Removed 2 CSS rules, 1 selector and 4 declarations with no effect, and in `hidden` mode and mobile the base `.box` rule was placed before its `.hidden` variant.
+12. Updated WUIDatepicker class version to `0.14`.
+	- Renamed the `locales` property to `locale`.
+	- Fixed error: same error and same fix as WUISelectpicker (footer's `cancel`/`accept`).
+	- Removed the `extended` class, meant to increase the box height for months spanning 6 weeks. It was never
+	  implemented in CSS (the height stayed fixed) and had no visual effect; the logic that generates the sixth week
+	  of days is unchanged.
+	- Fixed the order of 2 CSS declarations and removed 3 rules with no effect (they repeated values already applied
+	  by a less specific rule).
+	- Fixed error: the mobile font-size adjustment of the inputs used the `> input[type="text"]` selector, which matched no element (the inputs are inside `.inputs`).
+	- Removed 3 CSS rules and 1 selector with no effect, removed the `-webkit-mask-*` prefixes (the standard properties were already declared), and in `hidden` mode and mobile the base `.box` rule was placed before its `.hidden` variant.
+13. Updated WUITimepicker class version to `0.13`.
+	- Fixed error: same error and same fix as WUISelectpicker (footer's `cancel`/`accept`).
+	- Fixed error: the `> input[type="text"]` selector of the mobile-mode size adjustment matched no element (the
+	  actual input is nested inside `.inputs`), so the font-size adjustment was never applied.
+	- Removed 3 CSS rules with no effect (they repeated values already applied by a less specific rule).
+	- Removed 1 CSS rule, 1 selector and 2 declarations with no effect, the `-webkit-mask-*` prefixes (the standard properties were already declared) and `-webkit-overflow-scrolling` (no effect since iOS 13), and in `hidden` mode and mobile the base `.box` rule was placed before its `.hidden` variant.
+14. Updated WUIColorpicker class version to `0.14`.
+	- Fixed error: same error and same fix as WUISelectpicker (footer's `cancel`/`accept`), plus the `.button` element (the trigger
+	  that opens the picker) had the same issue.
+	- Fixed error: the `disabled` state rule targeted the container element instead of the button, so it had no visual effect.
+	- Fixed the order of 2 CSS declarations, removed 1 rule with no effect, and regrouped the `.list.hidden` rule next
+	  to its sibling rules.
+	- Removed 4 CSS rules, 1 selector and 1 declaration with no effect, and in `hidden` mode and mobile the base `.box` rule was placed before its `.hidden` variant.
+15. Updated WUIButton class version to `0.16`.
+	- The horizontal padding is computed with `clamp(min(5px, var(--wui-button-default-horizpadding)), 5%, var(--wui-button-default-horizpadding))`: it shrinks in narrow containers (the percentage is relative to the containing element's width) down to a minimum of `5px`, and the `--wui-button-default-horizpadding` CSS variable now defines the maximum. If the variable is less than `5px`, its value is kept.
+	- Removed 1 redundant CSS declaration (`border-radius` in `.submit`) and fixed the order of 1 declaration.
+
 ## [v0.15.0] - 2026-09-27
 
 Features:
@@ -15,7 +131,7 @@ Features:
 2. Updated WUIBody class version to `0.10`.
 	- Renamed the `importSections()` method to `compose()`, along with its `sections` argument and the `sections` key of its descriptors, now `fragments`. The "section" concept is now called "fragment" to avoid the clash with the `<section>` HTML tag, which is only one of the possible container tags. The `compose` verb sets this declarative operation apart from the `import()` method, which operates on a single already existing element.
 	- Added `header` and `footer` suffix as a valid automatic mode suffixes (`auto=true`) for fragment ids in the `compose()` method.
-	- Fixed error: in `compose()` methid.
+	- Fixed error: in `compose()` method.
 3. Updated WUILanguage class version to `0.8`.
 	- Fixed error: `load()` setting `responseType` to `"json"` in `json` mode while `onload` reads `responseText`, a combination the XHR spec forbids: every language load threw `InvalidStateError` and the page stalled. The mime type override alone is enough.
 	- Fixed error: `load()` merging language sets with a shallow `Object.assign` two levels deep, which let a set that only patches a few leaf keys (e.g. a `-custom` overlay file) wipe out sibling keys nested under the same object. Merging is now recursive.
@@ -48,7 +164,7 @@ Features:
 	- Replaced the `prev()`/`next()` animation loop, based on `setInterval` with fixed steps, with one based on `requestAnimationFrame` by elapsed time.
 	- Renamed the internal `debounce()` function to `rafThrottle()`, a name that reflects its actual behavior (it throttles execution via `requestAnimationFrame`, it does not wait for inactivity like a classic debounce).
 10. Updated WUIList class version to `0.10`.
-	- Tmproved the button visualization in `stretch` mode when the row strip is closed.
+	- Improved the button visualization in `stretch` mode when the row strip is closed.
 11. Updated WUITable class version to `0.11`.
 	- Added the `getSelectedIds()` method.
 	- Added support for `.wui-icon` compatibility.
@@ -75,7 +191,7 @@ Features:
 2. Updated the resource loader `wui.js`.
 3. Updated WUIBody class version to `0.9`.
 	- Added `button` and `script` suffix as a valid automatic mode suffixes (`auto=true`) for section ids in the `importSections()` method.
-	- Fixed error in `prepare()` methid.
+	- Fixed error in `prepare()` method.
 4. Updated WUIIcon class version to `0.12`.
 	- Added `stripe-fill` icon.
 	- Added `stripe-color` icon.
@@ -122,8 +238,8 @@ Features:
 6. Updated WUIModal class version to `0.11`.
 	- Fixed error in CSS rules for footer buttons in mobile mode.
 7. Updated WUIPaging class version to `0.10`.
-	- Fixed error in `#index2target()` methid: the received `index` parameter was ignored, always returning the current index's target instead of the requested one.
-	- Fixed error in `select()` methid: the internal target property now stores the value resolved from the dataset instead of the raw argument received (which could be numeric).
+	- Fixed error in `#index2target()` method: the received `index` parameter was ignored, always returning the current index's target instead of the requested one.
+	- Fixed error in `select()` method: the internal target property now stores the value resolved from the dataset instead of the raw argument received (which could be numeric).
 8. Updated WUITabs class version to `0.7`.
 	- Added `--wui-tabs-tab-bordercolor-out` CSS var.
 	- Added `--wui-tabs-tab-bordercolor-over` CSS var.

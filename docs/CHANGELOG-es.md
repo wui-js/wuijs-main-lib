@@ -7,6 +7,123 @@
 
 # Registro de Cambios
 
+## [v0.16.0] - 2026-10-04
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+2. Se actualizó versión clase WUIIcon a `0.14`.
+	- Se agregó la clase CSS `opacity-0` que asigna opacidad de 0%.
+	- Se agregó la clase CSS `opacity-25` que asigna opacidad de 25%.
+	- Se agregó la clase CSS `opacity-50` que asigna opacidad de 50%.
+	- Se agregó la clase CSS `opacity-75` que asigna opacidad de 75%.
+	- Se agregó el ícono `page-line`.
+	- Se agregó el ícono `page-fill`.
+	- Se agregó el ícono `pages-line`.
+	- Se agregó el ícono `pages-fill`.
+	- Se agregó el ícono `page-check-line`.
+	- Se agregó el ícono `page-check-fill`.
+	- Se agregó el ícono `pages-check-line`.
+	- Se agregó el ícono `pages-check-fill`.
+3. Se actualizó versión clase WUIFade a `0.7`.
+	- Las transiciones de entrada y salida se reimplementaron con `transition` de CSS sobre `opacity` en reemplazo de `requestAnimationFrame()`. La propiedad `transition` se aplica en línea durante el efecto y luego se restaura su valor previo.
+	- Un efecto ejecutado mientras otro está en curso sobre el mismo elemento interrumpe al anterior y continúa desde la opacidad actual. El `callback` del efecto interrumpido no se ejecuta.
+	- Se corrigió error: un `wuiFadeout()` ejecutado durante un `wuiFadein()` dejaba el elemento visible, porque ambos bucles de animación competían por la opacidad.
+4. Se actualizó versión clase WUIModal a `0.13`.
+	- Se agregó la propiedad `mode` de tipo lista con los valores `message`, `page`, `smallpage` y `slidepage`, valor por defecto `page`, para asignar el modo de visualización que antes se realizaba directamente con clases CSS.
+	- Se agregó la propiedad `overlay` booleana, valor por defecto `true`, para desactivar el overlay de fondo.
+	- Se agregó la propiedad `priority` booleana, valor por defecto `false`, para dar prioridad de apilamiento (`z-index`) al modal.
+	- Se agregó la propiedad `slidePosition` de tipo lista con los valores `left` y `right`, valor por defecto `right`, para definir el lado de apertura y cierre cuando la propiedad `mode` es `slidepage`.
+	- Se renombró la propiedad `openDelay` a `transitionDelay` y su valor por defecto cambió de `200` a `300`.
+	- Se agregó la variable CSS `--wui-modal-transition-delay`.
+	- Se agregó la variable CSS `--wui-modal-slidepage-box-width`.
+	- Se agregó la variable CSS `--wui-modal-box-borderwidth`.
+	- Se agregó la variable CSS `--wui-modal-box-bordercolor`.
+	- Las animaciones de apertura, maximización y cierre se reimplementaron con `transition` de CSS sobre `transform` y `opacity` en reemplazo de `requestAnimationFrame()`, evitando el recálculo de layout en cada cuadro. Se respeta la preferencia `prefers-reduced-motion`.
+	- Cuando la propiedad `mode` es `slidepage` y `overlay` es `false`, el elemento contenedor se ajusta a la caja del modal y concentra el margen, la sombra y el desplazamiento, permitiendo interactuar con la página de fondo.
+	- Se corrigió error: en modo `slidepage` el elemento contenedor se recortaba con el margen superior e inferior, dejando franjas sin overlay.
+	- Se corrigió error: en modo `smallpage` en móvil, arrastrar hacia arriba la `topbar` de la cabecera ejecutaba `maximize()` (y `onMaximize`) pero la caja no se maximizaba, ya que la regla de maximizado excluía la clase `small`. Ahora la caja se posiciona con un `top` numérico, por lo que se anima igual que en modo `page`.
+	- Se corrigió error: en móvil, el `backdrop-filter` de la caja la convertía en el bloque contenedor de sus descendientes `position: fixed`, por lo que el overlay y la caja de un `WUISelectpicker`, `WUIDatepicker`, `WUITimepicker` o `WUIColorpicker` dentro de un modal se abrían atrapados en la caja del modal en vez de a pantalla completa. Se desactiva el desenfoque de fondo de la caja en móvil.
+	- Se eliminaron 4 declaraciones CSS sin efecto (repetían valores ya aplicados por una regla menos específica), se reubicaron 2 reglas según la estructura de `docs/specs/code-css.md` y se corrigió la indentación de 1 declaración.
+5. Se actualizó versión clase WUIPaging a `0.12`.
+	- El desplazamiento de páginas se reimplementó con `transition` de CSS sobre `transform` en reemplazo de `left`, evitando el recálculo de layout en cada cuadro. La página seleccionada queda con `transform: none` para no alterar el posicionamiento de elementos `position: fixed` en su interior. Se respeta la preferencia `prefers-reduced-motion`.
+	- El fin del cambio de página se detecta con el evento `transitionend` en reemplazo de un `setTimeout()` calculado desde la variable CSS `--wui-paging-page-transition-time`.
+	- Se agregó la clase CSS `static` para cambios de página sin animación (`select()` con `instant` en `true`).
+	- Se corrigió error: al ejecutar `select()` durante una transición en curso, la finalización atrasada de la transición anterior asignaba la clase `left`/`right` a la página recién seleccionada, dejándola fuera de la vista. Ahora la transición en curso se completa antes de iniciar la nueva.
+	- Se corrigió error: `back()` retrocedía siempre a la primera página cuando el índice del historial era mayor que `0`, porque `getTarget()` retornaba un identificador vacío para esos índices.
+	- `onSelect` y `onChange` reciben siempre el identificador (`data-target`) de la página seleccionada, aunque `select()` se ejecute con un índice numérico. Así se corrige el error en `back()`, que entregaba el índice en lugar del identificador.
+	- `back()` ejecuta `onBack` al finalizar la transición en lugar de usar un `setTimeout()` independiente.
+	- El elemento HTML se localiza al construir el objeto (`#loadHtml()`), según la especificación de estructura de clase. Asignar `selector` después de la construcción ya no relocaliza el elemento.
+	- Se corrigió el orden de 2 declaraciones CSS.
+6. Se actualizó versión clase WUISlider a `0.10`.
+	- Se agregó la propiedad `transitionDelay` numérica, valor por defecto `200`, en reemplazo de la duración fija de la animación.
+	- Se agregó la variable CSS `--wui-slider-transition-delay`.
+	- La animación de desplazamiento entre diapositivas se reimplementó con `transition` de CSS sobre `transform` en reemplazo de `requestAnimationFrame()` sobre `left`, evitando el recálculo de layout en cada cuadro. Se respeta la preferencia `prefers-reduced-motion`.
+	- `prev()` y `next()` se ignoran mientras hay una transición en curso; `go()` cancela la transición en curso antes de posicionar.
+	- La creación de los indicadores de paginación se trasladó de `init()` al constructor.
+	- Se eliminaron reglas CSS redundantes de la clase `image`.
+	- Se corrigió error: la dirección de arrastre no se reiniciaba al soltar, por lo que un clic posterior sin arrastre podía desplazar el slider.
+	- La diapositiva activa queda con `transform: none` para no alterar el posicionamiento de elementos `position: fixed` en su interior.
+7. Se actualizó versión clase WUIList a `0.11`.
+	- La clase `under` de la botonera se asigna al finalizar la transición del desplazamiento de la fila (evento `transitionend`) en lugar de un `setTimeout()` fijo de 400 ms.
+	- La supresión del clic posterior a un arrastre se desacopló del temporizador: la dirección de arrastre se reinicia al iniciar un nuevo arrastre o al procesar el clic.
+	- Se respeta la preferencia `prefers-reduced-motion`.
+	- Se eliminaron 1 regla y 1 declaración CSS sin efecto (el elemento `.strip` no tiene borde), 1 regla que repetía los valores de otra y 2 selectores de elementos que el componente no genera (`.footer` y `.message`).
+	- Se corrigió el orden de declaraciones CSS en 5 reglas y se reubicó 1 regla según la estructura de `docs/specs/code-css.md`.
+8. Se actualizó versión clase WUITable a `0.12`.
+	- Se agregó el método `selectPageRows(page, selected)`, para seleccionar o deseleccionar todas las filas de una página.
+	- Se agregó el método `selectAllRows(selected)`, para seleccionar o deseleccionar todas las filas del data.
+	- Se corrigió error: `selectRow()` y `enableRow()` ubicaban la fila por su posición en `<tbody>` (`nth-of-type`) usando el índice global, por lo que con paginación activa, en cualquier página distinta de la primera no actualizaban la fila o actualizaban otra. Ahora la fila se ubica por su atributo `data-index`.
+9. Se actualizó versión clase WUIForm a `0.14`.
+	- Se agregó soporte de estilo para la barra `<progress>` indeterminada (sin atributo `value`), que mantenía el estilo nativo del navegador: los estilos base ahora aplican a todo elemento `progress`, y la barra indeterminada muestra un degradado animado construido con las variables CSS `--wui-form-progress-bgcolor` y `--wui-form-progress-valuecolor`. Se respeta la preferencia `prefers-reduced-motion`.
+10. Se actualizó versión clase WUIFormat a `0.7`.
+	- Se renombró la propiedad `locales` a `locale`.
+11. Se actualizó versión clase WUISelectpicker a `0.15`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-option-iconopacity-out`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-option-iconopacity-over`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-option-iconopacity-selected`.
+	- Se agregó la variable CSS `--wui-selectpicker-box-option-iconopacity-disabled`.
+	- Se agregó la propiedad `onStartOpen` de tipo función, valor por defecto `null`, que se ejecuta cuando el selector comienza a abrirse. Si retorna exactamente `false`, se cancela la apertura.
+	- Se agregó la propiedad `hidden` booleana, valor por defecto `false`, a la definición de **Opciones de Menú**, para ocultar una opción de la lista. La opción se mantiene oculta al cerrar el selector.
+	- Se agregó el método `hiddenOption(index, hidden)`, para ocultar o mostrar una opción de la lista según su posición.
+	- Se agregó la propiedad `enabled` booleana, valor por defecto `true`, a la definición de **Opciones de Menú**, para deshabilitar una opción de la lista.
+	- Se agregó el método `enabledOption(index, enabled)`, para habilitar o deshabilitar una opción de la lista según su posición.
+	- Se corrigió error: los botones `cancel`/`accept` del footer se creaban sin `type="button"`, así que por default HTML
+	  actuaban como `type="submit"`. Dentro de un `<form>` ancestro (ej. el formulario de un modal de filtro), un click en
+	  cualquiera de los dos disparaba el submit nativo de ese formulario en vez de solo cerrar/aceptar el picker.
+	- Se corrigió el orden de las declaraciones CSS en el bloque de ocultamiento forzado por ancho móvil, que no respetaba
+	  las reglas de `docs/specs/code-css.md`.
+	- Se eliminaron 2 reglas CSS sin efecto (duplicaban el `display: block` ya aplicado por una regla menos específica).
+	- En modo móvil, el overlay oculto mantiene `display: block` con opacidad `0`, igual que en `WUIDatepicker`, `WUITimepicker` y `WUIColorpicker`, por lo que su apertura y cierre se realizan con transición de opacidad.
+	- Se eliminaron 2 reglas, 1 selector y 4 declaraciones CSS sin efecto, y en el modo `hidden` y en móvil la regla base de `.box` se ubicó antes que su variante `.hidden`.
+12. Se actualizó versión clase WUIDatepicker a `0.14`.
+	- Se renombró la propiedad `locales` a `locale`.
+	- Se corrigió error: mismo error y mismo fix que WUISelectpicker (`cancel`/`accept` del footer).
+	- Se eliminó la clase `extended`, pensada para aumentar el alto de la caja en meses que ocupan 6 semanas. Nunca se
+	  implementó en CSS (el alto quedaba fijo) y se dejaba sin ningún efecto visual; la lógica que genera la sexta semana
+	  de días se mantiene intacta.
+	- Se corrigió el orden de 2 declaraciones CSS y se eliminaron 3 reglas sin efecto (repetían valores ya aplicados por
+	  una regla menos específica).
+	- Se corrigió error: el ajuste de tipografía de los inputs en móvil usaba el selector `> input[type="text"]`, que no coincidía con ningún elemento (los inputs están dentro de `.inputs`).
+	- Se eliminaron 3 reglas y 1 selector CSS sin efecto, se eliminaron los prefijos `-webkit-mask-*` (las propiedades estándar ya estaban declaradas) y en el modo `hidden` y en móvil la regla base de `.box` se ubicó antes que su variante `.hidden`.
+13. Se actualizó versión clase WUITimepicker a `0.13`.
+	- Se corrigió error: mismo error y mismo fix que WUISelectpicker (`cancel`/`accept` del footer).
+	- Se corrigió error: el selector `> input[type="text"]` del ajuste de tamaño en modo móvil no coincidía con ningún
+	  elemento (el input real está anidado dentro de `.inputs`), así que el ajuste de tipografía nunca se aplicaba.
+	- Se eliminaron 3 reglas CSS sin efecto (repetían valores ya aplicados por una regla menos específica).
+	- Se eliminaron 1 regla, 1 selector y 2 declaraciones CSS sin efecto, los prefijos `-webkit-mask-*` (las propiedades estándar ya estaban declaradas) y `-webkit-overflow-scrolling` (sin efecto desde iOS 13), y en el modo `hidden` y en móvil la regla base de `.box` se ubicó antes que su variante `.hidden`.
+14. Se actualizó versión clase WUIColorpicker a `0.14`.
+	- Se corrigió error: mismo error y mismo fix que WUISelectpicker (`cancel`/`accept` del footer), y además el botón `.button` (el
+	  disparador que abre el picker) tenía el mismo problema.
+	- Se corrigió error: la regla de estado `disabled` apuntaba al elemento contenedor en vez de al botón, por lo que no
+	  tenía ningún efecto visual.
+	- Se corrigió el orden de 2 declaraciones CSS, se eliminó 1 regla sin efecto y se reagrupó la regla `.list.hidden`
+	  junto a sus reglas hermanas.
+	- Se eliminaron 4 reglas, 1 selector y 1 declaración CSS sin efecto, y en el modo `hidden` y en móvil la regla base de `.box` se ubicó antes que su variante `.hidden`.
+15. Se actualizó versión clase WUIButton a `0.16`.
+	- El padding horizontal se calcula con `clamp(min(5px, var(--wui-button-default-horizpadding)), 5%, var(--wui-button-default-horizpadding))`: se reduce en contenedores angostos (el porcentaje se calcula sobre el ancho del elemento contenedor) hasta un mínimo de `5px`, y la variable CSS `--wui-button-default-horizpadding` pasa a definir el máximo. Si la variable es menor a `5px`, se respeta su valor.
+	- Se eliminó 1 declaración CSS redundante (`border-radius` en `.submit`) y se corrigió el orden de 1 declaración.
+
 ## [v0.15.0] - 2026-09-27
 
 Características:
@@ -14,7 +131,7 @@ Características:
 1. Se actualizó cargador de recursos `wui.js`.
 2. Se actualizó versión clase WUIBody a `0.10`.
 	- Se renombró el método `importSections()` a `compose()`, junto a su parámetro `sections` y la clave `sections` de sus descriptores, ahora `fragments`. El concepto de "sección" pasa a denominarse "fragmento" para evitar la colisión con la etiqueta HTML `<section>`, que es solo una de las etiquetas contenedoras posibles. El verbo `compose` distingue esta operación declarativa del método `import()`, que opera sobre un único elemento ya existente.
-	- Se agregaron los sufijos `header` y `footer` como sufijos válidos del módo automático (`auto=true`) para ids de fragmentos en el método `compose()`.
+	- Se agregaron los sufijos `header` y `footer` como sufijos válidos del modo automático (`auto=true`) para ids de fragmentos en el método `compose()`.
 	- Se corrigió error: en el método `compose()`.
 3. Se actualizó versión clase WUILanguage a `0.8`.
 	- Se corrigió error: `load()` asignaba `responseType` a `"json"` en modo `json` mientras `onload` lee `responseText`, combinación que la especificación de XHR prohíbe: toda carga de idioma lanzaba `InvalidStateError` y la página quedaba detenida. Basta con la sobreescritura del tipo mime.
@@ -52,7 +169,7 @@ Características:
 11. Se actualizó versión clase WUITable a `0.11`.
 	- Se agregó el método `getSelectedIds()`.
 	- Se agregó soporte para compatibilidad con `.wui-icon`.
-	- Se corrigió error: la fila no se selecionaba cuando `selectable` era `true` si la propiedad `onSelect` no era función.
+	- Se corrigió error: la fila no se seleccionaba cuando `selectable` era `true` si la propiedad `onSelect` no era función.
 	- Se corrigió error: no se respetaba el ancho asignado a una columna cuando la tabla es `resizable`.
 12. Se actualizó versión clase WUIForm a `0.13`.
 	- Se renombró la función interna `debounce()` a `rafThrottle()`, nombre que refleja su comportamiento real (limita la tasa de ejecución mediante `requestAnimationFrame`, no espera inactividad como un debounce clásico).
@@ -74,7 +191,7 @@ Características:
 1. Se agregó el script `prepare` a `package.json` para que una instalación vía tag de git (`npm install github:wui-js/wuijs-main-lib#vX.Y.Z`) produzca la misma estructura de archivos aplanada que una instalación desde el registro de npm.
 2. Se actualizó cargador de recursos `wui.js`.
 3. Se actualizó versión clase WUIBody a `0.9`.
-	- Se agregaron los sufijos `button` y `script` como sufijos válidos del módo automático (`auto=true`) para ids de secciones en el método `importSections()`.
+	- Se agregaron los sufijos `button` y `script` como sufijos válidos del modo automático (`auto=true`) para ids de secciones en el método `importSections()`.
 	- Se corrigió error en el método `prepare()`.
 4. Se actualizó versión clase WUIIcon a `0.12`.
 	- Se agregó el ícono `stripe-fill`.
@@ -94,7 +211,7 @@ Características:
 	- Se agregó el método `addJs()`.
 	- Se agregó el método `addResources()`.
 3. Se actualizó versión clase WUIBody a `0.8`.
-	- Se agregó el sufijo `fieldset` como sufijo válido del módo automático (`auto=true`) para ids de secciones en el método `importSections()`.
+	- Se agregó el sufijo `fieldset` como sufijo válido del modo automático (`auto=true`) para ids de secciones en el método `importSections()`.
 4. Se actualizó versión clase WUILanguage a `0.7`.
 	- Se agregaron los elementos de carga HTML `<ol>`, `<strong>`, `<b>` y `<select>`.
 5. Se actualizó versión clase WUIIcon a `0.11`.
@@ -874,7 +991,7 @@ Características:
 	- Se agregó el método `remove()`, que permite eliminar una cookie mediante su nombre.
 	- Se corrigió error en el método público `remove()`.
 5. Actualización versión clase WUIHead a `0.2`.
-	- Se mejoró el código para evitar XSS attacks.
+	- Se mejoró el código para evitar ataques XSS.
 	- Se corrigió error para asegurar referencia a elementos del DOM.
 6. Actualización versión clase WUIBody a `0.2`.
 	- Se agregó soporte para valores privados.
@@ -888,20 +1005,20 @@ Características:
 	- Se agregó soporte para valores privados.
 	- Se agregó el alias `.fadein-top` a la clase de estilo `fadein-up`.
 	- Se agregó la propiedad `direction`.
-	- Se agregaron los argumentos `sceneIndex`, `sceneStep` y `sceneProgress` a la propuedad `onMove()`.
+	- Se agregaron los argumentos `sceneIndex`, `sceneStep` y `sceneProgress` a la propiedad `onMove()`.
 9. Actualización versión clase WUILoader a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se corrigió error en el método `init()`.
 10. Actualización versión clase WUIModal a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el método `destroy()`.
-	- Se corrigió error en el evento de arrastre al maximizar y cerrar un modal con estilo página usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
+	- Se corrigió error en el evento de arrastre al maximizar y cerrar un modal con estilo página usando el evento `mousedown`, habilitando únicamente cuando el botón izquierdo permanece presionado.
 11. Actualización versión clase WUIPaging a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el método `destroy()`.
 12. Actualización versión clase WUISlider a `0.2`.
 	- Se agregó soporte para valores privados.
-	- Se corrigió error en el evento de arrastre al desplazar una diapositiva usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
+	- Se corrigió error en el evento de arrastre al desplazar una diapositiva usando el evento `mousedown`, habilitando únicamente cuando el botón izquierdo permanece presionado.
 	- Se corrigió error en el método `load()`.
 13. Actualización versión clase WUIList a `0.2`.
 	- Se agregó soporte para paginado.
@@ -913,7 +1030,7 @@ Características:
 	- Se renombró el método `next()` a `nextPage()`.
 	- Se renombró el método `isPrevEnable()` a `hasPrevPage()`.
 	- Se renombró el método `isNextEnable()` a `hasNextPage()`.
-	- Se corrigió error en el evento de arrastre al aperturar y cerrar la botonoera de cada fila usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
+	- Se corrigió error en el evento de arrastre al aperturar y cerrar la botonera de cada fila usando el evento `mousedown`, habilitando únicamente cuando el botón izquierdo permanece presionado.
 14. Actualización versión clase WUITable a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó soporte para formato CSS claro/oscuro.
@@ -970,7 +1087,7 @@ Características:
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
 21. Actualización versión clase WUICheckbox a `0.2`.
 	- Se agregó soporte para valores privados.
-	- Se corrigió error en el evento de arrastre al seleccionar y deseleccionar la caja de verificación usando el evento `mousedown`, habilitándo únicamente cuando el botón izquierdo permanece presionado.
+	- Se corrigió error en el evento de arrastre al seleccionar y deseleccionar la caja de verificación usando el evento `mousedown`, habilitando únicamente cuando el botón izquierdo permanece presionado.
 	- Se corrigió error para asegurar referencia a elementos del DOM de tipo `HTMLInputElement`.
 22. Actualización versión clase WUIButton a `0.2`.
 	- Se agregó soporte para valores privados.
