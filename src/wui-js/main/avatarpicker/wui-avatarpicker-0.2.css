@@ -1,0 +1,200 @@
+/*
+@file wui-avatarpicker-0.2.css
+@class WUIAvatarpicker
+@version 0.2
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+div.wui-avatarpicker {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+div.wui-avatarpicker > .preview,
+div.wui-avatarpicker > .preview > img {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+div.wui-avatarpicker > .preview {
+	position: relative;
+	display: flex;
+	width: var(--wui-avatarpicker-preview-size);
+	height: var(--wui-avatarpicker-preview-size);
+	border-radius: 10px;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='slategrey' style='opacity:.2;'><rect x='0' y='0' width='5' height='5'/><rect x='5' y='5' width='5' height='5'/></svg>");
+	overflow: hidden;
+}
+
+div.wui-avatarpicker > .preview::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><mask id='mask'><rect width='100' height='100' fill='white'/><circle cx='50' cy='50' r='50' fill='black'/></mask><rect width='100' height='100' fill='slategrey' fill-opacity='.4' mask='url(%23mask)'/></svg>");
+	background-size: 100% 100%;
+}
+
+div.wui-avatarpicker > .preview > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	cursor: move;
+}
+
+div.wui-avatarpicker > .preview > img.hidden {
+	display: none;
+}
+
+div.wui-avatarpicker > input[type="file"] {
+	display: none;
+}
+
+div.wui-avatarpicker > input[type="range"] {
+	--range-shadow: 0 0 2px 0 rgba(0, 0, 0, .4);
+	--range-transition: background .2s ease-in-out;
+	width: 100%;
+	height: var(--wui-avatarpicker-range-trackbar-height);
+	border: var(--wui-avatarpicker-range-trackbar-borderwidth) solid var(--wui-avatarpicker-range-trackbar-bordercolor-out);
+	border-radius: calc(var(--wui-avatarpicker-range-trackbar-height) / 2);
+	background-color: var(--wui-avatarpicker-range-trackbar-bgcolor-out);
+	appearance: none;
+}
+
+div.wui-avatarpicker > input[type="range"]::-webkit-slider-thumb,
+div.wui-avatarpicker > input[type="range"]::-webkit-slider-runnable-track,
+div.wui-avatarpicker > input[type="range"]::-moz-range-thumb,
+div.wui-avatarpicker > input[type="range"]::-moz-range-track,
+div.wui-avatarpicker > input[type="range"]::-ms-thumb,
+div.wui-avatarpicker > input[type="range"]::-ms-track {
+	box-sizing: border-box;
+}
+
+div.wui-avatarpicker > input[type="range"]:hover,
+div.wui-avatarpicker > input[type="range"]:focus-within {
+	border-color: var(--wui-avatarpicker-range-trackbar-bordercolor-focus);
+	background-color: var(--wui-avatarpicker-range-trackbar-bgcolor-focus);
+}
+
+div.wui-avatarpicker > input[type="range"]:disabled {
+	border-color: var(--wui-avatarpicker-range-trackbar-bordercolor-disabled) !important;
+	background-color: var(--wui-avatarpicker-range-trackbar-bgcolor-disabled) !important;
+}
+
+div.wui-avatarpicker > input[type="range"]::-webkit-slider-thumb {
+	width: var(--wui-avatarpicker-range-thumb-size);
+	height: var(--wui-avatarpicker-range-thumb-size);
+	box-shadow: var(--range-shadow);
+	border-radius: 50%;
+	appearance: none;
+	transition: var(--range-transition);
+}
+
+div.wui-avatarpicker > input[type="range"]::-moz-range-thumb {
+	width: var(--wui-avatarpicker-range-thumb-size);
+	height: var(--wui-avatarpicker-range-thumb-size);
+	box-shadow: var(--range-shadow);
+	border-radius: 50%;
+	appearance: none;
+	transition: var(--range-transition);
+}
+
+div.wui-avatarpicker > input[type="range"]::-ms-thumb {
+	width: var(--wui-avatarpicker-range-thumb-size);
+	height: var(--wui-avatarpicker-range-thumb-size);
+	box-shadow: var(--range-shadow);
+	border-radius: 50%;
+	appearance: none;
+	transition: var(--range-transition);
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-webkit-slider-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-out);
+	cursor: ew-resize;
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-webkit-slider-thumb:hover {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-over);
+}
+
+div.wui-avatarpicker > input[type="range"]:not(:enabled)::-webkit-slider-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-disabled);
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-moz-range-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-out);
+	cursor: ew-resize;
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-moz-range-thumb:hover {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-over);
+}
+
+div.wui-avatarpicker > input[type="range"]:not(:enabled)::-moz-range-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-disabled);
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-ms-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-out);
+	cursor: ew-resize;
+}
+
+div.wui-avatarpicker > input[type="range"]:enabled::-ms-thumb:hover {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-over);
+}
+
+div.wui-avatarpicker > input[type="range"]:not(:enabled)::-ms-thumb {
+	background-color: var(--wui-avatarpicker-range-thumb-bgcolor-disabled);
+}
+
+div.wui-avatarpicker > input[type="range"]::-webkit-slider-runnable-track {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	appearance: none;
+}
+
+div.wui-avatarpicker > input[type="range"]::-moz-range-track {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	appearance: none;
+}
+
+div.wui-avatarpicker > input[type="range"]::-ms-track {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	appearance: none;
+}
+
+div.wui-avatarpicker > .menu {
+	display: flex;
+	width: var(--wui-avatarpicker-preview-size);
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+div.wui-avatarpicker > .menu > button {
+	width: 24px;
+	height: 24px;
+	border: 0;
+	background-color: var(--wui-avatarpicker-button-bgcolor-out);
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+div.wui-avatarpicker > .menu > button:hover {
+	background-color: var(--wui-avatarpicker-button-bgcolor-over);
+}
+
+div.wui-avatarpicker > .menu > button:disabled {
+	background-color: var(--wui-avatarpicker-button-bgcolor-disabled) !important;
+}

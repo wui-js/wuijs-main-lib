@@ -1,0 +1,27 @@
+/*
+@file wui-avatarpicker-0.1.root.css
+@class WUIAvatarpicker
+@version 0.1
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+:root {
+	--wui-avatarpicker-range-thumb-size: 20px;
+	--wui-avatarpicker-range-thumb-bgcolor-out: #1e90ff;
+	--wui-avatarpicker-range-thumb-bgcolor-over: #1e90ff;
+	--wui-avatarpicker-range-thumb-bgcolor-disabled: #d5dce3;
+	--wui-avatarpicker-range-trackbar-height: 7px;
+	--wui-avatarpicker-range-trackbar-borderwidth: 1px;
+	--wui-avatarpicker-range-trackbar-bordercolor-out: #f0f0f3;
+	--wui-avatarpicker-range-trackbar-bordercolor-focus: #1e90ff;
+	--wui-avatarpicker-range-trackbar-bordercolor-disabled: #d5dce3;
+	--wui-avatarpicker-range-trackbar-bgcolor-out: #f6f6f6;
+	--wui-avatarpicker-range-trackbar-bgcolor-focus: #f6f6f6;
+	--wui-avatarpicker-range-trackbar-bgcolor-disabled: #d5dce3;
+	--wui-avatarpicker-button-bgcolor-out: rgb(from #2d3a47 r g b / 40%);
+	--wui-avatarpicker-button-bgcolor-over: #1e90ff;
+	--wui-avatarpicker-button-bgcolor-disabled: rgb(from #d5dce3 r g b / 40%);
+	--wui-avatarpicker-button-importicon-src: none;
+	--wui-avatarpicker-button-clearicon-src: none;
+}

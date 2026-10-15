@@ -7,6 +7,52 @@
 
 # Change Log
 
+## [v0.16.1] - 2026-10-08
+
+Features:
+
+1. Updated the resource loader `wui.js`.
+	- Standardized the cache buster use.
+2. Added WUIHttp class version `0.2`.
+	- Graduated from `wuijs-lab-lib`.
+	- The `token` property accepts `null` to remove the token.
+	- Fixed bug: the `null` default value of the `token` property was not assigned.
+	- Fixed bug: the content type of the `base64` response was not deduced when the URL included parameters or a fragment.
+	- Fixed bug: `getUrlContent()` sent the body in `GET` and `HEAD` requests.
+	- Fixed bug: `responseJson()` modified the `responseType` option of the received `options` object.
+3. Updated WUILanguage class version to `0.9`.
+	- Standardized the cache buster use.
+4. Updated WUIList class version to `0.12`.
+	- Added the `buttons` row option, an array with the `iconClass`, `bgcolor` and `enabled` options per button, in the same order as the `buttons` property. These options take precedence over the same row button options.
+5. Updated WUITable class version to `0.13`.
+	- Added the `selectable` row option. The `selectable` property takes precedence over this option.
+	- `selectRow()`, `selectPageRows()` and `selectAllRows()` do not select non-selectable rows, and `getSelectedIds()` does not include them. Unselecting has no restrictions.
+6. Updated WUIForm class version to `0.15`.
+	- Renamed the `fill`, `line`, `border` and `round` style classes of the main form element to `fill-fields`, `line-fields`, `border-fields` and `round-fields`. Removed the `curve` class, equivalent to `round`.
+	- Added the `fieldStyle` property (`"fill"` by default, `"roundfill"`, `"border"`, `"roundborder"` or `"line"`), which in `init()` adds the corresponding field style classes to the main form element.
+	- Added the `headerButtonStyle`, `bodyButtonStyle` and `footerButtonStyle` properties (`"none"` by default or `"join"`). With `"join"`, `init()` adds the `join-buttons` class to the form header, body or footer, which joins the contiguous buttons of the area, removing the gap between them and the radius of the corners in contact.
+	- Fixed bug: `getText()` and `setText()` always returned `null` (regression since version `0.10`).
+	- Fixed bug: `getFormData()` threw an exception when the component did not contain a `<form>` element.
+	- Fixed bug: `reset()` could match the wrong field or label due to operator precedence.
+	- `setType()`, `setValue()` and `setEnabled()` changed from arrow function properties to class methods.
+	- HTML elements are loaded once in the constructor; the `selector` setter and `init()` no longer repeat it.
+	- Removed the `-webkit-` prefixes from the `mask-image`, `mask-position` and `mask-repeat` properties.
+7. Added WUIAvatarpicker class version `0.2`.
+	- Graduated from `wuijs-lab-lib`.
+	- Implemented the `size` property, which defines the size of the preview area, the circular mask and the menu.
+	- Added the `--wui-avatarpicker-preview-size` CSS variable.
+	- Added the `destroy()` method.
+	- Fixed bug: the menu was duplicated when it already existed in the HTML markup.
+	- Fixed bug: the `minImageSize` property was not applied when validating the image size.
+	- Fixed bug: the scale control was never enabled or disabled.
+	- Fixed bug: an empty image showed the broken image icon.
+	- Fixed bug: the scale control did not return to its middle value when cleared.
+	- Fixed bug: scaling compared the image width with the preview area height.
+	- Fixed bug: files exceeding `maxFileSize` were still read.
+	- Fixed bug: the image could be dragged while the component was disabled.
+	- Fixed bug: the `name` property was not applied after `init()`.
+	- Fixed bug: the framing parameters (`params`) of a previous image were applied when importing a new file.
+
 ## [v0.16.0] - 2026-10-04
 
 Features:

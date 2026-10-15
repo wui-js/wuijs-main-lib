@@ -7,6 +7,52 @@
 
 # Registro de Cambios
 
+## [v0.16.1] - 2026-10-08
+
+Características:
+
+1. Se actualizó cargador de recursos `wui.js`.
+	- Se normalizó el uso del cache buster.
+2. Se agregó clase WUIHttp versión `0.2`.
+	- Graduada desde `wuijs-lab-lib`.
+	- La propiedad `token` acepta `null` para eliminar el token.
+	- Se corrigió error: el valor predeterminado `null` de la propiedad `token` no se asignaba.
+	- Se corrigió error: el tipo de contenido de la respuesta `base64` no se deducía cuando la URL incluía parámetros o fragmento.
+	- Se corrigió error: `getUrlContent()` enviaba el cuerpo en las peticiones `GET` y `HEAD`.
+	- Se corrigió error: `responseJson()` modificaba la opción `responseType` del objeto `options` recibido.
+3. Se actualizó versión clase WUILanguage a `0.9`.
+	- Se normalizó el uso del cache buster.
+4. Se actualizó versión clase WUIList a `0.12`.
+	- Se agregó la opción de fila `buttons`, arreglo con las opciones `iconClass`, `bgcolor` y `enabled` por botón, en el mismo orden que la propiedad `buttons`. Estas opciones tienen prioridad sobre las mismas opciones de los botones de fila.
+5. Se actualizó versión clase WUITable a `0.13`.
+	- Se agregó la opción de fila `selectable`. La propiedad `selectable` tiene prioridad sobre esta opción.
+	- `selectRow()`, `selectPageRows()` y `selectAllRows()` no seleccionan filas no seleccionables, y `getSelectedIds()` no las incluye. La deselección no tiene restricciones.
+6. Se actualizó versión clase WUIForm a `0.15`.
+	- Se renombraron las clases de estilo `fill`, `line`, `border` y `round` del elemento principal del formulario a `fill-fields`, `line-fields`, `border-fields` y `round-fields`. Se eliminó la clase `curve`, equivalente a `round`.
+	- Se agregó la propiedad `fieldStyle` (`"fill"` por defecto, `"roundfill"`, `"border"`, `"roundborder"` o `"line"`), que en `init()` agrega al elemento principal del formulario las clases de estilo de campos correspondientes.
+	- Se agregaron las propiedades `headerButtonStyle`, `bodyButtonStyle` y `footerButtonStyle` (`"none"` por defecto o `"join"`). Con `"join"`, `init()` agrega la clase `join-buttons` a la cabecera, cuerpo o pie del formulario, que une los botones contiguos de la zona eliminando la separación entre ellos y el radio de las esquinas en contacto.
+	- Se corrigió error: `getText()` y `setText()` siempre retornaban `null` (regresión desde la versión `0.10`).
+	- Se corrigió error: `getFormData()` lanzaba una excepción cuando el componente no contenía un elemento `<form>`.
+	- Se corrigió error: `reset()` podía asociar un campo o etiqueta incorrectos por precedencia de operadores.
+	- `setType()`, `setValue()` y `setEnabled()` pasan de propiedades de función flecha a métodos de clase.
+	- La carga de elementos HTML se realiza una sola vez en el constructor; el setter `selector` e `init()` ya no la repiten.
+	- Se eliminaron los prefijos `-webkit-` de las propiedades `mask-image`, `mask-position` y `mask-repeat`.
+7. Se agregó clase WUIAvatarpicker versión `0.2`.
+	- Graduada desde `wuijs-lab-lib`.
+	- Se implementó la propiedad `size`, que define el tamaño del área de previsualización, la máscara circular y el menú.
+	- Se agregó la variable CSS `--wui-avatarpicker-preview-size`.
+	- Se agregó el método `destroy()`.
+	- Se corrigió error: el menú se duplicaba cuando ya existía en el marcado HTML.
+	- Se corrigió error: la propiedad `minImageSize` no se aplicaba en la validación del tamaño de la imagen.
+	- Se corrigió error: el control de escala no se habilitaba ni deshabilitaba.
+	- Se corrigió error: la imagen vacía mostraba el ícono de imagen rota.
+	- Se corrigió error: el control de escala no volvía a su valor medio al limpiar.
+	- Se corrigió error: el escalado comparaba el ancho de la imagen con el alto del área de previsualización.
+	- Se corrigió error: los archivos que superaban `maxFileSize` se leían igualmente.
+	- Se corrigió error: la imagen se podía arrastrar con el componente deshabilitado.
+	- Se corrigió error: la propiedad `name` no se aplicaba después de `init()`.
+	- Se corrigió error: los parámetros de encuadre (`params`) de una imagen anterior se aplicaban al importar un nuevo archivo.
+
 ## [v0.16.0] - 2026-10-04
 
 Características:
