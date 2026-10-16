@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
 docs-check.py — WUI/JS Documentation Check
-Validates version consistency between source files and documentation.
+Validates version consistency between source files and documentation
+(class table in docs/README-<lang>.md, class sections in
+docs/classes/<name>/wui-<name>-<lang>.md).
 
 Usage:
   python docs-check.py                 → all components, English (default)
@@ -23,6 +25,7 @@ RESET = "\033[0m"
 # ── Paths ─────────────────────────────────────────────────────────────────────
 REPO   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAIN   = os.path.join(REPO, "src", "wui-js", "main")
+DOCS   = os.path.join(REPO, "docs")
 WUI_JS = os.path.join(MAIN, "wui.js")
 
 
@@ -65,24 +68,20 @@ def get_doc_order(doc_path):
     return order
 
 
-def comp_to_anchor(comp):
-    """Convert component directory name to anchor id: button → wui-button."""
-    return f"wui-{comp}"
+def get_class_doc_path(comp, lang):
+    """Return the class documentation file path: button → docs/classes/button/wui-button-en.md."""
+    return os.path.join(DOCS, "classes", comp, f"wui-{comp}-{lang}.md")
 
-def get_section(lines, comp):
-    """Return (start_idx, end_idx) of component section in doc lines."""
-    anchor = comp_to_anchor(comp)
-    start = None
-    for i, line in enumerate(lines):
-        if re.search(rf'<a name="{anchor}"', line):
-            start = i
-            break
-    if start is None:
-        return None, None
-    for i in range(start + 1, len(lines)):
-        if re.search(r'<a name="wui-\w[\w-]*"', lines[i]):
-            return start, i
-    return start, len(lines)
+def get_class_lines(comp, lang):
+    """Return the class documentation lines, or None if the file or its # WUI<Name> heading is missing."""
+    path = get_class_doc_path(comp, lang)
+    if not os.path.isfile(path):
+        return None
+    lines = [l.rstrip("\n") for l in open(path, encoding="utf-8")]
+    heading = f"# {comp_to_class(comp)}"
+    if not any(line.strip().lower() == heading.lower() for line in lines):
+        return None
+    return lines
 
 
 def ok(text):
@@ -99,8 +98,8 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     cls = comp_to_class(comp)
 
     # ── 1. Class documentation ─────────────────────────────────────────────
-    section_start, section_end = get_section(lines, comp)
-    has_section = section_start is not None
+    section_lines = get_class_lines(comp, lang)
+    has_section = section_lines is not None
     doc_fails = not has_section
 
     # ── 2. Class table version ─────────────────────────────────────────────
@@ -123,8 +122,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     # ── 3. Field version ───────────────────────────────────────────────────
     field_fails = []
     if has_section:
-        section_lines = lines[section_start:section_end]
-        offset = section_start
+        offset = 0
         for i, line in enumerate(section_lines):
             m = re.match(r'\s*Versi[oó]n:\s*`([0-9.]+)`', line, re.IGNORECASE) or \
                 re.match(r'\s*Version:\s*`([0-9.]+)`', line, re.IGNORECASE)
@@ -196,7 +194,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
             print(ok("class documentation."))
         else:
             print(fail("class documentation."))
-            print(f"    {RED}<a name=\"{comp_to_anchor(comp)}\"> not found in README{RESET}")
+            print(f"    {RED}docs/classes/{comp}/wui-{comp}-{lang}.md not found or missing '# {cls}' heading{RESET}")
 
     if not summary or table_fails:
         if not table_fails:
