@@ -1050,7 +1050,7 @@ Features:
 	- Added support for private values.
 	- Added the `mode` property, to support files in JS and JSON format.
 	- Added the `refresh()` method, which allows updating the content of a specific HTML element.
-	- Removed global constant `languages` and replaced with a variable definition, optional and external to the class, which is assigned using the `onLoad()` property (see implementation example in [Documentation](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-language)).
+	- Removed global constant `languages` and replaced with a variable definition, optional and external to the class, which is assigned using the `onLoad()` property (see implementation example in [Documentation](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/classes/language/wui-language-en.md)).
 8. WUIScrolly version class update to `0.2`.
 	- Added support for private values.
 	- Added `.fadein-top` alias to the style class `fadein-up`.

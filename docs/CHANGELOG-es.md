@@ -1046,7 +1046,7 @@ Características:
 	- Se agregó soporte para valores privados.
 	- Se agregó la propiedad `mode`, para dar soporte a archivo de lenguaje en formato JS y JSON.
 	- Se agregó el método `refresh()`, que permite actualizar el contenido de un elemento HTML específico.
-	- Se eliminó la constante global `languajes` y se reemplazó por una definición variable, opcional y externa a la clase, que es asignada mediante la propiedad `onLoad()` (ver ejemplo de implementación en [Documentación](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md#wui-language)).
+	- Se eliminó la constante global `languajes` y se reemplazó por una definición variable, opcional y externa a la clase, que es asignada mediante la propiedad `onLoad()` (ver ejemplo de implementación en [Documentación](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/classes/language/wui-language-es.md)).
 8. Actualización versión clase WUIScrolly a `0.2`.
 	- Se agregó soporte para valores privados.
 	- Se agregó el alias `.fadein-top` a la clase de estilo `fadein-up`.
