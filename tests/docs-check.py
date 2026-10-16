@@ -2,8 +2,16 @@
 """
 docs-check.py — WUI/JS Documentation Check
 Validates version consistency between source files and documentation
-(class table in docs/README-<lang>.md, class sections in
-docs/classes/<name>/wui-<name>-<lang>.md).
+(class table in docs/README-<lang>.md, class documents in
+docs/classes/<name>/<prefix>-<name>-<lang>.md).
+
+The same script runs in every WUI/JS library; the library is detected from
+its source directory (src/wui-js/<kind>/):
+  main         wui-<name>         WUI<Name>
+  plugins      wuiplugin-<name>   WUIPlugin<Name>
+  views        wuiview-<name>     WUIView<Name>
+  environment  wui-environment    WUIEnvironment (one document per platform:
+               docs/classes/environment/wui-environment-<platform>-<lang>.md)
 
 Usage:
   python docs-check.py                 → all components, English (default)
@@ -24,32 +32,71 @@ RESET = "\033[0m"
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 REPO   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MAIN   = os.path.join(REPO, "src", "wui-js", "main")
 DOCS   = os.path.join(REPO, "docs")
+LIBS   = {
+    "main":        {"prefix": "wui",       "cls": "WUI"},
+    "plugins":     {"prefix": "wuiplugin", "cls": "WUIPlugin"},
+    "views":       {"prefix": "wuiview",   "cls": "WUIView"},
+    "environment": {"prefix": "wui",       "cls": "WUI"},
+}
+KIND   = next((k for k in LIBS if os.path.isdir(os.path.join(REPO, "src", "wui-js", k))), "main")
+MAIN   = os.path.join(REPO, "src", "wui-js", KIND)
+PREFIX = LIBS[KIND]["prefix"]
 WUI_JS = os.path.join(MAIN, "wui.js")
+PLATFORMS = {
+    "android": ("Android", os.path.join("android", "WUIEnvironment.java")),
+    "ios":     ("iOS",     os.path.join("ios", "WUIEnvironment.swift")),
+    "web":     ("Web",     None),
+}
 
 
 def get_lib_version():
-    if not os.path.isfile(WUI_JS):
+    if os.path.isfile(WUI_JS):
+        for line in open(WUI_JS, encoding="utf-8"):
+            m = re.search(r'const version\s*=\s*"([^"]+)"', line)
+            if m:
+                return m.group(1)
         return "?"
-    for line in open(WUI_JS, encoding="utf-8"):
-        m = re.search(r'const version\s*=\s*"([^"]+)"', line)
-        if m:
-            return m.group(1)
-    return "?"
+    version_path = os.path.join(REPO, "VERSION")
+    return open(version_path, encoding="utf-8").read().strip() if os.path.isfile(version_path) else "?"
 
 
 def comp_to_class(comp):
-    return "WUI" + comp[0].upper() + comp[1:]
+    if KIND == "environment":
+        return "WUIEnvironment"
+    return LIBS[KIND]["cls"] + comp[0].upper() + comp[1:]
+
+
+def comp_heading(comp):
+    if KIND == "environment":
+        return f"# WUIEnvironment ({PLATFORMS[comp][0]})"
+    return f"# {comp_to_class(comp)}"
+
+
+def comp_file_name(comp):
+    """File name stem of the sources: button → wui-button, environment platforms → wui-environment."""
+    return "wui-environment" if KIND == "environment" else f"{PREFIX}-{comp}"
+
+
+def comp_dir(comp):
+    return os.path.join(MAIN, "web" if KIND == "environment" else comp)
 
 
 def get_source_version(comp):
-    comp_dir = os.path.join(MAIN, comp)
+    if KIND == "environment" and PLATFORMS[comp][1]:
+        path = os.path.join(MAIN, PLATFORMS[comp][1])
+        if os.path.isfile(path):
+            for line in open(path, encoding="utf-8"):
+                m = re.search(r'@version\s+([0-9.]+)', line)
+                if m:
+                    return m.group(1)
+        return None
+    name = comp_file_name(comp)
     for ext in ("js", "css"):
-        files = [f for f in glob.glob(os.path.join(comp_dir, f"wui-{comp}-*.{ext}"))
+        files = [f for f in glob.glob(os.path.join(comp_dir(comp), f"{name}-*.{ext}"))
                  if ".root." not in f]
         if files:
-            m = re.search(rf"wui-{comp}-([0-9.]+)\.{ext}$", os.path.basename(files[0]))
+            m = re.search(rf"{name}-([0-9.]+)\.{ext}$", os.path.basename(files[0]))
             if m:
                 return m.group(1)
     return None
@@ -57,9 +104,11 @@ def get_source_version(comp):
 
 def get_doc_order(doc_path):
     """Return component names in class table order."""
+    if KIND == "environment":
+        return list(PLATFORMS)
     order, seen = [], set()
     for line in open(doc_path, encoding="utf-8"):
-        m = re.match(r'\|\s*\[?(WUI(\w+))\]?[^|]*\|\s*`[0-9.]+`', line)
+        m = re.match(rf'\|\s*\[?({LIBS[KIND]["cls"]}(\w+))\]?[^|]*\|\s*`[0-9.]+`', line)
         if m:
             comp = m.group(2).lower()
             if comp not in seen:
@@ -68,9 +117,15 @@ def get_doc_order(doc_path):
     return order
 
 
+def get_class_doc_rel(comp, lang):
+    """Return the class documentation path relative to docs/: button → classes/button/wui-button-en.md."""
+    if KIND == "environment":
+        return f"classes/environment/wui-environment-{comp}-{lang}.md"
+    return f"classes/{comp}/{PREFIX}-{comp}-{lang}.md"
+
+
 def get_class_doc_path(comp, lang):
-    """Return the class documentation file path: button → docs/classes/button/wui-button-en.md."""
-    return os.path.join(DOCS, "classes", comp, f"wui-{comp}-{lang}.md")
+    return os.path.join(DOCS, get_class_doc_rel(comp, lang))
 
 def get_class_lines(comp, lang):
     """Return the class documentation lines, or None if the file or its # WUI<Name> heading is missing."""
@@ -78,7 +133,7 @@ def get_class_lines(comp, lang):
     if not os.path.isfile(path):
         return None
     lines = [l.rstrip("\n") for l in open(path, encoding="utf-8")]
-    heading = f"# {comp_to_class(comp)}"
+    heading = comp_heading(comp)
     if not any(line.strip().lower() == heading.lower() for line in lines):
         return None
     return lines
@@ -106,14 +161,17 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     table_fails = []
     in_table = False
     for i, line in enumerate(lines):
-        if re.search(r'\|\s*(Class name|Clase)', line, re.IGNORECASE):
+        if re.search(r'\|\s*(Class name|Nombre Clase|Clase)\s*\|', line, re.IGNORECASE):
             in_table = True
         if not in_table:
             continue
         if in_table and line.strip() == "":
             in_table = False
             continue
-        m = re.match(rf'\|\s*\[?{cls}\]?[^|]*\|\s*`([0-9.]+)`', line)
+        if KIND == "environment":
+            m = re.match(rf'\|\s*\[?{cls}\]?\([^)]*-{comp}-{lang}\.md\)[^`]*`([0-9.]+)`', line)
+        else:
+            m = re.match(rf'\|\s*\[?{cls}\]?[^|]*\|\s*`([0-9.]+)`', line, re.IGNORECASE)
         if m:
             if m.group(1) != src_ver:
                 table_fails.append((i + 1, m.group(1)))
@@ -132,7 +190,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     # ── 4. Files name version ──────────────────────────────────────────────
     file_fails = []
     if has_section:
-        file_pattern = re.compile(rf'wui-{comp}-([0-9.]+)\.(root\.css|css|js)')
+        file_pattern = re.compile(rf'{comp_file_name(comp)}-([0-9.]+)\.(root\.css|css|js)')
         for i, line in enumerate(section_lines):
             seen_in_line = set()
             for m in file_pattern.finditer(line):
@@ -145,7 +203,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     only_doc = only_root_v = value_fails = []
     doc_vars = doc_defaults = root_vars = {}
     if has_section:
-        root_path = os.path.join(MAIN, comp, f"wui-{comp}-{src_ver}.root.css")
+        root_path = os.path.join(comp_dir(comp), f"{comp_file_name(comp)}-{src_ver}.root.css")
         root_vars = {}
         if os.path.isfile(root_path):
             for line in open(root_path, encoding="utf-8"):
@@ -186,7 +244,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
     print(f"  version: {src_ver or '?'}")
 
     if src_ver is None:
-        print(f"  [{RED}error{RESET}] no versioned file found in src/wui-js/main/{comp}/")
+        print(f"  [{RED}error{RESET}] no versioned file found in src/wui-js/{KIND}/{comp}/")
         return
 
     if not summary or doc_fails:
@@ -194,7 +252,7 @@ def check_component(comp, lang, lines, src_ver, summary=False):
             print(ok("class documentation."))
         else:
             print(fail("class documentation."))
-            print(f"    {RED}docs/classes/{comp}/wui-{comp}-{lang}.md not found or missing '# {cls}' heading{RESET}")
+            print(f"    {RED}docs/{get_class_doc_rel(comp, lang)} not found or missing '{comp_heading(comp)}' heading{RESET}")
 
     if not summary or table_fails:
         if not table_fails:
@@ -297,9 +355,12 @@ def main():
     doc_order = get_doc_order(doc_path)
 
     raw_comps = " ".join(args).replace(",", " ").split()
-    src_dirs = {d for d in os.listdir(MAIN)
-                if os.path.isdir(os.path.join(MAIN, d)) and not d.startswith(".")}
-    src_dirs -= {"LICENSE", "wui.js"}
+    if KIND == "environment":
+        src_dirs = set(PLATFORMS)
+    else:
+        src_dirs = {d for d in os.listdir(MAIN)
+                    if os.path.isdir(os.path.join(MAIN, d)) and not d.startswith(".")}
+        src_dirs -= {"LICENSE", "wui.js"}
 
     if not raw_comps or raw_comps == ["*"]:
         order_idx = {c: i for i, c in enumerate(doc_order)}
@@ -309,11 +370,12 @@ def main():
 
     lib_ver = get_lib_version()
     print(f"\nWUI/JS - Docs check{' [summary]' if summary else ''}")
+    print(f"library: wuijs-{KIND}-lib")
     print(f"lib version: {lib_ver}")
     print(f"language: {lang}")
 
     for comp in selected:
-        if not os.path.isdir(os.path.join(MAIN, comp)):
+        if comp not in src_dirs:
             print(f"\n[{RED}error{RESET}] component not found: '{comp}'")
             continue
         src_ver = get_source_version(comp)

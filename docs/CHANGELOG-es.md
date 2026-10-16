@@ -7,7 +7,7 @@
 
 # Registro de Cambios
 
-## [v0.16.1] - 2026-10-08
+## [v0.16.1] - 2026-10-16
 
 Características:
 
