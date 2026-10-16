@@ -180,7 +180,7 @@
 	color: var(--wui-form-text-linkcolor-out);
 }
 
-.wui-form fieldset > :is(.field, .text, .message).hidden {
+.wui-form fieldset > :is(.field, .text, .message, button, input[type="button"]).hidden {
 	display: none !important;
 }
 
@@ -1010,17 +1010,17 @@
 
 /* wui-form join-buttons */
 
-.wui-form > :is(.header, .body, .footer).join-buttons:has(> :is(button, input[type="button"]) + :is(button, input[type="button"])),
-.wui-form > :is(.header, .body, .footer).join-buttons :has(> :is(button, input[type="button"]) + :is(button, input[type="button"])) {
+.wui-form > :is(.header, .body, .footer).join-buttons:has(> :is(button, input[type="button"]):not(.hidden) ~ :is(button, input[type="button"]):not(.hidden)),
+.wui-form > :is(.header, .body, .footer).join-buttons :has(> :is(button, input[type="button"]):not(.hidden) ~ :is(button, input[type="button"]):not(.hidden)) {
 	column-gap: 0;
 }
 
-.wui-form > :is(.header, .body, .footer).join-buttons :is(button, input[type="button"]):has(+ :is(button, input[type="button"])) {
+.wui-form > :is(.header, .body, .footer).join-buttons :is(button, input[type="button"]):not(.hidden):has(~ :is(button, input[type="button"]):not(.hidden)) {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.wui-form > :is(.header, .body, .footer).join-buttons :is(button, input[type="button"]) + :is(button, input[type="button"]) {
+.wui-form > :is(.header, .body, .footer).join-buttons :is(button, input[type="button"]):not(.hidden) ~ :is(button, input[type="button"]):not(.hidden) {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
